@@ -1,0 +1,212 @@
+.hero-inscripcion {
+  margin-top: -175px;
+  color: white;
+  padding: 100px 20px;
+  position: relative;
+  }
+
+.container-hero {
+  max-width: 1200px;
+  padding-top: 4em;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.chica {
+  width: 320px;
+  max-width: 100%;
+  margin-bottom: -100px;
+  margin-right: 1em;
+}
+
+.hero-text {
+  text-align: left;
+  margin-top: -100px;
+}
+
+.titulo-ahora {
+  font-family: Amsterdam;
+  font-size: 5rem;
+  color: #fff;
+  margin-bottom: 0;
+  transform: rotate(-8deg);
+  display: inline-block;
+}
+
+.titulo-inscripciones {
+  font-family: "Montserrat", sans-serif;
+  font-size: 5rem;
+  font-weight: 800;
+  margin-top: -80px;
+  color: #3ba7ff;
+  transform: rotate(-8deg);
+  display: inline-block;
+}
+
+.titulo-ano {
+  position: absolute;
+  top: -80px;
+  left: 220px;
+  font-size: 7.5rem;
+  color: white;
+  font-weight: 800;
+  transform: rotate(-8deg);
+}
+
+.texto-abiertas {
+  display: inline-block;
+  background-color: #9d9d9e;
+  color: rgb(21, 0, 112);
+  font-weight: 700;
+  padding: 0px 8px;
+  width: 31.6%;
+  border-radius: 5px;
+  margin-left: 20px;
+  font-style: italic;
+  font-size: 2.5rem;
+  transform: rotate(-8deg);
+}
+
+.texto-gestion {
+  font-size: 2.2rem;
+  font-weight: normal;
+  color: #fff;
+  transform: rotate(-8deg);
+  margin-top: -30px;
+  margin-left: 33px;
+}
+
+.textos-abiertas-gestion {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.sub-menu {
+  display: flex;
+  align-items: center;
+  gap: 3em;
+  background-color: #001A66;
+  padding: 20px 50px;
+  border-top-left-radius: 500px;
+  border-bottom-left-radius: 500px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+
+
+.sub-menu-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: default;
+}
+
+.sub-menu-img {
+  height: 50px;
+  border-radius: 10px;
+}
+
+.sub-menu-text {
+  color: #fff;
+  margin-top: 5px;
+  font-size: 0.8rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .chica {
+    
+    width: 220px;
+    margin: -70px auto 0px auto;
+     position: relative;
+       -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%);
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  }
+
+  .titulo-ahora {
+    margin: 35px auto -5px auto;
+    font-size: 3rem;
+     transform: rotate(-8deg);
+    text-align: center;
+  }
+
+  .titulo-inscripciones {
+    margin: -60px auto 0px auto;
+    font-size: 3rem;
+     transform: rotate(-8deg);
+    text-align: center;
+  }
+
+  .titulo-ano {
+    position: relative;
+    font-size: 5rem;
+    top: auto;
+    left: auto;
+    display: block;
+    text-align: center;
+    margin-top: -48px;
+    left: 70px;
+  }
+ 
+  .texto-abiertas {
+
+    font-size: 1.8rem;
+    width: 39%;
+    margin: -80px 10px 0px ;
+
+    transform: rotate(-8deg);
+
+  }
+  .texto-gestion {
+    font-size: 1.6rem;
+    margin: -20px 25px;
+    transform: rotate(-8deg);
+    
+    margin-left: -10;
+  }
+
+  .sub-menu {
+    flex-wrap: wrap;
+    justify-content: space-around; /* mejor distribución */
+    gap: 1em;
+    padding: 15px 50px;
+    border-radius: 20px;
+    bottom: -30px; /* más abajo del texto */
+    right: 10px;
+  }
+
+  .sub-menu-img {
+    height: 45px;
+  }
+
+  .sub-menu-text {
+    font-size: 0.9rem;
+    text-align: center;
+  }
+
+  .sub-menu-item {
+    width: auto; /* que cada item se ajuste a su contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: default;
+  }
+
+  /* Ocultar el cuarto item (expoUno) en móvil */
+  .sub-menu-item:nth-child(4) {
+    display: none;
+  }
+  }

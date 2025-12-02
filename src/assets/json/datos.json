@@ -1,0 +1,500 @@
+  {
+    "SantaCruz": {
+      "whatsapp":"+59162241035",
+      "imagenes":{
+        "personaPortada":"chicaUno.png",
+        "fondoIncripcion":"fondoLibertad.png",
+        "fondoAlumni":"fondoRedAlumni.png",
+        "graduados":"graduados.png",
+        "fondoOferta":"fondoOferta.png"
+      },
+
+      "mas": {
+        "bienvenida": {
+          "titulo": "Bienvenida",
+          "contenido": "A nombre de la familia UNO le queremos agradecer por el interés mostrado en nuestra institución y su visita a nuestra pagina web.\nPara nosotros es muy importante su visita porque nos da la oportunidad de poder mostrarle un poco de nuestra institución, de toda nuestra oferta académica en los diferentes niveles que tenemos, técnico superior, a nivel licenciatura (en 4 años y medio) y la oferta académica de todos los postgrados con los que contamos en todas nuestras sedes.\nActualmente la Universidad Nacional del Oriente cuenta con sedes legalmente establecidas en las ciudades de Santa Cruz de la Sierra, Montero, Tarija y Yacuiba.\nEstamos seguros que con sueños y trabajo duro próximamente estaremos anunciando la apertura de mas sedes.\nLa evolución académica y tecnológica nos demandan nuevas actualizaciones, por lo que esperamos que en esta su visita hubiese encontrado la información que estaba buscando.\nCon el afán de mantener una excelencia académica, todas las autoridades y los planteles administrativo y académico ratificamos nuestro compromiso de constante desarrollo en favor de nuestras regiones, y principalmente para el desarrollo de nuestra amada BOLIVIA.",
+          "Autor":"Dr. M.Sc. Sergio A. Borja Alarcón\nRECTOR – UNIVERSIDAD NACIONAL DEL ORIENTE",
+          "imagen":"rector.png"
+          },
+        "historia": {
+          "titulo": "Reseña Histórica",
+          "contenido": "La Universidad Nacional del Oriente de Santa Cruz, fue creada en el año 1999 aunque recién en la primera gestión del 2000 abre sus puertas a la población estudiantil de la ciudad de Santa Cruz de la Sierra y de su provincia Montero.\n\nEl 22 de Junio de 1999, el ministerio de Educación, emite la Resolución Ministerial Nº 203/99, autorizando el funcionamiento de las carreras de Bioquímica, Enfermería. Fisioterapia y Kinesiología, Biología a nivel Licenciatura. Además de Mercadotecnia. Forestal, Estadística a nivel Técnico Superior.\n\nAmparada bajo esta Resolución la Universidad inicia sus primeras clases en aulas ubicadas en el Segundo Anillo y Avenida Piraí, con 26 estudiantes inscritos en su primera gestión de funcionamiento.\n\nEl 1º de febrero de 2001, la Universidad recibe la Resolución Ministerial de Funcionamiento Nº 042/01, autorizando las carreras de Odontología, Derecho, Ingeniería de Sistemas a nivel Licenciatura y Análisis de Sistemas, Prótesis Dental, Contaduría a Nivel Técnico Superior.\n\nCon el aumento de la oferta académica, la población estudiantil de la universidad asciende para el año 2002 a 334 estudiantes inscritos, obligando a esta Casa Superior de Estudios a cambiar de infraestructura, trasladándose a los Edificios Zurita y Ortuño ubicados en la calle España entre Buenos Aires y Seoane.\n\nCon el compromiso de superación la Universidad Nacional del Oriente realiza la adquisición del Edificio Villarroel, infraestructura de gran importancia y Patrimonio Histórico y Cultural de Santa Cruz, ubicada en la calle España esquina Florida. Este edificio funciona como base para la Escuela de Postgrado.\n\nEl 23 de Mayo de 2008, el Ministerio de Educación emite la Resolución de Funcionamiento Nº 318/08, autorizando la apertura de la Subsede Académica en la ciudad de Montero – Santa Cruz de la Sierra, Subsede que se apertura con las carreras de Enfermería, Derecho e Ingeniería de Sistemas.\nEn fecha 19 de julio del año 2012 por Res. Ministerial Nº 449/2012, se aprueba el Plan de estudios de la Carrera Medicina, posibilitando el inicio de sus actividades académicas.\nEl 22 de Diciembre del año 2015, por Resolución Ministerial Nº 996/2015, aprueba la apertura de las Carreras: Licenciatura en Odontología, Bioquímica y Farmacia, Fisioterapia y Kinesiología y Licenciatura en Contaduría Pública; en la Subsede Montero.\nLa Resolución Ministerial Nº 0913/2016 del 30 de diciembre del 2016 se aprueban los rediseños curriculares de las Carreras Licenciatura en: Derecho, Enfermería, Ing. de Sistemas, Odontología, Bioquímica y Farmacia, Fisioterapia y Kinesiología y Técnico superior en Contaduría.\nAsí mismo el 30 de diciembre a través de la Resolución Ministerial Nº 0936/2016, se aprueba el inicio de actividades de la Subsede Tarija, con las siguientes Carreras: Odontología, Enfermería y Contaduría Pública.\nDe acuerdo con el artículo 1º del Estatuto Orgánico de la Universidad Nacional del Oriente, ésta es una institución de Educación Superior, que forma parte de la Asociación Nacional de Universidades Privadas en igual jerarquía que las demás universidades, bajo el respaldo de la Constitución Política del Estado Plurinacional de Bolivia, la cual establece que todas sus actividades académicas, están reguladas por el Ministerio de Educación, a través del Reglamento General de Universidades Privadas y su Estatuto Orgánico.\nAl presente cuenta con más de 18 años de excelencia académica e importante contribución a la formación de recursos humanos altamente calificados para las regiones dónde se hallan las subsedes y todo el Estado.\nLa Universidad Nacional del Oriente tiene como premisa fundamental coadyuvar al mejoramiento del bienestar de toda la población del país así como de la constante superación de la comunidad universitaria, mejorando paulatinamente las condiciones de infraestructura y oferta académica, de acuerdo a gestiones que desarrollan sus autoridades.\n\nLa comunidad universitaria de la UNO, está conformada por estudiantes de pregrado postgrado y docentes, en su Sede Principal Santa Cruz y sus dos Subsedes Tarija y Montero, distribuidos en 7 carreras y unidades de postgrado, además de la planta administrativa.\nCuenta con dos subsedes académicas en las ciudades de Montero y Tarija, así como el diseño de otros proyectos para promover la formación profesional en todas las regiones del país.",
+          "imagen":"fundador.png"
+        },
+        "filosofia": {
+          "titulo": "Filosofía",
+          "contenido": "La Filosofía institucional en que se inspira la Universidad Nacional del Oriente se funda en ser una Institución de formación, no elitista, que está fundada en el estudio del pensamiento del ser humano, desde el punto de vista del conocimiento teórico, como de la comprobación del mismo, a través del hecho empírico. Sus ideales se sustentan en el humanismo, como doctrina basada en la situación y el destino del hombre, en la ética como principio de la moral y de obligación social."
+        },
+        "reglamento": [{
+          "titulo": "Reglamento Docente",
+          "archivo": "reglamentoDocente.pdf"
+              },
+              {
+          "titulo": "Reglamento Estudiantil",
+          "archivo": "reglamentoEstudiantes.pdf"
+              },
+                {
+          "titulo": "Reglamento Investigación",
+          "archivo": "reglamentoInvestigacion.pdf"
+              },
+              {
+          "titulo": "Reglamento Interacción Social",
+          "archivo": "reglamentoInteraccion.pdf"
+              },
+                    {
+          "titulo": "Reglamento Becas",
+          "archivo": "reglamentoBecas.pdf"
+              }
+              
+              
+      ],
+        "misionvision": [{
+          "titulo": "Misión ",
+          "contenido": "La Universidad Nacional del Oriente tiene como misión:\n« Formar profesionales competentes, éticos líderes con emprendedurismo en base a la diversidad cultural, la ciencia y tecnología para contribuir al desarrollo de la sociedad. «"
+        },
+        {
+          "titulo": "Visión ",
+          "contenido": "La Universidad Nacional del Oriente tiene como visión:\n« Ser líderes en educación superior, acreditados y reconocidos internacionalmente por la formación de profesionales de alta calidad, con responsabilidad social y bases sólidas en la investigación e innovación. «"
+        }
+      ],
+        "autoridades": [
+          {
+        "cargo": "PRESIDENTA DEL DIRECTORIO",
+        "nombre": "Ing. Fabiola Marco Fernández",
+        "correo": "presidencia@www.uno.edu.bo"
+      },
+      {
+        "cargo": "RECTOR",
+        "nombre": "Dr. M.Sc. Sergio A. Borja Alarcón",
+        "correo": "rectorado@www.uno.edu.bo"
+      },
+      {
+        "cargo": "VICERRECTORA",
+        "nombre": "Ing. Delcy Nogales Rosado",
+        "correo": "vicerrectorado@www.uno.edu.bo"
+      },
+      {
+        "cargo": "SECRETARIA GENERAL",
+        "nombre": "Dra. M. Viviana Rodriguez Becerra",
+        "correo": "secretariageneral@www.uno.edu.bo"
+      },
+      {
+        "cargo": "DIRECTORA ADMINISTRATIVA Y FINANCIERA",
+        "nombre": "Lic. Nancy Llano Cardenas",
+        "correo": "daf@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "DIRECTORA DE INVESTIGACION Y POSGRADO",
+        "nombre": "Ing. Gabriela Quiroga Heredia",
+        "correo": "investigacion@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "DIRECTORA DE PLANIFICACION Y AUTOEVALUACION",
+        "nombre": "Lic. Patricia Arancibia Anagua",
+        "correo": "planificacion@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "DIRECTORA DE INTERACCION SOCIAL",
+        "nombre": "Lic. Rosa M. Barroso Porcel",
+        "correo": "interaccion@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "RECURSOS HUMANOS",
+        "nombre": "Ing. Karen Romero Sanchez",
+        "correo": "rrhh@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE CARRERA DE MEDICINA",
+        "nombre": "Dr. Luis Gómez Peña",
+        "correo": "jefemedicina@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "COORDINADOR DE CARRERA DE MEDICINA",
+        "nombre": "Dr. Dayan Alexis Saravia",
+        "correo": "medicina@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE CARRERA DE ODONTOLOGIA – PROTESIS DENTAL",
+        "nombre": "Dr. Jimmy Porcel",
+        "correo": "odontologia@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE BIOQUIMICA Y FARMACIA",
+        "nombre": "Dr. Jimmy Velasquez Ipamo",
+        "correo": "bioquimica@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE CARRERA DE ENFERMERIA",
+        "nombre": "Lic. Herminia Vargas",
+        "correo": "enfermeria@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE CARRERA DE FISIOTERAPIA Y KINESIOLOGIA",
+        "nombre": "Lic. Wilver J. Bazan Flores",
+        "correo": "fisioterapia@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE CARRERA DE DERECHO",
+        "nombre": "Dr. Juan Ramiro Duran Garcia",
+        "correo": "derecho@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE INTERNOS",
+        "nombre": "Dra. Sarita Montaño",
+        "correo": "internados@sc.uno.edu.bo"
+      }
+        ]
+      },
+
+
+    "inscripcion": {
+        "titulo": "Proceso de Inscripción",
+        "descripcion": "Todo lo que necesitas saber para inscribirte..."
+      },
+    "historia": {
+        "titulo": "Nuestra Historia",
+        "descripcion": "La Universidad UNO se fundó en..."
+      },
+        "alumni": 
+        { "descripcion": "Formar profesionales competentes, éticos líderes con emprendedurismo en base a la diversidad cultural, la ciencia y tecnología para contribuir al desarrollo de la sociedad." , 
+          "graduados": "5628"
+
+    },
+      "oferta": [
+        {"title": "Medicina", "imagen": "medicinaSC.png"},
+        {"title": "Odontología", "imagen": "odontoSC.png"},
+        {"title": "Enfermería", "imagen": "enfeSC.png"},
+        {"title": "Bioquímica y Farmacia", "imagen": "bioSC.png"},
+        {"title": "Fisioterapia y Kinesiología", "imagen": "fisioSC.png"},
+        {"title": "Ingenieria de Sistemas", "imagen": "sistemasSC.png"},
+        {"title": "Derecho", "imagen": "derechoSC.png"},
+        {"title": "Protesis Dental", "imagen": "odontoSC.png"}
+        
+
+      ],
+      "sedes": [
+        {"title": "Medicina", "imagen": "medicina.png"},
+        {"title": "Odontología", "imagen": "odontologia.png"},
+        {"title": "Enfermería", "imagen": "enfermeria.png"}
+      ],
+      "requisitos": [
+      
+      ],
+      "noticias": [
+      
+      ],
+      "carrera": [
+      {
+    "title": "Medicina",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Desarrolla habilidades diagnósticas y terapéuticas precisas mediante la aplicación sistemática del método clínico, promoviendo una atención médica centrada en el paciente. \n \nFomentar la innovación a través de la investigación científica y el desarrollo de tecnologías aplicadas a la salud, con el fin de mejorar la eficiencia diagnóstica, terapéutica y preventiva en el ámbito médico.",
+    "rm": "R.M No 449/2012",
+    "video":"https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mMedicina.png",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Impartir educación superior de calidad, para formar profesionales médicos, solidarios y democráticos al servicio de la comunidad.",
+    "vision": "Ser una carrera líder en educación Superior acreditada, con proyección internacional, que forma médicos en un modelo educativo globalizado de competencias.",
+    "roles": [
+      "Los médicos generales proporcionan atención médica primaria a pacientes de todas las edades. Investigador Clínico",
+      "Realizan estudio y ensayos clínicos para evaluar la eficacia y seguridad de tratamientos médicos.",
+      "Especialistas Médico",
+      "Los Especialistas son médicos que se han especializado en un área especificada de la medicina.",
+      "Docente Universitario de Medicina"
+    ]
+  },
+  {
+    "title": "Odontología",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "El odontólogo es un profesional universitario con sólida formación científico-humanista, capaz de brindar atención odontológica de alta calidad y referir, con prontitud y acierto, a pacientes que requieren cuidados especializados.\n\nAsimismo, participa en acciones de promoción de la salud, prevención de enfermedades, recuperación y rehabilitación odontológica, adoptando siempre las disposiciones reglamentarias vigentes en salubridad y medio ambiente, y actuando con principios éticos y humanistas.",
+    "rm": "R.M No 452/2012",
+    "video":"https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mOdonto.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar odontólogos competentes, éticos y solidarios, comprometidos con la salud bucodental de la comunidad y la mejora continua de su práctica profesional.",
+    "vision": "Ser una carrera líder en educación odontológica superior acreditada, con proyección internacional, que forme profesionales capaces de intervenir en prevención, diagnóstico y rehabilitación bucodental bajo un modelo educativo globalizado de competencias.",
+    "roles": [
+      "Brindar atención odontológica de alta calidad a pacientes de todas las edades.",
+      "Participar en programas de promoción de la salud y prevención de enfermedades bucodentales.",
+      "Realizar recuperación y rehabilitación odontológica especializada.",
+      "Cumplir con las normas de salubridad y medio ambiente, y actuar con ética y responsabilidad profesional.",
+      "Investigador en el área de salud bucodental y epidemiología.",
+      "Docente universitario en ciencias odontológicas."
+    ]
+  },
+
+  {
+    "title": "Enfermería",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Actúa con los fundamentos filosóficos de la profesión, en el cuidado integral del paciente, familia y comunidad, respetando la diversidad cultural; en base a principios ético-morales.\n\nUtiliza una comunicación efectiva con la persona, familia y los miembros del equipo de enfermería, de salud y otros profesionales. Reconoce los elementos de la gerencia estratégica y las aplica, gerenciando los servicios de enfermería y salud de los diferentes niveles de atención.\n\nFormula, ejecuta y evalúa programas de educación para el personal de enfermería. Conoce el proceso de la investigación y lo utiliza en la elaboración de los diferentes tipos de investigación en salud.",
+    "rm": "R.M No 453/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mEnfermeria.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales de enfermería competentes, éticos y solidarios, capaces de brindar cuidados integrales al paciente, familia y comunidad.",
+    "vision": "Ser una carrera líder en educación en enfermería, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias.",
+    "roles": [
+      "Proporcionar cuidados integrales al paciente, familia y comunidad respetando la diversidad cultural.",
+      "Comunicar eficazmente con pacientes, familias y equipo de salud.",
+      "Gestionar servicios de enfermería y salud en los diferentes niveles de atención.",
+      "Diseñar, ejecutar y evaluar programas de educación para el personal de enfermería.",
+      "Aplicar el proceso de investigación en la elaboración de estudios en salud."
+    ]
+  },
+  {
+    "title": "Fisioterapia y Kinesiología",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "El Licenciado en Fisioterapia y Kinesiología deberá ejercer su profesión con un profundo respeto a la persona humana en lo que hace a sus peculiaridades, costumbres, creencias y valores, con sentido ético y de servicio a la comunidad.\n\nInteractuar con otros profesionales de la salud, integrándose a equipos interdisciplinarios de trabajo y efectuar aportes al campo laboral y científico mediante el desarrollo de actividades de investigación. Aplicar tratamientos de kinefilaxia, fisioterapia y kinesioterapia en el ámbito público y privado.\n\nCumplir funciones de gestión en instituciones o áreas de su especialidad y efectuar aportes al campo laboral y científico mediante el desarrollo de actividades de investigación.",
+    "rm": "R.M No 454/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mFisio.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales de Fisioterapia y Kinesiología competentes, éticos y comprometidos con la salud y bienestar de las personas, con capacidad de investigación y trabajo en equipo interdisciplinario.",
+    "vision": "Ser una carrera líder en educación en Fisioterapia y Kinesiología, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias.",
+    "roles": [
+      "Ejercer la profesión con respeto a la persona, valores éticos y servicio a la comunidad.",
+      "Integrarse y colaborar en equipos interdisciplinarios de salud.",
+      "Aplicar tratamientos de kinefilaxia, fisioterapia y kinesioterapia en el ámbito público y privado.",
+      "Cumplir funciones de gestión en instituciones o áreas de especialidad.",
+      "Contribuir al campo laboral y científico mediante investigación."
+    ]
+  },
+  {
+    "title": "Bioquímica y Farmacia",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "El Licenciado en Bioquímica y Farmacia es un profesional de alto nivel científico, con un amplio sentido crítico, competente en el análisis, poseedor de importantes herramientas conceptuales y técnicas, capacitadas para emplear tecnologías que le permitan el avance de su especialidad.\n\nComo profesional que forma parte de un equipo de salud, debe tener una formación integral, científica y técnica, sobre una base de desarrollo de valores humanos, para buscar y dar respuestas adecuadas a los graves problemas de salud y de otro tipo existentes en nuestro país.\n\nPreparado para participar científicamente en la investigación en el campo de la Bioquímica y la Farmacia, así como en las diferentes disciplinas derivadas de la misma.",
+    "rm": "R.M No 455/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mBio.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales de Bioquímica y Farmacia competentes, éticos y con capacidad científica para contribuir al bienestar de la comunidad y al avance de su especialidad.",
+    "vision": "Ser una carrera líder en educación en Bioquímica y Farmacia, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias.",
+    "roles": [
+      "Analizar y aplicar herramientas conceptuales y técnicas en Bioquímica y Farmacia.",
+      "Integrarse como miembro de equipos de salud multidisciplinarios.",
+      "Participar en la investigación científica en su campo y disciplinas afines.",
+      "Aplicar conocimientos científicos y técnicos para resolver problemas de salud y sociales.",
+      "Desarrollar su labor profesional con principios éticos y valores humanos."
+    ]
+  },
+  {
+    "title": "Derecho",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Al concluir sus estudios, el egresado deberá tener conocimientos y habilidades que lo capaciten para el correcto ejercicio profesional del Derecho, incluyendo el conocimiento del marco jurídico vigente, capacidad de argumentación e interpretación jurídica, y habilidad para enfrentar conflictos y generar soluciones.\n\nAdemás, estará preparado para continuar sus estudios de posgrado y desarrollará actitudes y valores como capacidad analítica para resolver problemas de forma eficiente, vocación de servicio y sentido social de comunidad, liderazgo y trabajo en equipo, capacidad para la toma de decisiones, vocación mediadora y conciliatoria, y análisis de problemas jurídicos desde un enfoque humanista y multidisciplinario.",
+    "rm": "R.M No 456/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mDerecho.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Derecho competentes, éticos y con capacidad crítica y analítica, comprometidos con la justicia y el bienestar de la sociedad.",
+    "vision": "Ser una carrera líder en educación jurídica, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias.",
+    "roles": [
+      "Ejercer el Derecho con conocimientos sólidos y habilidades jurídicas adecuadas.",
+      "Interpretar y aplicar la normativa vigente de manera eficiente y ética.",
+      "Resolver conflictos y generar soluciones jurídicas efectivas.",
+      "Demostrar liderazgo, trabajo en equipo y vocación de servicio.",
+      "Analizar problemas jurídicos desde un enfoque humanista y multidisciplinario.",
+      "Prepararse para estudios de posgrado y desarrollo profesional continuo."
+    ]
+  },
+  {
+    "title": "Ingenieria de Sistemas",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "rm": "R.M No 457/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mSist.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
+    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "roles": [
+      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
+      "Desarrollar, implementar y administrar sistemas de información robustos.",
+      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
+      "Participar en proyectos informáticos, generación y gestión de software.",
+      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
+      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+    ]
+  }
+
+  ]
+
+    
+  },
+  "Cochabamba": {
+    "whatsapp":"+59164849322",
+    "imagenes":{
+        "personaPortada":"chicoUnoCocha.png",
+        "fondoIncripcion":"fondoCocha.png",
+        "fondoAlumni":"fondoRedAlumniCocha.png",
+        "graduados":"graduadosCohca.png",
+        "fondoOferta":"fondoOfertaCocha.png"
+      },
+      "inscripcion": {
+        "titulo": "Proceso de Inscripción",
+        "descripcion": "Todo lo que necesitas saber para inscribirte..."
+      },
+      "historia": {
+        "titulo": "Nuestra Historia",
+        "descripcion": "La Universidad UNO se fundó en..."
+      },
+      "alumni": 
+        { "descripcion": "Formar profesionales competentes, éticos líderes con emprendedurismo en base a la diversidad cultural, la ciencia y tecnología para contribuir al desarrollo de la sociedad." , 
+          "graduados": "1252"
+
+    },
+      "oferta": [
+        {"title": "Medicina", "imagen": "medicinaSC.png"},
+        {"title": "Enfermería", "imagen": "enfeSC.png"},
+        {"title": "Derecho", "imagen": "derechoSC.png"},
+        {"title": "Bioquímica y Farmacia", "imagen": "derechoSC.png"},
+        {"title": "Dirección y Administración de Empresas", "imagen": "odontoSC.png"}
+      ],
+      "sedes": [
+        {"title": "Medicina", "imagen": "medicina.png"},
+        {"title": "Odontología", "imagen": "odontologia.png"},
+        {"title": "Enfermería", "imagen": "enfermeria.png"}
+      ],
+      "requisitos": [
+        {"title": "Medicina", "imagen": "medicina.png"},
+        {"title": "Odontología", "imagen": "odontologia.png"},
+        {"title": "Enfermería", "imagen": "enfermeria.png"}
+      ],
+      "noticias": [
+        {"title": "Medicina", "imagen": "medicina.png"},
+        {"title": "Odontología", "imagen": "odontologia.png"},
+        {"title": "Enfermería", "imagen": "enfermeria.png"}
+      ],
+      "carrera": [
+        
+        {
+    "title": "Medicina",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "rm": "R.M No 457/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mSist.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
+    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "roles": [
+      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
+      "Desarrollar, implementar y administrar sistemas de información robustos.",
+      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
+      "Participar en proyectos informáticos, generación y gestión de software.",
+      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
+      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+    ]
+        }, {
+    "title": "Enfermería",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "rm": "R.M No 457/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mSist.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
+    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "roles": [
+      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
+      "Desarrollar, implementar y administrar sistemas de información robustos.",
+      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
+      "Participar en proyectos informáticos, generación y gestión de software.",
+      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
+      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+    ]
+        },
+          {
+    "title": "Bioquímica y Farmacia",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "rm": "R.M No 457/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mSist.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
+    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "roles": [
+      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
+      "Desarrollar, implementar y administrar sistemas de información robustos.",
+      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
+      "Participar en proyectos informáticos, generación y gestión de software.",
+      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
+      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+    ]
+        },
+          {
+    "title": "Derecho",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Los ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "rm": "R.M No 457/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mSist.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
+    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "roles": [
+      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
+      "Desarrollar, implementar y administrar sistemas de información robustos.",
+      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
+      "Participar en proyectos informáticos, generación y gestión de software.",
+      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
+      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+    ]
+        },
+          {
+    "title": "Dirección y Administración de Empresas",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "rm": "R.M No 457/2012",
+    "video": "https://youtu.be/PBWy69-zmb8",
+    "malla": "mSist.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
+    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "roles": [
+      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
+      "Desarrollar, implementar y administrar sistemas de información robustos.",
+      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
+      "Participar en proyectos informáticos, generación y gestión de software.",
+      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
+      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+    ]
+        }
+      ]
+    }
+  }
