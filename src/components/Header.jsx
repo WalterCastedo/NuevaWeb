@@ -10,38 +10,55 @@ export default function Header() {
   const { sede } = useParams();
   const location = useLocation();
 
-  const menuBgColor = "#001a66"; // color del menú
-  const defaultLogoColor = menuBgColor; // color inicial en páginas internas
+  const menuBgColor = "#001a66";
+  const defaultLogoColor = menuBgColor;
 
   const [scrolled, setScrolled] = useState(false);
   const [logoColor, setLogoColor] = useState(defaultLogoColor);
-  const [activeSection, setActiveSection] = useState("Inicio");
+  const [activeSection, setActiveSection] = useState("inicio");
   const [openDropdowns, setOpenDropdowns] = useState({});
   const [ofertaCarreras, setOfertaCarreras] = useState([]);
+  const [ofertaInteraccion, setOfertaInteraccion] = useState([]);
 
-  // ====== Manejo del color del logo y scroll ======
+  // ====== Función para normalizar URLs ======
+  const normalizeForUrl = (text) =>
+    text
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/\s+/g, "")
+      .toLowerCase();
+
+  // ====== Cargar datos de sede ======
+  useEffect(() => {
+    if (!sede) return;
+    const dataSede = dataJson[sede];
+    setOfertaCarreras(dataSede?.oferta || []);
+    setOfertaInteraccion(dataSede?.interaccion || []);
+  }, [sede]);
+
+  // ====== Manejo del scroll y logo ======
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
       setScrolled(scrollY > 0);
 
-      const pathParts = location.pathname.split("/").filter(Boolean);
-      const isMainOrSoloSede = pathParts.length <= 1; // página principal o solo sede
+      const pathParts = location.pathname
+        .split("/")
+        .filter(Boolean)
+        .map(normalizeForUrl);
+      const isMainOrSoloSede = pathParts.length <= 1;
 
-      // Logo y texto
-      if (isMainOrSoloSede) {
-        setLogoColor("white"); // siempre blanco
-      } else {
-        setLogoColor(scrollY > 0 ? "white" : defaultLogoColor); // cambia a blanco solo al hacer scroll
-      }
+      setLogoColor(
+        isMainOrSoloSede ? "white" : scrollY > 0 ? "white" : defaultLogoColor
+      );
 
-      // Secciones activas
       const sections = document.querySelectorAll("section[id]");
-      let current = "Inicio";
+      let current = "inicio"; // normalizado
       sections.forEach((section) => {
         const top = section.offsetTop - 100;
         const bottom = top + section.offsetHeight;
-        if (scrollY >= top && scrollY < bottom) current = section.id;
+        if (scrollY >= top && scrollY < bottom)
+          current = normalizeForUrl(section.id);
       });
       setActiveSection(current);
     };
@@ -51,33 +68,28 @@ export default function Header() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [location.pathname]);
 
-  // ====== Cargar oferta de carreras según sede ======
-  useEffect(() => {
-    if (!sede) return;
-    const dataSede = dataJson[sede];
-    const carreras = dataSede?.oferta || (Array.isArray(dataSede) ? dataSede : []);
-    setOfertaCarreras(carreras);
-  }, [sede]);
-
   // ====== Navegaciones ======
-  const normalizeForUrl = (text) =>
-    text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "");
-
   const handleClickInicio = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
     navigate(sede ? `/${normalizeForUrl(sede)}` : "/");
   };
 
-  const handleClickCarrera = (nombre) =>
-    navigate(`/${normalizeForUrl(sede)}/Carrera/${normalizeForUrl(nombre)}`);
+  const handleClickCarrera = (nombre) => {
+    navigate(`/${normalizeForUrl(sede)}/carrera/${normalizeForUrl(nombre)}`);
+  };
 
   const handleClickSubSede = (sub) => {
     navigate(`/${normalizeForUrl(sub)}`);
-    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
-  const handleClickMas = (target) =>
-    navigate(`/${normalizeForUrl(sede)}/Mas/${normalizeForUrl(target)}`);
+  const handleClickMas = (target) => {
+    navigate(`/${normalizeForUrl(sede)}/mas/${normalizeForUrl(target)}`);
+  };
+
+  const handleClickPrograma = (nombre) => {
+    navigate(
+      `/${normalizeForUrl(sede)}/interaccion/${normalizeForUrl(nombre)}`
+    );
+  };
 
   const scrollToTarget = (target) => {
     const el = document.getElementById(target);
@@ -91,7 +103,9 @@ export default function Header() {
     e.preventDefault();
     if (item.name === "Inicio") return handleClickInicio();
     if (item.targets?.length)
-      item.targets.forEach((t, i) => setTimeout(() => scrollToTarget(t), i * 100));
+      item.targets.forEach((t, i) =>
+        setTimeout(() => scrollToTarget(t), i * 100)
+      );
   };
 
   // ====== Dropdowns ======
@@ -106,16 +120,29 @@ export default function Header() {
     });
 
   const renderSubmenu = (submenu, level = 0, parentName = "") => (
-    <div style={{ display: "flex", flexDirection: "column", minWidth: "200px", backgroundColor: "#001a66", borderRadius: "0 0 10px 10px" }}>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        backgroundColor: "#001a66",
+        borderRadius: "0 0 10px 10px",
+        minWidth: Math.max(...submenu.map((s) => s.name.length * 8)) + 40,
+      }}
+    >
       {submenu.map((sub) => (
-        <div key={sub.name} style={{ position: "relative" }}>
+        <div
+          key={sub.name}
+          style={{ position: "relative", width: "100%" }}
+          onClick={() => {
+            if (parentName === "Más") handleClickMas(sub.target);
+            else if (parentName === "Carreras") handleClickCarrera(sub.name);
+            else if (parentName === "SubSedes") handleClickSubSede(sub.name);
+            else if (parentName === "Interacción")
+              handleClickPrograma(sub.name);
+            else scrollToTarget(sub.target);
+          }}
+        >
           <button
-            onClick={() => {
-              if (parentName === "Más") handleClickMas(sub.target);
-              else if (parentName === "Carreras") handleClickCarrera(sub.name);
-              else if (parentName === "SubSedes") handleClickSubSede(sub.name);
-              else scrollToTarget(sub.target);
-            }}
             onMouseEnter={() => sub.submenu && handleOpenDropdown(sub.name, level)}
             style={{
               display: "block",
@@ -123,14 +150,18 @@ export default function Header() {
               color: "#fff",
               fontSize: "0.7rem",
               fontWeight: "bold",
-              textDecoration: "none",
-              backgroundColor: activeSection === sub.target ? "#00bfff" : "transparent",
-              borderRadius: activeSection === sub.target ? "5px" : "0",
-              cursor: "pointer",
-              whiteSpace: "nowrap",
-              transition: "background 0.3s ease",
-              border: "none",
               textAlign: "left",
+              backgroundColor:
+                normalizeForUrl(activeSection) === normalizeForUrl(sub.target)
+                  ? "#00bfff"
+                  : "transparent",
+              borderRadius:
+                normalizeForUrl(activeSection) === normalizeForUrl(sub.target)
+                  ? "5px"
+                  : "0",
+              cursor: "pointer",
+              border: "none",
+              width: "100%",
             }}
           >
             {sub.name}
@@ -143,13 +174,11 @@ export default function Header() {
                 position: "absolute",
                 top: 0,
                 left: "100%",
-                minWidth: "200px",
                 backgroundColor: "#001a66",
                 borderRadius: "0 0 10px 10px",
                 zIndex: 3000 + level,
-                opacity: 0,
-                transform: "translateY(-10px)",
-                animation: "fadeIn 0.3s forwards",
+                minWidth:
+                  Math.max(...sub.submenu.map((s) => s.name.length * 8)) + 40,
               }}
             >
               {renderSubmenu(sub.submenu, level + 1, parentName)}
@@ -167,50 +196,77 @@ export default function Header() {
     {
       name: "Más",
       submenu: [
-        { name: "Bienvenida", target: "bienvenida" },
-        { name: "Historia", target: "historia" },
-        { name: "Filosofía", target: "filosofia" },
-        { name: "Reglamento", target: "reglamento" },
-        { name: "Misión y Visión", target: "misionvision" },
-        { name: "Autoridades", target: "autoridades" },
+        { name: "Bienvenida", target: normalizeForUrl("Bienvenida") },
+        { name: "Historia", target: normalizeForUrl("Historia") },
+        { name: "Filosofía", target: normalizeForUrl("Filosofía") },
+        { name: "Reglamento", target: normalizeForUrl("Reglamento") },
+        { name: "Misión y Visión", target: normalizeForUrl("MisionVision") },
+        { name: "Autoridades", target: normalizeForUrl("Autoridades") },
       ],
     },
     {
       name: "Carreras",
-      submenu: ofertaCarreras.map((c) => ({ name: c.title, target: c.title })),
+      submenu: ofertaCarreras.map((c) => ({
+        name: c.title,
+        target: normalizeForUrl(c.title),
+      })),
     },
-    { name: "Clinica", targets: ["clinica"] },
+    { name: "Clinica", targets: ["clinica"].map(normalizeForUrl) },
     {
       name: "SubSedes",
       submenu: [
-        { name: "Santa Cruz", target: "SantaCruz" },
-        { name: "Cochabamba", target: "Cochabamba" },
-        { name: "Shinaota", target: "Shinaota" },
-        { name: "Montero", target: "Montero" },
-        { name: "Yacuiba", target: "Yacuiba" },
-        { name: "Tarija", target: "Tarija" },
-      ],
+        "Santa Cruz",
+        "Cochabamba",
+        "Shinaota",
+        "Montero",
+        "Yacuiba",
+        "Tarija",
+      ].map((s) => ({ name: s, target: normalizeForUrl(s) })),
     },
-    { name: "Noticias", targets: ["noticias"] },
-    { name: "Requisitos", targets: ["requisitos"] },
-    { name: "Investigación", targets: ["investigacion"] },
-    { name: "Interacción", targets: ["interaccion"] },
+    { name: "Noticias", targets: ["noticias"].map(normalizeForUrl) },
+    { name: "Requisitos", targets: ["requisitos"].map(normalizeForUrl) },
+    { name: "Investigación", targets: ["investigacion"].map(normalizeForUrl) },
+    {
+      name: "Interacción",
+      submenu: ofertaInteraccion.map((p) => ({
+        name: p.titulo,
+        target: normalizeForUrl(p.titulo),
+      })),
+    },
     {
       name: "Postgrado",
-      targets: ["postgrado"],
+      targets: ["postgrado"].map(normalizeForUrl),
       submenu: [
-        { name: "Diplomados", target: "Diplomados" },
-        { name: "Maestrías", target: "Maestrias" },
-        { name: "Doctorado", target: "Doctorado" },
+        { name: "Diplomados", target: normalizeForUrl("Diplomados") },
+        { name: "Maestrías", target: normalizeForUrl("Maestrias") },
+        { name: "Doctorado", target: normalizeForUrl("Doctorado") },
       ],
     },
-    { name: "Red Alumni", targets: ["alumni", "otraSeccion"] },
+    { name: "Red Alumni", targets: ["alumni", "otraSeccion"].map(normalizeForUrl) },
   ];
 
   return (
-    <div style={{ display: "flex", alignItems: "center", position: "sticky", top: 0, zIndex: 1000, overflow: "visible", height: "120px" }}>
+    <div
+      style={{
+        display: "flex",
+        alignItems: "center",
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
+        overflow: "visible",
+        height: "120px",
+      }}
+    >
       {/* Logo y sede */}
-      <div style={{ padding: "0 50px", display: "flex", alignItems: "center", height: "100%", position: "relative" }}>
+      <div
+        style={{
+          padding: "0 50px",
+          display: "flex",
+          alignItems: "center",
+          height: "100%",
+          position: "relative",
+        }}
+      >
         {sede && (
           <div
             style={{
@@ -239,7 +295,7 @@ export default function Header() {
             marginTop: "-40px",
             cursor: "pointer",
             transition: "filter 0.3s ease",
-            filter: logoColor === "white" ? "brightness(0) invert(1)": "none" ,
+            filter: logoColor === "white" ? "brightness(0) invert(1)" : "none",
           }}
         />
       </div>
@@ -272,13 +328,31 @@ export default function Header() {
           transition: "width 0.3s ease",
         }}
       >
-        <Navbar expand="lg" variant="dark" style={{ background: "transparent", width: "100%", height: "80%" }}>
+        <Navbar
+          expand="lg"
+          variant="dark"
+          style={{ background: "transparent", width: "100%", height: "80%" }}
+        >
           <Container fluid className="p-0" style={{ height: "100%" }}>
             <Nav
               className="align-items-center w-100"
-              style={{ display: "flex", justifyContent: "space-between", alignItems: "center", width: "100%", height: "100%" }}
+              style={{
+                display: "flex",
+                justifyContent: "space-between",
+                alignItems: "center",
+                width: "100%",
+                height: "100%",
+              }}
             >
-              <div style={{ display: "flex", gap: 0, flex: 1, height: "100%", alignItems: "center" }}>
+              <div
+                style={{
+                  display: "flex",
+                  gap: 0,
+                  flex: 1,
+                  height: "100%",
+                  alignItems: "center",
+                }}
+              >
                 {menuItems.map((item) =>
                   item.submenu ? (
                     <div
@@ -304,7 +378,14 @@ export default function Header() {
                         {item.name}
                       </Nav.Link>
                       {item.submenu && openDropdowns[0] === item.name && (
-                        <div style={{ position: "absolute", top: "80%", left: 0, width: "100%", zIndex: 2000 }}>
+                        <div
+                          style={{
+                            position: "absolute",
+                            top: "80%",
+                            left: 0,
+                            zIndex: 2000,
+                          }}
+                        >
                           {renderSubmenu(item.submenu, 1, item.name)}
                         </div>
                       )}
@@ -323,7 +404,13 @@ export default function Header() {
                         justifyContent: "center",
                         height: "100%",
                         transition: "all 0.3s ease",
-                        backgroundColor: item.targets.some((t) => t === activeSection) ? "#00bfff" : "transparent",
+                        backgroundColor: item.targets.some(
+                          (t) =>
+                            normalizeForUrl(t) ===
+                            normalizeForUrl(activeSection)
+                        )
+                          ? "#00bfff"
+                          : "transparent",
                         borderRadius: "5px",
                       }}
                     >

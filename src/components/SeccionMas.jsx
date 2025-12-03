@@ -1,20 +1,53 @@
-import React, { useEffect } from "react";
-import { useParams } from "react-router-dom";
+import React, { useEffect, useState, useRef } from "react";
+import { useParams, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import dataJson from "../assets/json/datos.json";
 import NotFound from "../components/404";
+import fondo from "../assets/img/fondoOferta.webp";
+
 export default function SeccionMas() {
   const { sede, seccion } = useParams();
+  const navigate = useNavigate();
+  const rightRef = useRef(null);
+  const leftRef = useRef(null);
+
+  const [topPos, setTopPos] = useState(0);
+  const [activeTab, setActiveTab] = useState(seccion);
+
+  // Listener scroll para mover la derecha
+  useEffect(() => {
+    const handleScroll = () => {
+      if (!rightRef.current || !leftRef.current) return;
+      const containerTop = leftRef.current.offsetTop;
+      const containerHeight = leftRef.current.offsetHeight;
+      const rightHeight = rightRef.current.offsetHeight;
+
+      const maxTop = containerHeight - rightHeight;
+      const newTop = Math.min(Math.max(window.scrollY - containerTop + 20, 0), maxTop);
+
+      setTopPos(newTop);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("resize", handleScroll);
+    handleScroll();
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("resize", handleScroll);
+    };
+  }, []);
+
+  // Scroll al cambiar de sección
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    setActiveTab(seccion);
+  }, [seccion]);
 
   const capitalize = (text = "") =>
-  text.charAt(0).toUpperCase() + text.slice(1);
+    text.charAt(0).toUpperCase() + text.slice(1);
 
   const normalizeText = (text) =>
-    text
-      .normalize("NFD")
-      .replace(/[\u0300-\u036f]/g, "")
-      .replace(/\s+/g, "")
-      .toLowerCase();
+    text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "").toLowerCase();
 
   const sedeKey = Object.keys(dataJson).find(
     (key) => normalizeText(key) === normalizeText(sede)
@@ -23,253 +56,279 @@ export default function SeccionMas() {
   const sedeInfo = sedeKey ? dataJson[sedeKey] : null;
   const bloque = sedeInfo?.mas;
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   if (!sedeInfo) return <h2 className="text-center mt-5">Sede no encontrada</h2>;
   if (!bloque) return <h2 className="text-center mt-5">La sede no tiene datos de "Más"</h2>;
 
-  const contenidoUnificado =
-    seccion === "misionvision" || seccion === "filosofia"
-      ? [
-          {
-            titulo: "Misión",
-            contenido:
-              bloque.misionvision?.find((item) =>
-                item.titulo.toLowerCase().includes("misi")
-              )?.contenido || "",
-          },
-          {
-            titulo: "Visión",
-            contenido:
-              bloque.misionvision?.find((item) =>
-                item.titulo.toLowerCase().includes("visi")
-              )?.contenido || "",
-          },
-          {
-            titulo: "Filosofía",
-            contenido: bloque.filosofia?.contenido || "",
-          },
-        ]
-      : null;
+  const tabKeys = Object.keys(bloque);
+  const tabs = tabKeys.map((key) => {
+    if (key === "misionvision") return { key, label: "Misión y Visión" };
+    if (key === "filosofia") return { key, label: "Filosofía" };
+    return { key, label: capitalize(key) };
+  });
 
-  const contenido =
-    contenidoUnificado ||
-    (() => {
-      switch (normalizeText(seccion)) {
-        case "bienvenida":
-          return bloque.bienvenida;
-        case "historia":
-          return bloque.historia;
-        case "reglamento":
-          return bloque.reglamento;
-        case "autoridades":
-          return bloque.autoridades;
-        default:
-          return null;
-      }
-    })();
+  // Preparar contenido según la sección
+  let contenido;
+  if (seccion === "misionvision") {
+    contenido = [
+      {
+        titulo: "Misión",
+        contenido:
+          bloque.misionvision?.find((item) =>
+            item.titulo.toLowerCase().includes("misi")
+          )?.contenido || "",
+      },
+      {
+        titulo: "Visión",
+        contenido:
+          bloque.misionvision?.find((item) =>
+            item.titulo.toLowerCase().includes("visi")
+          )?.contenido || "",
+      },
+    ];
+  } else if (seccion === "filosofia" || seccion === "bienvenida" || seccion === "historia") {
+    contenido = [bloque[seccion]]; 
+  } else if (seccion === "reglamento") {
+    contenido = bloque.reglamento; 
+  } else if (seccion === "autoridades") {
+    contenido = bloque.autoridades; 
+  } else {
+    contenido = bloque[seccion];
+  }
 
-  if (!contenido)  return <NotFound mensaje={`En la sede "${sedeInfo}" no existe el apartado "${contenido}".`} />;
+  if (!contenido)
+    return (
+      <NotFound
+        mensaje={`No existe la sección "${seccion}" en la sede ${sede}.`}
+      />
+    );
 
-  // Imagen de la sección
-  const sectionImage = contenido?.imagen ? require(`../assets/img/${contenido.imagen}`) : null;
+  const handleTabClick = (tabKey) => {
+    navigate(`/${sede}/mas/${tabKey}`);
+  };
+
+  // --- Animaciones ---
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    exit: { opacity: 0, y: -50, transition: { duration: 0.4, ease: "easeIn" } }
+  };
+
+  const tabVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.35 } },
+    exit: { opacity: 0, x: -50, transition: { duration: 0.25 } }
+  };
 
   return (
-    <AnimatePresence mode="wait">
-      <motion.div
-        key={seccion}
-        className="card border-0 p-4 my-4 mx-auto"
-        style={{ maxWidth: "1100px", color: "#001A66", fontFamily: "'Montserrat', sans-serif" }}
-        initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }}
-        exit={{ opacity: 0, y: -50 }}
-        transition={{ duration: 0.6 }}
-      >
-        <motion.h1
-  className="text-center mb-4"
-  style={{ fontWeight: 800, fontSize: "3rem" }}
->
-  {seccion === "misionvision" || seccion === "filosofia"
-    ? "Misión, Visión y Filosofía"
-    : capitalize(contenido.titulo || seccion)}
-</motion.h1>
+    <div
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        fontFamily: "'Montserrat', sans-serif",
+        color: "#001A66",
+        backgroundImage: `url(${fondo})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        marginTop: "-13rem",
+      }}
+    >
+      <div
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: "100%",
+          height: "100%",
+          backgroundColor: "rgba(255,255,255,0.82)",
+          zIndex: 0,
+        }}
+      />
 
-        {/* Imagen sticky en Bienvenida o Historia */}
-        {(normalizeText(seccion) === "bienvenida" || normalizeText(seccion) === "historia") && sectionImage && (
-          <div className="row mb-4">
-            <div className="col-md-8">
-              <p style={{ whiteSpace: "pre-line", fontSize: "1rem" }}>{contenido.contenido}</p>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={seccion}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          style={{
+            position: "relative",
+            zIndex: 1,
+            maxWidth: "1100px",
+            margin: "0 auto",
+            padding: "2rem 1rem",
+            marginTop: "5rem",
+          }}
+        >
+          <h1
+            style={{
+              fontSize: "3.5rem",
+              fontWeight: 700,
+              marginBottom: "2rem",
+              textAlign: "center",
+              marginTop: "6rem",
+            }}
+          >
+            {seccion === "misionvision" ? "Misión y Visión" : capitalize(seccion)}
+          </h1>
+
+          <div
+            style={{
+              display: "flex",
+              gap: "2rem",
+              marginLeft: "3rem",
+              alignItems: "flex-start",
+            }}
+          >
+            {/* IZQUIERDA */}
+            <div style={{ flex: "0 0 600px" }} ref={leftRef}>
+              <AnimatePresence mode="wait">
+                <motion.div
+                  key={activeTab}
+                  variants={tabVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                >
+                  {seccion === "autoridades" ? (
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
+                        gap: "1rem",
+                        justifyItems: "center",
+                        marginBottom: "1rem",
+                      }}
+                    >
+                      {contenido.map((item, j) => (
+                        <div
+                          key={j}
+                          className="shadow-lg"
+                          style={{
+                            background: "#fff",
+                            borderRadius: "10px",
+                            padding: "1rem",
+                            width: "100%",
+                            maxWidth: "350px",
+                            textAlign: "center",
+                            boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
+                            wordWrap: "break-word",
+                            overflow: "hidden",
+                            fontSize: "0.9rem",
+                          }}
+                        >
+                          <h4
+                            style={{
+                              fontWeight: 700,
+                              color: "#001A66",
+                              marginBottom: "0.3rem",
+                              fontSize: "1rem",
+                            }}
+                          >
+                            {item.cargo}
+                          </h4>
+                          <p style={{ fontWeight: 500, marginBottom: "0.2rem", fontSize: "0.85rem" }}>
+                            {item.nombre}
+                          </p>
+                          <p>
+                            <a
+                              href={`mailto:${item.correo}`}
+                              style={{
+                                color: "#009DFA",
+                                textDecoration: "none",
+                                fontWeight: 500,
+                                fontSize: "0.8rem",
+                              }}
+                            >
+                              {item.correo}
+                            </a>
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  ) : Array.isArray(contenido) ? (
+                    contenido.map((item, i) => (
+                      <motion.div key={i} className="p-3 shadow-sm rounded" style={{ background: "#fff", marginBottom:"2rem" }}>
+                        {item.titulo && <h3 style={{ fontWeight: 700 }}>{item.titulo}</h3>}
+                        <p style={{ whiteSpace: "pre-line" }}>{item.contenido}</p>
+                      </motion.div>
+                    ))
+                  ) : (
+                    <motion.p
+                      style={{
+                        whiteSpace: "pre-line",
+                        background: "#fff",
+                        padding: "1rem",
+                        borderRadius: "5px",
+                      }}
+                    >
+                      {contenido.contenido || contenido}
+                    </motion.p>
+                  )}
+                </motion.div>
+              </AnimatePresence>
             </div>
-            <div className="col-md-4">
-              <div style={{ position: "sticky", top: "120px" }}>
-                <img
-                  src={sectionImage}
-                  alt={contenido.titulo}
-                  className="img-fluid shadow-sm rounded"
-                  style={{ maxHeight: "450px", width: "100%", objectFit: "cover" }}
-                />
+
+            {/* DERECHA */}
+            <div style={{ flex: "0 0 380px", alignSelf: "flex-start" }}>
+              <div
+                style={{
+                  position: "sticky",
+                  top: "20px",
+                }}
+                ref={rightRef}
+              >
+                <div
+                  style={{
+                    backgroundColor: "#001A66",
+                    color: "#fff",
+                    padding: "0.5rem 1rem",
+                    fontWeight: 700,
+                    marginBottom: "1.5rem",
+                    borderRadius: "5px",
+                    textAlign: "center",
+                    borderBottom: "5px solid #009DFA",
+                  }}
+                >
+                  Acerca de la Universidad
+                </div>
+
+                <div
+                  style={{
+                    background: "#F5F7FF",
+                    padding: "1rem",
+                    borderRadius: "8px",
+                    boxShadow: "0 0 6px rgba(0,0,0,0.1)",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: "0.5rem",
+                  }}
+                >
+                  {tabs.map((tab) => (
+                    <button
+                      key={tab.key}
+                      onClick={() => handleTabClick(tab.key)}
+                      style={{
+                        backgroundColor: activeTab === tab.key ? "#009DFA" : "#001A66",
+                        color: "#fff",
+                        border: "none",
+                        padding: "0.6rem",
+                        cursor: "pointer",
+                        fontWeight: 600,
+                        borderRadius: "5px",
+                      }}
+                    >
+                      {tab.label}
+                    </button>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
-        )}
-
-        {/* Bloque unificado Misión, Visión y Filosofía */}
-        {contenidoUnificado && (
-          <div className="d-flex flex-column gap-4">
-            {/* Misión y Visión arriba */}
-            <div className="d-flex flex-wrap gap-3 justify-content-center">
-              {contenidoUnificado
-                .filter((item) => item.titulo === "Misión" || item.titulo === "Visión")
-                .map((item, i) => (
-                  <motion.div
-                    key={i}
-                    className="p-3 shadow-sm rounded"
-                    style={{ background: "#f2f6ff", minWidth: "250px", flex: "1 1 250px" }}
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ delay: 0.1 * i }}
-                  >
-                    <h3 style={{ fontWeight: 700 }}>{item.titulo}</h3>
-                    <p style={{ whiteSpace: "pre-line" }}>{item.contenido}</p>
-                  </motion.div>
-                ))}
-            </div>
-
-            {/* Filosofía abajo */}
-            <div className="p-3 shadow-sm rounded" style={{ background: "#e6f0ff" }}>
-              <h3 style={{ fontWeight: 700 }}>Filosofía</h3>
-              <p style={{ whiteSpace: "pre-line" }}>
-                {contenidoUnificado.find((item) => item.titulo === "Filosofía")?.contenido}
-              </p>
-            </div>
-          </div>
-        )}
-
-        {/* Reglamento */}
-        {normalizeText(seccion) === "reglamento" && (
-          <div className="d-flex flex-column gap-2">
-            {contenido.map((item, i) => (
-              <motion.a
-                key={i}
-                href={`/assets/pdf/${item.archivo}`}
-                target="_blank"
-                className="btn btn-primary"
-                style={{ maxWidth: "300px" }}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ delay: 0.1 * i }}
-              >
-                {item.titulo}
-              </motion.a>
-            ))}
-          </div>
-        )}
-
-{normalizeText(seccion) === "autoridades" && (
-  <div
-    className="d-flex flex-wrap justify-content-center align-items-stretch"
-    style={{
-      gap: "2.2rem", // ← ESPACIADO AMPLIO ENTRE TARJETAS
-      padding: "1rem 0",
-    }}
-  >
-    {contenido.map((a, index) => (
-      <motion.div
-        key={index}
-        className="shadow-sm rounded d-flex flex-column text-center"
-        style={{
-          background: "#f2f6ff",
-          borderLeft: "4px solid #001A66",
-          minWidth: "260px",
-          maxWidth: "260px",
-          flex: "1 1 260px",
-
-          padding: "1.5rem",   // ← más espacio interno
-          borderRadius: "12px",
-
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "flex-start",
-        }}
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 0.1 * index }}
-      >
-        {/* Nombre */}
-        <h6
-          style={{
-            fontWeight: 700,
-            marginBottom: "0.3rem",
-            height: "45px",
-            overflow: "hidden",
-
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "flex-start",
-            textAlign: "center",
-            width: "100%",
-          }}
-        >
-          {a.nombre}
-        </h6>
-
-        {/* Cargo */}
-        <p
-          style={{
-            margin: "0.1rem 0",
-            fontSize: "0.8rem",
-            height: "55px",
-            overflow: "hidden",
-
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-            width: "100%",
-          }}
-        >
-          {a.cargo}
-        </p>
-
-        {/* Correo */}
-        <p
-          style={{
-            margin: 0,
-            fontSize: "0.85rem",
-            height: "40px",
-            overflow: "hidden",
-
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            textAlign: "center",
-            width: "100%",
-          }}
-        >
-          {a.correo}
-        </p>
-      </motion.div>
-    ))}
-  </div>
-)}
-
-
-
-
-
-        {/* Secciones normales */}
-        {!contenidoUnificado &&
-          normalizeText(seccion) !== "reglamento" &&
-          normalizeText(seccion) !== "autoridades" &&
-          normalizeText(seccion) !== "bienvenida" &&
-          normalizeText(seccion) !== "historia" && (
-            <motion.p style={{ whiteSpace: "pre-line", fontSize: "1.1rem" }}>
-              {contenido.contenido}
-            </motion.p>
-          )}
-      </motion.div>
-    </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 }

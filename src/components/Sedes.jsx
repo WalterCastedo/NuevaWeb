@@ -94,10 +94,12 @@ export default function SeleccionarSede() {
                       style={{ textAlign: "center", cursor: "pointer", opacity}}
                       onMouseEnter={() => setActiveSede(sede.nombre)}
                       onMouseLeave={() => setActiveSede(null)}
-                     onClick={() => {
-  navigate(`/${sede.nombre.replace(/\s+/g, '')}`);
+                    onClick={() => {
+  // Normaliza: quitar espacios y pasar a minúsculas
+  const sedeUrl = sede.nombre.replace(/\s+/g, "").toLowerCase();
+  navigate(`/${sedeUrl}`);
   window.scrollTo({ top: 0, behavior: "smooth" });
-}}                    >
+}}               >
                       <div
   style={{
     height: "110px",

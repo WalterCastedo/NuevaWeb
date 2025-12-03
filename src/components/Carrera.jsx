@@ -10,7 +10,7 @@ const images = require.context("../assets/img/mallas", false, /\.(png|jpe?g|svg|
 export default function CareerCard() {
   const { sede, carrera } = useParams();
   const [showVideo, setShowVideo] = useState(false);
-  const [activeTab, setActiveTab] = useState("mision");
+  const [activeTab, setActiveTab] = useState("misionVision");
   const [zoomPos, setZoomPos] = useState({ x: 0, y: 0, visible: false });
   const iframeRef = useRef(null);
 
@@ -22,41 +22,23 @@ export default function CareerCard() {
   const sedeKey = Object.keys(careersData).find(
     (key) => normalizeText(key) === normalizeText(sede.replace(/([A-Z])/g, " $1").trim())
   );
-
   const sedeInfo = sedeKey ? careersData[sedeKey] : null;
   const data = sedeInfo?.carrera.find(
     (item) => normalizeText(item.title) === normalizeText(carrera)
   );
 
-  const videoId = data?.video ? (() => {
-    const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/;
-    const match = data.video.match(regExp);
-    return match && match[2].length === 11 ? match[2] : null;
-  })() : null;
-
- const thumbnail = videoId
-  ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
-  : null; 
-  const mallaImage = data?.malla ? images(`./${data.malla}`) : null;
-
-  // --- Control cuando el video termina ---
+  // Video control
   useEffect(() => {
     if (!showVideo || !iframeRef.current) return;
-
     const interval = setInterval(() => {
-      const iframe = iframeRef.current;
-      iframe.contentWindow.postMessage(JSON.stringify({ event: "listening" }), "*");
+      iframeRef.current.contentWindow.postMessage(JSON.stringify({ event: "listening" }), "*");
     }, 500);
-
     const handleMessage = (event) => {
       try {
         const msg = JSON.parse(event.data);
-        if (msg.event === "onStateChange" && msg.info === 0) {
-          setShowVideo(false);
-        }
+        if (msg.event === "onStateChange" && msg.info === 0) setShowVideo(false);
       } catch {}
     };
-
     window.addEventListener("message", handleMessage);
     return () => {
       clearInterval(interval);
@@ -65,39 +47,61 @@ export default function CareerCard() {
   }, [showVideo]);
 
   if (!sedeInfo) return <div className="text-center mt-5">Sede no encontrada</div>;
-  if (!data) return <NotFound mensaje={`La sede no existe.`} />;
+  if (!data) return <NotFound mensaje={`La carrera no existe.`} />;
 
-  // --- Zoom malla ---
+  const videoId = data?.video
+    ? (() => {
+        const regExp = /^.*(youtu\.be\/|v\/|u\/\w\/|embed\/|watch\?v=)([^#&?]*).*/;
+        const match = data.video.match(regExp);
+        return match && match[2].length === 11 ? match[2] : null;
+      })()
+    : null;
+  const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : null;
+  const mallaImage = data?.malla ? images(`./${data.malla}`) : null;
+
   const handleMouseMove = (e) => {
     const rect = e.currentTarget.getBoundingClientRect();
     const x = ((e.clientX - rect.left) / rect.width) * 100;
     const y = ((e.clientY - rect.top) / rect.height) * 100;
     setZoomPos({ x, y, visible: true });
   };
-
   const handleMouseLeave = () => setZoomPos({ ...zoomPos, visible: false });
+
+  const whatsapp = sedeInfo?.whatsapp || "";
+  const mensaje = encodeURIComponent(`Hola, deseo solicitar más información sobre la carrera ${data.title} en la sede ${sede}.`);
+  const enlaceWhatsApp = `https://wa.me/${whatsapp}?text=${mensaje}`;
 
   // --- Tabs ---
   const tabs = [
-    { key: "mision", label: "Misión", content: <p>{data.mission}</p> },
-    { key: "vision", label: "Visión", content: <p>{data.vision}</p> },
-    { key: "campo", label: "Campo Laboral", content: <ul>{data.roles?.map((r, i) => <li key={i}>{r}</li>)}</ul> },
-    { key: "valores", label: "Valores", content: <ul>{data.values?.map((v, i) => <li key={i}>{v}</li>)}</ul> },
+    {
+      key: "misionVision",
+      label: "Misión y Visión",
+      content: (
+        <div>
+          <p>{data.mission}</p>
+          <p>{data.vision}</p>
+        </div>
+      )
+    },
+    {
+      key: "campo",
+      label: "Campo Laboral",
+      content: <ul>{data.roles?.map((r, i) => <li key={i}>{r}</li>)}</ul>
+    },
+    {
+      key: "valores",
+      label: "Valores",
+      content: <ul>{data.values?.map((v, i) => <li key={i}>{v}</li>)}</ul>
+    },
     {
       key: "malla",
       label: "Malla Curricular",
       content: mallaImage && (
-        <div
-          style={{ display: "inline-block", position: "relative" }}
+        <div style={{ display: "inline-block", position: "relative" }}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
         >
-          <img
-            src={mallaImage}
-            alt={`Malla ${data.title}`}
-            className="img-fluid shadow-sm"
-            style={{ borderRadius: "10px" }}
-          />
+          <img src={mallaImage} alt={`Malla ${data.title}`} className="img-fluid shadow-sm" style={{ borderRadius: "10px" }} />
           {zoomPos.visible && (
             <div
               style={{
@@ -119,75 +123,122 @@ export default function CareerCard() {
           )}
         </div>
       )
+    },
+    {
+      key: "informacion",
+      label: "Solicitar Información",
+      content: (
+        <div style={{ textAlign: "center", marginTop: "1rem" }}>
+          <a href={enlaceWhatsApp} target="_blank" rel="noopener noreferrer"
+            style={{
+              backgroundColor: "#1f219bff",
+              padding: "0.8rem 1.5rem",
+              borderRadius: "8px",
+              color: "white",
+              textDecoration: "none",
+              fontWeight: 700,
+              fontSize: "1.1rem",
+              display: "inline-block"
+            }}
+          >
+            Solicitar más información
+          </a>
+        </div>
+      )
     }
   ];
 
-  const whatsapp = sedeInfo?.whatsapp || "";
-  const mensaje = encodeURIComponent(`Hola, deseo solicitar más información sobre la carrera ${data.title} en la sede ${sede}.`);
-  const enlaceWhatsApp = `https://wa.me/${whatsapp}?text=${mensaje}`;
+  // --- Variants de animación ---
+  const containerVariants = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    exit: { opacity: 0, y: -50, transition: { duration: 0.4, ease: "easeIn" } }
+  };
+
+  const tabVariants = {
+    hidden: { opacity: 0, x: 50 },
+    visible: { opacity: 1, x: 0, transition: { duration: 0.35 } },
+    exit: { opacity: 0, x: -50, transition: { duration: 0.25 } }
+  };
+
+  const videoVariants = {
+    hidden: { opacity: 0, scale: 0.8 },
+    visible: { opacity: 1, scale: 1, transition: { duration: 0.4, ease: "easeOut" } },
+    exit: { opacity: 0, scale: 0.8, transition: { duration: 0.3, ease: "easeIn" } }
+  };
 
   return (
-    <AnimatePresence mode="wait">
-      {/* Contenedor principal con fondo global */}
-      <motion.div
-        key={carrera}
-        style={{
-          position: "relative",
-          minHeight: "100vh",
-          fontFamily: "'Montserrat', sans-serif",
-          color: "#001A66",
-          backgroundImage: `url(${fondo})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          backgroundRepeat: "no-repeat",
-          backgroundAttachment: "fixed",
-          marginTop: "-120px", // si hay menú fijo arriba
-        }}
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        exit={{ opacity: 0 }}
-        transition={{ duration: 0.4 }}
-      >
-        {/* Filtro blanco semitransparente */}
-        <div style={{
-          position: "absolute",
-          top: 0,
-          left: 0,
-          width: "100%",
-          height: "100%",
-          backgroundColor: "rgba(255, 255, 255, 0.82)",
-          zIndex: 0,
-        }} />
+    <div
+      style={{
+        position: "relative",
+        minHeight: "100vh",
+        fontFamily: "'Montserrat', sans-serif",
+        color: "#001A66",
+        backgroundImage: `url(${fondo})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        backgroundAttachment: "fixed",
+        marginTop:"-13rem"
+      }}
+    >
+      <div style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
+        backgroundColor: "rgba(255,255,255,0.82)",
+        zIndex: 0,
+      }}/>
 
-        {/* Contenido encima del filtro */}
-        <div style={{ position: "relative", zIndex: 1, maxWidth: "1100px", margin: "0 auto", padding: "2rem 1rem" }}>
-          <h1 style={{ fontSize: "3.5rem", fontWeight: 700, textAlign: "center", marginTop: "5.5rem" }}>{data.title}</h1>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={carrera}
+          variants={containerVariants}
+          initial="hidden"
+          animate="visible"
+          exit="exit"
+          style={{ position: "relative", zIndex: 1, maxWidth: "1100px", margin: "0 auto", padding: "2rem 1rem", marginTop: "5rem" }}
+        >
+          <h1 style={{ fontSize: "3.5rem", fontWeight: 700, textAlign: "center", marginTop:"6rem" }}>{data.title}</h1>
 
-          <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap", marginTop: "2rem" }}>
+          <div style={{ display: "flex", gap: "2rem", flexWrap: "wrap", marginTop: "2rem", marginLeft:"3rem" }}>
             {/* IZQUIERDA */}
             <div style={{ flex: "0 0 600px" }}>
               {videoId && (
-                <div className="ratio ratio-16x9 mb-3">
-                  {showVideo ? (
-                    <iframe
-                      ref={iframeRef}
-                      src={`https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`}
-                      title="Video de la carrera"
-                      allowFullScreen
-                      className="w-100 h-100 rounded shadow-sm"
-                    />
-                  ) : (
-                    <div
-                      className="w-100 h-100 d-flex align-items-center justify-content-center rounded shadow-sm"
-                      style={{ backgroundImage: `url(${thumbnail})`, backgroundSize: "cover", backgroundPosition: "center", cursor: "pointer" }}
-                      onClick={() => setShowVideo(true)}
-                    >
-                      <span style={{ background: "rgba(0,0,0,0.6)", borderRadius: "50%", padding: "20px", color: "white", fontSize: "2rem" }}>▶</span>
-                    </div>
-                  )}
-                </div>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={showVideo ? "video" : "thumbnail"}
+                    variants={videoVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    className="ratio ratio-16x9 mb-3"
+                  >
+                    {showVideo ? (
+                      <iframe
+                        ref={iframeRef}
+                        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`}
+                        title="Video de la carrera"
+                        allowFullScreen
+                        className="w-100 h-100 rounded shadow-sm"
+                      />
+                    ) : (
+                      <div
+                        className="w-100 h-100 d-flex align-items-center justify-content-center rounded shadow-sm"
+                        style={{ backgroundImage: `url(${thumbnail})`, backgroundSize: "cover", backgroundPosition: "center", cursor: "pointer" }}
+                        onClick={() => setShowVideo(true)}
+                      >
+                        <span style={{ background: "rgba(0,0,0,0.6)", borderRadius: "50%", padding: "20px", color: "white", fontSize: "2rem" }}>▶</span>
+                      </div>
+                    )}
+                  </motion.div>
+                </AnimatePresence>
               )}
-              <p style={{ whiteSpace: "pre-line", marginTop: "1rem" }}>{data.description}</p>
+              <div style={{ background: "#F5F7FF", padding: "1rem", borderRadius: "8px", boxShadow: "0 0 6px rgba(0,0,0,0.1)" }}>
+                <p style={{ whiteSpace: "pre-line", marginTop: "1rem" }}>{data.description}</p>
+              </div>
             </div>
 
             {/* DERECHA */}
@@ -210,23 +261,23 @@ export default function CareerCard() {
                       }}>{tab.label}</button>
                   ))}
                 </div>
-                <motion.div key={activeTab} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.25 }} style={{ marginTop: "1rem" }}>
-                  {tabs.find((t) => t.key === activeTab)?.content}
-                </motion.div>
+                <AnimatePresence mode="wait">
+                  <motion.div
+                    key={activeTab}
+                    variants={tabVariants}
+                    initial="hidden"
+                    animate="visible"
+                    exit="exit"
+                    style={{ marginTop: "1rem" }}
+                  >
+                    {tabs.find((t) => t.key === activeTab)?.content}
+                  </motion.div>
+                </AnimatePresence>
               </div>
             </div>
           </div>
-
-          <div style={{ textAlign: "center", marginTop: "1.5rem", paddingBottom:"2rem" }}>
-            <a href={enlaceWhatsApp} target="_blank" rel="noopener noreferrer"
-              style={{
-                backgroundColor: "#1f219bff", padding: "0.8rem 1.5rem", borderRadius: "8px",
-                color: "white", textDecoration: "none", fontWeight: 700, fontSize: "1.1rem", display: "inline-block"
-              }}
-            >Solicitar más información</a>
-          </div>
-        </div>
-      </motion.div>
-    </AnimatePresence>
+        </motion.div>
+      </AnimatePresence>
+    </div>
   );
 }

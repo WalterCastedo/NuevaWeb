@@ -28,6 +28,8 @@ export default function Home() {
       {sedeData?.alumni && <Alumni data={sedeData.alumni} />}
       {sedeData?.requisitos && <Requisitos data={sedeData.requisitos} />}
       {sedeData?.noticias && <Noticias data={sedeData.noticias} />}
+      
+      
     </>
   );
 }

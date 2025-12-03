@@ -1,10 +1,43 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useParams, useNavigate } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import CareerCard from "./components/Carrera";
-import SeccionMas from "./components/SeccionMas";   // <--- IMPORTANTE
+import SeccionMas from "./components/SeccionMas";
 import SeleccionarSede from "./pages/SeleccionarSede";
+import Interaccion from "./components/inteaccion";
+import ScrollToTop from "./components/ScrollToTop";
+import { useEffect } from "react";
+
+// Componente para normalizar params y redirigir si es necesario
+function RouteWrapper({ element: Element }) {
+  const navigate = useNavigate();
+  const params = useParams();
+
+  useEffect(() => {
+    // Normaliza todos los parámetros a minúscula
+    let normalized = false;
+    const newParams = {};
+    Object.keys(params).forEach((key) => {
+      if (params[key] && params[key] !== params[key].toLowerCase()) {
+        newParams[key] = params[key].toLowerCase();
+        normalized = true;
+      }
+    });
+
+    if (normalized) {
+      // Construye la URL normalizada y reemplaza la ruta
+      let path = window.location.pathname;
+      Object.keys(newParams).forEach((key) => {
+        const re = new RegExp(params[key], "i");
+        path = path.replace(re, newParams[key]);
+      });
+      navigate(path, { replace: true });
+    }
+  }, [params, navigate]);
+
+  return <Element />;
+}
 
 function AppContent() {
   return (
@@ -17,9 +50,9 @@ function AppContent() {
         path="/:sede"
         element={
           <>
-            <Header />
+            <RouteWrapper element={Header} />
             <main className="bg-white min-h-screen">
-              <Home />
+              <RouteWrapper element={Home} />
             </main>
             <Footer />
           </>
@@ -28,26 +61,40 @@ function AppContent() {
 
       {/* Página de carrera */}
       <Route
-        path="/:sede/Carrera/:carrera"
+        path="/:sede/carrera/:carrera"
         element={
           <>
-            <Header />
+            <RouteWrapper element={Header} />
             <main className="bg-white min-h-screen">
-              <CareerCard />
+              <RouteWrapper element={CareerCard} />
             </main>
             <Footer />
           </>
         }
       />
 
-      {/* 🔵 PÁGINAS DEL MENÚ "MÁS" */}
+      {/* PÁGINAS DEL MENÚ "MÁS" */}
       <Route
         path="/:sede/mas/:seccion"
         element={
           <>
-            <Header />
+            <RouteWrapper element={Header} />
             <main className="bg-white min-h-screen">
-              <SeccionMas />
+              <RouteWrapper element={SeccionMas} />
+            </main>
+            <Footer />
+          </>
+        }
+      />
+
+      {/* Página de interacción */}
+      <Route
+        path="/:sede/interaccion/:programa"
+        element={
+          <>
+            <RouteWrapper element={Header} />
+            <main className="bg-white min-h-screen">
+              <RouteWrapper element={Interaccion} />
             </main>
             <Footer />
           </>
@@ -70,6 +117,7 @@ function AppContent() {
 export default function App() {
   return (
     <Router>
+      <ScrollToTop />
       <AppContent />
     </Router>
   );
