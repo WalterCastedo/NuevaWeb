@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { useParams } from "react-router-dom";
 import dataJson from "../assets/json/datos.json"; 
-import fondoDefault from "../assets/img/fondoRedAlumni.png";
+import fondoDefault from "../assets/img/fondoRedAlumni.webp";
 
 function AnimatedCircle({ value, label, duration = 2000, showPlus = false, delay = 0, hover }) {
   const [count, setCount] = useState(0);

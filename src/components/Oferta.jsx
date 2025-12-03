@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate, useParams } from "react-router-dom";
 import datos from "../assets/json/datos.json";
-import fondoDefault from "../assets/img/fondoOferta.png";
+import fondoDefault from "../assets/img/fondoOferta.webp";
 
 export default function Oferta() {
   const navigate = useNavigate();

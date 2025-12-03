@@ -1,10 +1,10 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaRegFileAlt, FaRegClipboard, FaIdCard, FaRegImage } from "react-icons/fa";
-import fondoRequisitos from "../assets/img/fondoRequisitos.png";
-import fotoRequisito from "../assets/img/fotos.png";
-import certificadoRequisito from "../assets/img/certificado.jpg";
-import carnetRequisito from "../assets/img/carnet.png";
+import fondoRequisitos from "../assets/img/fondoRequisitos.webp";
+import fotoRequisito from "../assets/img/fotos.webp";
+import certificadoRequisito from "../assets/img/certificado.webp";
+import carnetRequisito from "../assets/img/carnet.webp";
 import tituloRequisito from "../assets/img/titulo.webp";
 
 export default function Requisitos() {

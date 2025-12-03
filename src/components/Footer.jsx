@@ -1,6 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { FaInstagram, FaFacebook, FaTwitter } from "react-icons/fa";
-import logo from "../assets/img/logo.png"; // coloca aquí tu logo
+import logo from "../assets/img/logo.webp"; // coloca aquí tu logo
 
 export default function Footer() {
   return (

@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import fondoNoticias from "../assets/img/noticias.png";
+import fondoNoticias from "../assets/img/noticias.webp";
 
 export default function Noticias() {
   useEffect(() => {

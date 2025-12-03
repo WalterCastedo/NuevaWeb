@@ -2,11 +2,11 @@
     "SantaCruz": {
       "whatsapp":"+59162241035",
       "imagenes":{
-        "personaPortada":"chicaUno.png",
-        "fondoIncripcion":"fondoLibertad.png",
-        "fondoAlumni":"fondoRedAlumni.png",
-        "graduados":"graduados.png",
-        "fondoOferta":"fondoOferta.png"
+        "personaPortada":"chicaUno.webp",
+        "fondoIncripcion":"fondoLibertad.webp",
+        "fondoAlumni":"fondoRedAlumni.webp",
+        "graduados":"graduados.webp",
+        "fondoOferta":"fondoOferta.webp"
       },
 
       "mas": {
@@ -14,12 +14,12 @@
           "titulo": "Bienvenida",
           "contenido": "A nombre de la familia UNO le queremos agradecer por el interés mostrado en nuestra institución y su visita a nuestra pagina web.\nPara nosotros es muy importante su visita porque nos da la oportunidad de poder mostrarle un poco de nuestra institución, de toda nuestra oferta académica en los diferentes niveles que tenemos, técnico superior, a nivel licenciatura (en 4 años y medio) y la oferta académica de todos los postgrados con los que contamos en todas nuestras sedes.\nActualmente la Universidad Nacional del Oriente cuenta con sedes legalmente establecidas en las ciudades de Santa Cruz de la Sierra, Montero, Tarija y Yacuiba.\nEstamos seguros que con sueños y trabajo duro próximamente estaremos anunciando la apertura de mas sedes.\nLa evolución académica y tecnológica nos demandan nuevas actualizaciones, por lo que esperamos que en esta su visita hubiese encontrado la información que estaba buscando.\nCon el afán de mantener una excelencia académica, todas las autoridades y los planteles administrativo y académico ratificamos nuestro compromiso de constante desarrollo en favor de nuestras regiones, y principalmente para el desarrollo de nuestra amada BOLIVIA.",
           "Autor":"Dr. M.Sc. Sergio A. Borja Alarcón\nRECTOR – UNIVERSIDAD NACIONAL DEL ORIENTE",
-          "imagen":"rector.png"
+          "imagen":"rector.webp"
           },
         "historia": {
           "titulo": "Reseña Histórica",
           "contenido": "La Universidad Nacional del Oriente de Santa Cruz, fue creada en el año 1999 aunque recién en la primera gestión del 2000 abre sus puertas a la población estudiantil de la ciudad de Santa Cruz de la Sierra y de su provincia Montero.\n\nEl 22 de Junio de 1999, el ministerio de Educación, emite la Resolución Ministerial Nº 203/99, autorizando el funcionamiento de las carreras de Bioquímica, Enfermería. Fisioterapia y Kinesiología, Biología a nivel Licenciatura. Además de Mercadotecnia. Forestal, Estadística a nivel Técnico Superior.\n\nAmparada bajo esta Resolución la Universidad inicia sus primeras clases en aulas ubicadas en el Segundo Anillo y Avenida Piraí, con 26 estudiantes inscritos en su primera gestión de funcionamiento.\n\nEl 1º de febrero de 2001, la Universidad recibe la Resolución Ministerial de Funcionamiento Nº 042/01, autorizando las carreras de Odontología, Derecho, Ingeniería de Sistemas a nivel Licenciatura y Análisis de Sistemas, Prótesis Dental, Contaduría a Nivel Técnico Superior.\n\nCon el aumento de la oferta académica, la población estudiantil de la universidad asciende para el año 2002 a 334 estudiantes inscritos, obligando a esta Casa Superior de Estudios a cambiar de infraestructura, trasladándose a los Edificios Zurita y Ortuño ubicados en la calle España entre Buenos Aires y Seoane.\n\nCon el compromiso de superación la Universidad Nacional del Oriente realiza la adquisición del Edificio Villarroel, infraestructura de gran importancia y Patrimonio Histórico y Cultural de Santa Cruz, ubicada en la calle España esquina Florida. Este edificio funciona como base para la Escuela de Postgrado.\n\nEl 23 de Mayo de 2008, el Ministerio de Educación emite la Resolución de Funcionamiento Nº 318/08, autorizando la apertura de la Subsede Académica en la ciudad de Montero – Santa Cruz de la Sierra, Subsede que se apertura con las carreras de Enfermería, Derecho e Ingeniería de Sistemas.\nEn fecha 19 de julio del año 2012 por Res. Ministerial Nº 449/2012, se aprueba el Plan de estudios de la Carrera Medicina, posibilitando el inicio de sus actividades académicas.\nEl 22 de Diciembre del año 2015, por Resolución Ministerial Nº 996/2015, aprueba la apertura de las Carreras: Licenciatura en Odontología, Bioquímica y Farmacia, Fisioterapia y Kinesiología y Licenciatura en Contaduría Pública; en la Subsede Montero.\nLa Resolución Ministerial Nº 0913/2016 del 30 de diciembre del 2016 se aprueban los rediseños curriculares de las Carreras Licenciatura en: Derecho, Enfermería, Ing. de Sistemas, Odontología, Bioquímica y Farmacia, Fisioterapia y Kinesiología y Técnico superior en Contaduría.\nAsí mismo el 30 de diciembre a través de la Resolución Ministerial Nº 0936/2016, se aprueba el inicio de actividades de la Subsede Tarija, con las siguientes Carreras: Odontología, Enfermería y Contaduría Pública.\nDe acuerdo con el artículo 1º del Estatuto Orgánico de la Universidad Nacional del Oriente, ésta es una institución de Educación Superior, que forma parte de la Asociación Nacional de Universidades Privadas en igual jerarquía que las demás universidades, bajo el respaldo de la Constitución Política del Estado Plurinacional de Bolivia, la cual establece que todas sus actividades académicas, están reguladas por el Ministerio de Educación, a través del Reglamento General de Universidades Privadas y su Estatuto Orgánico.\nAl presente cuenta con más de 18 años de excelencia académica e importante contribución a la formación de recursos humanos altamente calificados para las regiones dónde se hallan las subsedes y todo el Estado.\nLa Universidad Nacional del Oriente tiene como premisa fundamental coadyuvar al mejoramiento del bienestar de toda la población del país así como de la constante superación de la comunidad universitaria, mejorando paulatinamente las condiciones de infraestructura y oferta académica, de acuerdo a gestiones que desarrollan sus autoridades.\n\nLa comunidad universitaria de la UNO, está conformada por estudiantes de pregrado postgrado y docentes, en su Sede Principal Santa Cruz y sus dos Subsedes Tarija y Montero, distribuidos en 7 carreras y unidades de postgrado, además de la planta administrativa.\nCuenta con dos subsedes académicas en las ciudades de Montero y Tarija, así como el diseño de otros proyectos para promover la formación profesional en todas las regiones del país.",
-          "imagen":"fundador.png"
+          "imagen":"fundador.webp"
         },
         "filosofia": {
           "titulo": "Filosofía",
@@ -161,21 +161,21 @@
 
     },
       "oferta": [
-        {"title": "Medicina", "imagen": "medicinaSC.png"},
-        {"title": "Odontología", "imagen": "odontoSC.png"},
-        {"title": "Enfermería", "imagen": "enfeSC.png"},
-        {"title": "Bioquímica y Farmacia", "imagen": "bioSC.png"},
-        {"title": "Fisioterapia y Kinesiología", "imagen": "fisioSC.png"},
-        {"title": "Ingenieria de Sistemas", "imagen": "sistemasSC.png"},
-        {"title": "Derecho", "imagen": "derechoSC.png"},
-        {"title": "Protesis Dental", "imagen": "odontoSC.png"}
+        {"title": "Medicina", "imagen": "medicinaSC.webp"},
+        {"title": "Odontología", "imagen": "odontoSC.webp"},
+        {"title": "Enfermería", "imagen": "enfeSC.webp"},
+        {"title": "Bioquímica y Farmacia", "imagen": "bioSC.webp"},
+        {"title": "Fisioterapia y Kinesiología", "imagen": "fisioSC.webp"},
+        {"title": "Ingenieria de Sistemas", "imagen": "sistemasSC.webp"},
+        {"title": "Derecho", "imagen": "derechoSC.webp"},
+        {"title": "Protesis Dental", "imagen": "odontoSC.webp"}
         
 
       ],
       "sedes": [
-        {"title": "Medicina", "imagen": "medicina.png"},
-        {"title": "Odontología", "imagen": "odontologia.png"},
-        {"title": "Enfermería", "imagen": "enfermeria.png"}
+        {"title": "Medicina", "imagen": "medicina.webp"},
+        {"title": "Odontología", "imagen": "odontologia.webp"},
+        {"title": "Enfermería", "imagen": "enfermeria.webp"}
       ],
       "requisitos": [
       
@@ -190,7 +190,7 @@
     "description": "Desarrolla habilidades diagnósticas y terapéuticas precisas mediante la aplicación sistemática del método clínico, promoviendo una atención médica centrada en el paciente. \n \nFomentar la innovación a través de la investigación científica y el desarrollo de tecnologías aplicadas a la salud, con el fin de mejorar la eficiencia diagnóstica, terapéutica y preventiva en el ámbito médico.",
     "rm": "R.M No 449/2012",
     "video":"https://www.youtube.com/watch?v=nTj6DBd096k",
-    "malla": "mMedicina.png",
+    "malla": "mMedicina.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
@@ -211,7 +211,7 @@
     "description": "El odontólogo es un profesional universitario con sólida formación científico-humanista, capaz de brindar atención odontológica de alta calidad y referir, con prontitud y acierto, a pacientes que requieren cuidados especializados.\n\nAsimismo, participa en acciones de promoción de la salud, prevención de enfermedades, recuperación y rehabilitación odontológica, adoptando siempre las disposiciones reglamentarias vigentes en salubridad y medio ambiente, y actuando con principios éticos y humanistas.",
     "rm": "R.M No 452/2012",
     "video":"https://www.youtube.com/watch?v=nTj6DBd096k",
-    "malla": "mOdonto.jpg",
+    "malla": "mOdonto.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
@@ -234,7 +234,7 @@
     "description": "Actúa con los fundamentos filosóficos de la profesión, en el cuidado integral del paciente, familia y comunidad, respetando la diversidad cultural; en base a principios ético-morales.\n\nUtiliza una comunicación efectiva con la persona, familia y los miembros del equipo de enfermería, de salud y otros profesionales. Reconoce los elementos de la gerencia estratégica y las aplica, gerenciando los servicios de enfermería y salud de los diferentes niveles de atención.\n\nFormula, ejecuta y evalúa programas de educación para el personal de enfermería. Conoce el proceso de la investigación y lo utiliza en la elaboración de los diferentes tipos de investigación en salud.",
     "rm": "R.M No 453/2012",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
-    "malla": "mEnfermeria.jpg",
+    "malla": "mEnfermeria.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
@@ -255,7 +255,7 @@
     "description": "El Licenciado en Fisioterapia y Kinesiología deberá ejercer su profesión con un profundo respeto a la persona humana en lo que hace a sus peculiaridades, costumbres, creencias y valores, con sentido ético y de servicio a la comunidad.\n\nInteractuar con otros profesionales de la salud, integrándose a equipos interdisciplinarios de trabajo y efectuar aportes al campo laboral y científico mediante el desarrollo de actividades de investigación. Aplicar tratamientos de kinefilaxia, fisioterapia y kinesioterapia en el ámbito público y privado.\n\nCumplir funciones de gestión en instituciones o áreas de su especialidad y efectuar aportes al campo laboral y científico mediante el desarrollo de actividades de investigación.",
     "rm": "R.M No 454/2012",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
-    "malla": "mFisio.jpg",
+    "malla": "mFisio.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
@@ -276,7 +276,7 @@
     "description": "El Licenciado en Bioquímica y Farmacia es un profesional de alto nivel científico, con un amplio sentido crítico, competente en el análisis, poseedor de importantes herramientas conceptuales y técnicas, capacitadas para emplear tecnologías que le permitan el avance de su especialidad.\n\nComo profesional que forma parte de un equipo de salud, debe tener una formación integral, científica y técnica, sobre una base de desarrollo de valores humanos, para buscar y dar respuestas adecuadas a los graves problemas de salud y de otro tipo existentes en nuestro país.\n\nPreparado para participar científicamente en la investigación en el campo de la Bioquímica y la Farmacia, así como en las diferentes disciplinas derivadas de la misma.",
     "rm": "R.M No 455/2012",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
-    "malla": "mBio.jpg",
+    "malla": "mBio.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
@@ -297,7 +297,7 @@
     "description": "Al concluir sus estudios, el egresado deberá tener conocimientos y habilidades que lo capaciten para el correcto ejercicio profesional del Derecho, incluyendo el conocimiento del marco jurídico vigente, capacidad de argumentación e interpretación jurídica, y habilidad para enfrentar conflictos y generar soluciones.\n\nAdemás, estará preparado para continuar sus estudios de posgrado y desarrollará actitudes y valores como capacidad analítica para resolver problemas de forma eficiente, vocación de servicio y sentido social de comunidad, liderazgo y trabajo en equipo, capacidad para la toma de decisiones, vocación mediadora y conciliatoria, y análisis de problemas jurídicos desde un enfoque humanista y multidisciplinario.",
     "rm": "R.M No 456/2012",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
-    "malla": "mDerecho.jpg",
+    "malla": "mDerecho.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
@@ -319,7 +319,7 @@
     "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
     "rm": "R.M No 457/2012",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
-    "malla": "mSist.jpg",
+    "malla": "mSist.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
@@ -343,11 +343,11 @@
   "Cochabamba": {
     "whatsapp":"+59164849322",
     "imagenes":{
-        "personaPortada":"chicoUnoCocha.png",
-        "fondoIncripcion":"fondoCocha.png",
-        "fondoAlumni":"fondoRedAlumniCocha.png",
-        "graduados":"graduadosCohca.png",
-        "fondoOferta":"fondoOfertaCocha.png"
+        "personaPortada":"chicoUnoCocha.webp",
+        "fondoIncripcion":"fondoCocha.webp",
+        "fondoAlumni":"fondoRedAlumniCocha.webp",
+        "graduados":"graduadosCohca.webp",
+        "fondoOferta":"fondoOfertaCocha.webp"
       },
       "inscripcion": {
         "titulo": "Proceso de Inscripción",
@@ -363,26 +363,26 @@
 
     },
       "oferta": [
-        {"title": "Medicina", "imagen": "medicinaSC.png"},
-        {"title": "Enfermería", "imagen": "enfeSC.png"},
-        {"title": "Derecho", "imagen": "derechoSC.png"},
-        {"title": "Bioquímica y Farmacia", "imagen": "derechoSC.png"},
-        {"title": "Dirección y Administración de Empresas", "imagen": "odontoSC.png"}
+        {"title": "Medicina", "imagen": "medicinaSC.webp"},
+        {"title": "Enfermería", "imagen": "enfeSC.webp"},
+        {"title": "Derecho", "imagen": "derechoSC.webp"},
+        {"title": "Bioquímica y Farmacia", "imagen": "derechoSC.webp"},
+        {"title": "Dirección y Administración de Empresas", "imagen": "odontoSC.webp"}
       ],
       "sedes": [
-        {"title": "Medicina", "imagen": "medicina.png"},
-        {"title": "Odontología", "imagen": "odontologia.png"},
-        {"title": "Enfermería", "imagen": "enfermeria.png"}
+        {"title": "Medicina", "imagen": "medicina.webp"},
+        {"title": "Odontología", "imagen": "odontologia.webp"},
+        {"title": "Enfermería", "imagen": "enfermeria.webp"}
       ],
       "requisitos": [
-        {"title": "Medicina", "imagen": "medicina.png"},
-        {"title": "Odontología", "imagen": "odontologia.png"},
-        {"title": "Enfermería", "imagen": "enfermeria.png"}
+        {"title": "Medicina", "imagen": "medicina.webp"},
+        {"title": "Odontología", "imagen": "odontologia.webp"},
+        {"title": "Enfermería", "imagen": "enfermeria.webp"}
       ],
       "noticias": [
-        {"title": "Medicina", "imagen": "medicina.png"},
-        {"title": "Odontología", "imagen": "odontologia.png"},
-        {"title": "Enfermería", "imagen": "enfermeria.png"}
+        {"title": "Medicina", "imagen": "medicina.webp"},
+        {"title": "Odontología", "imagen": "odontologia.webp"},
+        {"title": "Enfermería", "imagen": "enfermeria.webp"}
       ],
       "carrera": [
         
@@ -392,7 +392,7 @@
     "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
     "rm": "R.M No 457/2012",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
-    "malla": "mSist.jpg",
+    "malla": "mSist.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
@@ -413,7 +413,7 @@
     "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
     "rm": "R.M No 457/2012",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
-    "malla": "mSist.jpg",
+    "malla": "mSist.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
@@ -435,7 +435,7 @@
     "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
     "rm": "R.M No 457/2012",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
-    "malla": "mSist.jpg",
+    "malla": "mSist.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
@@ -457,7 +457,7 @@
     "description": "Los ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
     "rm": "R.M No 457/2012",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
-    "malla": "mSist.jpg",
+    "malla": "mSist.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
@@ -479,7 +479,7 @@
     "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
     "rm": "R.M No 457/2012",
     "video": "https://youtu.be/PBWy69-zmb8",
-    "malla": "mSist.jpg",
+    "malla": "mSist.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"

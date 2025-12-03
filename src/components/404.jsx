@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import lobo from "../assets/img/lobo404.png"
+import lobo from "../assets/img/lobo404.webp"
 
 export default function NotFound({ mensaje }) {
   return (

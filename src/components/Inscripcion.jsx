@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 import { AnimatedText } from "./textoIncripcion";
 
 import { useParams } from "react-router-dom";
-import fondoLibertad from "../assets/img/fondoLibertad.png";
-import expoUno from "../assets/img/expUno.png";
-import calendario from "../assets/img/ingresoAlumno.png";
-import ingAlum from "../assets/img/ingresoAlumno.png";
-import ingDoc from "../assets/img/ingresoDocente.png";
+import fondoLibertad from "../assets/img/fondoLibertad.webp";
+import expoUno from "../assets/img/expUno.webp";
+import calendario from "../assets/img/ingresoAlumno.webp";
+import ingAlum from "../assets/img/ingresoAlumno.webp";
+import ingDoc from "../assets/img/ingresoDocente.webp";
 
 import dataJson from "../assets/json/datos.json"; // JSON con info de cada sede
 import "./Inscripcion.css"; 
@@ -42,10 +42,10 @@ useEffect(() => {
         const img = require(`../assets/img/${dataSede.imagenes.personaPortada}`);
         setChicaImg(img);
       } catch {
-        setChicaImg(require("../assets/img/ChicaUno.png")); 
+        setChicaImg(require("../assets/img/ChicaUno.webp")); 
       }
     } else {
-      setChicaImg(require("../assets/img/ChicaUno.png")); 
+      setChicaImg(require("../assets/img/ChicaUno.webp")); 
     }
 
     // Imagen de fondo dinámica según subsede
@@ -80,7 +80,7 @@ useEffect(() => {
       <div className="container-hero">
         <div className="hero-content">
           <motion.img
-            src={chicaImg || require("../assets/img/ChicaUno.png")}
+            src={chicaImg || require("../assets/img/ChicaUno.webp")}
             alt="Chica invitando"
             className="chica"
             initial={{ opacity: 0, x: -50 }}

@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logo.webp";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { useNavigate, useParams, useLocation } from "react-router-dom";

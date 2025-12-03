@@ -1,4 +1,4 @@
-import historiaImg from "../assets/img/fundador.png";
+import historiaImg from "../assets/img/fundador.webp";
 import { Container, Row, Col } from "react-bootstrap";
 
 export default function Historia() {

@@ -2,19 +2,19 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
-import cochabambaImg from "../assets/img/cocha.png";
-import monteroImg from "../assets/img/montero.png";
-import shinahotaImg from "../assets/img/shinaota.png";
-import santaCruzImg from "../assets/img/santacruz.png";
-import tarijaImg from "../assets/img/tarija.png";
-import yacuibaImg from "../assets/img/yacuhiba.png";
+import cochabambaImg from "../assets/img/cocha.webp";
+import monteroImg from "../assets/img/montero.webp";
+import shinahotaImg from "../assets/img/shinaota.webp";
+import santaCruzImg from "../assets/img/santacruz.webp";
+import tarijaImg from "../assets/img/tarija.webp";
+import yacuibaImg from "../assets/img/yacuhiba.webp";
 
-import mapaBolivia from "../assets/img/pais.png";
-import marcador from "../assets/img/marcador.png";
-import fondoSedes from "../assets/img/fondoRed.png";
-import mscImg from "../assets/img/mSC.png";
-import mcbImg from "../assets/img/mcb.png";
-import mtrImg from "../assets/img/mtr.png";
+import mapaBolivia from "../assets/img/pais.webp";
+import marcador from "../assets/img/marcador.webp";
+import fondoSedes from "../assets/img/fondoRed.webp";
+import mscImg from "../assets/img/mSC.webp";
+import mcbImg from "../assets/img/mcb.webp";
+import mtrImg from "../assets/img/mtr.webp";
 
 export default function SeleccionarSede() {
   const navigate = useNavigate();

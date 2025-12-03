@@ -3,7 +3,7 @@ import { useParams } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import careersData from "../assets/json/datos.json";
 import NotFound from "../components/404";
-import fondo from "../assets/img/fondoOferta.png";
+import fondo from "../assets/img/fondoOferta.webp";
 
 const images = require.context("../assets/img/mallas", false, /\.(png|jpe?g|svg)$/);
 
@@ -34,7 +34,7 @@ export default function CareerCard() {
     return match && match[2].length === 11 ? match[2] : null;
   })() : null;
 
-  const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : null;
+  const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.webp` : null;
   const mallaImage = data?.malla ? images(`./${data.malla}`) : null;
 
   // --- Control cuando el video termina ---
