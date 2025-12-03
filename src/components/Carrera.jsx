@@ -5,7 +5,7 @@ import careersData from "../assets/json/datos.json";
 import NotFound from "../components/404";
 import fondo from "../assets/img/fondoOferta.webp";
 
-const images = require.context("../assets/img/mallas", false, /\.(png|jpe?g|svg)$/);
+const images = require.context("../assets/img/mallas", false, /\.(png|jpe?g|svg|webp)$/);
 
 export default function CareerCard() {
   const { sede, carrera } = useParams();
@@ -34,7 +34,9 @@ export default function CareerCard() {
     return match && match[2].length === 11 ? match[2] : null;
   })() : null;
 
-  const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.webp` : null;
+ const thumbnail = videoId
+  ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg`
+  : null; 
   const mallaImage = data?.malla ? images(`./${data.malla}`) : null;
 
   // --- Control cuando el video termina ---
