@@ -105,43 +105,44 @@ export default function SeleccionarSede() {
                       onClick={() => navigate(`/${sede.nombre.replace(/\s+/g, '')}`)}
                     >
                       <div
-                        style={{
-                          height: isMobile ? "110px" : "120px",
-                          width: isMobile ? "120px" : "140px",
-                          backgroundColor: "#009dfa",
-                          borderRadius: "0.8rem",
-                          position: "relative",
-                          overflow: "visible",
-                          display: "flex",
-                          justifyContent: "center",
-                          alignItems: "flex-end",
-                        }}
-                      >
-                        <motion.img
-                          src={sede.img}
-                          alt={sede.nombre}
-                          style={{
-                            width: `calc(${sede.width} * ${isMobile ? 0.7 : 1})`,
-                            height: `calc(${sede.height} * ${isMobile ? 0.7 : 1})`,
-                            objectFit: "cover",
-                            borderRadius: "0.5rem",
-                            position: "absolute",
-                            bottom: "0",
-                            right: sede.anchor === "bottom-right" ? "0" : "auto",
-                            left: sede.anchor === "bottom-left" ? "0" : "auto",
-                          }}
-                          whileHover={{
-                            scale: 1.15,
-                            translateX: sede.anchor === "bottom-right" ? "-6%" : "6%",
-                            translateY: "-6%",
-                          }}
-                          transition={{ duration: 0.3 }}
-                        />
-                      </div>
+  style={{
+    height: isMobile ? "110px" : "100px", // antes 120px
+    width: isMobile ? "120px" : "120px",  // antes 140px
+    backgroundColor: "#009dfa",
+    borderRadius: "0.8rem",
+    position: "relative",
+    overflow: "visible",
+    display: "flex",
+    justifyContent: "center",
+    alignItems: "flex-end",
+   
+  }}
+>
+  <motion.img
+    src={sede.img}
+    alt={sede.nombre}
+    style={{
+      width: `calc(${sede.width} * ${isMobile ? 0.7 : 0.8})`, // reduce 20% en PC
+      height: `calc(${sede.height} * ${isMobile ? 0.7 : 0.8})`,
+      objectFit: "cover",
+      borderRadius: "0.5rem",
+      position: "absolute",
+      bottom: "0",
+      right: sede.anchor === "bottom-right" ? "0" : "auto",
+      left: sede.anchor === "bottom-left" ? "0" : "auto",
+    }}
+    whileHover={{
+      scale: 1.15,
+      translateX: sede.anchor === "bottom-right" ? "-6%" : "6%",
+      translateY: "-6%",
+    }}
+    transition={{ duration: 0.3 }}
+  />
+</div>
 
                       <h5
                         className="mt-2 text-white fw-bold"
-                        style={{ fontSize: isMobile ? "0.9rem" : "1rem" }}
+                        style={{ fontSize: isMobile ? "0.9rem" : "1rem",  marginBottom: isMobile ?"0rem": "2.5rem" }}
                       >
                         {sede.nombre}
                       </h5>
