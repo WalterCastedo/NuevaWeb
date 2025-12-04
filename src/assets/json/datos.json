@@ -134,8 +134,7 @@
             }
           ],
           "revistaSalud":"https://salud.uno.edu.bo/index.php/inicio",
-          "revistaMultidiciplinaria":"https://revistauno.org/index.php/uno",
-          "lineaDeInvestigacion":[
+          "lineadeinvestigacion":[
             {
               "titulo":"Neurológica, Motricidad Y Respiración",
               "img":""
@@ -169,7 +168,7 @@
               "img":""
            }
           ],
-          "investigaciones ":[
+          "investigaciones":[
             {
               "titulo":"“EVALUACIÓN DE LA EFECTIVIDAD DE LA DESPARASITACIÓN EN ALUMNOS DE PRIMER Y SEGUNDO SEMESTRE DE LA CARRERA DE MEDICINA DE LA UNIVERSIDAD NACIONAL DEL ORIENTE, SEDE SANTA CRUZ, BOLIVIA",
               "descripcion":"El objetivo de la investigación realizada por el Dr. Mario Farfán es mejorar la información y la educación sobre desparasitación en los estudiantes y ciudadanía en general, pues se observa que en un considerable porcentaje no recibieron la información suficiente sobre los beneficios y riesgos de la desparasitación. Y es en éste sentido que se quiere sugerir se implementar programas de educación y concientización completos. Esto incluye proporcionar información detallada sobre los beneficios de la desparasitación, los riesgos potenciales, las mejores prácticas de higiene y prevención de infecciones parasitarias, así como la importancia de la desparasitación periódica como una alternativa de mejorar la salud.”",
@@ -206,7 +205,31 @@
               "img":"",
               "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
             }
-          ]
+          ],
+          "docentesinvestigadores":[
+            {
+            "docente":"Dr. Franz Mario Farfán Cama ha construido una destacada trayectoria académica que abarca la Medicina, la investigación y la docencia. Sus logros en la formación médica, la investigación innovadora y la contribución a la educación lo convierten en una figura influyente en su campo, con un legado perdurable en el avance de la medicina y la promoción del conocimiento científico.",
+            "img":""
+          },
+          {
+            "docente":"Dra. Tatiana Apaza Ibañez , Odontóloga titulada en la UMSS, Magister En Magister En Educacion Superior Basada En Competencias. Diplomado En Cirugía Bucal. Especialista En Odontopediatría. Especialista En Auditoria Medica Y Gestion De Calidad. Diplomado En Educacion En Prevencion Prenatal De Discapacidades",
+            "img":""
+          },
+          {
+            "docente":"Dr.Henry Farfán, Cirujano Odontólogo, Especialidad en Cirugía Bucal Dentomaxilar, cuento con Maestría en Educación Superior Tic´s, me desempeño como, Docente pregrado – posgrado, Tutor y Docente Investigador.",
+            "img":""
+          },
+          {
+            "docente":"Arq. Esteffany Brenda Antezana Heredia, Docente de metodología de investigación y Ingles de la Universidad Nacional del Oriente. Licenciatura en Arquitectura, Diplomado en Metodología de la    Investigación Científica, Diplomado en Estadística Aplicada a la    Investigación Científica, Diplomado en educación superior basado en el modelo académico por competencias.",
+            "img":""
+          },
+           {
+            "docente":"Licenciada en Bioquímica y Farmacia de la UAGRM, Diplomado en Educación Superior Basado En Neurociencias , Diplomado En Salud Pública, Bioquímica Jefa De Laboratorio Del  Centro de Salud El Carmen (Municipio La Guardia), Docente De Bioquimica – Análisis Clínico,   Parasitología –  Docente en la carrera de Enfermería",
+            "img":""
+          }
+          
+          
+        ]
         }
         
       ],

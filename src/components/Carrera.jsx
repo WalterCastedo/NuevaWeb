@@ -202,9 +202,20 @@ export default function CareerCard() {
           exit="exit"
           style={{ position: "relative", zIndex: 1, maxWidth: "1100px", margin: "0 auto", padding: "2rem 1rem", marginTop: "5rem" }}
         >
-          <h1 style={{ fontSize: "3.5rem", fontWeight: 700, textAlign: "center", marginTop: "6rem" }}>
-            {data.title}
-          </h1>
+          <h1
+  style={{
+    fontSize: isMobile ? "2rem" : "3.5rem", // más pequeño en móvil
+    fontWeight: 700,
+    textAlign: "center",
+    marginTop: "6rem",
+    wordBreak: "break-word",         // evita que se desborde
+    overflowWrap: "break-word",      // soporte extra
+    lineHeight: isMobile ? "2.4rem" : "4rem", // ajusta la altura de línea
+    padding: isMobile ? "0 1rem" : "0", // añade padding lateral en móvil
+  }}
+>
+  {data.title}
+</h1>
 
           <div
             style={{
