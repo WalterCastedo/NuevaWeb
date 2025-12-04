@@ -8,6 +8,208 @@
         "graduados":"graduados.webp",
         "fondoOferta":"fondoOferta.webp"
       },
+       "investigacion":[
+        {
+          "bienvenida":"En la Universidad Nacional del Oriente buscamos fomentar las actividades de investigación en todos los niveles de formación esto con el fin de motivar al ciudadano a asumir su rol de responsabilidad desde cada posición que ocupe en la sociedad.\nEs así que en los programas de formación que ofrece la Universidad Nacional del Oriente, se busca motivar a los estudiantes a entrar en el maravilloso mundo de la investigación. Lo que se busca es sentar presencia creando conciencia para realizar análisis emitir puntos de vista y tener criterio sobre ciertos temas determinados que están presentes en el diario vivir. \nDesde la universidad nos preocupamos por insertar en nuestros programas de pre y postgrado actividades que hagan reflexionar al estudiante y ciudadano para generar ideas innovadoras e inmiscuirse en el mundo de la investigación sea cual sea el campo de acción. \nLos objetivos del departamento de Investigación de la UNO son:\n– Desarrollar talento humano para la investigación.\n– Permanecer insertos en la globalización.\n– Aplicar tecnología e innovación en cada uno de los productos que se generan desde la UNO.\n– Desarrollar proyectos que involucren investigación con innovación apuntando al desarrollo social.\n– Incentivar al desarrollo de un eco-sistema sostenible.",
+          "boletines":[
+            {
+              "titulo":"Boletin 001",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 002",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 003",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 004",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 005",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 006",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 007",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 008",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+             {
+              "titulo":"Boletin 009",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 010",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 011",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 012",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 013",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 014",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 015",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 016",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+             {
+              "titulo":"Boletin 017",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 018",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 019",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 020",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 021",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 022",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 023",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 024",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            }
+          ],
+          "revistaSalud":"https://salud.uno.edu.bo/index.php/inicio",
+          "revistaMultidiciplinaria":"https://revistauno.org/index.php/uno",
+          "lineaDeInvestigacion":[
+            {
+              "titulo":"Neurológica, Motricidad Y Respiración",
+              "img":""
+           },
+           {
+              "titulo":"Salud Pública, Enfermería Pediátrica, Médico-Quirúrgica",
+              "img":""
+           },
+           {
+              "titulo":"Bioquímica, Farmacología, Epidemiología",
+              "img":""
+           },
+           {
+              "titulo":"Medicina Preventiva",
+              "img":""
+           },
+            {
+              "titulo":"Software, Redes, Inteligencia Artificial",
+              "img":""
+           },
+           {
+              "titulo":"Leyes, Procedimientos, Reglamentos",
+              "img":""
+           },
+           {
+              "titulo":"Familia, Sociedad, Economía Y Medio Ambiente",
+              "img":""
+           },
+           {
+              "titulo":"Salud Y Bienestar Bucal",
+              "img":""
+           }
+          ],
+          "investigaciones ":[
+            {
+              "titulo":"“EVALUACIÓN DE LA EFECTIVIDAD DE LA DESPARASITACIÓN EN ALUMNOS DE PRIMER Y SEGUNDO SEMESTRE DE LA CARRERA DE MEDICINA DE LA UNIVERSIDAD NACIONAL DEL ORIENTE, SEDE SANTA CRUZ, BOLIVIA",
+              "descripcion":"El objetivo de la investigación realizada por el Dr. Mario Farfán es mejorar la información y la educación sobre desparasitación en los estudiantes y ciudadanía en general, pues se observa que en un considerable porcentaje no recibieron la información suficiente sobre los beneficios y riesgos de la desparasitación. Y es en éste sentido que se quiere sugerir se implementar programas de educación y concientización completos. Esto incluye proporcionar información detallada sobre los beneficios de la desparasitación, los riesgos potenciales, las mejores prácticas de higiene y prevención de infecciones parasitarias, así como la importancia de la desparasitación periódica como una alternativa de mejorar la salud.”",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+            {
+              "titulo":"“METODO AULA INVERTIDA Y SU INFLUENCIA EL RENDIMIENTO DE LOS ESTUDIANTES DE LA MATERIA DE METODOLOGÍA DE INVESTIGACIÓN EN LA FACULTAD DE SALUD DE LA UNIVERSIDAD NACIONAL DEL ORIENTE EN LA GESTIÓN 2/2023”",
+              "descripcion":"El presente estudio se enfoca en analizar la influencia del Aula Invertida en el rendimiento académico de estudiantes de Metodología de Investigación en la Facultad de Salud de la Universidad Nacional del Oriente (gestión 2/2023). Este método implica que los contenidos teóricos se aprenden mediante herramientas multimedia fuera del aula, reservando las sesiones presenciales para aplicar y discutir los conocimientos.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+             {
+              "titulo":"“BICO (BICARBONATO DE SODIO) Y LA SALUD MENTAL EN SANTA CRUZ DE LA SIERRA: INVESTIGACIÓN SOBRE LOS EFECTOS EN LA DEPRESIÓN: (SUICIDIO, FEMINICIDIO E INFANTICIDIO)”",
+              "descripcion":"El presente estudio de investigación, titulado «BICO (Bicarbonato de Sodio) y Salud Mental en Santa Cruz de la Sierra: Investigación sobre los Efectos en la Depresión, Suicidio, Feminicidio e Infanticidio», se centra en la relación entre la salud mental y el consumo de bicarbonato de sodio, comúnmente conocido como «bico», en la ciudad de Santa Cruz de la Sierra, Bolivia.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+            {
+              "titulo":"“EFECTIVIDAD EN LA INGESTION DE FLOR DE JAMAICA Y ARANDANO (ROJO) EN MUJERES CON INFECCION URINARIA ENTRE 50 A 80 AÑOS EN LA CIUDAD DE SANTACRUZ”",
+              "descripcion":"El presente estudio se enfoca en analizar la influencia del Aula Invertida en el rendimiento académico de estudiantes de Metodología de Investigación en la Facultad de Salud de la Universidad Nacional del Oriente (gestión 2/2023). Este método implica que los contenidos teóricos se aprenden mediante herramientas multimedia fuera del aula, reservando las sesiones presenciales para aplicar y discutir los conocimientos.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+             {
+              "titulo":"“IA EN PLANIFICACIÓN Y TRATAMIENTO QUIRÚRGICO DE QUERATOQUISTE ODONTOGÉNICO”",
+              "descripcion":"La aplicación de la inteligencia artificial (IA) en la cirugía bucal para el queratoquiste odontogénico (QO) representa un avance significativo en la mejora de la atención al paciente con esta patología oral. La investigación ha demostrado que la IA tiene un alto potencial en varias áreas clave, incluyendo la detección temprana, el diagnóstico diferencial, la planificación quirúrgica y la predicción de recurrencia del QO.La IA permite la detección precoz de QO a través de análisis de imágenes radiográficas, lo que facilita intervenciones oportunas. Además, su capacidad para distinguir el QO de otras lesiones orales mejora la precisión diagnóstica.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+            {
+              "titulo":"“REHABILITACION FÍSICA A TRAVES DE LA APLICACIÓN DE BANDAS ELASTICAS (NEUMATICOS), EN PACIENTE CON PARAPLEJIA”",
+              "descripcion":"Actualmente no existen tratamientos eficaces para recuperar la función de la medula espinal. El proceso de rehabilitación en pacientes con lesión medular baja muestra un hecho que en gran parte de los casos esta en relación al tiempo, los recursos económicos, humanos y el entorno familiar.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            }
+          ]
+        }
+        
+      ],
 
       "mas": {
         "bienvenida": {

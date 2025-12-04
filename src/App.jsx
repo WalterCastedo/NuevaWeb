@@ -7,6 +7,7 @@ import SeccionMas from "./components/SeccionMas";
 import SeleccionarSede from "./pages/SeleccionarSede";
 import Interaccion from "./components/inteaccion";
 import ScrollToTop from "./components/ScrollToTop";
+import investigacion from "./components/investigacion"
 import { useEffect } from "react";
 
 // Componente para normalizar params y redirigir si es necesario
@@ -95,6 +96,20 @@ function AppContent() {
             <RouteWrapper element={Header} />
             <main className="bg-white min-h-screen">
               <RouteWrapper element={Interaccion} />
+            </main>
+            <Footer />
+          </>
+        }
+      />
+
+      {/* Página de investigacion */}
+      <Route
+        path="/:sede/investigacion/:seccion"
+        element={
+          <>
+            <RouteWrapper element={Header} />
+            <main className="bg-white min-h-screen">
+              <RouteWrapper element={investigacion} />
             </main>
             <Footer />
           </>
