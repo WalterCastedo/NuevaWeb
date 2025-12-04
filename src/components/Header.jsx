@@ -269,48 +269,48 @@ export default function Header() {
         height: "120px",
       }}
     >
-      {/* Logo y sede */}
-      <div
-        style={{
-          padding: "0 50px",
-          display: "flex",
-          alignItems: "center",
-          height: "100%",
-          position: "relative",
-        }}
-      >
-        {sede && (
-          <div
-            style={{
-              position: "absolute",
-              top: "20px",
-              left: "54%",
-              transform: "translateX(-50%)",
-              color: logoColor,
-              fontSize: "0.5rem",
-              fontWeight: "bold",
-              textTransform: "uppercase",
-              letterSpacing: "1px",
-              whiteSpace: "nowrap",
-              transition: "color 0.3s ease",
-            }}
-          >
-            {sede}
-          </div>
-        )}
-        <img
-          src={logo}
-          alt="Logo UNO"
-          onClick={handleClickInicio}
-          style={{
-            maxHeight: "80%",
-            marginTop: "-40px",
-            cursor: "pointer",
-            transition: "filter 0.3s ease",
-            filter: logoColor === "white" ? "brightness(0) invert(1)" : "none",
-          }}
-        />
-      </div>
+      {/* Logo y sede solo escritorio */}
+<div
+  className="d-none d-lg-flex"
+  style={{
+    padding: "0 50px",
+    alignItems: "center",
+    height: "100%",
+    position: "relative",
+  }}
+>
+  {sede && (
+    <div
+      style={{
+        position: "absolute",
+        top: "20px",
+        left: "54%",
+        transform: "translateX(-50%)",
+        color: logoColor,
+        fontSize: "0.5rem",
+        fontWeight: "bold",
+        textTransform: "uppercase",
+        letterSpacing: "1px",
+        whiteSpace: "nowrap",
+        transition: "color 0.3s ease",
+      }}
+    >
+      {sede}
+    </div>
+  )}
+  <img
+    src={logo}
+    alt="Logo UNO"
+    onClick={handleClickInicio}
+    style={{
+      maxHeight: "80%",
+      marginTop: "-40px",
+      cursor: "pointer",
+      transition: "filter 0.3s ease",
+      filter: logoColor === "white" ? "brightness(0) invert(1)" : "none",
+    }}
+  />
+</div>
 
       {/* Fondo azul animado escritorio */}
       <div

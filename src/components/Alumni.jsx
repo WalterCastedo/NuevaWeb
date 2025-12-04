@@ -78,21 +78,40 @@ function AnimatedCircle({ value, label, duration = 2000, showPlus = false, delay
 }
 
 export default function Alumni() {
-  const { sede } = useParams();
+  const { sede, seccion } = useParams();
   const totalDuration = 1500;
   const [hover, setHover] = useState(false);
   const [fondoImg, setFondoImg] = useState(fondoDefault);
   const [alumniImg, setAlumniImg] = useState(null);
 
-  const dataSede = dataJson[sede];
+  // Manejo dinámico de datos según sección
+  const dataSede = seccion === "general" 
+    ? null 
+    : dataJson[sede];
 
-  const totalGraduados = dataSede?.alumni?.graduados || 0;
-  const descripcion = dataSede?.alumni?.descripcion || "";
+  // Totales dinámicos
+  const totalGraduados = seccion === "general"
+    ? Object.values(dataJson).reduce((acc, s) => acc + (s.alumni?.graduados || 0), 0)
+    : dataSede?.alumni?.graduados || 0;
 
-  const totalCarreras = dataSede?.oferta ? Object.keys(dataSede.oferta).length : 0;
+  const totalCarreras = seccion === "general"
+    ? Object.values(dataJson).reduce((acc, s) => acc + (s.oferta ? Object.keys(s.oferta).length : 0), 0)
+    : dataSede?.oferta ? Object.keys(dataSede.oferta).length : 0;
 
+  const descripcion = seccion === "general"
+    ? "Conoce nuestra Red Alumni de todas las sedes y descubre el impacto de nuestros graduados."
+    : dataSede?.alumni?.descripcion || "";
+
+  // Cargar imágenes dinámicamente
   useEffect(() => {
+    if (seccion === "general") {
+      setFondoImg(fondoDefault);
+      setAlumniImg(null);
+      return;
+    }
+
     if (!dataSede) return;
+
     if (dataSede?.imagenes?.fondoAlumni) {
       try {
         const fondo = require(`../assets/img/${dataSede.imagenes.fondoAlumni}`);
@@ -110,7 +129,7 @@ export default function Alumni() {
         setAlumniImg(null);
       }
     }
-  }, [sede]);
+  }, [sede, seccion, dataSede]);
 
   const buttonBg = hover ? "#fff" : "#001A66";
   const buttonColor = hover ? "#001A66" : "#fff";
@@ -187,19 +206,19 @@ export default function Alumni() {
               transition={{ delay: 0.9, duration: 0.8 }}
             >
               <a
-                href="/alumni"
-                className="fw-bold btn rounded-pill px-5 py-2"
-                style={{
-                  backgroundColor: buttonBg,
-                  color: buttonColor,
-                  border: `2px solid #001A66`,
-                  transition: "all 0.5s ease",
-                }}
-                onMouseEnter={() => setHover(true)}
-                onMouseLeave={() => setHover(false)}
-              >
-                Ver más...
-              </a>
+  href={`/${sede}/redalumni/general`}
+  className="fw-bold btn rounded-pill px-5 py-2"
+  style={{
+    backgroundColor: buttonBg,
+    color: buttonColor,
+    border: `2px solid #001A66`,
+    transition: "all 0.5s ease",
+  }}
+  onMouseEnter={() => setHover(true)}
+  onMouseLeave={() => setHover(false)}
+>
+  Ver más...
+</a>
             </motion.div>
           </div>
 

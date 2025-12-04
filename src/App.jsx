@@ -8,6 +8,7 @@ import SeleccionarSede from "./pages/SeleccionarSede";
 import Interaccion from "./components/inteaccion";
 import ScrollToTop from "./components/ScrollToTop";
 import investigacion from "./components/investigacion"
+import RedAlumni from "./components/RedAlumni";
 import { useEffect } from "react";
 
 // Componente para normalizar params y redirigir si es necesario
@@ -68,6 +69,20 @@ function AppContent() {
             <RouteWrapper element={Header} />
             <main className="bg-white min-h-screen">
               <RouteWrapper element={CareerCard} />
+            </main>
+            <Footer />
+          </>
+        }
+      />
+
+       {/* Página de carrera */}
+      <Route
+        path="/:sede/redalumni/:seccion"
+        element={
+          <>
+            <RouteWrapper element={Header} />
+            <main className="bg-white min-h-screen">
+              <RouteWrapper element={RedAlumni} />
             </main>
             <Footer />
           </>

@@ -8,6 +8,29 @@
         "graduados":"graduados.webp",
         "fondoOferta":"fondoOferta.webp"
       },
+      "redalumni": {
+        "descripcion": "La Red Alumni de nuestra universidad conecta a todos los graduados, promoviendo networking y oportunidades de desarrollo profesional.",
+        "carreras": [
+          {
+            "nombre": "Medicina",
+            "graduados": 1200,
+            "lugaresTrabajo": ["Hospital Central", "Clínica del Este", "ONG Salud"],
+            "convenios": ["Hospital Central", "Cruz Roja"]
+          },
+          {
+            "nombre": "Enfermería",
+            "graduados": 800,
+            "lugaresTrabajo": ["Hospital Regional", "Clínica San Juan"],
+            "convenios": ["Hospital Regional", "Fundación Salud"]
+          },
+          {
+            "nombre": "Fisioterapia y Kinesiología",
+            "graduados": 450,
+            "lugaresTrabajo": ["Clínica Rehabilita", "Centro FisioPlus"],
+            "convenios": ["Clínica Rehabilita", "Centro FisioPlus"]
+          }
+        ]
+      },
        "investigacion":[
         {
           "bienvenida":"En la Universidad Nacional del Oriente buscamos fomentar las actividades de investigación en todos los niveles de formación esto con el fin de motivar al ciudadano a asumir su rol de responsabilidad desde cada posición que ocupe en la sociedad.\nEs así que en los programas de formación que ofrece la Universidad Nacional del Oriente, se busca motivar a los estudiantes a entrar en el maravilloso mundo de la investigación. Lo que se busca es sentar presencia creando conciencia para realizar análisis emitir puntos de vista y tener criterio sobre ciertos temas determinados que están presentes en el diario vivir. \nDesde la universidad nos preocupamos por insertar en nuestros programas de pre y postgrado actividades que hagan reflexionar al estudiante y ciudadano para generar ideas innovadoras e inmiscuirse en el mundo de la investigación sea cual sea el campo de acción. \nLos objetivos del departamento de Investigación de la UNO son:\n– Desarrollar talento humano para la investigación.\n– Permanecer insertos en la globalización.\n– Aplicar tecnología e innovación en cada uno de los productos que se generan desde la UNO.\n– Desarrollar proyectos que involucren investigación con innovación apuntando al desarrollo social.\n– Incentivar al desarrollo de un eco-sistema sostenible.",

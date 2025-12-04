@@ -187,16 +187,18 @@ const tabs = tabKeys.map((key) => ({
           }}
         >
           <h1
-            style={{
-              fontSize: "3.5rem",
-              fontWeight: 700,
-              marginBottom: "2rem",
-              textAlign: "center",
-              marginTop: "6rem",
-            }}
-          >
-            {getTitle(seccionKey)}
-          </h1>
+  style={{
+    fontSize: isMobile ? "2rem" : "3.5rem", // responsivo
+    fontWeight: 700,
+    marginBottom: "2rem",
+    textAlign: "center",
+    marginTop: "6rem",
+    wordWrap: "break-word",
+    overflowWrap: "break-word",
+  }}
+>
+  {getTitle(seccionKey)}
+</h1>
 
           <div
             style={{
@@ -273,16 +275,32 @@ const tabs = tabKeys.map((key) => ({
                   )}
 
                   {/* Investigaciones */}
-                  {seccionKey === "investigaciones" && (
-                    <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
-                      {contenido.map((item, i) => (
-                        <a key={i} href={item.url} target="_blank" rel="noopener noreferrer" style={{ background: "#fff", padding: "1rem", borderRadius: "8px", textDecoration: "none", color: "#001A66", boxShadow: "0 2px 6px rgba(0,0,0,0.1)" }}>
-                          <h4 style={{ fontWeight: 700 }}>{item.titulo}</h4>
-                          <p style={{ whiteSpace: "pre-line" }}>{item.descripcion}</p>
-                        </a>
-                      ))}
-                    </div>
-                  )}
+{seccionKey === "investigaciones" && (
+  <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
+    {contenido.map((item, i) => (
+      <a
+        key={i}
+        href={item.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          background: "#fff",
+          padding: "1rem",
+          borderRadius: "8px",
+          textDecoration: "none",
+          color: "#001A66",
+          boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+          textAlign: "center",      // centrar contenido
+          wordBreak: "break-word",  // evitar desbordes
+        }}
+      >
+        <h4 style={{ fontWeight: 700 }}>{item.titulo}</h4>
+        <p style={{ whiteSpace: "pre-line" }}>{item.descripcion}</p>
+      </a>
+    ))}
+  </div>
+)}
+
 
                   {/* Bienvenida u otros */}
                   {["bienvenida"].includes(seccionKey) && (
