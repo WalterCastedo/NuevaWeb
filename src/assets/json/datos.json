@@ -431,31 +431,125 @@
       "noticias": [
       
       ],
-      "interaccion":[
-        {
-          "titulo":"Manos Solidarias",
-          "descripcion":"El programa ´Manos Solidarias´ de la Universidad Nacional del Oriente (UNO) es una iniciativa que busca fortalecer el vínculo entre la universidad y las comunidades locales, promoviendo el desarrollo social y el bienestar integral. A través de este programa, estudiantes y docentes de diversas carreras del área de la salud participan activamente en proyectos que benefician a las comunidades más vulnerables, aplicando sus conocimientos y habilidades en situaciones reales.",
-          "objetivo":"Promover el bienestar integral y el desarrollo social de comunidades vulnerables mediante la participación activa de estudiantes y docentes en actividades de salud, apoyo social y educación, fortaleciendo la responsabilidad social universitaria y fomentando la interacción social entre la Universidad Nacional del Oriente y las comunidades locales.",
-          "Proyectos":["La UNO en tu Comunidad",
-        "Solidaridad UNO"]
-        },
-        {
-           "titulo":"Uno Solidario",
-           "descripcion":"El programa ´Uno Solidario´ surge como respuesta a la realidad, reconociendo la necesidad urgente de brindar atención médica integral y servicios a comunidades que enfrentan barreras para acceder a la salud. Enfocado en el principio de solidaridad y compromiso social, este programa busca no solo proporcionar atención médica, sino también generar un impacto positivo en la vida de las personas y en la construcción de una sociedad más equitativa y justa.",
-          "objetivo":"Promover la solidaridad y el bienestar en las comunidades vulnerables mediante la recolección y donación de recursos materiales y la realización de actividades educativas y de salud, contribuyendo así al desarrollo social y al mejoramiento de la calidad de vida.",
-          "Proyectos":["Yo me UNO por la sonrisa de un niño",
-        "Unidos por las Madres",
-        "Unidos por un Invierno Más Cálido",
-        "UNO Noelito"]
-        },
-        {
-           "titulo":"Eco Uno",
-           "descripcion":"La Universidad Nacional del Oriente (UNO) está comprometida con la promoción de la sostenibilidad ambiental y la conservación del entorno natural. El programa ´ECO UNO´ se presenta como una iniciativa integral que busca fomentar prácticas sostenibles y desarrollar proyectos que contribuyan a la preservación de nuestro entorno.",
-          "objetivo":"Promover la sostenibilidad ambiental y la conservación del entorno natural mediante la implementación de proyectos de gestión de residuos y reforestación, fomentando la conciencia ecológica y la participación activa de la comunidad universitaria y local.",
-          "Proyectos":["Basura en su Lugar",
-        "Jóvenes en Acción (Reforestación)"]
-        }
-      ],
+     "interaccion":[
+  {
+    "titulo":"Manos Solidarias",
+    "descripcion":"El programa ´Manos Solidarias´ de la Universidad Nacional del Oriente (UNO) es una iniciativa que busca fortalecer el vínculo entre la universidad y las comunidades locales, promoviendo el desarrollo social y el bienestar integral. A través de este programa, estudiantes y docentes de diversas carreras del área de la salud participan activamente en proyectos que benefician a las comunidades más vulnerables, aplicando sus conocimientos y habilidades en situaciones reales.",
+    "objetivo":"Promover el bienestar integral y el desarrollo social de comunidades vulnerables mediante la participación activa de estudiantes y docentes en actividades de salud, apoyo social y educación, fortaleciendo la responsabilidad social universitaria y fomentando la interacción social entre la Universidad Nacional del Oriente y las comunidades locales.",
+    "Proyectos":["La UNO en tu Comunidad","Solidaridad UNO"]
+  },
+  {
+    "titulo":"Uno Solidario",
+    "descripcion":"El programa ´Uno Solidario´ surge como respuesta a la realidad, reconociendo la necesidad urgente de brindar atención médica integral y servicios a comunidades que enfrentan barreras para acceder a la salud. Enfocado en el principio de solidaridad y compromiso social, este programa busca no solo proporcionar atención médica, sino también generar un impacto positivo en la vida de las personas y en la construcción de una sociedad más equitativa y justa.",
+    "objetivo":"Promover la solidaridad y el bienestar en las comunidades vulnerables mediante la recolección y donación de recursos materiales y la realización de actividades educativas y de salud, contribuyendo así al desarrollo social y al mejoramiento de la calidad de vida.",
+    "Proyectos":["Yo me UNO por la sonrisa de un niño","Unidos por las Madres","Unidos por un Invierno Más Cálido","UNO Noelito"]
+  },
+  {
+    "titulo":"Eco Uno",
+    "descripcion":"La Universidad Nacional del Oriente (UNO) está comprometida con la promoción de la sostenibilidad ambiental y la conservación del entorno natural. El programa ´ECO UNO´ se presenta como una iniciativa integral que busca fomentar prácticas sostenibles y desarrollar proyectos que contribuyan a la preservación de nuestro entorno.",
+    "objetivo":"Promover la sostenibilidad ambiental y la conservación del entorno natural mediante la implementación de proyectos de gestión de residuos y reforestación, fomentando la conciencia ecológica y la participación activa de la comunidad universitaria y local.",
+    "Proyectos":["Basura en su Lugar","Jóvenes en Acción (Reforestación)"]
+  },
+  {
+    "titulo":"Becas UNO",
+    "descripcion":"La Universidad Nacional del Oriente ofrece diversos tipos de becas orientadas a apoyar a estudiantes en función de sus méritos académicos, situación social, talentos culturales, deportivos, participación en investigación y cooperación institucional.",
+    "objetivo":"Facilitar el acceso y la permanencia de los estudiantes en la universidad, reconociendo méritos, talentos y necesidades económicas, promoviendo la equidad y el desarrollo integral de la comunidad estudiantil.",
+    "Proyectos":[
+      {
+        "titulo":"Beca Social Solidaria",
+        "descripcion":"Comprende a personas con escasos recursos, poblaciones indígenas, originarios, campesinos y sectores sociales; otorgada por el Ministerio de Educación.",
+        "objetivo":"Brindar apoyo económico a estudiantes de sectores vulnerables, garantizando el acceso a la educación superior."
+      },
+      {
+        "titulo":"Beca Social Capacidades Diferentes",
+        "descripcion":"Se establece en el marco de la Ley General para personas con Discapacidad N° 223 y el Decreto Supremo N°1893.",
+        "objetivo":"Apoyar a estudiantes con necesidades especiales para que puedan cursar sus estudios universitarios sin impedimentos."
+      },
+      {
+        "titulo":"Beca Excelencia Académica",
+        "descripcion":"Reconoce y fomenta el rendimiento académico sobresaliente de los estudiantes universitarios que hayan obtenido el promedio requerido.",
+        "objetivo":"Incentivar el alto rendimiento académico y premiar a los estudiantes destacados."
+      },
+      {
+        "titulo":"Beca Bachiller Destacado",
+        "descripcion":"Dirigida a bachilleres de colegios Fiscales, Particulares y de Convenio con promedio elevado y acumulado en la promoción.",
+        "objetivo":"Incentivar a bachilleres talentosos a continuar sus estudios universitarios en la UNO."
+      },
+      {
+        "titulo":"Beca Cultural",
+        "descripcion":"Otorgada a estudiantes destacados en áreas culturales que hayan representado a la Universidad.",
+        "objetivo":"Promover y reconocer el talento cultural de los estudiantes."
+      },
+      {
+        "titulo":"Beca Deporte",
+        "descripcion":"Se otorga a estudiantes que participen y representen a la UNO en actividades deportivas oficiales.",
+        "objetivo":"Fomentar la práctica deportiva y premiar la dedicación en competencias universitarias."
+      },
+      {
+        "titulo":"Beca de Cooperación Interinstitucional",
+        "descripcion":"Se otorga a estudiantes procedentes de instituciones que mantengan un Convenio de Cooperación Interinstitucional vigente con la UNO.",
+        "objetivo":"Apoyar a estudiantes de instituciones aliadas y fortalecer la cooperación interinstitucional."
+      },
+      {
+        "titulo":"Beca Familiar",
+        "descripcion":"Destinada a estudiantes que demuestren relación familiar de primer grado con otros miembros de la UNO.",
+        "objetivo":"Facilitar el acceso a la educación universitaria a familias de estudiantes ya vinculados a la institución."
+      },
+      {
+        "titulo":"Beca Profesional UNO",
+        "descripcion":"Reconoce e incentiva la fidelidad y adhesión de estudiantes graduados de la UNO, ofreciéndoles beca en colegiatura para su segunda carrera.",
+        "objetivo":"Premiar la fidelidad de los estudiantes graduados y fomentar la continuidad educativa."
+      },
+      {
+        "titulo":"Beca Social UNO",
+        "descripcion":"Beneficia a estudiantes que, por motivos económicos, sociales o de salud, no pueden cubrir sus estudios universitarios.",
+        "objetivo":"Garantizar la continuidad de estudios a estudiantes en situación de vulnerabilidad."
+      },
+      {
+        "titulo":"Beca Apoyo Institucional",
+        "descripcion":"Reconoce al estudiante por el apoyo brindado a la institución y contribución al desarrollo de la UNO mediante labores específicas.",
+        "objetivo":"Valorar la colaboración de los estudiantes en actividades institucionales, apoyando su formación profesional."
+      },
+      {
+        "titulo":"Beca Investigador UNO",
+        "descripcion":"Estimula la participación de los estudiantes en actividades de investigación científica, tecnológica y humanística.",
+        "objetivo":"Reconocer y fomentar la investigación universitaria entre los estudiantes."
+      }
+    ]
+  },
+  {
+    "titulo": "Convenios UNO",
+    "descripcion": "La Universidad Nacional del Oriente mantiene convenios con diversas instituciones y organizaciones, ofreciendo becas especiales y beneficios exclusivos a estudiantes vinculados a estas entidades.",
+    "objetivo": "Fortalecer la cooperación interinstitucional y proporcionar oportunidades educativas con descuentos y beneficios especiales para estudiantes de instituciones aliadas o miembros de organizaciones convenidas.",
+    "convenios": [
+      {
+        "titulo": "UNO - Policía Boliviana",
+        "beneficios": "👮‍♂️ BECA CONVENIO👮🏻‍♀️ Reconocemos tu dedicación y servicio a la comunidad ☝🏻💙 🔖 ¡Aprovecha descuentos exclusivos en tus mensualidades! ⏰ Horarios flexibles para que estudies en la mañana, tarde o noche. 🎓 Carreras: ⚖️ Derecho 💼 Ingeniería Comercial 📊 Contaduría Pública 🌟 ¡Esta es tu oportunidad de crecer profesional y académicamente! Para más información, contáctanos al 📲 78148470.",
+        "imagen": "convenio.jpg"
+      },
+      {
+        "titulo": "UNO - Mercados Municipales",
+        "beneficios": "Beca Convenio 📚💙 El futuro depende de #UNO ☺☝🏻🎓💙 No esperes más, ven y se parte de esta gran familia, aprovecha los descuentos por Convenio Suscrito 😊 Consulta aquí 📲 76050098 💼 ¡Esta es tu oportunidad de crecer profesional y académicamente!👌🏻 🎓 Carreras: ⚖️ Derecho - 📊 Ingeniería Comercial - 🧮Contaduría Pública ⏰ Horarios flexibles para que estudies en la mañana, tarde o noche. Para más información, contáctanos al 📲 78148470.",
+        "imagen": "convenio.jpg"
+      },
+      {
+        "titulo": "UNO - CSUTCY",
+        "beneficios": "Si formas parte de la Central Sindical Única de Trabajadores Campesinos de Yacuiba (CSUTCY)🤠 💼 ¡Esta es tu oportunidad de crecer profesional y académicamente!👌🏻 🎓 Carreras: ⚖️ Derecho - 📊 Ingeniería Comercial - 🧮Contaduría Pública 🔖 ¡Aprovecha descuentos exclusivos en tus mensualidades! ⏰ Horarios flexibles para que estudies en la mañana, tarde o noche. Para más información, contáctanos al 📲 78148470.",
+        "imagen": "convenio.jpg"
+      },
+      {
+        "titulo": "UNO - FSTP",
+        "beneficios": "BECA TRABAJADORES PETROLEROS 🦺 ¿Formas parte de la Federación Sindical de Trabajadores Petroleros? 💼 ¡Esta es tu oportunidad de crecer profesional y académicamente!👌🏻 🎓 Carreras: ⚖️ Derecho - 📊 Ingeniería Comercial - 🧮Contaduría Pública 🔖 ¡Aprovecha descuentos exclusivos en tus mensualidades! ⏰ Horarios flexibles para que estudies en la mañana, tarde o noche. Para más información, contáctanos al 📲 78148470.",
+        "imagen": "convenio.jpg"
+      },
+      {
+        "titulo": "UNO - COR",
+        "beneficios": "🛍️ BECA ✍🏻🖊️ CENTRAL OBRERA REGIONAL YACUIBA ☺️☝🏻💙 Valoramos tu esfuerzo y dedicación 💪 🔖 ¡Descuentos especiales en tus mensualidades, para Afiliados. ⏰ Horarios flexibles que se adaptan a tu rutina: mañana, tarde o noche. 🎓 Carreras disponibles: ⚖️ Derecho 💼 Ingeniería Comercial 📊 Contaduría Pública Para más información, contáctanos al 📲 78148470. ✨ La Universidad UNO está contigo para alcanzar tus metas. ¡Te esperamos!😉",
+        "imagen": "convenio.jpg"
+      }
+    ]
+  }
+],
       "carrera": [
       {
     "title": "Medicina",

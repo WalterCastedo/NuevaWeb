@@ -11,7 +11,6 @@ export default function Interaccion() {
   const rightRef = useRef(null);
   const leftRef = useRef(null);
 
-  // ---------- HOOKS ----------
   const [topPos, setTopPos] = useState(0);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
@@ -43,7 +42,6 @@ export default function Interaccion() {
     window.scrollTo(0, 0);
   }, [programa]);
 
-  // ---------- FUNCIONES ----------
   const normalizeText = (text) =>
     text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "").toLowerCase();
 
@@ -51,7 +49,6 @@ export default function Interaccion() {
     navigate(`/${normalizeText(sede)}/interaccion/${normalizeText(progTitulo)}`);
   };
 
-  // ---------- DATOS ----------
   const sedeKey = Object.keys(dataJson).find(
     (key) => normalizeText(key) === normalizeText(sede)
   );
@@ -61,18 +58,15 @@ export default function Interaccion() {
     (item) => normalizeText(item.titulo) === normalizeText(programa)
   );
 
-  // ---------- RENDERS CONDICIONALES ----------
   if (!sedeInfo) return <NotFound mensaje={`Sede "${sede}" no encontrada`} />;
   if (!contenido) return <NotFound mensaje={`Programa "${programa}" no encontrado`} />;
 
-  // ---------- ANIMACIONES ----------
   const contentVariants = {
     hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
     exit: { opacity: 0, y: -30, transition: { duration: 0.4 } },
   };
 
-  // ---------- RENDER ----------
   return (
     <div
       style={{
@@ -136,126 +130,200 @@ export default function Interaccion() {
             }}
           >
             {/* IZQUIERDA */}
-<div
-  ref={leftRef}
-  style={{
-    flex: isMobile ? "1 1 100%" : "0 0 600px",
-    maxWidth: isMobile ? "100%" : "600px",
-    textAlign: isMobile ? "center" : "left", // centra todo en móvil
-    margin: isMobile ? "0 auto" : "0",       // centra el bloque en móvil
-  }}
->
-  <div className="p-3 shadow-sm rounded" style={{ background: "#fff" }}>
-    {contenido.descripcion && (
-      <p style={{ whiteSpace: "pre-line" }}>{contenido.descripcion}</p>
-    )}
-    {contenido.objetivo && (
-      <div>
-        <h3 style={{ textAlign: isMobile ? "center" : "left" }}>Objetivo</h3>
-        <p style={{ whiteSpace: "pre-line" }}>{contenido.objetivo}</p>
-      </div>
-    )}
-    {contenido.Proyectos && contenido.Proyectos.length > 0 && (
-      <div>
-        <h3 style={{ textAlign: isMobile ? "center" : "left" }}>Proyectos</h3>
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(220px, 1fr))",
-            gap: "1rem",
-            justifyItems: "center", // centra cada proyecto en móvil
-          }}
-        >
-          {contenido.Proyectos.map((p, i) => (
             <div
-              key={i}
+              ref={leftRef}
               style={{
-                padding: "1rem",
-                background: "#F5F7FF",
-                borderRadius: "8px",
-                fontWeight: 600,
-                color: "#001A66",
-                textAlign: "center",
-                boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-                width: isMobile ? "90%" : "auto", // hace que los proyectos sean más grandes en móvil
+                flex: isMobile ? "1 1 100%" : "0 0 600px",
+                maxWidth: isMobile ? "100%" : "600px",
+                textAlign: isMobile ? "center" : "left",
+                margin: isMobile ? "0 auto" : "0",
               }}
             >
-              {p}
+              <div className="p-3 shadow-sm rounded" style={{ background: "#fff" }}>
+                {contenido.descripcion && (
+                  <p style={{ whiteSpace: "pre-line" }}>{contenido.descripcion}</p>
+                )}
+                {contenido.objetivo && (
+                  <div>
+                    <h3 style={{ textAlign: isMobile ? "center" : "left" }}>Objetivo</h3>
+                    <p style={{ whiteSpace: "pre-line" }}>{contenido.objetivo}</p>
+                  </div>
+                )}
+
+                {/* Proyectos o Becas (para todas las pestañas) */}
+                {contenido.Proyectos && contenido.Proyectos.length > 0 && (
+                  <div>
+                    <h3 style={{ textAlign: isMobile ? "center" : "left", marginBottom: "1rem" }}>
+                      {contenido.titulo === "Becas UNO" ? "Tipos de Becas" : "Proyectos"}
+                    </h3>
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))",
+                        gap: "1.5rem",
+                        justifyItems: "center",
+                      }}
+                    >
+                      {contenido.Proyectos.map((p, i) => (
+                        <div
+                          key={i}
+                          style={{
+                            background: "#fff",
+                            borderRadius: "12px",
+                            border: "1px solid #E0E0E0",
+                            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                            padding: "1.5rem",
+                            width: "100%",
+                            maxWidth: "320px",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "0.5rem",
+                            transition: "transform 0.2s",
+                          }}
+                          onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-4px)")}
+                          onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+                        >
+                          {typeof p === "string" ? (
+                            <span style={{ fontWeight: 600, textAlign: "center" }}>{p}</span>
+                          ) : (
+                            <>
+                              <h4 style={{ margin: 0, color: "#001A66", fontSize: "1.2rem" }}>{p.titulo}</h4>
+                              {p.descripcion && <p style={{ margin: "0.3rem 0", color: "#333" }}>{p.descripcion}</p>}
+                              {p.objetivo && (
+                                <p style={{ fontStyle: "italic", color: "#555", margin: "0.3rem 0" }}>
+                                  Objetivo: {p.objetivo}
+                                </p>
+                              )}
+                            </>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+                {/* Convenios: SOLO en la pestaña Convenios UNO */}
+                {contenido.titulo === "Convenios UNO" && contenido.convenios && contenido.convenios.length > 0 && (
+                  <div style={{ marginTop: "2rem" }}>
+                    <h3 style={{ textAlign: isMobile ? "center" : "left", marginBottom: "1rem" }}>
+                      Convenios
+                    </h3>
+                    <div
+                      style={{
+                        display: "grid",
+                        gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(260px, 1fr))",
+                        gap: "1.5rem",
+                        justifyItems: "center",
+                      }}
+                    >
+                      {contenido.convenios.map((conv, i) => (
+                        <div
+                          key={i}
+                          style={{
+                            background: "#fff",
+                            borderRadius: "12px",
+                            border: "1px solid #E0E0E0",
+                            boxShadow: "0 4px 12px rgba(0,0,0,0.08)",
+                            padding: "1.5rem",
+                            width: "100%",
+                            maxWidth: "320px",
+                            display: "flex",
+                            flexDirection: "column",
+                            gap: "0.5rem",
+                            transition: "transform 0.2s",
+                          }}
+                          onMouseEnter={(e) => (e.currentTarget.style.transform = "translateY(-4px)")}
+                          onMouseLeave={(e) => (e.currentTarget.style.transform = "translateY(0)")}
+                        >
+                          {conv.imagen && (
+                            <img
+                              src={require(`../assets/img/${conv.imagen}`)}
+                              alt={conv.titulo}
+                              style={{ borderRadius: "8px", width: "100%", objectFit: "cover" }}
+                            />
+                          )}
+                          <h4 style={{ margin: 0, color: "#001A66", fontSize: "1.2rem" }}>
+                            {conv.titulo}
+                          </h4>
+                          {conv.beneficios && (
+                            <p style={{ fontSize: "0.9rem", color: "#333", whiteSpace: "pre-line" }}>
+                              {conv.beneficios}
+                            </p>
+                          )}
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
+              </div>
             </div>
-          ))}
-        </div>
-      </div>
-    )}
-  </div>
-</div>
 
-{/* DERECHA */}
-<div
-  ref={rightRef}
-  style={{
-    flex: isMobile ? "1 1 100%" : "0 0 380px",
-    maxWidth: isMobile ? "100%" : "380px",
-    width: isMobile ? "100%" : "380px",
-    position: isMobile ? "relative" : "sticky",
-    top: isMobile ? "auto" : `${topPos}px`,
-    margin: isMobile ? "1rem auto 0 auto" : "0", // espacio arriba y centrado en móvil
-  }}
->
-  <div
-    style={{
-      backgroundColor: "#001A66",
-      color: "#fff",
-      padding: "0.5rem 1rem",
-      fontWeight: 700,
-      marginBottom: "1.5rem",
-      borderRadius: "5px",
-      textAlign: "center",
-      borderBottom: "5px solid #009DFA",
-      width: "100%",
-      boxSizing: "border-box",
-    }}
-  >
-    Programas
-  </div>
+            {/* DERECHA */}
+            <div
+              ref={rightRef}
+              style={{
+                flex: isMobile ? "1 1 100%" : "0 0 380px",
+                maxWidth: isMobile ? "100%" : "380px",
+                width: isMobile ? "100%" : "380px",
+                position: isMobile ? "relative" : "sticky",
+                top: isMobile ? "auto" : "100px",
+                margin: isMobile ? "1rem auto 0 auto" : "0",
+              }}
+            >
+              <div
+                style={{
+                  backgroundColor: "#001A66",
+                  color: "#fff",
+                  padding: "0.5rem 1rem",
+                  fontWeight: 700,
+                  marginBottom: "1.5rem",
+                  borderRadius: "5px",
+                  textAlign: "center",
+                  borderBottom: "5px solid #009DFA",
+                  width: "100%",
+                  boxSizing: "border-box",
+                }}
+              >
+                Interacción Social
+              </div>
 
-  <div
-    style={{
-      background: "#F5F7FF",
-      padding: "1rem",
-      borderRadius: "8px",
-      boxShadow: "0 0 6px rgba(0,0,0,0.1)",
-      display: "flex",
-      flexDirection: "column",
-      gap: "0.5rem",
-      width: "100%",
-      boxSizing: "border-box",
-    }}
-  >
-    {interaccionArray.map((prog) => (
-      <button
-        key={prog.titulo}
-        onClick={() => handleProgramaClick(prog.titulo)}
-        style={{
-          backgroundColor:
-            normalizeText(programa) === normalizeText(prog.titulo)
-              ? "#009DFA"
-              : "#001A66",
-          color: "#fff",
-          border: "none",
-          padding: "0.6rem",
-          cursor: "pointer",
-          fontWeight: 600,
-          borderRadius: "5px",
-          width: "100%",
-        }}
-      >
-        {prog.titulo}
-      </button>
-    ))}
-  </div>
-</div>
-
-
+              <div
+                style={{
+                  background: "#F5F7FF",
+                  padding: "1rem",
+                  borderRadius: "8px",
+                  boxShadow: "0 0 6px rgba(0,0,0,0.1)",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: "0.5rem",
+                  width: "100%",
+                  boxSizing: "border-box",
+                }}
+              >
+                {interaccionArray.map((prog) => (
+                  <button
+                    key={prog.titulo}
+                    onClick={() => handleProgramaClick(prog.titulo)}
+                    style={{
+                      backgroundColor:
+                        normalizeText(programa) === normalizeText(prog.titulo)
+                          ? "#009DFA"
+                          : "#001A66",
+                      color: "#fff",
+                      border: "none",
+                      padding: "0.6rem",
+                      cursor: "pointer",
+                      fontWeight: 600,
+                      borderRadius: "5px",
+                      width: "100%",
+                    }}
+                  >
+                    {prog.titulo}
+                  </button>
+                ))}
+              </div>
+            </div>
           </div>
         </motion.div>
       </AnimatePresence>
