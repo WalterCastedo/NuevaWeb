@@ -63,7 +63,7 @@ export default function SeleccionarSede() {
           transition={{ duration: 0.8 }}
         >
           <h2 className="fw-bold text-white text-center" style={{ fontSize: "3em" }}>
-            Selecciona tu Sub Sede
+            Sub Sedes
           </h2>
           <p className="text-white text-center" style={{ fontSize: "1.2em" }}>
             Bienvenido a la Red Universitaria UNO
@@ -74,75 +74,78 @@ export default function SeleccionarSede() {
         >
           <div className="col-lg-6"
           >
-           <div className="row d-flex flex-wrap justify-content-end" style={{ marginLeft: "100px" }}>
-          
-            
-              {sedes.map((sede, i) => {
-                const isActive = activeSede === sede.nombre;
-                const opacity = activeSede && !isActive ? 0.3 : 1;
+           <div className="row d-flex flex-wrap justify-content-center">
+  {sedes.map((sede, i) => {
+    const isActive = activeSede === sede.nombre;
+    const opacity = activeSede && !isActive ? 0.3 : 1;
 
-                return (
-                  <motion.div
-                    key={i}
-                    className="col-lg-4 col-md-4 col-6 mb-4"
-                    style={{ order: i }}
-                    initial={{ opacity: 0, y: 40, scale: 0.9 }}
-                    animate={{ opacity: 1, y: 0, scale: 1 }}
-                    transition={{ duration: 0.6, delay: i * 0.15 }}
-                  >
-                    <div
-                      style={{ textAlign: "center", cursor: "pointer", opacity}}
-                      onMouseEnter={() => setActiveSede(sede.nombre)}
-                      onMouseLeave={() => setActiveSede(null)}
-                    onClick={() => {
-  // Normaliza: quitar espacios y pasar a minúsculas
-  const sedeUrl = sede.nombre.replace(/\s+/g, "").toLowerCase();
-  navigate(`/${sedeUrl}`);
-  window.scrollTo({ top: 0, behavior: "smooth" });
-}}               >
-                      <div
-  style={{
-    height: "110px",
-    width: "120px", // antes 130px
-    backgroundColor: "#009dfa",
-    borderRadius: "0.8rem",
-    position: "relative",
-    overflow: "visible",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "flex-end",
-  }}
->
-                        <motion.img
-                          src={sede.img}
-                          alt={sede.nombre}
-                          style={{
-                            width: `calc(${sede.width} * 0.7)`,
-                            height: `calc(${sede.height} * 0.7)`,
-                            objectFit: "cover",
-                            borderRadius: "0.5rem",
-                            position: "absolute",
-                            bottom: "0",
-                            right: sede.anchor === "bottom-right" ? "0" : "auto",
-                            left: sede.anchor === "bottom-left" ? "0" : "auto",
-                          }}
-                          whileHover={{
-                            scale: 1.15,
-                            translateX: sede.anchor === "bottom-right" ? "-6%" : "6%",
-                            translateY: "-6%",
-                          }}
-                          transition={{ duration: 0.3 }}
-                        />
-                      </div>
+    return (
+      <motion.div
+        key={i}
+        className="col-4 col-md-4 col-lg-4 mb-4" // col-4 asegura 3 por fila en móvil
+        style={{ order: i }}
+        initial={{ opacity: 0, y: 40, scale: 0.9 }}
+        animate={{ opacity: 1, y: 0, scale: 1 }}
+        transition={{ duration: 0.6, delay: i * 0.15 }}
+      >
+        <div
+          style={{ textAlign: "center", cursor: "pointer", opacity }}
+          onMouseEnter={() => setActiveSede(sede.nombre)}
+          onMouseLeave={() => setActiveSede(null)}
+          onClick={() => {
+            const sedeUrl = sede.nombre.replace(/\s+/g, "").toLowerCase();
+            navigate(`/${sedeUrl}`);
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }}
+        >
+          <div
+            style={{
+              height: "110px",
+              width: "120px",
+              backgroundColor: "#009dfa",
+              borderRadius: "0.8rem",
+              position: "relative",
+              overflow: "visible",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "flex-end",
+              margin: "0 auto", // centra en móvil
+            }}
+          >
+            <motion.img
+              src={sede.img}
+              alt={sede.nombre}
+              style={{
+                width: `calc(${sede.width} * 0.7)`,
+                height: `calc(${sede.height} * 0.7)`,
+                objectFit: "cover",
+                borderRadius: "0.5rem",
+                position: "absolute",
+                bottom: "0",
+                right: sede.anchor === "bottom-right" ? "0" : "auto",
+                left: sede.anchor === "bottom-left" ? "0" : "auto",
+              }}
+              whileHover={{
+                scale: 1.15,
+                translateX: sede.anchor === "bottom-right" ? "-6%" : "6%",
+                translateY: "-6%",
+              }}
+              transition={{ duration: 0.3 }}
+            />
+          </div>
 
-                      <h5 className="mt-2 text-white fw-bold" style={{ fontSize: "0.9rem" }}>
-                        {sede.nombre}
-                      </h5>
-                    </div>
-                  </motion.div>
-                );
-              })}
-            </div>
+          <h5
+            className="mt-2 text-white fw-bold"
+            style={{ fontSize: "0.9rem" }}
+          >
+            {sede.nombre}
+          </h5>
+        </div>
+      </motion.div>
+    );
+  })}
+</div>
+
           </div>
 
           <div className="col-lg-6 text-center mt-4 mt-lg-0">
@@ -152,7 +155,7 @@ export default function SeleccionarSede() {
               animate={{ opacity: 1, scale: 1.2, y: -50 }}
               transition={{ duration: 0.8 }}
             >
-              <div style={{ maxWidth: "320px", margin: "0 auto", position: "relative" }}>
+              <div style={{ maxWidth: "320px", margin: "50px auto -20px", position: "relative" }}>
                 <img
                   src={mapaBolivia}
                   className="img-fluid rounded"

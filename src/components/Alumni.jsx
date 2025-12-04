@@ -44,7 +44,7 @@ function AnimatedCircle({ value, label, duration = 2000, showPlus = false, delay
       whileInView={{ opacity: 1 }}
       viewport={{ once: true }}
       transition={{ delay, duration: 0.8 }}
-      className="d-flex flex-column align-items-center justify-content-center rounded-circle m-1 position-relative"
+      className="d-flex flex-column align-items-center justify-content-center rounded-circle m-2 position-relative"
       style={{ width: "180px", height: "180px" }}
     >
       <svg width="180" height="180">
@@ -86,20 +86,13 @@ export default function Alumni() {
 
   const dataSede = dataJson[sede];
 
-  // 🟦 DATOS DINÁMICOS DESDE JSON
   const totalGraduados = dataSede?.alumni?.graduados || 0;
   const descripcion = dataSede?.alumni?.descripcion || "";
 
-  // Contar carreras desde "ofertas"
-  const totalCarreras = dataSede?.oferta
-    ? Object.keys(dataSede.oferta).length
-    : 0;
+  const totalCarreras = dataSede?.oferta ? Object.keys(dataSede.oferta).length : 0;
 
-  // 🟦 cargar imágenes dinámicas
   useEffect(() => {
     if (!dataSede) return;
-
-    // Fondo dinámico
     if (dataSede?.imagenes?.fondoAlumni) {
       try {
         const fondo = require(`../assets/img/${dataSede.imagenes.fondoAlumni}`);
@@ -107,11 +100,8 @@ export default function Alumni() {
       } catch {
         setFondoImg(fondoDefault);
       }
-    } else {
-      setFondoImg(fondoDefault);
-    }
+    } else setFondoImg(fondoDefault);
 
-    // Imagen de graduados dinámica
     if (dataSede?.imagenes?.graduados) {
       try {
         const img = require(`../assets/img/${dataSede.imagenes.graduados}`);
@@ -147,33 +137,31 @@ export default function Alumni() {
       />
 
       <div className="container py-5 position-relative" style={{ zIndex: 2 }}>
-        <div className="row align-items-center">
-          <div className="col-md-6 mb-4 mb-md-0">
+        <div className="row justify-content-center text-center">
+          <div className="col-12 col-md-6 mb-4">
             <motion.h2
               initial={{ opacity: 0, y: -50 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 1 }}
               className="fw-bold mb-4"
-              style={{ fontSize: "2.5em", color: hover ? "#fff" : "#001A66" }}
+              style={{ fontSize: "2.2em", color: hover ? "#fff" : "#001A66" }}
             >
               Red Alumni
             </motion.h2>
 
-            {/* 🟦 DESCRIPCIÓN DINÁMICA DESDE JSON */}
             <motion.p
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               viewport={{ once: true }}
               transition={{ delay: 0.3, duration: 1 }}
               className="fw-semibold mb-4"
-              style={{ fontSize: "1.3em", color: hover ? "#fff" : "#001A66" }}
+              style={{ fontSize: "1.2em", color: hover ? "#fff" : "#001A66" }}
             >
               {descripcion}
             </motion.p>
 
-            {/* 🟦 CÍRCULOS DINÁMICOS */}
-            <div className="d-flex flex-wrap justify-content-between justify-content-md-around mb-3">
+            <div className="d-flex flex-wrap justify-content-center mb-3">
               <AnimatedCircle
                 value={totalGraduados}
                 label="Graduados"
@@ -197,7 +185,6 @@ export default function Alumni() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: 0.9, duration: 0.8 }}
-              className="text-center fw-bold"
             >
               <a
                 href="/alumni"
@@ -216,9 +203,8 @@ export default function Alumni() {
             </motion.div>
           </div>
 
-          {/* 🟦 IMAGEN DINÁMICA DE GRADUADOS */}
           <motion.div
-            className="col-md-6 text-center text-md-end position-relative overflow-hidden"
+            className="col-12 col-md-6 mt-4 mt-md-0 text-center"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
@@ -226,14 +212,13 @@ export default function Alumni() {
           >
             <div
               style={{
-                position: "relative",
-                display: "inline-block",
-                right: "-15%",
-                width: "100%",
+                margin: "0 auto",
+                width: "80%",
                 maxWidth: "450px",
                 aspectRatio: "1/1",
                 borderRadius: "50%",
                 overflow: "hidden",
+                position: "relative",
               }}
             >
               {alumniImg && (
@@ -245,7 +230,6 @@ export default function Alumni() {
                     width: "100%",
                     height: "100%",
                     objectFit: "cover",
-                    display: "block",
                   }}
                 />
               )}

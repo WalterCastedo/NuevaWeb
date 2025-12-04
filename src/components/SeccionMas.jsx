@@ -13,18 +13,25 @@ export default function SeccionMas() {
 
   const [topPos, setTopPos] = useState(0);
   const [activeTab, setActiveTab] = useState(seccion);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
-  // Listener scroll para mover la derecha
+  // Detectar tamaño móvil
   useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // Scroll para sticky derecha (solo desktop)
+  useEffect(() => {
+    if (isMobile) return;
     const handleScroll = () => {
       if (!rightRef.current || !leftRef.current) return;
       const containerTop = leftRef.current.offsetTop;
       const containerHeight = leftRef.current.offsetHeight;
       const rightHeight = rightRef.current.offsetHeight;
-
       const maxTop = containerHeight - rightHeight;
       const newTop = Math.min(Math.max(window.scrollY - containerTop + 20, 0), maxTop);
-
       setTopPos(newTop);
     };
 
@@ -35,7 +42,7 @@ export default function SeccionMas() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
     };
-  }, []);
+  }, [isMobile]);
 
   // Scroll al cambiar de sección
   useEffect(() => {
@@ -43,8 +50,7 @@ export default function SeccionMas() {
     setActiveTab(seccion);
   }, [seccion]);
 
-  const capitalize = (text = "") =>
-    text.charAt(0).toUpperCase() + text.slice(1);
+  const capitalize = (text = "") => text.charAt(0).toUpperCase() + text.slice(1);
 
   const normalizeText = (text) =>
     text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "").toLowerCase();
@@ -85,12 +91,10 @@ export default function SeccionMas() {
           )?.contenido || "",
       },
     ];
-  } else if (seccion === "filosofia" || seccion === "bienvenida" || seccion === "historia") {
-    contenido = [bloque[seccion]]; 
-  } else if (seccion === "reglamento") {
-    contenido = bloque.reglamento; 
-  } else if (seccion === "autoridades") {
-    contenido = bloque.autoridades; 
+  } else if (["filosofia", "bienvenida", "historia"].includes(seccion)) {
+    contenido = [bloque[seccion]];
+  } else if (["reglamento", "autoridades"].includes(seccion)) {
+    contenido = bloque[seccion];
   } else {
     contenido = bloque[seccion];
   }
@@ -102,9 +106,7 @@ export default function SeccionMas() {
       />
     );
 
-  const handleTabClick = (tabKey) => {
-    navigate(`/${sede}/mas/${tabKey}`);
-  };
+  const handleTabClick = (tabKey) => navigate(`/${sede}/mas/${tabKey}`);
 
   // --- Animaciones ---
   const containerVariants = {
@@ -114,9 +116,9 @@ export default function SeccionMas() {
   };
 
   const tabVariants = {
-    hidden: { opacity: 0, x: 50 },
-    visible: { opacity: 1, x: 0, transition: { duration: 0.35 } },
-    exit: { opacity: 0, x: -50, transition: { duration: 0.25 } }
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.35 } },
+    exit: { opacity: 0, y: -20, transition: { duration: 0.25 } }
   };
 
   return (
@@ -177,13 +179,20 @@ export default function SeccionMas() {
           <div
             style={{
               display: "flex",
+              flexDirection: isMobile ? "column" : "row",
               gap: "2rem",
-              marginLeft: "3rem",
-              alignItems: "flex-start",
+              justifyContent: "center",
+              flexWrap: "wrap",
             }}
           >
             {/* IZQUIERDA */}
-            <div style={{ flex: "0 0 600px" }} ref={leftRef}>
+            <div
+              ref={leftRef}
+              style={{
+                flex: "1 1 100%",
+                maxWidth: "600px",
+              }}
+            >
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeTab}
@@ -191,6 +200,7 @@ export default function SeccionMas() {
                   initial="hidden"
                   animate="visible"
                   exit="exit"
+                  style={{ position: "relative" }} // Evita que afecte layout global
                 >
                   {seccion === "autoridades" ? (
                     <div
@@ -214,8 +224,6 @@ export default function SeccionMas() {
                             maxWidth: "350px",
                             textAlign: "center",
                             boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
-                            wordWrap: "break-word",
-                            overflow: "hidden",
                             fontSize: "0.9rem",
                           }}
                         >
@@ -250,9 +258,18 @@ export default function SeccionMas() {
                     </div>
                   ) : Array.isArray(contenido) ? (
                     contenido.map((item, i) => (
-                      <motion.div key={i} className="p-3 shadow-sm rounded" style={{ background: "#fff", marginBottom:"2rem" }}>
-                        {item.titulo && <h3 style={{ fontWeight: 700 }}>{item.titulo}</h3>}
-                        <p style={{ whiteSpace: "pre-line" }}>{item.contenido}</p>
+                      <motion.div
+                        key={i}
+                        className="p-3 shadow-sm rounded"
+                        style={{
+                          background: "#fff",
+                          marginBottom: "2rem",
+                          padding: "1rem",
+                          fontSize: "1rem",
+                        }}
+                      >
+                        {item.titulo && <h3 style={{ fontWeight: 700, fontSize: "1.3rem" }}>{item.titulo}</h3>}
+                        <p style={{ whiteSpace: "pre-line", fontSize: "1rem" }}>{item.contenido}</p>
                       </motion.div>
                     ))
                   ) : (
@@ -272,13 +289,19 @@ export default function SeccionMas() {
             </div>
 
             {/* DERECHA */}
-            <div style={{ flex: "0 0 380px", alignSelf: "flex-start" }}>
+            <div
+              style={{
+                flex: "0 0 380px", // Mantiene ancho fijo en escritorio
+                maxWidth: isMobile ? "100%" : "380px", // 100% en móvil
+                
+              }}
+            >
               <div
-                style={{
-                  position: "sticky",
-                  top: "20px",
-                }}
                 ref={rightRef}
+                style={{
+                  position: isMobile ? "relative" : "sticky", // sticky solo en desktop
+                  top: isMobile ? "auto" : "20px",
+                }}
               >
                 <div
                   style={{

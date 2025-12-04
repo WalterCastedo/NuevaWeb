@@ -11,12 +11,19 @@ export default function Interaccion() {
   const rightRef = useRef(null);
   const leftRef = useRef(null);
 
-  // ---------- HOOKS SIEMPRE PRIMERO ----------
+  // ---------- HOOKS ----------
   const [topPos, setTopPos] = useState(0);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
-      if (!rightRef.current || !leftRef.current) return;
+      if (!rightRef.current || !leftRef.current || isMobile) return;
       const containerTop = leftRef.current.offsetTop;
       const containerHeight = leftRef.current.offsetHeight;
       const rightHeight = rightRef.current.offsetHeight;
@@ -30,7 +37,7 @@ export default function Interaccion() {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleScroll);
     };
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -118,101 +125,137 @@ export default function Interaccion() {
             {contenido.titulo}
           </h1>
 
-          <div style={{ display: "flex", gap: "2rem" }}>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: isMobile ? "column" : "row",
+              gap: "2rem",
+              justifyContent: "center",
+              flexWrap: "wrap",
+              alignItems: isMobile ? "center" : "flex-start",
+            }}
+          >
             {/* IZQUIERDA */}
-            <div style={{ flex: "0 0 600px" }} ref={leftRef}>
-              <div className="p-3 shadow-sm rounded" style={{ background: "#fff" }}>
-                {contenido.descripcion && <p style={{ whiteSpace: "pre-line" }}>{contenido.descripcion}</p>}
-                {contenido.objetivo && (
-                  <div>
-                    <h3>Objetivo</h3>
-                    <p style={{ whiteSpace: "pre-line" }}>{contenido.objetivo}</p>
-                  </div>
-                )}
-                {contenido.Proyectos && contenido.Proyectos.length > 0 && (
-                  <div>
-                    <h3>Proyectos</h3>
-                    <div
-                      style={{
-                        display: "grid",
-                        gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
-                        gap: "1rem",
-                      }}
-                    >
-                      {contenido.Proyectos.map((p, i) => (
-                        <div
-                          key={i}
-                          style={{
-                            padding: "1rem",
-                            background: "#F5F7FF",
-                            borderRadius: "8px",
-                            fontWeight: 600,
-                            color: "#001A66",
-                            textAlign: "center",
-                            boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-                          }}
-                        >
-                          {p}
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </div>
+<div
+  ref={leftRef}
+  style={{
+    flex: isMobile ? "1 1 100%" : "0 0 600px",
+    maxWidth: isMobile ? "100%" : "600px",
+    textAlign: isMobile ? "center" : "left", // centra todo en móvil
+    margin: isMobile ? "0 auto" : "0",       // centra el bloque en móvil
+  }}
+>
+  <div className="p-3 shadow-sm rounded" style={{ background: "#fff" }}>
+    {contenido.descripcion && (
+      <p style={{ whiteSpace: "pre-line" }}>{contenido.descripcion}</p>
+    )}
+    {contenido.objetivo && (
+      <div>
+        <h3 style={{ textAlign: isMobile ? "center" : "left" }}>Objetivo</h3>
+        <p style={{ whiteSpace: "pre-line" }}>{contenido.objetivo}</p>
+      </div>
+    )}
+    {contenido.Proyectos && contenido.Proyectos.length > 0 && (
+      <div>
+        <h3 style={{ textAlign: isMobile ? "center" : "left" }}>Proyectos</h3>
+        <div
+          style={{
+            display: "grid",
+            gridTemplateColumns: isMobile ? "1fr" : "repeat(auto-fit, minmax(220px, 1fr))",
+            gap: "1rem",
+            justifyItems: "center", // centra cada proyecto en móvil
+          }}
+        >
+          {contenido.Proyectos.map((p, i) => (
+            <div
+              key={i}
+              style={{
+                padding: "1rem",
+                background: "#F5F7FF",
+                borderRadius: "8px",
+                fontWeight: 600,
+                color: "#001A66",
+                textAlign: "center",
+                boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+                width: isMobile ? "90%" : "auto", // hace que los proyectos sean más grandes en móvil
+              }}
+            >
+              {p}
             </div>
+          ))}
+        </div>
+      </div>
+    )}
+  </div>
+</div>
 
-            {/* DERECHA */}
-            <div style={{ flex: "0 0 380px", alignSelf: "flex-start" }}>
-              <div ref={rightRef} style={{ position: "sticky", top: `${topPos}px` }}>
-                <div
-                  style={{
-                    backgroundColor: "#001A66",
-                    color: "#fff",
-                    padding: "0.5rem 1rem",
-                    fontWeight: 700,
-                    marginBottom: "1.5rem",
-                    borderRadius: "5px",
-                    textAlign: "center",
-                    borderBottom: "5px solid #009DFA",
-                  }}
-                >
-                  Programas
-                </div>
+{/* DERECHA */}
+<div
+  ref={rightRef}
+  style={{
+    flex: isMobile ? "1 1 100%" : "0 0 380px",
+    maxWidth: isMobile ? "100%" : "380px",
+    width: isMobile ? "100%" : "380px",
+    position: isMobile ? "relative" : "sticky",
+    top: isMobile ? "auto" : `${topPos}px`,
+    margin: isMobile ? "1rem auto 0 auto" : "0", // espacio arriba y centrado en móvil
+  }}
+>
+  <div
+    style={{
+      backgroundColor: "#001A66",
+      color: "#fff",
+      padding: "0.5rem 1rem",
+      fontWeight: 700,
+      marginBottom: "1.5rem",
+      borderRadius: "5px",
+      textAlign: "center",
+      borderBottom: "5px solid #009DFA",
+      width: "100%",
+      boxSizing: "border-box",
+    }}
+  >
+    Programas
+  </div>
 
-                <div
-                  style={{
-                    background: "#F5F7FF",
-                    padding: "1rem",
-                    borderRadius: "8px",
-                    boxShadow: "0 0 6px rgba(0,0,0,0.1)",
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "0.5rem",
-                  }}
-                >
-                  {interaccionArray.map((prog) => (
-                    <button
-                      key={prog.titulo}
-                      onClick={() => handleProgramaClick(prog.titulo)}
-                      style={{
-                        backgroundColor:
-                          normalizeText(programa) === normalizeText(prog.titulo)
-                            ? "#009DFA"
-                            : "#001A66",
-                        color: "#fff",
-                        border: "none",
-                        padding: "0.6rem",
-                        cursor: "pointer",
-                        fontWeight: 600,
-                        borderRadius: "5px",
-                      }}
-                    >
-                      {prog.titulo}
-                    </button>
-                  ))}
-                </div>
-              </div>
-            </div>
+  <div
+    style={{
+      background: "#F5F7FF",
+      padding: "1rem",
+      borderRadius: "8px",
+      boxShadow: "0 0 6px rgba(0,0,0,0.1)",
+      display: "flex",
+      flexDirection: "column",
+      gap: "0.5rem",
+      width: "100%",
+      boxSizing: "border-box",
+    }}
+  >
+    {interaccionArray.map((prog) => (
+      <button
+        key={prog.titulo}
+        onClick={() => handleProgramaClick(prog.titulo)}
+        style={{
+          backgroundColor:
+            normalizeText(programa) === normalizeText(prog.titulo)
+              ? "#009DFA"
+              : "#001A66",
+          color: "#fff",
+          border: "none",
+          padding: "0.6rem",
+          cursor: "pointer",
+          fontWeight: 600,
+          borderRadius: "5px",
+          width: "100%",
+        }}
+      >
+        {prog.titulo}
+      </button>
+    ))}
+  </div>
+</div>
+
+
           </div>
         </motion.div>
       </AnimatePresence>

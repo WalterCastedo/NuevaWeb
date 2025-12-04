@@ -9,6 +9,7 @@ export default function Oferta() {
   const { sede } = useParams();
   const [carreras, setCarreras] = useState([]);
   const [fondo, setFondo] = useState(fondoDefault);
+const isMobile = window.innerWidth <= 768; // ancho típico móvil
 
   const dividirEnFilas = (lista) => {
     const n = lista.length;
@@ -93,33 +94,33 @@ export default function Oferta() {
       <div className="container text-center">
 
         <motion.h2
-          initial={{ opacity: 0, y: -50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 1 }}
-          className="fw-bold mb-3"
-          style={{
-            fontSize: "3.3em",
-            color: "#002166",
-          }}
-        >
-          Oferta académica
-        </motion.h2>
+  initial={{ opacity: 0, y: -50 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1 }}
+  className="fw-bold mb-3"
+  style={{
+    fontSize: isMobile ? "3em" : "3.3em", // más pequeño en móvil
+    color: "#002166",
+    marginBottom: isMobile ? "0.8rem" : "1.5rem", // menos espaciado
+  }}
+>
+  Oferta académica
+</motion.h2>
 
         <motion.p
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ delay: 0.5, duration: 1 }}
-          className="mb-5"
-          style={{
-            fontSize: "1.35em",
-            color: "#002166",
-          }}
-        >
-          Contamos con carreras con mayor demanda laboral.
-        </motion.p>
-
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ delay: 0.5, duration: 1 }}
+  className="mb-5"
+  style={{
+    fontSize: isMobile ? "1.6em" : "1.35em", // más grande en móvil
+    color: "#002166",
+  }}
+>
+  Contamos con carreras con mayor demanda laboral.
+</motion.p>
         {filas.map((fila, indexFila) => (
           <div
             key={indexFila}
@@ -133,56 +134,47 @@ export default function Oferta() {
           >
             {fila.map((carrera, i) => (
               <motion.div
-                key={i}
-                variants={itemVariants}
-                initial="hidden"
-                whileInView="visible"
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ delay: i * 0.1, type: "spring", stiffness: 100 }}
-              >
-                <motion.div
-                  className="text-center"
-                  style={{
-                    maxWidth: "215px",
-                    width: "100%",
-                  }}
-                  whileHover={{ scale: 1.05, y: -5 }}
-                >
-                  <img
-                    src={carrera.img}
-                    alt={carrera.title}
-                    className="img-fluid rounded shadow"
-                    style={{
-                      maxHeight: "190px",
-                      objectFit: "contain",
-                      padding: "5px",
-                      borderRadius: "12px",
-                    }}
-                  />
+  className="text-center"
+  style={{
+    maxWidth: isMobile ? "260px" : "215px", // tarjeta más grande en móvil
+    width: "100%",
+  }}
+  whileHover={{ scale: 1.05, y: -5 }}
+>
+  <img
+    src={carrera.img}
+    alt={carrera.title}
+    className="img-fluid rounded shadow"
+    style={{
+      maxHeight: isMobile ? "280px" : "190px", // imagen más grande en móvil
+      objectFit: "contain",
+      padding: "5px",
+      borderRadius: "12px",
+    }}
+  />
 
-                  <motion.span
-                    className="d-block fw-bold py-2 rounded-pill mt-3"
-                    style={{
-                      background: "#002166",
-                      color: "white",
-                      width: "100%",
-                      fontSize: "1em",
-                      whiteSpace: "nowrap",
-                      overflow: "hidden",
-                      textOverflow: "ellipsis",
-                      cursor: "pointer",
-                    }}
-                    whileHover={{ scale: 1.07, backgroundColor: "#003399" }}
-                    onClick={() =>
-                      navigate(
-                        `/${sede}/Carrera/${carrera.title.replace(/\s+/g, "")}`
-                      )
-                    }
-                  >
-                    {carrera.title}
-                  </motion.span>
-                </motion.div>
-              </motion.div>
+  <motion.span
+    className="d-block fw-bold py-2 rounded-pill mt-3"
+    style={{
+      background: "#002166",
+      color: "white",
+      width: "100%",
+      fontSize: isMobile ? "1.2em" : "1em", // texto más grande en móvil
+      whiteSpace: "nowrap",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      cursor: "pointer",
+    }}
+    whileHover={{ scale: 1.07, backgroundColor: "#003399" }}
+    onClick={() =>
+      navigate(
+        `/${sede}/Carrera/${carrera.title.replace(/\s+/g, "")}`
+      )
+    }
+  >
+    {carrera.title}
+  </motion.span>
+</motion.div>
             ))}
           </div>
         ))}

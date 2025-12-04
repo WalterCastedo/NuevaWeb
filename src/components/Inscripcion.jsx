@@ -105,17 +105,15 @@ useEffect(() => {
       </div>
       <motion.div
   className="sub-menu"
-  animate={{
+  animate={window.innerWidth > 768 ? {
     scale: isScrolled ? 0.7 : 1,
     bottom: isScrolled ? 0 : 0,
     right: isScrolled ? 0 : 0,
     position: isScrolled ? "fixed" : "absolute",
     x: isScrolled ? 99 : 0,
     y: isScrolled ? 15 : 0
-  }}
-
-  // SOLO hover grande cuando está pequeño
-  whileHover={
+  } : {}}
+  whileHover={window.innerWidth > 768 ? 
     isScrolled
       ? {
           scale: 1,
@@ -124,8 +122,8 @@ useEffect(() => {
           transition: { type: "spring", stiffness: 1800, damping: 100 }
         }
       : undefined
+    : undefined
   }
-
   transition={{ type: "spring", stiffness: 200, damping: 25 }}
 >
   {botones.map((item, i) => (

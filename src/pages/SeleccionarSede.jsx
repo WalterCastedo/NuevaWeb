@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 
@@ -19,8 +19,14 @@ import mtrImg from "../assets/img/mtr.webp";
 export default function SeleccionarSede() {
   const navigate = useNavigate();
   const [activeSede, setActiveSede] = useState(null);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 992);
 
-  // Nuevo orden de sedes
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 992);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const sedes = [
     { nombre: "Santa Cruz", img: santaCruzImg, width: "115px", height: "170px", anchor: "bottom-right" },
     { nombre: "Montero", img: monteroImg, width: "120px", height: "180px", anchor: "bottom-right" },
@@ -62,21 +68,24 @@ export default function SeleccionarSede() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="fw-bold text-white text-center" style={{ fontSize: "3em" }}>
+          <h2
+            className="fw-bold text-white text-center"
+            style={{ fontSize: isMobile ? "2.5em" : "3em" }}
+          >
             Selecciona tu Sub Sede
           </h2>
-          <p className="text-white text-center" style={{ fontSize: "1.2em" }}>
+          <p
+            className="text-white text-center"
+            style={{ fontSize: "1.2em", marginTop: isMobile ? "0.5em" : "1em" }}
+          >
             Bienvenido a la Red Universitaria UNO
           </p>
         </motion.div>
 
-        <div className="row pt-5 align-items-start"
-        >
-          <div className="col-lg-6"
-          >
-           <div className="row d-flex flex-wrap justify-content-end" style={{ marginLeft: "100px" }}>
-          
-            
+        <div className={`row ${isMobile ? "pt-1" : "pt-5"} align-items-start`}>
+          {/* Columna de sedes */}
+          <div className="col-12 col-lg-6">
+            <div className="row flex-wrap justify-content-center">
               {sedes.map((sede, i) => {
                 const isActive = activeSede === sede.nombre;
                 const opacity = activeSede && !isActive ? 0.3 : 1;
@@ -84,37 +93,36 @@ export default function SeleccionarSede() {
                 return (
                   <motion.div
                     key={i}
-                    className="col-lg-4 col-md-4 col-6 mb-4"
-                    style={{ order: i }}
+                    className="col-4 col-md-4 col-lg-4 mb-4 d-flex justify-content-center"
                     initial={{ opacity: 0, y: 40, scale: 0.9 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 0.6, delay: i * 0.15 }}
                   >
                     <div
-                      style={{ textAlign: "center", cursor: "pointer", opacity}}
+                      style={{ textAlign: "center", cursor: "pointer", opacity }}
                       onMouseEnter={() => setActiveSede(sede.nombre)}
                       onMouseLeave={() => setActiveSede(null)}
                       onClick={() => navigate(`/${sede.nombre.replace(/\s+/g, '')}`)}
                     >
                       <div
-  style={{
-    height: "110px",
-    width: "120px", // antes 130px
-    backgroundColor: "#009dfa",
-    borderRadius: "0.8rem",
-    position: "relative",
-    overflow: "visible",
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "flex-end",
-  }}
->
+                        style={{
+                          height: isMobile ? "110px" : "120px",
+                          width: isMobile ? "120px" : "140px",
+                          backgroundColor: "#009dfa",
+                          borderRadius: "0.8rem",
+                          position: "relative",
+                          overflow: "visible",
+                          display: "flex",
+                          justifyContent: "center",
+                          alignItems: "flex-end",
+                        }}
+                      >
                         <motion.img
                           src={sede.img}
                           alt={sede.nombre}
                           style={{
-                            width: `calc(${sede.width} * 0.7)`,
-                            height: `calc(${sede.height} * 0.7)`,
+                            width: `calc(${sede.width} * ${isMobile ? 0.7 : 1})`,
+                            height: `calc(${sede.height} * ${isMobile ? 0.7 : 1})`,
                             objectFit: "cover",
                             borderRadius: "0.5rem",
                             position: "absolute",
@@ -131,7 +139,10 @@ export default function SeleccionarSede() {
                         />
                       </div>
 
-                      <h5 className="mt-2 text-white fw-bold" style={{ fontSize: "0.9rem" }}>
+                      <h5
+                        className="mt-2 text-white fw-bold"
+                        style={{ fontSize: isMobile ? "0.9rem" : "1rem" }}
+                      >
                         {sede.nombre}
                       </h5>
                     </div>
@@ -141,14 +152,21 @@ export default function SeleccionarSede() {
             </div>
           </div>
 
-          <div className="col-lg-6 text-center mt-4 mt-lg-0">
+          {/* Columna del mapa */}
+          <div className="col-12 col-lg-6 text-center mt-1 mt-lg-0">
             <motion.div
               className="position-relative d-inline-block"
               initial={{ opacity: 0, scale: 0.9, y: 40 }}
-              animate={{ opacity: 1, scale: 1.2, y: -50 }}
+              animate={{ opacity: 1, scale: isMobile ? 1 : 1.2, y: isMobile ? 0 : -50 }}
               transition={{ duration: 0.8 }}
             >
-              <div style={{ maxWidth: "320px", margin: "0 auto", position: "relative" }}>
+              <div
+                style={{
+                  maxWidth: isMobile ? "300px" : "320px",
+                  margin: isMobile ? "0px auto 0" : "50px auto -20px",
+                  position: "relative",
+                }}
+              >
                 <img
                   src={mapaBolivia}
                   className="img-fluid rounded"
@@ -197,11 +215,11 @@ export default function SeleccionarSede() {
                       {arriba && (
                         <div
                           className="text-white px-2 py-1"
-                           style={{
-    backgroundColor: "#001A66",
-    borderRadius: "50px",
-    fontSize: "0.75rem"   
-  }}
+                          style={{
+                            backgroundColor: "#001A66",
+                            borderRadius: "50px",
+                            fontSize: "0.75rem",
+                          }}
                         >
                           {m.nombre}
                         </div>
@@ -218,9 +236,12 @@ export default function SeleccionarSede() {
                       {!arriba && (
                         <div
                           className="text-white px-2 py-1 small mt-1"
-                          style={{ backgroundColor: "#001A66", borderRadius: "50px" , fontSize: "0.75rem" }}
-                       
-                       >
+                          style={{
+                            backgroundColor: "#001A66",
+                            borderRadius: "50px",
+                            fontSize: "0.75rem",
+                          }}
+                        >
                           {m.nombre}
                         </div>
                       )}
