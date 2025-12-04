@@ -106,7 +106,7 @@ const isMobile = window.innerWidth <= 768; // ancho típico móvil
   transition={{ duration: 1 }}
   className="fw-bold mb-3"
   style={{
-    fontSize: isMobile ? "3Sem" : "3.3em", // más pequeño en móvil
+    fontSize: isMobile ? "2.5em" : "3.3em", // más pequeño en móvil
     color: "#002166",
     marginBottom: isMobile ? "0.8rem" : "1.5rem", // menos espaciado
   }}
