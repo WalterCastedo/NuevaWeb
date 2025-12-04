@@ -40,12 +40,18 @@ const isMobile = window.innerWidth <= 768; // ancho típico móvil
     }
   };
 
-  const normalize = (str) => str.toLowerCase().replace(/\s+/g, "");
-
+ const normalize = (str) => {
+  return str
+    .toLowerCase()                   // minúsculas
+    .normalize("NFD")                // separar acentos
+    .replace(/[\u0300-\u036f]/g, "")// quitar acentos
+    .replace(/\s+/g, "")             // quitar espacios
+    .replace(/[^a-z0-9]/g, "");     // quitar caracteres no alfanuméricos
+};
   useEffect(() => {
     const sedeKey = Object.keys(datos).find(
-      (s) => normalize(s) === normalize(sede || "")
-    );
+  (s) => normalize(s) === normalize(sede || "")
+);
 
     if (sedeKey && datos[sedeKey]) {
       const data = datos[sedeKey];
@@ -100,7 +106,7 @@ const isMobile = window.innerWidth <= 768; // ancho típico móvil
   transition={{ duration: 1 }}
   className="fw-bold mb-3"
   style={{
-    fontSize: isMobile ? "3em" : "3.3em", // más pequeño en móvil
+    fontSize: isMobile ? "3Sem" : "3.3em", // más pequeño en móvil
     color: "#002166",
     marginBottom: isMobile ? "0.8rem" : "1.5rem", // menos espaciado
   }}
@@ -167,10 +173,8 @@ const isMobile = window.innerWidth <= 768; // ancho típico móvil
     }}
     whileHover={{ scale: 1.07, backgroundColor: "#003399" }}
     onClick={() =>
-      navigate(
-        `/${sede}/Carrera/${carrera.title.replace(/\s+/g, "")}`
-      )
-    }
+  navigate(`/${sede}/Carrera/${normalize(carrera.title)}`)
+}
   >
     {carrera.title}
   </motion.span>
