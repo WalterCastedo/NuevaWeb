@@ -130,7 +130,7 @@ export default function CareerCard() {
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              backgroundColor: "#1f219bff",
+              backgroundColor: "#001A66",
               padding: "0.8rem 1.5rem",
               borderRadius: "8px",
               color: "white",
