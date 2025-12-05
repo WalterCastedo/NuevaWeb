@@ -259,20 +259,19 @@ export default function Header() {
 
   return (
     <div
-  style={{
-    display: "flex",
-    alignItems: "center",
-    position: "sticky",
-    top: 0,
-    zIndex: 1000,
-    overflowX: "hidden",   // ← evita overflow horizontal
-    width: "100vw",        // ← evita que crezca más allá del viewport
-    height: "120px",
-  }}
->
-      {/* Logo y sede */}
-     <div
-  className="d-none d-lg-flex"  //  ⬅⬅⬅  NUEVO
+      style={{
+        display: "flex",
+        alignItems: "center",
+        position: "sticky",
+        top: 0,
+        zIndex: 1000,
+        overflow: "visible",
+        height: "120px",
+      }}
+    >
+      {/* Logo y sede solo en escritorio */}
+<div
+  className="d-none d-lg-flex"
   style={{
     padding: "0 50px",
     display: "flex",
@@ -281,38 +280,38 @@ export default function Header() {
     position: "relative",
   }}
 >
-        {sede && (
-          <div
-            style={{
-              position: "absolute",
-              top: "20px",
-              left: "54%",
-              transform: "translateX(-50%)",
-              color: logoColor,
-              fontSize: "0.5rem",
-              fontWeight: "bold",
-              textTransform: "uppercase",
-              letterSpacing: "1px",
-              whiteSpace: "nowrap",
-              transition: "color 0.3s ease",
-            }}
-          >
-            {sede}
-          </div>
-        )}
-        <img
-          src={logo}
-          alt="Logo UNO"
-          onClick={handleClickInicio}
-          style={{
-            maxHeight: "80%",
-            marginTop: "-40px",
-            cursor: "pointer",
-            transition: "filter 0.3s ease",
-            filter: logoColor === "white" ? "brightness(0) invert(1)" : "none",
-          }}
-        />
-      </div>
+  {sede && (
+    <div
+      style={{
+        position: "absolute",
+        top: "20px",
+        left: "54%",
+        transform: "translateX(-50%)",
+        color: logoColor,
+        fontSize: "0.5rem",
+        fontWeight: "bold",
+        textTransform: "uppercase",
+        letterSpacing: "1px",
+        whiteSpace: "nowrap",
+        transition: "color 0.3s ease",
+      }}
+    >
+      {sede}
+    </div>
+  )}
+  <img
+    src={logo}
+    alt="Logo UNO"
+    onClick={handleClickInicio}
+    style={{
+      maxHeight: "80%",
+      marginTop: "-40px",
+      cursor: "pointer",
+      transition: "filter 0.3s ease",
+      filter: logoColor === "white" ? "brightness(0) invert(1)" : "none",
+    }}
+  />
+</div>
 
       {/* Fondo azul animado escritorio */}
       <div
@@ -343,7 +342,7 @@ export default function Header() {
           transition: "width 0.3s ease",
         }}
       >
-        <Navbar expand="lg" variant="dark" style={{ background: "transparent", width: "100vw", maxWidth: "100%",  height: "80%" }}>
+        <Navbar expand="lg" variant="dark" style={{ background: "transparent", width: "100%", height: "80%" }}>
           <Container fluid className="p-0" style={{ height: "100%" }}>
             <Nav
               className="align-items-center w-100"
@@ -419,17 +418,7 @@ export default function Header() {
       </div>
 
       {/* menú móvil */}
-      <div
-  className="d-lg-none"
-  style={{
-    width: "100vw",       // ← evita ensanchamiento
-    position: "fixed",
-    top: 0,
-    left: 0,
-    zIndex: 3000,
-    overflowX: "hidden",  // ← elimina scroll horizontal
-  }}
->
+      <div className="d-lg-none" style={{ width: "100%", position: "fixed", top: 0, left: 0, zIndex: 3000 }}>
         {/* Barra superior */}
         <div
           style={{
@@ -469,16 +458,13 @@ export default function Header() {
         </div>
 
         <div
-  style={{
-    overflowX: "hidden",     // ← importante
-    overflowY: "hidden",
-    maxHeight: mobileMenuOpen ? "1000px" : "0",
-    width: "100vw",          // ← evita desbordes
-    transition: "max-height 0.5s ease-in-out",
-    backgroundColor: "#001a66",
-  }}
->
-
+          style={{
+            overflow: "hidden",
+            maxHeight: mobileMenuOpen ? "1000px" : "0",
+            transition: "max-height 0.5s ease-in-out",
+            backgroundColor: "#001a66",
+          }}
+        >
           <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: mobileMenuOpen ? "10px 0" : "0" }}>
             {menuItems.map((item, index) => {
               const isActive = openDropdowns[0] === item.name;
