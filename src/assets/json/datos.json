@@ -570,15 +570,7 @@
       "Especialistas Médico",
       "Los Especialistas son médicos que se han especializado en un área especificada de la medicina.",
       "Docente Universitario de Medicina"
-    ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
-
+    ]
   },
   {
     "title": "Odontología",
@@ -600,15 +592,7 @@
       "Cumplir con las normas de salubridad y medio ambiente, y actuar con ética y responsabilidad profesional.",
       "Investigador en el área de salud bucodental y epidemiología.",
       "Docente universitario en ciencias odontológicas."
-    ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
-
+    ]
   },
 
   {
@@ -630,14 +614,7 @@
       "Gestionar servicios de enfermería y salud en los diferentes niveles de atención.",
       "Diseñar, ejecutar y evaluar programas de educación para el personal de enfermería.",
       "Aplicar el proceso de investigación en la elaboración de estudios en salud."
-    ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
+    ]
   },
   {
     "title": "Fisioterapia y Kinesiología",
@@ -658,14 +635,7 @@
       "Aplicar tratamientos de kinefilaxia, fisioterapia y kinesioterapia en el ámbito público y privado.",
       "Cumplir funciones de gestión en instituciones o áreas de especialidad.",
       "Contribuir al campo laboral y científico mediante investigación."
-   ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
+    ]
   },
   {
     "title": "Bioquímica y Farmacia",
@@ -686,14 +656,7 @@
       "Participar en la investigación científica en su campo y disciplinas afines.",
       "Aplicar conocimientos científicos y técnicos para resolver problemas de salud y sociales.",
       "Desarrollar su labor profesional con principios éticos y valores humanos."
-    ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
+    ]
   },
   {
     "title": "Derecho",
@@ -715,14 +678,7 @@
       "Demostrar liderazgo, trabajo en equipo y vocación de servicio.",
       "Analizar problemas jurídicos desde un enfoque humanista y multidisciplinario.",
       "Prepararse para estudios de posgrado y desarrollo profesional continuo."
-    ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
+    ]
   },
   {
     "title": "Ingenieria de Sistemas",
@@ -744,14 +700,7 @@
       "Participar en proyectos informáticos, generación y gestión de software.",
       "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
       "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
-    ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
+    ]
   }
 
   ]
@@ -824,14 +773,7 @@
       "Participar en proyectos informáticos, generación y gestión de software.",
       "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
       "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
-    ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
+    ]
         }, {
     "title": "Enfermería",
     "subtitle": "!Forma parte de la Familia UNO!",
@@ -852,14 +794,7 @@
       "Participar en proyectos informáticos, generación y gestión de software.",
       "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
       "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
-    ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
+    ]
         },
           {
     "title": "Bioquímica y Farmacia",
@@ -881,14 +816,7 @@
       "Participar en proyectos informáticos, generación y gestión de software.",
       "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
       "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
-    ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
+    ]
         },
           {
     "title": "Derecho",
@@ -910,14 +838,7 @@
       "Participar en proyectos informáticos, generación y gestión de software.",
       "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
       "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
-    ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
+    ]
         },
           {
     "title": "Dirección y Administración de Empresas",
@@ -939,14 +860,7 @@
       "Participar en proyectos informáticos, generación y gestión de software.",
       "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
       "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
-    ],
-     "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
-  ]
+    ]
         }
       ]
     }
