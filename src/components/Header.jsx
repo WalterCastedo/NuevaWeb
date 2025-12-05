@@ -19,6 +19,7 @@ export default function Header() {
   const [openDropdowns, setOpenDropdowns] = useState({});
   const [ofertaCarreras, setOfertaCarreras] = useState([]);
   const [ofertaInteraccion, setOfertaInteraccion] = useState([]);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const normalizeForUrl = (text) =>
     text
@@ -67,22 +68,41 @@ export default function Header() {
 
   const handleClickInicio = () => {
     navigate(sede ? `/${normalizeForUrl(sede)}` : "/");
+    setMobileMenuOpen(false);
   };
-  const handleClickCarrera = (nombre) =>
+
+  const handleClickCarrera = (nombre) => {
     navigate(`/${normalizeForUrl(sede)}/carrera/${normalizeForUrl(nombre)}`);
-  const handleClickSubSede = (sub) => navigate(`/${normalizeForUrl(sub)}`);
-  const handleClickMas = (target) =>
+    setMobileMenuOpen(false);
+  };
+
+  const handleClickSubSede = (sub) => {
+    navigate(`/${normalizeForUrl(sub)}`);
+    setMobileMenuOpen(false);
+  };
+
+  const handleClickMas = (target) => {
     navigate(`/${normalizeForUrl(sede)}/mas/${normalizeForUrl(target)}`);
-  const handleClickPrograma = (nombre) =>
+    setMobileMenuOpen(false);
+  };
+
+  const handleClickPrograma = (nombre) => {
     navigate(`/${normalizeForUrl(sede)}/interaccion/${normalizeForUrl(nombre)}`);
-  const handleClickInvestigacion = (seccion) =>
+    setMobileMenuOpen(false);
+  };
+
+  const handleClickInvestigacion = (seccion) => {
     navigate(`/${normalizeForUrl(sede)}/investigacion/${normalizeForUrl(seccion)}`);
+    setMobileMenuOpen(false);
+    setOpenDropdowns({});
+  };
 
   const scrollToTarget = (target) => {
     const el = document.getElementById(target);
     if (el) {
       const offset = el.getBoundingClientRect().top + window.scrollY - 80;
       window.scrollTo({ top: offset, behavior: "smooth" });
+      setMobileMenuOpen(false);
     }
   };
 
@@ -97,6 +117,7 @@ export default function Header() {
 
   const handleOpenDropdown = (name, level) =>
     setOpenDropdowns((prev) => ({ ...prev, [level]: name }));
+
   const handleCloseDropdown = (level) =>
     setOpenDropdowns((prev) => {
       const copy = { ...prev };
@@ -114,8 +135,6 @@ export default function Header() {
         backgroundColor: "#001a66",
         borderRadius: "0 0 10px 10px",
         minWidth: Math.max(...submenu.map((s) => s.name.length * 6)) + 40,
-        position: "relative",
-        zIndex: 4000 + level,
       }}
     >
       {submenu.map((sub) => (
@@ -126,8 +145,7 @@ export default function Header() {
               else if (parentName === "Carreras") handleClickCarrera(sub.name);
               else if (parentName === "SubSedes") handleClickSubSede(sub.name);
               else if (parentName === "Interacción") handleClickPrograma(sub.name);
-              else if (parentName === "Investigación")
-                handleClickInvestigacion(sub.target);
+              else if (parentName === "Investigación") handleClickInvestigacion(sub.target);
               else scrollToTarget(sub.target);
             }}
             onMouseEnter={() => sub.submenu && handleOpenDropdown(sub.name, level)}
@@ -149,8 +167,6 @@ export default function Header() {
               cursor: "pointer",
               border: "none",
               width: "100%",
-              position: "relative",
-              zIndex: 4000 + level,
             }}
           >
             {sub.name}
@@ -165,7 +181,7 @@ export default function Header() {
                 left: "100%",
                 backgroundColor: "#001a66",
                 borderRadius: "0 0 10px 10px",
-                zIndex: 5000 + level,
+                zIndex: 3000 + level,
                 minWidth: Math.max(...sub.submenu.map((s) => s.name.length * 8)) + 40,
               }}
             >
@@ -209,7 +225,7 @@ export default function Header() {
     },
     { name: "Noticias", targets: ["noticias"].map(normalizeForUrl) },
     { name: "Requisitos", targets: ["requisitos"].map(normalizeForUrl) },
-    {
+    {  
       name: "Investigación",
       submenu: [
         { name: "Bienvenida", target: normalizeForUrl("bienvenida") },
@@ -239,28 +255,32 @@ export default function Header() {
     { name: "Red Alumni", targets: ["alumni", "otraSeccion"].map(normalizeForUrl) },
   ];
 
+  const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
+
   return (
     <div
-      style={{
-        display: "flex",
-        alignItems: "center",
-        position: "sticky",
-        top: 0,
-        zIndex: 1000,
-        overflow: "visible",
-        height: "120px",
-      }}
-    >
-      {/* Logo y sede escritorio */}
-      <div
-        className="d-none d-lg-flex"
-        style={{
-          padding: "0 50px",
-          alignItems: "center",
-          height: "100%",
-          position: "relative",
-        }}
-      >
+  style={{
+    display: "flex",
+    alignItems: "center",
+    position: "sticky",
+    top: 0,
+    zIndex: 1000,
+    overflowX: "hidden",   // ← evita overflow horizontal
+    width: "100vw",        // ← evita que crezca más allá del viewport
+    height: "120px",
+  }}
+>
+      {/* Logo y sede */}
+     <div
+  className="d-none d-lg-flex"  //  ⬅⬅⬅  NUEVO
+  style={{
+    padding: "0 50px",
+    display: "flex",
+    alignItems: "center",
+    height: "100%",
+    position: "relative",
+  }}
+>
         {sede && (
           <div
             style={{
@@ -275,7 +295,6 @@ export default function Header() {
               letterSpacing: "1px",
               whiteSpace: "nowrap",
               transition: "color 0.3s ease",
-              zIndex: 5000,
             }}
           >
             {sede}
@@ -291,8 +310,6 @@ export default function Header() {
             cursor: "pointer",
             transition: "filter 0.3s ease",
             filter: logoColor === "white" ? "brightness(0) invert(1)" : "none",
-            position: "relative",
-            zIndex: 5000,
           }}
         />
       </div>
@@ -324,15 +341,9 @@ export default function Header() {
           display: "flex",
           alignItems: "center",
           transition: "width 0.3s ease",
-          position: "relative", // <-- importante para z-index
-          zIndex: 1000,
         }}
       >
-        <Navbar
-          expand="lg"
-          variant="dark"
-          style={{ background: "transparent", width: "100%", height: "80%" }}
-        >
+        <Navbar expand="lg" variant="dark" style={{ background: "transparent", width: "100vw", maxWidth: "100%",  height: "80%" }}>
           <Container fluid className="p-0" style={{ height: "100%" }}>
             <Nav
               className="align-items-center w-100"
@@ -365,21 +376,12 @@ export default function Header() {
                           justifyContent: "center",
                           cursor: "pointer",
                           transition: "all 0.3s ease",
-                          position: "relative",
-                          zIndex: 5000,
                         }}
                       >
                         {item.name}
                       </Nav.Link>
                       {item.submenu && openDropdowns[0] === item.name && (
-                        <div
-                          style={{
-                            position: "absolute",
-                            top: "80%",
-                            left: 0,
-                            zIndex: 5000,
-                          }}
-                        >
+                        <div style={{ position: "absolute", top: "80%", left: 0, zIndex: 2000 }}>
                           {renderSubmenu(item.submenu, 1, item.name)}
                         </div>
                       )}
@@ -404,8 +406,6 @@ export default function Header() {
                           ? "#00bfff"
                           : "transparent",
                         borderRadius: "5px",
-                        position: "relative",
-                        zIndex: 5000,
                       }}
                     >
                       {item.name}
@@ -416,6 +416,173 @@ export default function Header() {
             </Nav>
           </Container>
         </Navbar>
+      </div>
+
+      {/* menú móvil */}
+      <div
+  className="d-lg-none"
+  style={{
+    width: "100vw",       // ← evita ensanchamiento
+    position: "fixed",
+    top: 0,
+    left: 0,
+    zIndex: 3000,
+    overflowX: "hidden",  // ← elimina scroll horizontal
+  }}
+>
+        {/* Barra superior */}
+        <div
+          style={{
+            backgroundColor: "#001a66",
+            width: "100%",
+            padding: "20px 50px 10px",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            boxShadow: "0 2px 5px rgba(0,0,0,0.2)",
+          }}
+        >
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "flex-start" }}>
+            <img
+              src={logo}
+              alt="Logo UNO"
+              onClick={handleClickInicio}
+              style={{ maxHeight: "80px", cursor: "pointer", filter: "brightness(0) invert(1)", marginTop: "-20px" }}
+            />
+          </div>
+          <button
+            onClick={() => {
+              setMobileMenuOpen((prev) => !prev);
+              if (mobileMenuOpen) setOpenDropdowns({});
+            }}
+            style={{
+              fontSize: "2rem",
+              background: "transparent",
+              border: "none",
+              color: "#fff",
+              cursor: "pointer",
+              zIndex: 3100,
+            }}
+          >
+            {mobileMenuOpen ? "✕" : "☰"}
+          </button>
+        </div>
+
+        <div
+  style={{
+    overflowX: "hidden",     // ← importante
+    overflowY: "hidden",
+    maxHeight: mobileMenuOpen ? "1000px" : "0",
+    width: "100vw",          // ← evita desbordes
+    transition: "max-height 0.5s ease-in-out",
+    backgroundColor: "#001a66",
+  }}
+>
+
+          <div style={{ display: "flex", flexDirection: "column", alignItems: "center", padding: mobileMenuOpen ? "10px 0" : "0" }}>
+            {menuItems.map((item, index) => {
+              const isActive = openDropdowns[0] === item.name;
+              return (
+                <div
+                  key={item.name}
+                  style={{
+                    width: "90%",
+                    textAlign: "center",
+                    marginBottom: isActive ? "10px" : "0",
+                    transform: isActive ? "translateY(0px)" : "translateY(0px)",
+                    transition: "all 0.4s ease",
+                    display: !openDropdowns[0] || isActive ? "block" : "none",
+                  }}
+                >
+                  {item.submenu ? (
+                    <>
+                      <button
+                        onClick={() =>
+                          setOpenDropdowns((prev) => ({
+                            0: prev[0] === item.name ? null : item.name,
+                          }))
+                        }
+                        style={{
+                          background: "#0044aa",
+                          border: "none",
+                          color: "#fff",
+                          textAlign: "center",
+                          padding: "12px 0",
+                          width: "100%",
+                          fontWeight: "bold",
+                          cursor: "pointer",
+                          fontSize: "1rem",
+                          borderRadius: "5px",
+                          transition: "all 0.4s ease",
+                        }}
+                      >
+                        {item.name}
+                      </button>
+
+                      <div
+                        style={{
+                          maxHeight: isActive ? `${item.submenu.length * 50}px` : "0",
+                          overflow: "hidden",
+                          transition: "max-height 0.4s ease-in-out",
+                          backgroundColor: "#0055cc",
+                          borderRadius: "5px",
+                          marginTop: "5px",
+                        }}
+                      >
+                        {item.submenu.map((sub) => (
+                          <button
+                            key={sub.name}
+                            onClick={() => {
+                              if (item.name === "Más") handleClickMas(sub.target);
+                              else if (item.name === "Carreras") handleClickCarrera(sub.name);
+                              else if (item.name === "SubSedes") handleClickSubSede(sub.name);
+                              else if (item.name === "Interacción") handleClickPrograma(sub.name);
+                              else if (item.name === "Investigación") handleClickInvestigacion(sub.target);
+                              else scrollToTarget(sub.target);
+                            }}
+                            style={{
+                              display: "block",
+                              padding: "10px",
+                              width: "100%",
+                              textAlign: "center",
+                              color: "#fff",
+                              background: "transparent",
+                              border: "none",
+                              fontSize: "0.8rem",
+                              fontWeight: "bold",
+                              cursor: "pointer",
+                            }}
+                          >
+                            {sub.name}
+                          </button>
+                        ))}
+                      </div>
+                    </>
+                  ) : (
+                    <button
+                      onClick={(e) => handleClick(e, item)}
+                      style={{
+                        background: "#0044aa",
+                        border: "none",
+                        color: "#fff",
+                        textAlign: "center",
+                        padding: "12px 0",
+                        width: "100%",
+                        fontWeight: "bold",
+                        cursor: "pointer",
+                        fontSize: "1rem",
+                        borderRadius: "5px",
+                        marginBottom: "5px",
+                      }}
+                    >
+                      {item.name}
+                    </button>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );
