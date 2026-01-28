@@ -15,7 +15,13 @@
             "nombre": "Medicina",
             "graduados": 1200,
             "lugaresTrabajo": ["Hospital Central", "Clínica del Este", "ONG Salud"],
-            "convenios": ["Hospital Central", "Cruz Roja"]
+            "convenios": ["Hospital Central", "Cruz Roja, etc"]
+          },
+          {
+            "nombre": "Odontología",
+            "graduados": 800,
+            "lugaresTrabajo": ["Hospital Regional", "Clínica San Juan"],
+            "convenios": ["Hospital Regional", "Fundación Salud"]
           },
           {
             "nombre": "Enfermería",
@@ -554,7 +560,7 @@
       {
     "title": "Medicina",
     "subtitle": "!Forma parte de la Familia UNO!",
-    "description": "Desarrolla habilidades diagnósticas y terapéuticas precisas mediante la aplicación sistemática del método clínico, promoviendo una atención médica centrada en el paciente. \n \nFomentar la innovación a través de la investigación científica y el desarrollo de tecnologías aplicadas a la salud, con el fin de mejorar la eficiencia diagnóstica, terapéutica y preventiva en el ámbito médico.",
+    "description": "Formar médicos altamente calificados, con competencias técnicas y visión social, capaces de restaurar la salud individual y colectiva, promover municipios saludables e insertarse en programas nacionales de salud. Resuelven problemáticas sanitarias, prevalentes, estudian patologías complejas y contribuyen a mejorar la salud en Bolivia mediante investigación, participación en políticas públicas y una formación integral, priorizando prevención, equidad y compromiso ético con el desarrollo sostenible de las comunidades.",
     "rm": "R.M No 449/2012",
     "video":"https://www.youtube.com/watch?v=nTj6DBd096k",
     "malla": "mMedicina.webp",
@@ -565,48 +571,52 @@
     "mission": "Impartir educación superior de calidad, para formar profesionales médicos, solidarios y democráticos al servicio de la comunidad.",
     "vision": "Ser una carrera líder en educación Superior acreditada, con proyección internacional, que forma médicos en un modelo educativo globalizado de competencias.",
     "roles": [
-      "Los médicos generales proporcionan atención médica primaria a pacientes de todas las edades. Investigador Clínico",
-      "Realizan estudio y ensayos clínicos para evaluar la eficacia y seguridad de tratamientos médicos.",
-      "Especialistas Médico",
-      "Los Especialistas son médicos que se han especializado en un área especificada de la medicina.",
-      "Docente Universitario de Medicina"
+      "Atención médica integral: evaluación, tratamiento y seguimiento del bienestar total.",
+      "Práctica quirúrgica: realización de cirugías seguras con conocimientos y técnicas avanzadas.",
+      "Medicina comunitaria y salud pública: promoción y prevención de la salud en poblaciones.",
+      "Producción científica e investigación: generar y difundir conocimiento médico riguroso.",
+      "Docencia universitaria: enseñar habilidades y valores, formando profesionales críticos.",
+      "Gestión y administración en salud: organizar recursos para atención eficiente y de calidad.",
+      "Innovación y tecnología médica: usar nuevas herramientas para mejorar diagnósticos y tratamientos."
     ],
      "values": [
     "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
+    "Vocación de servicio y solidaridad",
+    "Respeto por la dignidad humana",
+    "Compromiso comunitario y responsabilidad social",
+    "Pensamiento crítico y compromiso con la ciencia",
+    "Liderazgo y trabajo en equipo"
   ]
 
   },
   {
     "title": "Odontología",
     "subtitle": "!Forma parte de la Familia UNO!",
-    "description": "El odontólogo es un profesional universitario con sólida formación científico-humanista, capaz de brindar atención odontológica de alta calidad y referir, con prontitud y acierto, a pacientes que requieren cuidados especializados.\n\nAsimismo, participa en acciones de promoción de la salud, prevención de enfermedades, recuperación y rehabilitación odontológica, adoptando siempre las disposiciones reglamentarias vigentes en salubridad y medio ambiente, y actuando con principios éticos y humanistas.",
-    "rm": "R.M No 452/2012",
+    "description": "Formar profesionales competentes en Odontología, capacitados para desempeñarse con bases sólidas en ciencia, investigación, tecnología, capaces de desarrollar actividades, destrezas, habilidades y conocimientos en un modelo de atención orientado de forma pertinente hacia el paciente y la comunidad para el cuidado odontológico integral y las labores de promoción y prevención en los niveles primario y secundario de salud, con un fundamento profesional humanístico-ético y comprometido con su formación continua tanto científica, como tecnológica y en valores",
+    "rm": "R.M No 0913/2016 (Rediseño Curricular)",
     "video":"https://www.youtube.com/watch?v=nTj6DBd096k",
     "malla": "mOdonto.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
     },
-    "mission": "Formar odontólogos competentes, éticos y solidarios, comprometidos con la salud bucodental de la comunidad y la mejora continua de su práctica profesional.",
-    "vision": "Ser una carrera líder en educación odontológica superior acreditada, con proyección internacional, que forme profesionales capaces de intervenir en prevención, diagnóstico y rehabilitación bucodental bajo un modelo educativo globalizado de competencias.",
+    "mission": "Formar profesionales líderes en Odontología con competencias sólidas en ciencia, tecnología, salud y gestión, mediante una formación centrada en el estudiante y orientada a la innovación, la investigación aplicada y el desarrollo sostenible, capaces de aportar soluciones efectivas y éticas a los problemas emergentes del sector salud.",
+    "vision": "Ser una carrera reconocida nacional e internacionalmente por su excelencia académica y su modelo formativo por competencias, consolidando profesionales odontólogos competentes, éticos y comprometidos con el desarrollo científico, sanitario y social del país.",
     "roles": [
-      "Brindar atención odontológica de alta calidad a pacientes de todas las edades.",
-      "Participar en programas de promoción de la salud y prevención de enfermedades bucodentales.",
-      "Realizar recuperación y rehabilitación odontológica especializada.",
-      "Cumplir con las normas de salubridad y medio ambiente, y actuar con ética y responsabilidad profesional.",
-      "Investigador en el área de salud bucodental y epidemiología.",
-      "Docente universitario en ciencias odontológicas."
+      "Atención clínica individual y comunitaria: servicios odontológicos completos para todos.",
+      "Gestión y administración de salud bucodental: organizar y supervisar unidades eficaces.",
+      "Investigación e innovación en salud oral: desarrollar proyectos y generar conocimiento.",
+      "Educación y promoción de la salud: programas de prevención y hábitos saludables.",
+      "Trabajo interdisciplinario: colaborar con profesionales para atención integral.",
+      "Consultoría y asesoría profesional: apoyar proyectos, políticas y protocolos odontológicos.",
+      "Docencia: enseñar teoría y práctica a estudiantes y profesionales en formación continua."
     ],
      "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
+    "Ética profesional y humanismo",
+    "Responsabilidad y calidad de atención",
+    "Compromiso con la salud pública y promoción",
+    "Rigor científico y actualización continua",
+    "Cumplimiento normativo y respeto a reglamentos"
   ]
 
   },
@@ -614,85 +624,94 @@
   {
     "title": "Enfermería",
     "subtitle": "!Forma parte de la Familia UNO!",
-    "description": "Actúa con los fundamentos filosóficos de la profesión, en el cuidado integral del paciente, familia y comunidad, respetando la diversidad cultural; en base a principios ético-morales.\n\nUtiliza una comunicación efectiva con la persona, familia y los miembros del equipo de enfermería, de salud y otros profesionales. Reconoce los elementos de la gerencia estratégica y las aplica, gerenciando los servicios de enfermería y salud de los diferentes niveles de atención.\n\nFormula, ejecuta y evalúa programas de educación para el personal de enfermería. Conoce el proceso de la investigación y lo utiliza en la elaboración de los diferentes tipos de investigación en salud.",
-    "rm": "R.M No 453/2012",
+    "description": "Formar profesionales de enfermería con preparación integral, humanista, científica y ética, capaces de brindar cuidados seguros y de calidad en todos los niveles de atención, con liderazgo, pensamiento crítico e innovación, en respuesta a las necesidades de salud de la población y al fortalecimiento del sistema sanitario.",
+    "rm": "R.M No 0913/2016 (Rediseño Curricular)",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
     "malla": "mEnfermeria.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
     },
-    "mission": "Formar profesionales de enfermería competentes, éticos y solidarios, capaces de brindar cuidados integrales al paciente, familia y comunidad.",
-    "vision": "Ser una carrera líder en educación en enfermería, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias.",
+    "mission": "Brindar una formación profesional integral y humanista que permita desarrollar habilidades técnicas, científicas y éticas en los futuros profesionales de enfermería, promoviendo liderazgo, pensamiento crítico y compromiso social, para responder a las necesidades de salud de la población en diferentes niveles de atención, bajo principios de equidad, calidad y respeto a la diversidad cultural.",
+    "vision": "Ser una carrera de referencia en la formación de profesionales de enfermería con sólida preparación científica, técnica y humanista, reconocidos por su liderazgo, pensamiento crítico y compromiso social, capaces de brindar cuidados integrales, seguros y éticos que respondan a las necesidades de salud de la población en todos los niveles de atención, contribuyendo al fortalecimiento del sistema de salud y al desarrollo sostenible, con responsabilidad social e innovación, tanto en el ámbito nacional como internacional.",
     "roles": [
-      "Proporcionar cuidados integrales al paciente, familia y comunidad respetando la diversidad cultural.",
-      "Comunicar eficazmente con pacientes, familias y equipo de salud.",
-      "Gestionar servicios de enfermería y salud en los diferentes niveles de atención.",
-      "Diseñar, ejecutar y evaluar programas de educación para el personal de enfermería.",
-      "Aplicar el proceso de investigación en la elaboración de estudios en salud."
+      "Área Asistencial: atención integral a pacientes y familias, con planes individualizados.",
+      "Área Docencia: formar y educar profesionales promoviendo aprendizaje continuo.",
+      "Área Investigación: investigar, publicar y colaborar para mejorar la práctica de enfermería.",
+      "Área Pública: promover salud, prevenir enfermedades y colaborar con comunidades.",
+      "Área Gestión y Liderazgo: gestionar servicios y liderar equipos con calidad y eficiencia.",
+      "Área Digital e Innovación en Salud: aplicar tecnologías e innovaciones para mejorar cuidados."
     ],
      "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
+    "Ética y responsabilidad profesional",
+    "Compromiso con el bienestar integral del paciente",
+    "Vocación de servicio y sentido social",
+    "Trabajo en equipo interdisciplinario",
+    "Pensamiento crítico y científico",
+    "Humanismo y empatía",
+    "Actualización y aprendizaje continuo"
   ]
   },
   {
     "title": "Fisioterapia y Kinesiología",
     "subtitle": "!Forma parte de la Familia UNO!",
-    "description": "El Licenciado en Fisioterapia y Kinesiología deberá ejercer su profesión con un profundo respeto a la persona humana en lo que hace a sus peculiaridades, costumbres, creencias y valores, con sentido ético y de servicio a la comunidad.\n\nInteractuar con otros profesionales de la salud, integrándose a equipos interdisciplinarios de trabajo y efectuar aportes al campo laboral y científico mediante el desarrollo de actividades de investigación. Aplicar tratamientos de kinefilaxia, fisioterapia y kinesioterapia en el ámbito público y privado.\n\nCumplir funciones de gestión en instituciones o áreas de su especialidad y efectuar aportes al campo laboral y científico mediante el desarrollo de actividades de investigación.",
-    "rm": "R.M No 454/2012",
+    "description": "Formar profesionales en Fisioterapia y Kinesiología con una sólida base científica, técnica, humanística y ética, capaces de desempeñarse con competencia en la valoración, prevención, diagnóstico funcional, tratamiento y rehabilitación integral de las alteraciones del movimiento humano y la funcionalidad, en diversos contextos clínicos y comunitarios. Esta formación está centrada en el desarrollo de competencias profesionales y un enfoque socioformativo, comprometido con la transformación social, el bienestar de la población boliviana y los estándares internacionales de calidad en salud dentro del mercado laboral, mediante un sistema progresivo de práctica pre profesional e interrelación constante con las instituciones de salud, respetando la pluriculturidad, y cuidado del medio ambiente.",
+    "rm": "R.M No 0913/2016 (Rediseño Curricular)",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
     "malla": "mFisio.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
     },
-    "mission": "Formar profesionales de Fisioterapia y Kinesiología competentes, éticos y comprometidos con la salud y bienestar de las personas, con capacidad de investigación y trabajo en equipo interdisciplinario.",
-    "vision": "Ser una carrera líder en educación en Fisioterapia y Kinesiología, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias.",
+    "mission": "La carrera de Fisioterapia y Kinesiología forma profesionales competentes, humanistas y éticos; capaces de prevenir, valorar, tratar y rehabilitar. Sustentada en la formación por competencias y la socioformación, promueve el aprendizaje significativo, la investigación aplicada y el trabajo colaborativo, contribuyendo a la transformación social y al fortalecimiento del sistema de salud boliviano",
+    "vision": "Ser una carrera de referencia nacional e internacional en la formación de fisioterapeutas y kinesiólogos integrales humanistas, innovadores y socialmente comprometidos, reconocidos por su excelencia académica, su responsabilidad ética y su capacidad de generar soluciones sostenibles a los problemas de salud funcional de la población.",
     "roles": [
-      "Ejercer la profesión con respeto a la persona, valores éticos y servicio a la comunidad.",
-      "Integrarse y colaborar en equipos interdisciplinarios de salud.",
-      "Aplicar tratamientos de kinefilaxia, fisioterapia y kinesioterapia en el ámbito público y privado.",
-      "Cumplir funciones de gestión en instituciones o áreas de especialidad.",
-      "Contribuir al campo laboral y científico mediante investigación."
+      "Área Privada: consultorios, clínicas, academias, rehabilitación, estética y geriátricos.",
+      "Área Pública: centros de salud, hospitales, programas comunitarios e instituciones.",
+      "Docencia: universidades e institutos superiores, públicos y privados."
    ],
      "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
+    "Ética y responsabilidad profesional",
+    "Compromiso con el bienestar integral del paciente",
+    "Vocación de servicio y sentido social",
+    "Trabajo en equipo interdisciplinario",
+    "Pensamiento crítico y científico",
+    "Humanismo y empatía",
+    "Actualización y aprendizaje continuo"
   ]
   },
   {
     "title": "Bioquímica y Farmacia",
     "subtitle": "!Forma parte de la Familia UNO!",
-    "description": "El Licenciado en Bioquímica y Farmacia es un profesional de alto nivel científico, con un amplio sentido crítico, competente en el análisis, poseedor de importantes herramientas conceptuales y técnicas, capacitadas para emplear tecnologías que le permitan el avance de su especialidad.\n\nComo profesional que forma parte de un equipo de salud, debe tener una formación integral, científica y técnica, sobre una base de desarrollo de valores humanos, para buscar y dar respuestas adecuadas a los graves problemas de salud y de otro tipo existentes en nuestro país.\n\nPreparado para participar científicamente en la investigación en el campo de la Bioquímica y la Farmacia, así como en las diferentes disciplinas derivadas de la misma.",
-    "rm": "R.M No 455/2012",
+    "description": "formar profesionales con un conocimiento integral sobre la salud, la ciencia y la tecnología para aplicarlo en el diagnóstico, tratamiento y prevención de enfermedades, así como en el desarrollo y control de productos farmacéuticos, parafarmacéutico y alimentarios. Esto incluye la gestión de laboratorios, la investigación científica, la aplicación de principios éticos en la atención a la salud, y la contribución al bienestar social y la preservación del medio ambiente.",
+    "rm": "R.M No 0913/2016 (Rediseño Curricular)",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
     "malla": "mBio.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
     },
-    "mission": "Formar profesionales de Bioquímica y Farmacia competentes, éticos y con capacidad científica para contribuir al bienestar de la comunidad y al avance de su especialidad.",
-    "vision": "Ser una carrera líder en educación en Bioquímica y Farmacia, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias.",
+    "mission": "Formar profesionales bioquímicos farmacéuticos, con la capacidad para desempeñarse en el diagnóstico de laboratorio clínico, el análisis e investigación científica, desarrollo sostenible e industria farmacéutica y así promover la solución de problemas de salud prevalentes en la región y en el país",
+    "vision": "Formar profesionales bioquímicos farmacéuticos (as) de alta calidad, con capacidad resolutiva, íntegros, solidarios, con pensamiento crítico y gran sensibilidad humana para el desarrollo de sus competencias profesionales con profunda vocación de servicio dentro de sus diferentes campos laborales, comprometidos a la ciencia del cuidado que emana la profesión.",
     "roles": [
-      "Analizar y aplicar herramientas conceptuales y técnicas en Bioquímica y Farmacia.",
-      "Integrarse como miembro de equipos de salud multidisciplinarios.",
-      "Participar en la investigación científica en su campo y disciplinas afines.",
-      "Aplicar conocimientos científicos y técnicos para resolver problemas de salud y sociales.",
-      "Desarrollar su labor profesional con principios éticos y valores humanos."
+      "Laboratorio clínico: procesa, analiza e interpreta muestras con control de calidad.",
+      "Asistencial farmacéutico: regencia, dispensación y control de medicamentos.",
+      "Industria cosmetológica: diseña y prepara fórmulas cosméticas con control de calidad.",
+      "Toxicología: analiza muestras biológicas y químicas, participa en investigación forense.",
+      "Bromatología: controla calidad de alimentos industrializados y procesados.",
+      "Biotecnología: aplica procesos bioquímicos para fármacos, vacunas y productos biológicos.",
+      "Gestión de salud pública y privada: planifica programas y regula medicamentos.",
+      "Control de calidad de productos químicos: asegura seguridad y cumplimiento normativo.",
+    "Docencia e investigación: forma profesionales y desarrolla estudios en bioquímica y farmacología."
     ],
      "values": [
-    "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
+    "Ética profesional e integridad",
+    "Responsabilidad y compromiso social",
+    "Pensamiento crítico y científico",
+    "Competencia técnica y profesional",
+    "Trabajo en equipo y comunicación",
+    "Respeto por la vida y el entorno",
+    "Innovación y actualización continua"
   ]
   },
   {
@@ -727,7 +746,7 @@
   {
     "title": "Ingenieria de Sistemas",
     "subtitle": "!Forma parte de la Familia UNO!",
-    "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "description": "Formamos profesionales a nivel licenciatura, capaz de desarrollar proyectos de software, introducir nuevas tecnologías de computación, desarrollar sistemas informáticas en redes de computadoras y sistemas para internet; bajo principios de eficiencia y productividad de servicio, con altos valores éticos y sensibilidad social.",
     "rm": "R.M No 457/2012",
     "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
     "malla": "mSist.webp",
@@ -735,22 +754,28 @@
       "text": "Iniciar mi proceso de admisión",
       "link": "#"
     },
-    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
-    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "mission": "Formar ingenieros competentes, críticos, humanistas, líderes y emprendedores con responsabilidad social y cuidado del medio ambiente; con capacidad creadora e investigativa en el área de las ciencia y tecnología de la información; comprometido con los cambios tecnológicos; aportando al mejoramiento de técnicas y métodos de los sistemas computacionales, contribuyendo de esta manera al desarrollo inte3gral de la región y el país",
+    "vision": "Ser una carrera reconocida en el medio, dedicada a formar profesionales con espíritu creativo e innovador por excelencia",
     "roles": [
-      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
-      "Desarrollar, implementar y administrar sistemas de información robustos.",
-      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
-      "Participar en proyectos informáticos, generación y gestión de software.",
-      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
-      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+      "Empresas industriales, con actividades productivas cuando su proceso tecnológico alcance suficiente complejidad ",
+      "Empresas de telecomunicaciones que utilizan la computadora como medio de comunicación y control de sus procesos administrativos",
+      "Instituciones que usan la computadora, no solamente para la administración, sino como instrumento de análisis y pronostico.",
+      "Instituciones dedicadas a la formación de profesionales en sistemas e informática y computación, como parte de su formación (universidades, institutos, escuelas de computación, colegios, etc)",
+      "Empresas de ensamblaje, mantenimiento y servicios de equipo de computo",
+      "Empresas especializadas en instalaciones de redes de corto, mediano y largo alcance",
+      "Elaboración de sistemas computacionales",
+      "Dirigir grupos de trabajo con eficiencia y eficacia optimizando costos y garantizando la calidad exigida.",
+      "Realizar modificaciones a sistemas computacionales ya existentes"
+    
     ],
      "values": [
     "Ética profesional",
-    "Responsabilidad social",
-    "Humanismo",
-    "Respeto a la dignidad del paciente",
-    "Solidaridad"
+    "Pensamiento crítico, analítico y creativo",
+    "Trabajo en equipo y colaboración interdisciplinaria",
+    "Compromiso con la calidad y la excelencia técnica",
+    "Aprendizaje continuo e innovación",
+    "Responsabilidad social y compromiso con el entorno",
+    "Comunicación efectiva"
   ]
   }
 
