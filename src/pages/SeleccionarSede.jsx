@@ -72,7 +72,7 @@ export default function SeleccionarSede() {
             className="fw-bold text-white text-center"
             style={{ fontSize: isMobile ? "2.5em" : "3em" }}
           >
-            Selecciona tu SubSede
+            Selecciona tu Sub Sede
           </h2>
           <p
             className="text-white text-center"
