@@ -67,9 +67,21 @@ export default function Header() {
   }, [location.pathname]);
 
   const handleClickInicio = () => {
-    navigate(sede ? `/${normalizeForUrl(sede)}` : "/");
-    setMobileMenuOpen(false);
-  };
+  const currentPath = location.pathname;
+  const targetPath = sede ? `/${normalizeForUrl(sede)}` : "/";
+
+  if (currentPath === targetPath) {
+    // Ya estamos en inicio de la sede, subir al top
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  } else {
+    // Navegar y esperar un momento antes de scroll
+    navigate(targetPath);
+    setTimeout(() => window.scrollTo({ top: 0, behavior: "smooth" }), 500);
+  }
+
+  setMobileMenuOpen(false);
+};
+
 
   const handleClickCarrera = (nombre) => {
     navigate(`/${normalizeForUrl(sede)}/carrera/${normalizeForUrl(nombre)}`);
@@ -106,14 +118,33 @@ export default function Header() {
     }
   };
 
-  const handleClick = (e, item) => {
-    e.preventDefault();
-    if (item.name === "Inicio") return handleClickInicio();
-    if (item.targets?.length)
-      item.targets.forEach((t, i) =>
-        setTimeout(() => scrollToTarget(t), i * 100)
-      );
-  };
+const handleClick = (e, item) => {
+  e.preventDefault();
+
+  if (item.name === "Inicio") return handleClickInicio();
+
+ 
+  const mainPageItems = ["Noticias", "Requisitos", "Postgrado","Red Alumni",];
+
+  if (mainPageItems.includes(item.name)) {
+    
+    const targetPath = sede ? `/${normalizeForUrl(sede)}` : "/";
+
+    navigate(targetPath);
+    setMobileMenuOpen(false);
+
+ 
+    setTimeout(() => scrollToTarget(item.targets[0]), 100);
+    return;
+  }
+
+
+  if (item.targets?.length)
+    item.targets.forEach((t, i) =>
+      setTimeout(() => scrollToTarget(t), i * 100)
+    );
+};
+
 
   const handleOpenDropdown = (name, level) =>
     setOpenDropdowns((prev) => ({ ...prev, [level]: name }));
@@ -215,7 +246,7 @@ export default function Header() {
         target: normalizeForUrl(c.title),
       })),
     },
-    { name: "Clinica", targets: ["clinica"].map(normalizeForUrl) },
+    //{ name: "Clinica", targets: ["clinica"].map(normalizeForUrl) },
     {
       name: "SubSedes",
       submenu: ["Santa Cruz", "Cochabamba", "Shinaota", "Montero", "Yacuiba", "Tarija"].map((s) => ({
@@ -230,7 +261,7 @@ export default function Header() {
       submenu: [
         { name: "Bienvenida", target: normalizeForUrl("bienvenida") },
         { name: "Boletines", target: normalizeForUrl("boletines") },
-        { name: "Salud UNO", target: normalizeForUrl("") },
+        { name: "Salud UNO", target: normalizeForUrl("saludUno") },
         { name: "Líneas de Investigación", target: normalizeForUrl("lineadeinvestigacion") },
         { name: "Investigaciónes", target: normalizeForUrl("investigaciones") },
         { name: "Docentes Investigadores", target: normalizeForUrl("docentesinvestigadores") },
