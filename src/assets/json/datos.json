@@ -6,7 +6,13 @@
         "fondoIncripcion":"fondoLibertad.webp",
         "fondoAlumni":"fondoRedAlumni.webp",
         "graduados":"graduados.webp",
-        "fondoOferta":"fondoOferta.webp"
+        "fondoOferta":"fondoOferta.webp",
+        "fondoRequisitos":"fondoRequisitos.webp",
+        "fondoNoticias": "fondoNoticiasLibertad.webp",
+        "fondoPrincipal":"fondoOferta.webp",
+        "elfsightId": "c9a88a88-eca1-4915-bbee-8dcc660e0042",
+              "iframeNoticias": "https://widget.tagembed.com/317321?website=1"
+
       },
       "redalumni": {
       "descripcion": "La Red Alumni de nuestra universidad es un espacio diseñado para conectar a todos los graduados, fortaleciendo los lazos entre profesionales que comparten la experiencia de haber formado parte de nuestra institución. A través de esta red, los egresados pueden ampliar su círculo de contactos, participar en actividades de networking, intercambiar conocimientos y experiencias, y acceder a diversas oportunidades de desarrollo académico y profesional. Además, la Red Alumni fomenta la colaboración, el aprendizaje continuo y la creación de vínculos que potencian tanto el crecimiento personal como el impacto en sus respectivas áreas laborales y en la comunidad universitaria.",
@@ -543,9 +549,9 @@
         {"title": "Odontología", "imagen": "odontologia.webp"},
         {"title": "Enfermería", "imagen": "enfermeria.webp"}
       ],
-      "requisitos": [
-      
-      ],
+      "requisitos": {
+      "fondo": "/assets/img/fondoLaPaz.webp"
+      },
       "noticias": [
       
       ],
@@ -887,10 +893,64 @@
   ]
   }
 
-  ]
+  ],
+  "footer": {
+      "edificios": [
+        {
+          "nombre": "Edificio Central",
+          "direccion": "Calle Libertad – esq. Andrés Ibáñez",
+          "telefono": "(591) (3) 333 7577",
+          "fax": "(591) (3) 336 8453"
+        },
+        {
+          "nombre": "Edificio Ciencias de la Salud",
+          "direccion": "Calle 24 de Septiembre entre calles Cuellar y Seoane",
+          "telefono": "(591) 62241035 – 62241036"
+        },
+        {
+          "nombre": "Clínica Odontológica",
+          "direccion": "Calle España esq. Florida #220",
+          "telefono": "(591) (3) 337 7951"
+        }
+      ],
+      "email": "informaciones@uno.edu.bo",
+      "redes": {
+        "instagram": "https://www.instagram.com/uno_scz/",
+        "facebook": "https://www.facebook.com/UNOSCZ",
+        "twitter": "https://twitter.com/uno"
+      }
+    }
 
     
   },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   "cochabamba": {
     "whatsapp":"+59164849322",
     "imagenes":{
@@ -898,7 +958,13 @@
         "fondoIncripcion":"fondoCocha.webp",
         "fondoAlumni":"fondoRedAlumniCocha.webp",
         "graduados":"graduadosCohca.webp",
-        "fondoOferta":"fondoOfertaCocha.webp"
+        "fondoOferta":"fondoOfertaCocha.webp",
+        "fondoRequisitos":"fondoRequisitos.webp",
+        "fondoNoticias": "fondoNoticiasLibertad.webp",
+        "fondoPrincipal":"fondoOferta.webp",
+        "elfsightId": "c9a88a88-eca1-4915-bbee-8dcc660e0042",
+        "iframeNoticias": "https://widget.tagembed.com/317304?website=1"
+
       },
       "inscripcion": {
         "titulo": "Proceso de Inscripción",
@@ -1082,5 +1148,806 @@
   ]
         }
       ]
+    },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "yacuiba": {
+      "whatsapp":"+59176050098",
+      "imagenes":{
+        "personaPortada":"chicoPortadaY.png",
+        "fondoIncripcion":"pantallaBienveniday.jpg",
+        "fondoAlumni":"fondoRedAlumniY.jpg",
+        "graduados":"graduadosY.png",
+        "fondoOferta":"fondoOfertaY.jpg",
+        "fondoRequisitos":"fondoRequiY.jpg",
+        "fondoNoticias": "fondoNotiY.jpg",
+        "fondoPrincipal":"fondoOfertaY.jpg",
+          "elfsightId": "c9a88a88-eca1-4915-bbee-8dcc660e0042",
+                "iframeNoticias": "https://widget.tagembed.com/317304?website=1"
+
+
+      },
+      "redalumni": {
+      "descripcion": "La Red Alumni de nuestra universidad es un espacio diseñado para conectar a todos los graduados, fortaleciendo los lazos entre profesionales que comparten la experiencia de haber formado parte de nuestra institución. A través de esta red, los egresados pueden ampliar su círculo de contactos, participar en actividades de networking, intercambiar conocimientos y experiencias, y acceder a diversas oportunidades de desarrollo académico y profesional. Además, la Red Alumni fomenta la colaboración, el aprendizaje continuo y la creación de vínculos que potencian tanto el crecimiento personal como el impacto en sus respectivas áreas laborales y en la comunidad universitaria.",
+      "carreras": [
+        {
+          "nombre": "Medicina",
+          "graduados": 1200,
+          "lugaresTrabajo": [
+            "Hospital Central: Atención médica general y especialidades clínicas",
+            "Clínica del Este: Consultorios privados y atención especializada",
+            "ONG Salud: Programas comunitarios, campañas de prevención y proyectos de salud pública",
+            "Otros hospitales y centros de salud a nivel nacional: Diversas especialidades médicas"
+          ],
+          "convenios": [
+            "Hospital Central: Prácticas profesionales, residencias médicas y proyectos de investigación",
+            "Cruz Roja: Voluntariado, capacitaciones y programas de apoyo en salud comunitaria",
+            "Clínicas privadas y organismos internacionales: Intercambio académico, seminarios y talleres especializados"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/MedicinaGrupo"
+        },
+        {
+          "nombre": "Odontología",
+          "graduados": 800,
+          "lugaresTrabajo": [
+            "Hospital Regional: Atención odontológica general y especializada",
+            "Clínica San Juan: Tratamientos dentales y ortodoncia",
+            "Consultorios privados: Atención personalizada y especialidades odontológicas"
+          ],
+          "convenios": [
+            "Hospital Regional: Prácticas profesionales y pasantías",
+            "Fundación Salud: Programas comunitarios y voluntariado",
+            "Clínicas odontológicas privadas: Capacitación y talleres especializados"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/OdontologiaGrupo"
+        },
+        {
+          "nombre": "Bioquímica y Farmacia",
+          "graduados": 600,
+          "lugaresTrabajo": [
+            "Laboratorios clínicos: Análisis clínicos y bioquímicos",
+            "Hospitales públicos y privados: Gestión de medicación y control de calidad",
+            "Industria farmacéutica: Producción, control de calidad y desarrollo de medicamentos"
+          ],
+          "convenios": [
+            "Laboratorios Nacionales: Prácticas y pasantías profesionales",
+            "Universidades y centros de investigación: Investigación aplicada y colaboración académica",
+            "Industria farmacéutica: Capacitación y desarrollo profesional"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/BioquimicaFarmaciaGrupo"
+        },
+        {
+          "nombre": "Enfermería",
+          "graduados": 800,
+          "lugaresTrabajo": [
+            "Hospital Regional: Atención clínica y cuidado de pacientes",
+            "Clínica San Juan: Asistencia especializada y apoyo en procedimientos médicos",
+            "Centros de salud comunitarios: Atención primaria y programas preventivos"
+          ],
+          "convenios": [
+            "Hospital Regional: Prácticas y rotaciones profesionales",
+            "Fundación Salud: Programas de voluntariado y formación",
+            "ONGs de atención sanitaria: Capacitación y proyectos comunitarios"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/EnfermeriaGrupo"
+        },
+        {
+          "nombre": "Fisioterapia y Kinesiología",
+          "graduados": 450,
+          "lugaresTrabajo": [
+            "Clínica Rehabilita: Rehabilitación física y terapias especializadas",
+            "Centro FisioPlus: Fisioterapia deportiva y tratamiento de lesiones",
+            "Consultorios privados: Terapias personalizadas y seguimiento de pacientes"
+          ],
+          "convenios": [
+            "Clínica Rehabilita: Prácticas profesionales y pasantías",
+            "Centro FisioPlus: Capacitación y talleres especializados",
+            "Programas de rehabilitación pública: Colaboración académica y profesional"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/FisioKinesiologiaGrupo"
+        },
+        {
+          "nombre": "Derecho",
+          "graduados": 500,
+          "lugaresTrabajo": [
+            "Despachos de abogados: Consultoría legal y litigios",
+            "Ministerio de Justicia: Asesoría y gestión jurídica",
+            "Organismos internacionales: Proyectos legales y cooperación internacional"
+          ],
+          "convenios": [
+            "Colegios de abogados: Capacitación y formación continua",
+            "Universidades y ONGs: Pasantías y programas de investigación",
+            "Instituciones gubernamentales: Rotaciones y prácticas profesionales"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/DerechoGrupo"
+        },
+        {
+          "nombre": "Ingeniería en Sistemas",
+          "graduados": 700,
+          "lugaresTrabajo": [
+            "Empresas de software: Desarrollo de aplicaciones y sistemas",
+            "Startups tecnológicas: Innovación y proyectos tecnológicos",
+            "Departamentos de IT de empresas privadas y públicas: Gestión de infraestructura y soporte"
+          ],
+          "convenios": [
+            "Empresas de tecnología: Pasantías y proyectos prácticos",
+            "Universidades y laboratorios de innovación: Investigación aplicada",
+            "Organizaciones internacionales: Colaboración académica y tecnológica"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/IngenieriaSistemasGrupo"
+        },
+        {
+          "nombre": "Contaduría Pública",
+          "graduados": 650,
+          "lugaresTrabajo": [
+            "Despachos contables: Auditorías, contabilidad y asesoría fiscal",
+            "Empresas privadas: Gestión financiera y contable",
+            "Instituciones gubernamentales: Control financiero y auditorías públicas"
+          ],
+          "convenios": [
+            "Colegios de contadores: Capacitación y certificaciones",
+            "Universidades y asociaciones contables: Pasantías y programas profesionales",
+            "Auditorías privadas: Rotaciones y formación práctica"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/ContaduriaPublicaGrupo"
+        },
+        {
+          "nombre": "Prótesis Dental",
+          "graduados": 350,
+          "lugaresTrabajo": [
+            "Laboratorios dentales: Fabricación y diseño de prótesis",
+            "Clínicas odontológicas: Colaboración en tratamientos y rehabilitación dental",
+            "Consultorios privados: Personalización y atención especializada"
+          ],
+          "convenios": [
+            "Laboratorios especializados: Capacitación y prácticas profesionales",
+            "Clínicas odontológicas: Intercambio académico y pasantías",
+            "Universidades y programas de investigación dental: Proyectos y talleres"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/ProtesisDentalGrupo"
+        }
+        ]
+      },
+       "investigacion":[
+        {
+          "bienvenida":"La Dirección de Investigación y Postgrado de la Universidad Nacional del Oriente – Subsede Yacuiba tiene como misión fortalecer la cultura científica como eje fundamental del desarrollo académico, profesional y social. La investigación constituye una función sustantiva de la universidad y una herramienta transformadora que permite generar conocimiento, resolver problemáticas del entorno y contribuir al progreso regional y nacional.\n\nDesde nuestra subsede promovemos la formación de estudiantes y docentes investigadores comprometidos con la producción científica, el pensamiento crítico y la innovación. Entendemos la investigación como un proceso continuo que impulsa el desarrollo de competencias analíticas y fortalece la formación profesional.n/nTrabajamos en la consolidación de una comunidad científica que fomente la generación de proyectos, la publicación de resultados y la participación en redes académicas nacionales e internacionales. Incentivamos la investigación formativa desde el pregrado y el desarrollo de investigaciones aplicadas que aporten soluciones concretas a las necesidades de nuestra sociedad.",
+          "boletines":[
+            {
+              "titulo":"Boletin 001",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 002",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 003",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 004",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 005",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 006",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 007",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 008",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+             {
+              "titulo":"Boletin 009",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 010",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 011",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 012",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 013",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 014",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 015",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 016",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+             {
+              "titulo":"Boletin 017",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 018",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 019",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 020",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 021",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 022",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 023",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 024",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            }
+          ],
+          "revistaSalud":"https://salud.uno.edu.bo/index.php/inicio",
+          "lineadeinvestigacion":[
+            {
+              "titulo":"Neurológica, Motricidad Y Respiración",
+              "img":""
+           },
+           {
+              "titulo":"Salud Pública, Enfermería Pediátrica, Médico-Quirúrgica",
+              "img":""
+           },
+           {
+              "titulo":"Bioquímica, Farmacología, Epidemiología",
+              "img":""
+           },
+           {
+              "titulo":"Medicina Preventiva",
+              "img":""
+           },
+            {
+              "titulo":"Software, Redes, Inteligencia Artificial",
+              "img":""
+           },
+           {
+              "titulo":"Leyes, Procedimientos, Reglamentos",
+              "img":""
+           },
+           {
+              "titulo":"Familia, Sociedad, Economía Y Medio Ambiente",
+              "img":""
+           },
+           {
+              "titulo":"Salud Y Bienestar Bucal",
+              "img":""
+           }
+          ],
+          "investigaciones":[
+            {
+              "titulo":"“EVALUACIÓN DE LA EFECTIVIDAD DE LA DESPARASITACIÓN EN ALUMNOS DE PRIMER Y SEGUNDO SEMESTRE DE LA CARRERA DE MEDICINA DE LA UNIVERSIDAD NACIONAL DEL ORIENTE, SEDE SANTA CRUZ, BOLIVIA",
+              "descripcion":"El objetivo de la investigación realizada por el Dr. Mario Farfán es mejorar la información y la educación sobre desparasitación en los estudiantes y ciudadanía en general, pues se observa que en un considerable porcentaje no recibieron la información suficiente sobre los beneficios y riesgos de la desparasitación. Y es en éste sentido que se quiere sugerir se implementar programas de educación y concientización completos. Esto incluye proporcionar información detallada sobre los beneficios de la desparasitación, los riesgos potenciales, las mejores prácticas de higiene y prevención de infecciones parasitarias, así como la importancia de la desparasitación periódica como una alternativa de mejorar la salud.”",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+            {
+              "titulo":"“METODO AULA INVERTIDA Y SU INFLUENCIA EL RENDIMIENTO DE LOS ESTUDIANTES DE LA MATERIA DE METODOLOGÍA DE INVESTIGACIÓN EN LA FACULTAD DE SALUD DE LA UNIVERSIDAD NACIONAL DEL ORIENTE EN LA GESTIÓN 2/2023”",
+              "descripcion":"El presente estudio se enfoca en analizar la influencia del Aula Invertida en el rendimiento académico de estudiantes de Metodología de Investigación en la Facultad de Salud de la Universidad Nacional del Oriente (gestión 2/2023). Este método implica que los contenidos teóricos se aprenden mediante herramientas multimedia fuera del aula, reservando las sesiones presenciales para aplicar y discutir los conocimientos.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+             {
+              "titulo":"“BICO (BICARBONATO DE SODIO) Y LA SALUD MENTAL EN SANTA CRUZ DE LA SIERRA: INVESTIGACIÓN SOBRE LOS EFECTOS EN LA DEPRESIÓN: (SUICIDIO, FEMINICIDIO E INFANTICIDIO)”",
+              "descripcion":"El presente estudio de investigación, titulado «BICO (Bicarbonato de Sodio) y Salud Mental en Santa Cruz de la Sierra: Investigación sobre los Efectos en la Depresión, Suicidio, Feminicidio e Infanticidio», se centra en la relación entre la salud mental y el consumo de bicarbonato de sodio, comúnmente conocido como «bico», en la ciudad de Santa Cruz de la Sierra, Bolivia.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+            {
+              "titulo":"“EFECTIVIDAD EN LA INGESTION DE FLOR DE JAMAICA Y ARANDANO (ROJO) EN MUJERES CON INFECCION URINARIA ENTRE 50 A 80 AÑOS EN LA CIUDAD DE SANTACRUZ”",
+              "descripcion":"El presente estudio se enfoca en analizar la influencia del Aula Invertida en el rendimiento académico de estudiantes de Metodología de Investigación en la Facultad de Salud de la Universidad Nacional del Oriente (gestión 2/2023). Este método implica que los contenidos teóricos se aprenden mediante herramientas multimedia fuera del aula, reservando las sesiones presenciales para aplicar y discutir los conocimientos.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+             {
+              "titulo":"“IA EN PLANIFICACIÓN Y TRATAMIENTO QUIRÚRGICO DE QUERATOQUISTE ODONTOGÉNICO”",
+              "descripcion":"La aplicación de la inteligencia artificial (IA) en la cirugía bucal para el queratoquiste odontogénico (QO) representa un avance significativo en la mejora de la atención al paciente con esta patología oral. La investigación ha demostrado que la IA tiene un alto potencial en varias áreas clave, incluyendo la detección temprana, el diagnóstico diferencial, la planificación quirúrgica y la predicción de recurrencia del QO.La IA permite la detección precoz de QO a través de análisis de imágenes radiográficas, lo que facilita intervenciones oportunas. Además, su capacidad para distinguir el QO de otras lesiones orales mejora la precisión diagnóstica.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+            {
+              "titulo":"“REHABILITACION FÍSICA A TRAVES DE LA APLICACIÓN DE BANDAS ELASTICAS (NEUMATICOS), EN PACIENTE CON PARAPLEJIA”",
+              "descripcion":"Actualmente no existen tratamientos eficaces para recuperar la función de la medula espinal. El proceso de rehabilitación en pacientes con lesión medular baja muestra un hecho que en gran parte de los casos esta en relación al tiempo, los recursos económicos, humanos y el entorno familiar.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            }
+          ],
+          "docentesinvestigadores":[
+            {
+            "docente":"Dr. Franz Mario Farfán Cama ha construido una destacada trayectoria académica que abarca la Medicina, la investigación y la docencia. Sus logros en la formación médica, la investigación innovadora y la contribución a la educación lo convierten en una figura influyente en su campo, con un legado perdurable en el avance de la medicina y la promoción del conocimiento científico.",
+            "img":""
+          },
+          {
+            "docente":"Dra. Tatiana Apaza Ibañez , Odontóloga titulada en la UMSS, Magister En Magister En Educacion Superior Basada En Competencias. Diplomado En Cirugía Bucal. Especialista En Odontopediatría. Especialista En Auditoria Medica Y Gestion De Calidad. Diplomado En Educacion En Prevencion Prenatal De Discapacidades",
+            "img":""
+          },
+          {
+            "docente":"Dr.Henry Farfán, Cirujano Odontólogo, Especialidad en Cirugía Bucal Dentomaxilar, cuento con Maestría en Educación Superior Tic´s, me desempeño como, Docente pregrado – posgrado, Tutor y Docente Investigador.",
+            "img":""
+          },
+          {
+            "docente":"Arq. Esteffany Brenda Antezana Heredia, Docente de metodología de investigación y Ingles de la Universidad Nacional del Oriente. Licenciatura en Arquitectura, Diplomado en Metodología de la    Investigación Científica, Diplomado en Estadística Aplicada a la    Investigación Científica, Diplomado en educación superior basado en el modelo académico por competencias.",
+            "img":""
+          },
+           {
+            "docente":"Licenciada en Bioquímica y Farmacia de la UAGRM, Diplomado en Educación Superior Basado En Neurociencias , Diplomado En Salud Pública, Bioquímica Jefa De Laboratorio Del  Centro de Salud El Carmen (Municipio La Guardia), Docente De Bioquimica – Análisis Clínico,   Parasitología –  Docente en la carrera de Enfermería",
+            "img":""
+          }
+          
+        ]
+        }
+        
+      ],
+
+      "mas": {
+        "bienvenida": {
+          "titulo": "",
+          "contenido": "A nombre de la familia UNO - Yacuiba, le damos la más cordial bienvenida a la página web de la Subsede Yacuiba de la Universidad Nacional del Oriente. Nos alegra profundamente contar con su visita y el interés por conocer más sobre nuestra propuesta académica y el trabajo que desarrollamos en esta importante región del sur del país.\n\n La Subsede Yacuiba nace con el firme compromiso de brindar educación superior de calidad, accesible y pertinente a las necesidades locales y nacionales. Ofrecemos programas en los niveles de Técnico Superior, Licenciatura con una duración de cuatro años y medio y una proyección de formación continua y postgradual, orientados a fortalecer las competencias profesionales de nuestros estudiantes y contribuir al crecimiento de la región.\n\nNuestro equipo académico y administrativo trabaja con vocación, responsabilidad y visión de futuro, promoviendo una formación integral basada en valores, innovación y excelencia. Creemos firmemente que la educación transforma vidas y genera oportunidades de desarrollo sostenible para Yacuiba y todo el Chaco boliviano.\n\nLe invitamos a recorrer nuestra página y conocer más sobre nuestra oferta, actividades y servicios. Esperamos que la información brindada sea de utilidad y que muy pronto forme parte activa de la familia UNO en la Subsede Yacuiba, construyendo juntos un mejor futuro para nuestra región y para Bolivia.",
+          "Autor":"Dr. M.Sc. Sergio A. Borja Alarcón\nRECTOR – UNIVERSIDAD NACIONAL DEL ORIENTE",
+          "imagen":"rector.webp"
+          },
+        "historia": {
+          "titulo": "Reseña Histórica",
+          "contenido": "La Subsede Yacuiba de la Universidad Nacional del Oriente (UNO) es el resultado de un proceso de crecimiento institucional que tiene sus raíces en la ciudad de Santa Cruz de la Sierra, donde en 1999 se gestó el proyecto académico de la Universidad Nacional del Oriente. Desde su apertura oficial en la gestión 2000, la UNO asumió el compromiso de brindar educación superior de calidad, orientada a la formación científica, técnica y humanística, contribuyendo de manera directa al desarrollo regional y nacional.\n\nCon el paso de los años, el fortalecimiento académico, el incremento sostenido de la matrícula estudiantil y la consolidación de su prestigio institucional permitieron proyectar una política de expansión hacia otras regiones del país. Esta visión estratégica estuvo guiada por el propósito de democratizar el acceso a la educación superior y generar oportunidades de formación profesional en contextos donde la oferta académica era limitada.\n\nEn este marco, y respondiendo a la necesidad de ampliar la cobertura educativa hacia el sur del país, se impulsó la creación de la Subsede Yacuiba, concebida como un espacio académico destinado a atender la demanda formativa de la región del Chaco boliviano. Este importante hito se formalizó mediante la Resolución Ministerial Nº 0796/2019, de fecha 22 de julio de 2019, emitida por el Ministerio de Educación, instrumento legal que autoriza oficialmente el funcionamiento de la Subsede y respalda el desarrollo de sus actividades académicas conforme a la normativa vigente.\n\nLa creación de la Subsede Yacuiba representa un paso trascendental en la historia institucional, ya que no solo amplía la presencia territorial de la Universidad, sino que reafirma su compromiso con la inclusión educativa y el desarrollo regional. Desde sus inicios, la Subsede fue concebida bajo los mismos principios que rigen a la casa matriz: excelencia académica, formación integral, ética profesional, responsabilidad social e innovación permanente.\n\nLas primeras gestiones estuvieron orientadas a la organización administrativa, la adecuación de espacios físicos y la conformación de un plantel docente altamente calificado, comprometido con el proyecto educativo institucional. Con una oferta académica estructurada en los niveles de Técnico Superior y Licenciatura, la Subsede inició sus actividades con el objetivo de formar profesionales competentes, capaces de responder a los desafíos económicos, sociales y productivos del contexto chaqueño.\n\nA lo largo de su consolidación, la Subsede Yacuiba ha fortalecido su presencia en la región, promoviendo no solo la formación académica, sino también actividades de extensión universitaria, investigación aplicada y vinculación con instituciones públicas y privadas. Este proceso ha permitido generar un impacto positivo en la comunidad, aportando al desarrollo del talento humano y fomentando una cultura de superación y liderazgo.\n\nEl crecimiento institucional ha sido posible gracias al esfuerzo conjunto de autoridades, docentes, personal administrativo y estudiantes, quienes comparten la misión de contribuir al progreso sostenible de la región y del país. La Subsede se ha convertido en un espacio de encuentro para jóvenes que buscan construir un proyecto de vida basado en la educación, el conocimiento y los valores.\n\nHoy, respaldada por la Resolución Ministerial Nº 0796/2019, la Subsede Yacuiba de la Universidad Nacional del Oriente reafirma su compromiso con la mejora continua, la actualización tecnológica y la calidad académica. Su historia, aunque reciente, se proyecta con firmeza hacia el futuro, consolidándose como un referente educativo en el Chaco boliviano y como parte integral del legado institucional de la UNO, que continúa apostando por la educación como motor de transformación y desarrollo para Bolivia.",
+          "imagen":"fundador.webp"
+        }, "misionvision": [{
+          "titulo": "Misión ",
+          "contenido": "La Universidad Nacional del Oriente tiene como misión:\n« Formar profesionales competentes, éticos líderes con emprendedurismo en base a la diversidad cultural, la ciencia y tecnología para contribuir al desarrollo de la sociedad. «"
+        },
+        {
+          "titulo": "Visión ",
+          "contenido": "La Universidad Nacional del Oriente tiene como visión:\n« Ser líderes en educación superior, acreditados y reconocidos internacionalmente por la formación de profesionales de alta calidad, con responsabilidad social y bases sólidas en la investigación e innovación. «"
+        }
+      ],
+        "filosofia": {
+          "titulo": "",
+          "contenido": "La Filosofía institucional en que se inspira la Universidad Nacional del Oriente se funda en ser una Institución de formación, no elitista, que está fundada en el estudio del pensamiento del ser humano, desde el punto de vista del conocimiento teórico, como de la comprobación del mismo, a través del hecho empírico. Sus ideales se sustentan en el humanismo, como doctrina basada en la situación y el destino del hombre, en la ética como principio de la moral y de obligación social."
+        },
+        "reglamento": [{
+          "titulo": "Reglamento Docente",
+          "archivo": "reglamentoDocente.pdf"
+              },
+              {
+          "titulo": "Reglamento Estudiantil",
+          "archivo": "reglamentoEstudiantes.pdf"
+              },
+                {
+          "titulo": "Reglamento Investigación",
+          "archivo": "reglamentoInvestigacion.pdf"
+              },
+              {
+          "titulo": "Reglamento Interacción Social",
+          "archivo": "reglamentoInteraccion.pdf"
+              },
+                    {
+          "titulo": "Reglamento Becas",
+          "archivo": "reglamentoBecas.pdf"
+              }
+              
+              
+      ],
+       "autoridades": [
+    {
+      "cargo": "PRESIDENTA DEL DIRECTORIO",
+      "nombre": "Ing. Fabiola Marco Fernández",
+      "correo": "presidencia@uno.edu.bo"
+    },
+    {
+      "cargo": "GERENTE REGIONAL SUBSEDE YACUIBA",
+      "nombre": "Lic. Rodrigo Marco Fernández",
+      "correo": "rodrigomarco@uno.edu.bo"
+    },
+    {
+      "cargo": "RECTOR NACIONAL",
+      "nombre": "M.Sc. Dr. Sergio Borja Alarcon",
+      "correo": "rectorado@uno.edu.bo"
+    },
+    {
+      "cargo": "SECRETARIA GENERAL",
+      "nombre": "Dra. Viviana Rodriguez Becerra",
+      "correo": "secretariageneral@uno.edu.bo"
+    },
+    {
+      "cargo": "VICERRECTOR A.I.",
+      "nombre": "Ing. Alvaro Joel Serrano Sejas",
+      "correo": "vicerrectorado@yba.uno.edu.bo"
+    },
+    {
+      "cargo": "COORDINADORA ADMINISTRATIVA FINANCIERA",
+      "nombre": "Lic. Eliana Rodriguez Tellez",
+      "correo": "direccionadministracion@yba.uno.edu.bo"
+    },
+    {
+      "cargo": "DIRECTOR DE INTERACCIÓN SOCIAL Y DIFUSIÓN CULTURAL",
+      "nombre": "Ing. Alvaro Joel Serrano Sejas",
+      "correo": "direccioninteraccion@yba.uno.edu.bo"
+    },
+    {
+      "cargo": "DIRECTORA DE INVESTIGACIÓN Y POSGRADO",
+      "nombre": "Dra. Viviana Paz Gonzales",
+      "correo": "direccionpostgrado@yba.uno.edu.bo"
+    },
+    {
+      "cargo": "JEFATURA DE RECURSOS HUMANOS",
+      "nombre": "Lic. Luis Benjamin Valda Mercado",
+      "correo": "direccionrecursoshumanos@yba.uno.edu.bo"
+    },
+    {
+      "cargo": "JEFATURA DE CARRERA DE DERECHO",
+      "nombre": "Dra. Mirian Herrera Paniagua",
+      "correo": "jefaturaderecho@yba.uno.edu.bo"
+    },
+    {
+      "cargo": "JEFATURA DE CARRERA DE INGENIERIA COMERCIAL",
+      "nombre": "Ing. Eunice Garcia Bedoya",
+      "correo": "jefaturaingenieriacomercial@yba.uno.edu.bo"
+    },
+    {
+      "cargo": "JEFATURA DE CARRERA DE CONTADURIA PUBLICA",
+      "nombre": "Lic. Teddy Javier Greau Ferreira",
+      "correo": "jefaturacontaduriapublica@yba.uno.edu.bo"
     }
+  ]},
+
+
+    "inscripcion": {
+        "titulo": "Proceso de Inscripción",
+        "descripcion": "Todo lo que necesitas saber para inscribirte..."
+      },
+    "historia": {
+        "titulo": "Nuestra Historia",
+        "descripcion": "La Universidad UNO se fundó en..."
+      },
+        "alumni": 
+        { "descripcion": "Formar profesionales competentes, éticos líderes con emprendedurismo en base a la diversidad cultural, la ciencia y tecnología para contribuir al desarrollo de la sociedad." , 
+          "graduados": "133"
+
+    },
+      "oferta": [
+        {"title": "Derecho", "imagen": "derechoY.jpg"},
+        {"title": "Ingeniería Comercial", "imagen": "ingComY.jpg"},
+        {"title": "Contaduría Pública ", "imagen": "conPubY.jpg"}
+        
+      ],
+      "sedes": [
+        {"title": "Medicina", "imagen": "medicina.webp"},
+        {"title": "Odontología", "imagen": "odontologia.webp"},
+        {"title": "Enfermería", "imagen": "enfermeria.webp"}
+      ],
+      "requisitos": [
+      
+      ],
+      "noticias": [
+      
+      ],
+     "interaccion":[
+  {
+    "titulo":"Manos Solidarias",
+    "descripcion":"El programa ´Manos Solidarias´ de la Universidad Nacional del Oriente (UNO) es una iniciativa que busca fortalecer el vínculo entre la universidad y las comunidades locales, promoviendo el desarrollo social y el bienestar integral. A través de este programa, estudiantes y docentes de diversas carreras del área de la salud participan activamente en proyectos que benefician a las comunidades más vulnerables, aplicando sus conocimientos y habilidades en situaciones reales.",
+    "objetivo":"Promover el bienestar integral y el desarrollo social de comunidades vulnerables mediante la participación activa de estudiantes y docentes en actividades de salud, apoyo social y educación, fortaleciendo la responsabilidad social universitaria y fomentando la interacción social entre la Universidad Nacional del Oriente y las comunidades locales.",
+    "Proyectos":["La UNO en tu Comunidad","Solidaridad UNO"]
+  },
+  {
+    "titulo":"Uno Solidario",
+    "descripcion":"El programa ´Uno Solidario´ surge como respuesta a la realidad, reconociendo la necesidad urgente de brindar atención médica integral y servicios a comunidades que enfrentan barreras para acceder a la salud. Enfocado en el principio de solidaridad y compromiso social, este programa busca no solo proporcionar atención médica, sino también generar un impacto positivo en la vida de las personas y en la construcción de una sociedad más equitativa y justa.",
+    "objetivo":"Promover la solidaridad y el bienestar en las comunidades vulnerables mediante la recolección y donación de recursos materiales y la realización de actividades educativas y de salud, contribuyendo así al desarrollo social y al mejoramiento de la calidad de vida.",
+    "Proyectos":["Yo me UNO por la sonrisa de un niño","Unidos por las Madres","Unidos por un Invierno Más Cálido","UNO Noelito"]
+  },
+  {
+    "titulo":"Eco Uno",
+    "descripcion":"La Universidad Nacional del Oriente (UNO) está comprometida con la promoción de la sostenibilidad ambiental y la conservación del entorno natural. El programa ´ECO UNO´ se presenta como una iniciativa integral que busca fomentar prácticas sostenibles y desarrollar proyectos que contribuyan a la preservación de nuestro entorno.",
+    "objetivo":"Promover la sostenibilidad ambiental y la conservación del entorno natural mediante la implementación de proyectos de gestión de residuos y reforestación, fomentando la conciencia ecológica y la participación activa de la comunidad universitaria y local.",
+    "Proyectos":["Basura en su Lugar","Jóvenes en Acción (Reforestación)"]
+  },
+  {
+    "titulo":"Becas UNO",
+    "descripcion":"La Universidad Nacional del Oriente ofrece diversos tipos de becas orientadas a apoyar a estudiantes en función de sus méritos académicos, situación social, talentos culturales, deportivos, participación en investigación y cooperación institucional.",
+    "objetivo":"Facilitar el acceso y la permanencia de los estudiantes en la universidad, reconociendo méritos, talentos y necesidades económicas, promoviendo la equidad y el desarrollo integral de la comunidad estudiantil.",
+    "Proyectos":[
+      {
+        "titulo":"Beca Social Solidaria",
+        "descripcion":"Comprende a personas con escasos recursos, poblaciones indígenas, originarios, campesinos y sectores sociales; otorgada por el Ministerio de Educación.",
+        "objetivo":"Brindar apoyo económico a estudiantes de sectores vulnerables, garantizando el acceso a la educación superior."
+      },
+      {
+        "titulo":"Beca Social Capacidades Diferentes",
+        "descripcion":"Se establece en el marco de la Ley General para personas con Discapacidad N° 223 y el Decreto Supremo N°1893.",
+        "objetivo":"Apoyar a estudiantes con necesidades especiales para que puedan cursar sus estudios universitarios sin impedimentos."
+      },
+      {
+        "titulo":"Beca Excelencia Académica",
+        "descripcion":"Reconoce y fomenta el rendimiento académico sobresaliente de los estudiantes universitarios que hayan obtenido el promedio requerido.",
+        "objetivo":"Incentivar el alto rendimiento académico y premiar a los estudiantes destacados."
+      },
+      {
+        "titulo":"Beca Esfuerzo",
+        "descripcion":"Dirigida a bachilleres de colegios Fiscales, Particulares y de Convenio con promedio elevado y acumulado en la promoción.",
+        "objetivo":"Incentivar a bachilleres talentosos a continuar sus estudios universitarios en la UNO."
+      },
+      {
+        "titulo":"Beca Cultural",
+        "descripcion":"Otorgada a estudiantes destacados en áreas culturales que hayan representado a la Universidad.",
+        "objetivo":"Promover y reconocer el talento cultural de los estudiantes."
+      },
+      {
+        "titulo":"Beca Deporte",
+        "descripcion":"Se otorga a estudiantes que participen y representen a la UNO en actividades deportivas oficiales.",
+        "objetivo":"Fomentar la práctica deportiva y premiar la dedicación en competencias universitarias."
+      },
+      {
+        "titulo":"Beca de Cooperación Interinstitucional",
+        "descripcion":"Se otorga a estudiantes procedentes de instituciones que mantengan un Convenio de Cooperación Interinstitucional vigente con la UNO.",
+        "objetivo":"Apoyar a estudiantes de instituciones aliadas y fortalecer la cooperación interinstitucional."
+      },
+      {
+        "titulo":"Beca Familiar",
+        "descripcion":"Destinada a estudiantes que demuestren relación familiar de primer grado con otros miembros de la UNO.",
+        "objetivo":"Facilitar el acceso a la educación universitaria a familias de estudiantes ya vinculados a la institución."
+      },
+      {
+        "titulo":"Beca Profesional UNO",
+        "descripcion":"Reconoce e incentiva la fidelidad y adhesión de estudiantes graduados de la UNO, ofreciéndoles beca en colegiatura para su segunda carrera.",
+        "objetivo":"Premiar la fidelidad de los estudiantes graduados y fomentar la continuidad educativa."
+      },
+      {
+        "titulo":"Beca Social UNO",
+        "descripcion":"Beneficia a estudiantes que, por motivos económicos, sociales o de salud, no pueden cubrir sus estudios universitarios.",
+        "objetivo":"Garantizar la continuidad de estudios a estudiantes en situación de vulnerabilidad."
+      },
+      {
+        "titulo":"Beca Apoyo Institucional",
+        "descripcion":"Reconoce al estudiante por el apoyo brindado a la institución y contribución al desarrollo de la UNO mediante labores específicas.",
+        "objetivo":"Valorar la colaboración de los estudiantes en actividades institucionales, apoyando su formación profesional."
+      },
+      {
+        "titulo":"Beca Investigador UNO",
+        "descripcion":"Estimula la participación de los estudiantes en actividades de investigación científica, tecnológica y humanística.",
+        "objetivo":"Reconocer y fomentar la investigación universitaria entre los estudiantes."
+      }
+    ]
+  },
+  {
+    "titulo": "Convenios UNO",
+    "descripcion": "La Universidad Nacional del Oriente mantiene convenios con diversas instituciones y organizaciones, ofreciendo becas especiales y beneficios exclusivos a estudiantes vinculados a estas entidades.",
+    "objetivo": "Fortalecer la cooperación interinstitucional y proporcionar oportunidades educativas con descuentos y beneficios especiales para estudiantes de instituciones aliadas o miembros de organizaciones convenidas.",
+    "convenios": [
+      {
+        "titulo": "UNO - Policía Boliviana",
+        "beneficios": "Reconocemos tu dedicación y servicio a la comunidad ¡Aprovecha descuentos exclusivos en tus mensualidades! Horarios flexibles para que estudies en la mañana, tarde o noche.  ¡Esta es tu oportunidad de crecer profesional y académicamente!",
+        "imagen": "conPol.jpg"
+      },
+      {
+        "titulo": "UNO - Instituto Latinoamericano",
+        "beneficios": "Accede a descuentos especiales por convenio institucional en tus mensualidades. Estudia en horarios flexibles, compatibles con tu actividad laboral. Forma parte de una universidad comprometida con tu crecimiento profesional y académico.",
+        "imagen": "conlat.jpg"
+      },
+      {
+        "titulo": "UNO - Colegio Médico",
+        "beneficios": "Los miembros del Colegio Médico y sus familiares pueden acceder a descuentos especiales por convenio institucional en sus mensualidades, con horarios flexibles en la mañana, tarde o noche. Continúa tu formación profesional en UNO y brinda nuevas oportunidades académicas a tu familia.",
+        "imagen": "conMed.jpg"
+      },
+      {
+        "titulo": "UNO - Top Fitnes Center",
+        "beneficios": "Los estudiantes de UNO acceden a tarifas preferenciales en Top Fitness Center, promoviendo un estilo de vida saludable y equilibrado. Este convenio apoya su bienestar físico y rendimiento académico mediante espacios modernos y planes accesibles.",
+        "imagen": "contop.jpg"
+      }
+      
+    ]
+  }
+],
+      "carrera": [
+      {
+    "title": "Ingeniería Comercial",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Formar profesionales en Ingeniería Comercial con sólida preparación en gestión empresarial, economía, finanzas, marketing e innovación, capaces de diseñar estrategias competitivas y tomar decisiones basadas en análisis cuantitativo y cualitativo. Desarrollan habilidades de liderazgo, emprendimiento y pensamiento estratégico para impulsar el desarrollo sostenible de organizaciones públicas y privadas, contribuyendo al crecimiento económico y social del país con ética y responsabilidad.",
+    "rm": "R.M No 449/2012",
+    "video":"https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mIngCY.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar ingenieros comerciales competentes, éticos y emprendedores, con capacidad de gestión estratégica, innovación y liderazgo, comprometidos con el desarrollo empresarial y social.",
+    "vision": "Ser una carrera líder y acreditada en formación empresarial, reconocida por su excelencia académica, investigación aplicada y aporte al desarrollo económico sostenible a nivel nacional e internacional.",
+    "roles": [
+      "Dirección y gestión estratégica de empresas públicas y privadas",
+      "Administración financiera y análisis de inversiones",
+      "Gestión de marketing y posicionamiento de marcas",
+      "Desarrollo y evaluación de proyectos empresariales",
+      "Consultoría en planificación y gestión organizacional",
+      "Emprendimiento y creación de nuevas empresas",
+      "Gestión del talento humano y desarrollo organizacional",
+      "Comercio exterior y negociación internacional",
+      "Investigación y análisis económico empresarial"
+    ],
+     "values": [
+    "Ética profesional",
+"Responsabilidad social",
+"Liderazgo",
+"Innovación y creatividad",
+"Pensamiento estratégico",
+"Compromiso con la calidad",
+"Trabajo en equipo",
+"Transparencia",
+"Emprendimiento",
+"Sostenibilidad"
+
+  ]
+
+  },
+  {
+    "title": "Derecho",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Formar profesionales en Derecho con sólida preparación jurídica, pensamiento crítico y compromiso social, capaces de interpretar, aplicar y transformar el ordenamiento jurídico en defensa de la justicia y los derechos humanos. Desarrollan competencias en asesoramiento legal, litigación, mediación y gestión pública o privada, contribuyendo al fortalecimiento del Estado de Derecho y la convivencia democrática con ética, responsabilidad y vocación de servicio.",
+    "rm": "R.M No 456/2012",
+    "video": "https://www.youtube.com/watch?v=B27C5-2J2uw",
+    "malla": "mDerechoY.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar abogados íntegros, críticos y comprometidos con la justicia, capaces de brindar asesoramiento y defensa legal con responsabilidad social y ética profesional.",
+    "vision": "Ser una carrera líder y acreditada en educación jurídica, reconocida por la excelencia académica y la formación de profesionales con proyección nacional e internacional.",
+    "roles": [
+      "Ejercicio libre de la abogacía y litigación en tribunales.",
+      "Asesoría jurídica en instituciones públicas.",
+      "Consultoría legal en empresas privadas.",
+      "Función judicial y administración de justicia.",
+      "Ministerio Público y defensa pública.",
+      "Notariado y registros públicos.",
+      "Docencia e investigación jurídica.",
+      "Mediación y resolución alternativa de conflictos",
+      "Organismos internacionales y derechos humanos."
+      
+    ],
+     "values": [
+    "Ética profesional",
+    "Justicia y equidad",
+    "Responsabilidad social",
+    "Respeto a los derechos humanos",
+    "Compromiso democrático",
+    "Honestidad",
+    "Pensamiento crítico",
+    "Vocación de servicio",
+    "Liderazgo y firmeza moral"
+  ]
+  },
+  {
+    "title": "Contaduría Pública",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Formar profesionales en Contaduría Pública con sólida preparación en contabilidad, auditoría, tributación y finanzas, capaces de generar información financiera confiable para la toma de decisiones. Desarrollan competencias técnicas, analíticas y normativas que garantizan transparencia y cumplimiento legal en organizaciones públicas y privadas. Contribuyen al desarrollo económico mediante el control, fiscalización y asesoramiento financiero con responsabilidad social y ética profesional.",
+    "rm": "R.M No 457/2012",
+    "video": "https://www.youtube.com/watch?v=1OuS9xM2B5w",
+    "malla": "mContY.jpg",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar contadores públicos íntegros y competentes, con excelencia académica, pensamiento crítico y responsabilidad social, capaces de garantizar transparencia y eficiencia en la gestión financiera.",
+    "vision": "Ser una carrera líder y acreditada en educación superior, reconocida por la calidad en la formación contable, la investigación aplicada y el aporte al desarrollo económico sostenible.",
+    "roles": [
+      "Contabilidad general y elaboración de estados financieros",
+"Auditoría interna y externa en entidades públicas y privadas",
+"Asesoramiento tributario y planificación fiscal",
+"Control y fiscalización de recursos financieros",
+"Gestión financiera y presupuestaria institucional",
+"Peritaje contable y apoyo en procesos judiciales",
+"Consultoría contable y financiera empresarial",
+"Administración y control de costos empresariales",
+"Docencia e investigación en el área contable"
+
+    
+    ],
+     "values": [
+    "Ética profesional",
+"Transparencia",
+"Responsabilidad",
+"Honestidad",
+"Confidencialidad",
+"Rigurosidad técnica",
+"Compromiso social",
+"Objetividad",
+"Disciplina profesional",
+"Respeto a la normativa vigente"
+
+  ]
+  }
+
+  ],
+  "footer": {
+      "edificios": [
+        {
+          "nombre": "Edificio Central",
+          "direccion": "Calle Sucre entre calles Comercio y Martin Barroso",
+          "telefono": "(591) 76050098"
+        },
+        {
+          "nombre": "Edificio Académic",
+          "direccion": " Calle Santa Cruz entre calles Crevaux y Sucre ",
+          "telefono": "(591) 76050098"
+        }
+      ],
+      "email": "informaciones@yba.uno.edu.bo",
+      "redes": {
+        "instagram": "https://www.instagram.com/uno_scz/",
+        "facebook": "https://www.facebook.com/UnoYacuiba",
+        "twitter": "https://twitter.com/uno"
+      }
+    }
+
+    
+  }
   }

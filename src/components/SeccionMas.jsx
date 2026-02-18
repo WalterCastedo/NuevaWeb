@@ -241,18 +241,20 @@ export default function SeccionMas() {
                             {item.nombre}
                           </p>
                           <p>
-                            <a
-                              href={`mailto:${item.correo}`}
-                              style={{
-                                color: "#009DFA",
-                                textDecoration: "none",
-                                fontWeight: 500,
-                                fontSize: "0.8rem",
-                              }}
-                            >
-                              {item.correo}
-                            </a>
-                          </p>
+  <a
+    href={`mailto:${item.correo}`}
+    style={{
+      color: "#009DFA",
+      textDecoration: "none",
+      fontWeight: 500,
+      fontSize: "0.8rem",
+      wordBreak: "break-word", // <- esto evita que el correo se salga
+      overflowWrap: "break-word", // <- soporte extra para navegadores
+    }}
+  >
+    {item.correo}
+  </a>
+</p>
                         </div>
                       ))}
                     </div>

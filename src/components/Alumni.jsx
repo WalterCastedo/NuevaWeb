@@ -84,51 +84,51 @@ export default function Alumni() {
   const [fondoImg, setFondoImg] = useState(fondoDefault);
   const [alumniImg, setAlumniImg] = useState(null);
 
-  // Manejo dinámico de datos según sección
-  const dataSede = seccion === "general" 
-    ? null 
-    : dataJson[sede];
+  // Datos de sede
+  const dataSede = sede && seccion !== "general" ? dataJson[sede] : null;
 
   // Totales dinámicos
-  const totalGraduados = seccion === "general"
-    ? Object.values(dataJson).reduce((acc, s) => acc + (s.alumni?.graduados || 0), 0)
-    : dataSede?.alumni?.graduados || 0;
+  const totalGraduados =
+    seccion === "general"
+      ? Object.values(dataJson).reduce((acc, s) => acc + (s.alumni?.graduados || 0), 0)
+      : dataSede?.alumni?.graduados || 0;
 
-  const totalCarreras = seccion === "general"
-    ? Object.values(dataJson).reduce((acc, s) => acc + (s.oferta ? Object.keys(s.oferta).length : 0), 0)
-    : dataSede?.oferta ? Object.keys(dataSede.oferta).length : 0;
+  const totalCarreras =
+    seccion === "general"
+      ? Object.values(dataJson).reduce((acc, s) => acc + (s.oferta ? Object.keys(s.oferta).length : 0), 0)
+      : dataSede?.oferta ? Object.keys(dataSede.oferta).length : 0;
 
-  const descripcion = seccion === "general"
-    ? "Conoce nuestra Red Alumni de todas las sedes y descubre el impacto de nuestros graduados."
-    : dataSede?.alumni?.descripcion || "";
+  const descripcion =
+    seccion === "general"
+      ? "Conoce nuestra Red Alumni de todas las sedes y descubre el impacto de nuestros graduados."
+      : dataSede?.alumni?.descripcion || "";
 
-  // Cargar imágenes dinámicamente
+  // ---------------------------
+  // Fondo y fotos dinámicas
+  // ---------------------------
   useEffect(() => {
-    if (seccion === "general") {
-      setFondoImg(fondoDefault);
-      setAlumniImg(null);
-      return;
-    }
-
-    if (!dataSede) return;
-
-    if (dataSede?.imagenes?.fondoAlumni) {
+    // Fondo dinámico
+    const loadFondo = () => {
+      if (!dataSede?.imagenes?.fondoPrincipal) return fondoDefault;
       try {
-        const fondo = require(`../assets/img/${dataSede.imagenes.fondoAlumni}`);
-        setFondoImg(fondo);
+        return require(`../assets/img/${dataSede.imagenes.fondoPrincipal}`);
       } catch {
-        setFondoImg(fondoDefault);
+        return fondoDefault;
       }
-    } else setFondoImg(fondoDefault);
+    };
 
-    if (dataSede?.imagenes?.graduados) {
+    // Imagen de graduados
+    const loadAlumniImg = () => {
+      if (!dataSede?.imagenes?.graduados) return null;
       try {
-        const img = require(`../assets/img/${dataSede.imagenes.graduados}`);
-        setAlumniImg(img);
+        return require(`../assets/img/${dataSede.imagenes.graduados}`);
       } catch {
-        setAlumniImg(null);
+        return null;
       }
-    }
+    };
+
+    setFondoImg(seccion === "general" ? fondoDefault : loadFondo());
+    setAlumniImg(seccion === "general" ? null : loadAlumniImg());
   }, [sede, seccion, dataSede]);
 
   const buttonBg = hover ? "#fff" : "#001A66";
@@ -206,19 +206,19 @@ export default function Alumni() {
               transition={{ delay: 0.9, duration: 0.8 }}
             >
               <a
-  href={`/${sede}/redalumni/general`}
-  className="fw-bold btn rounded-pill px-5 py-2"
-  style={{
-    backgroundColor: buttonBg,
-    color: buttonColor,
-    border: `2px solid #001A66`,
-    transition: "all 0.5s ease",
-  }}
-  onMouseEnter={() => setHover(true)}
-  onMouseLeave={() => setHover(false)}
->
-  Ver más...
-</a>
+                href={`/${sede}/redalumni/general`}
+                className="fw-bold btn rounded-pill px-5 py-2"
+                style={{
+                  backgroundColor: buttonBg,
+                  color: buttonColor,
+                  border: `2px solid #001A66`,
+                  transition: "all 0.5s ease",
+                }}
+                onMouseEnter={() => setHover(true)}
+                onMouseLeave={() => setHover(false)}
+              >
+                Ver más...
+              </a>
             </motion.div>
           </div>
 
@@ -245,14 +245,9 @@ export default function Alumni() {
                   src={alumniImg}
                   alt="Red Alumni UNO"
                   className="img-fluid"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                  }}
+                  style={{ width: "100%", height: "100%", objectFit: "cover" }}
                 />
               )}
-
               <div
                 style={{
                   position: "absolute",

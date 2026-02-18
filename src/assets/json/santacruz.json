@@ -1,0 +1,892 @@
+{
+      "whatsapp":"+59162241035",
+      "imagenes":{
+        "personaPortada":"chicaUno.webp",
+        "fondoIncripcion":"fondoLibertad.webp",
+        "fondoAlumni":"fondoRedAlumni.webp",
+        "graduados":"graduados.webp",
+        "fondoOferta":"fondoOferta.webp"
+      },
+      "redalumni": {
+      "descripcion": "La Red Alumni de nuestra universidad es un espacio diseñado para conectar a todos los graduados, fortaleciendo los lazos entre profesionales que comparten la experiencia de haber formado parte de nuestra institución. A través de esta red, los egresados pueden ampliar su círculo de contactos, participar en actividades de networking, intercambiar conocimientos y experiencias, y acceder a diversas oportunidades de desarrollo académico y profesional. Además, la Red Alumni fomenta la colaboración, el aprendizaje continuo y la creación de vínculos que potencian tanto el crecimiento personal como el impacto en sus respectivas áreas laborales y en la comunidad universitaria.",
+      "carreras": [
+        {
+          "nombre": "Medicina",
+          "graduados": 1200,
+          "lugaresTrabajo": [
+            "Hospital Central: Atención médica general y especialidades clínicas",
+            "Clínica del Este: Consultorios privados y atención especializada",
+            "ONG Salud: Programas comunitarios, campañas de prevención y proyectos de salud pública",
+            "Otros hospitales y centros de salud a nivel nacional: Diversas especialidades médicas"
+          ],
+          "convenios": [
+            "Hospital Central: Prácticas profesionales, residencias médicas y proyectos de investigación",
+            "Cruz Roja: Voluntariado, capacitaciones y programas de apoyo en salud comunitaria",
+            "Clínicas privadas y organismos internacionales: Intercambio académico, seminarios y talleres especializados"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/MedicinaGrupo"
+        },
+        {
+          "nombre": "Odontología",
+          "graduados": 800,
+          "lugaresTrabajo": [
+            "Hospital Regional: Atención odontológica general y especializada",
+            "Clínica San Juan: Tratamientos dentales y ortodoncia",
+            "Consultorios privados: Atención personalizada y especialidades odontológicas"
+          ],
+          "convenios": [
+            "Hospital Regional: Prácticas profesionales y pasantías",
+            "Fundación Salud: Programas comunitarios y voluntariado",
+            "Clínicas odontológicas privadas: Capacitación y talleres especializados"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/OdontologiaGrupo"
+        },
+        {
+          "nombre": "Bioquímica y Farmacia",
+          "graduados": 600,
+          "lugaresTrabajo": [
+            "Laboratorios clínicos: Análisis clínicos y bioquímicos",
+            "Hospitales públicos y privados: Gestión de medicación y control de calidad",
+            "Industria farmacéutica: Producción, control de calidad y desarrollo de medicamentos"
+          ],
+          "convenios": [
+            "Laboratorios Nacionales: Prácticas y pasantías profesionales",
+            "Universidades y centros de investigación: Investigación aplicada y colaboración académica",
+            "Industria farmacéutica: Capacitación y desarrollo profesional"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/BioquimicaFarmaciaGrupo"
+        },
+        {
+          "nombre": "Enfermería",
+          "graduados": 800,
+          "lugaresTrabajo": [
+            "Hospital Regional: Atención clínica y cuidado de pacientes",
+            "Clínica San Juan: Asistencia especializada y apoyo en procedimientos médicos",
+            "Centros de salud comunitarios: Atención primaria y programas preventivos"
+          ],
+          "convenios": [
+            "Hospital Regional: Prácticas y rotaciones profesionales",
+            "Fundación Salud: Programas de voluntariado y formación",
+            "ONGs de atención sanitaria: Capacitación y proyectos comunitarios"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/EnfermeriaGrupo"
+        },
+        {
+          "nombre": "Fisioterapia y Kinesiología",
+          "graduados": 450,
+          "lugaresTrabajo": [
+            "Clínica Rehabilita: Rehabilitación física y terapias especializadas",
+            "Centro FisioPlus: Fisioterapia deportiva y tratamiento de lesiones",
+            "Consultorios privados: Terapias personalizadas y seguimiento de pacientes"
+          ],
+          "convenios": [
+            "Clínica Rehabilita: Prácticas profesionales y pasantías",
+            "Centro FisioPlus: Capacitación y talleres especializados",
+            "Programas de rehabilitación pública: Colaboración académica y profesional"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/FisioKinesiologiaGrupo"
+        },
+        {
+          "nombre": "Derecho",
+          "graduados": 500,
+          "lugaresTrabajo": [
+            "Despachos de abogados: Consultoría legal y litigios",
+            "Ministerio de Justicia: Asesoría y gestión jurídica",
+            "Organismos internacionales: Proyectos legales y cooperación internacional"
+          ],
+          "convenios": [
+            "Colegios de abogados: Capacitación y formación continua",
+            "Universidades y ONGs: Pasantías y programas de investigación",
+            "Instituciones gubernamentales: Rotaciones y prácticas profesionales"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/DerechoGrupo"
+        },
+        {
+          "nombre": "Ingeniería en Sistemas",
+          "graduados": 700,
+          "lugaresTrabajo": [
+            "Empresas de software: Desarrollo de aplicaciones y sistemas",
+            "Startups tecnológicas: Innovación y proyectos tecnológicos",
+            "Departamentos de IT de empresas privadas y públicas: Gestión de infraestructura y soporte"
+          ],
+          "convenios": [
+            "Empresas de tecnología: Pasantías y proyectos prácticos",
+            "Universidades y laboratorios de innovación: Investigación aplicada",
+            "Organizaciones internacionales: Colaboración académica y tecnológica"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/IngenieriaSistemasGrupo"
+        },
+        {
+          "nombre": "Contaduría Pública",
+          "graduados": 650,
+          "lugaresTrabajo": [
+            "Despachos contables: Auditorías, contabilidad y asesoría fiscal",
+            "Empresas privadas: Gestión financiera y contable",
+            "Instituciones gubernamentales: Control financiero y auditorías públicas"
+          ],
+          "convenios": [
+            "Colegios de contadores: Capacitación y certificaciones",
+            "Universidades y asociaciones contables: Pasantías y programas profesionales",
+            "Auditorías privadas: Rotaciones y formación práctica"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/ContaduriaPublicaGrupo"
+        },
+        {
+          "nombre": "Prótesis Dental",
+          "graduados": 350,
+          "lugaresTrabajo": [
+            "Laboratorios dentales: Fabricación y diseño de prótesis",
+            "Clínicas odontológicas: Colaboración en tratamientos y rehabilitación dental",
+            "Consultorios privados: Personalización y atención especializada"
+          ],
+          "convenios": [
+            "Laboratorios especializados: Capacitación y prácticas profesionales",
+            "Clínicas odontológicas: Intercambio académico y pasantías",
+            "Universidades y programas de investigación dental: Proyectos y talleres"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/ProtesisDentalGrupo"
+        }
+        ]
+      },
+       "investigacion":[
+        {
+          "bienvenida":"En la Universidad Nacional del Oriente buscamos fomentar las actividades de investigación en todos los niveles de formación esto con el fin de motivar al ciudadano a asumir su rol de responsabilidad desde cada posición que ocupe en la sociedad.\nEs así que en los programas de formación que ofrece la Universidad Nacional del Oriente, se busca motivar a los estudiantes a entrar en el maravilloso mundo de la investigación. Lo que se busca es sentar presencia creando conciencia para realizar análisis emitir puntos de vista y tener criterio sobre ciertos temas determinados que están presentes en el diario vivir. \nDesde la universidad nos preocupamos por insertar en nuestros programas de pre y postgrado actividades que hagan reflexionar al estudiante y ciudadano para generar ideas innovadoras e inmiscuirse en el mundo de la investigación sea cual sea el campo de acción. \nLos objetivos del departamento de Investigación de la UNO son:\n– Desarrollar talento humano para la investigación.\n– Permanecer insertos en la globalización.\n– Aplicar tecnología e innovación en cada uno de los productos que se generan desde la UNO.\n– Desarrollar proyectos que involucren investigación con innovación apuntando al desarrollo social.\n– Incentivar al desarrollo de un eco-sistema sostenible.",
+          "boletines":[
+            {
+              "titulo":"Boletin 001",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 002",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 003",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 004",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 005",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 006",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 007",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 008",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+             {
+              "titulo":"Boletin 009",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 010",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 011",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 012",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 013",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 014",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 015",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 016",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+             {
+              "titulo":"Boletin 017",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 018",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 019",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 020",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 021",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 022",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 023",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            },
+            {
+              "titulo":"Boletin 024",
+              "img":"portada1.webp",
+              "url":"https://mega.nz/file/J4JlhI6I#_3wa0vLWkMmLa4LXkYXItN9Bb9p1TaLMW1KVMKGKdjo"
+            }
+          ],
+          "revistaSalud":"https://salud.uno.edu.bo/index.php/inicio",
+          "lineadeinvestigacion":[
+            {
+              "titulo":"Neurológica, Motricidad Y Respiración",
+              "img":""
+           },
+           {
+              "titulo":"Salud Pública, Enfermería Pediátrica, Médico-Quirúrgica",
+              "img":""
+           },
+           {
+              "titulo":"Bioquímica, Farmacología, Epidemiología",
+              "img":""
+           },
+           {
+              "titulo":"Medicina Preventiva",
+              "img":""
+           },
+            {
+              "titulo":"Software, Redes, Inteligencia Artificial",
+              "img":""
+           },
+           {
+              "titulo":"Leyes, Procedimientos, Reglamentos",
+              "img":""
+           },
+           {
+              "titulo":"Familia, Sociedad, Economía Y Medio Ambiente",
+              "img":""
+           },
+           {
+              "titulo":"Salud Y Bienestar Bucal",
+              "img":""
+           }
+          ],
+          "investigaciones":[
+            {
+              "titulo":"“EVALUACIÓN DE LA EFECTIVIDAD DE LA DESPARASITACIÓN EN ALUMNOS DE PRIMER Y SEGUNDO SEMESTRE DE LA CARRERA DE MEDICINA DE LA UNIVERSIDAD NACIONAL DEL ORIENTE, SEDE SANTA CRUZ, BOLIVIA",
+              "descripcion":"El objetivo de la investigación realizada por el Dr. Mario Farfán es mejorar la información y la educación sobre desparasitación en los estudiantes y ciudadanía en general, pues se observa que en un considerable porcentaje no recibieron la información suficiente sobre los beneficios y riesgos de la desparasitación. Y es en éste sentido que se quiere sugerir se implementar programas de educación y concientización completos. Esto incluye proporcionar información detallada sobre los beneficios de la desparasitación, los riesgos potenciales, las mejores prácticas de higiene y prevención de infecciones parasitarias, así como la importancia de la desparasitación periódica como una alternativa de mejorar la salud.”",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+            {
+              "titulo":"“METODO AULA INVERTIDA Y SU INFLUENCIA EL RENDIMIENTO DE LOS ESTUDIANTES DE LA MATERIA DE METODOLOGÍA DE INVESTIGACIÓN EN LA FACULTAD DE SALUD DE LA UNIVERSIDAD NACIONAL DEL ORIENTE EN LA GESTIÓN 2/2023”",
+              "descripcion":"El presente estudio se enfoca en analizar la influencia del Aula Invertida en el rendimiento académico de estudiantes de Metodología de Investigación en la Facultad de Salud de la Universidad Nacional del Oriente (gestión 2/2023). Este método implica que los contenidos teóricos se aprenden mediante herramientas multimedia fuera del aula, reservando las sesiones presenciales para aplicar y discutir los conocimientos.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+             {
+              "titulo":"“BICO (BICARBONATO DE SODIO) Y LA SALUD MENTAL EN SANTA CRUZ DE LA SIERRA: INVESTIGACIÓN SOBRE LOS EFECTOS EN LA DEPRESIÓN: (SUICIDIO, FEMINICIDIO E INFANTICIDIO)”",
+              "descripcion":"El presente estudio de investigación, titulado «BICO (Bicarbonato de Sodio) y Salud Mental en Santa Cruz de la Sierra: Investigación sobre los Efectos en la Depresión, Suicidio, Feminicidio e Infanticidio», se centra en la relación entre la salud mental y el consumo de bicarbonato de sodio, comúnmente conocido como «bico», en la ciudad de Santa Cruz de la Sierra, Bolivia.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+            {
+              "titulo":"“EFECTIVIDAD EN LA INGESTION DE FLOR DE JAMAICA Y ARANDANO (ROJO) EN MUJERES CON INFECCION URINARIA ENTRE 50 A 80 AÑOS EN LA CIUDAD DE SANTACRUZ”",
+              "descripcion":"El presente estudio se enfoca en analizar la influencia del Aula Invertida en el rendimiento académico de estudiantes de Metodología de Investigación en la Facultad de Salud de la Universidad Nacional del Oriente (gestión 2/2023). Este método implica que los contenidos teóricos se aprenden mediante herramientas multimedia fuera del aula, reservando las sesiones presenciales para aplicar y discutir los conocimientos.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+             {
+              "titulo":"“IA EN PLANIFICACIÓN Y TRATAMIENTO QUIRÚRGICO DE QUERATOQUISTE ODONTOGÉNICO”",
+              "descripcion":"La aplicación de la inteligencia artificial (IA) en la cirugía bucal para el queratoquiste odontogénico (QO) representa un avance significativo en la mejora de la atención al paciente con esta patología oral. La investigación ha demostrado que la IA tiene un alto potencial en varias áreas clave, incluyendo la detección temprana, el diagnóstico diferencial, la planificación quirúrgica y la predicción de recurrencia del QO.La IA permite la detección precoz de QO a través de análisis de imágenes radiográficas, lo que facilita intervenciones oportunas. Además, su capacidad para distinguir el QO de otras lesiones orales mejora la precisión diagnóstica.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            },
+            {
+              "titulo":"“REHABILITACION FÍSICA A TRAVES DE LA APLICACIÓN DE BANDAS ELASTICAS (NEUMATICOS), EN PACIENTE CON PARAPLEJIA”",
+              "descripcion":"Actualmente no existen tratamientos eficaces para recuperar la función de la medula espinal. El proceso de rehabilitación en pacientes con lesión medular baja muestra un hecho que en gran parte de los casos esta en relación al tiempo, los recursos económicos, humanos y el entorno familiar.",
+              "img":"",
+              "url":"https://mega.nz/file/gh5QQSwJ#ua2Jj-f-WzwGpjoJkbmYHNzZRf3pqd5jmPCJcL7DYdY"
+            }
+          ],
+          "docentesinvestigadores":[
+            {
+            "docente":"Dr. Franz Mario Farfán Cama ha construido una destacada trayectoria académica que abarca la Medicina, la investigación y la docencia. Sus logros en la formación médica, la investigación innovadora y la contribución a la educación lo convierten en una figura influyente en su campo, con un legado perdurable en el avance de la medicina y la promoción del conocimiento científico.",
+            "img":""
+          },
+          {
+            "docente":"Dra. Tatiana Apaza Ibañez , Odontóloga titulada en la UMSS, Magister En Magister En Educacion Superior Basada En Competencias. Diplomado En Cirugía Bucal. Especialista En Odontopediatría. Especialista En Auditoria Medica Y Gestion De Calidad. Diplomado En Educacion En Prevencion Prenatal De Discapacidades",
+            "img":""
+          },
+          {
+            "docente":"Dr.Henry Farfán, Cirujano Odontólogo, Especialidad en Cirugía Bucal Dentomaxilar, cuento con Maestría en Educación Superior Tic´s, me desempeño como, Docente pregrado – posgrado, Tutor y Docente Investigador.",
+            "img":""
+          },
+          {
+            "docente":"Arq. Esteffany Brenda Antezana Heredia, Docente de metodología de investigación y Ingles de la Universidad Nacional del Oriente. Licenciatura en Arquitectura, Diplomado en Metodología de la    Investigación Científica, Diplomado en Estadística Aplicada a la    Investigación Científica, Diplomado en educación superior basado en el modelo académico por competencias.",
+            "img":""
+          },
+           {
+            "docente":"Licenciada en Bioquímica y Farmacia de la UAGRM, Diplomado en Educación Superior Basado En Neurociencias , Diplomado En Salud Pública, Bioquímica Jefa De Laboratorio Del  Centro de Salud El Carmen (Municipio La Guardia), Docente De Bioquimica – Análisis Clínico,   Parasitología –  Docente en la carrera de Enfermería",
+            "img":""
+          }
+          
+          
+        ]
+        }
+        
+      ],
+
+      "mas": {
+        "bienvenida": {
+          "titulo": "",
+          "contenido": "A nombre de la familia UNO le queremos agradecer por el interés mostrado en nuestra institución y su visita a nuestra pagina web.\nPara nosotros es muy importante su visita porque nos da la oportunidad de poder mostrarle un poco de nuestra institución, de toda nuestra oferta académica en los diferentes niveles que tenemos, técnico superior, a nivel licenciatura (en 4 años y medio) y la oferta académica de todos los postgrados con los que contamos en todas nuestras sedes.\nActualmente la Universidad Nacional del Oriente cuenta con sedes legalmente establecidas en las ciudades de Santa Cruz de la Sierra, Montero, Tarija y Yacuiba.\nEstamos seguros que con sueños y trabajo duro próximamente estaremos anunciando la apertura de mas sedes.\nLa evolución académica y tecnológica nos demandan nuevas actualizaciones, por lo que esperamos que en esta su visita hubiese encontrado la información que estaba buscando.\nCon el afán de mantener una excelencia académica, todas las autoridades y los planteles administrativo y académico ratificamos nuestro compromiso de constante desarrollo en favor de nuestras regiones, y principalmente para el desarrollo de nuestra amada BOLIVIA.",
+          "Autor":"Dr. M.Sc. Sergio A. Borja Alarcón\nRECTOR – UNIVERSIDAD NACIONAL DEL ORIENTE",
+          "imagen":"rector.webp"
+          },
+        "historia": {
+          "titulo": "Reseña Histórica",
+          "contenido": "La Universidad Nacional del Oriente de Santa Cruz, fue creada en el año 1999 aunque recién en la primera gestión del 2000 abre sus puertas a la población estudiantil de la ciudad de Santa Cruz de la Sierra y de su provincia Montero.\n\nEl 22 de Junio de 1999, el ministerio de Educación, emite la Resolución Ministerial Nº 203/99, autorizando el funcionamiento de las carreras de Bioquímica, Enfermería. Fisioterapia y Kinesiología, Biología a nivel Licenciatura. Además de Mercadotecnia. Forestal, Estadística a nivel Técnico Superior.\n\nAmparada bajo esta Resolución la Universidad inicia sus primeras clases en aulas ubicadas en el Segundo Anillo y Avenida Piraí, con 26 estudiantes inscritos en su primera gestión de funcionamiento.\n\nEl 1º de febrero de 2001, la Universidad recibe la Resolución Ministerial de Funcionamiento Nº 042/01, autorizando las carreras de Odontología, Derecho, Ingeniería de Sistemas a nivel Licenciatura y Análisis de Sistemas, Prótesis Dental, Contaduría a Nivel Técnico Superior.\n\nCon el aumento de la oferta académica, la población estudiantil de la universidad asciende para el año 2002 a 334 estudiantes inscritos, obligando a esta Casa Superior de Estudios a cambiar de infraestructura, trasladándose a los Edificios Zurita y Ortuño ubicados en la calle España entre Buenos Aires y Seoane.\n\nCon el compromiso de superación la Universidad Nacional del Oriente realiza la adquisición del Edificio Villarroel, infraestructura de gran importancia y Patrimonio Histórico y Cultural de Santa Cruz, ubicada en la calle España esquina Florida. Este edificio funciona como base para la Escuela de Postgrado.\n\nEl 23 de Mayo de 2008, el Ministerio de Educación emite la Resolución de Funcionamiento Nº 318/08, autorizando la apertura de la Subsede Académica en la ciudad de Montero – Santa Cruz de la Sierra, Subsede que se apertura con las carreras de Enfermería, Derecho e Ingeniería de Sistemas.\nEn fecha 19 de julio del año 2012 por Res. Ministerial Nº 449/2012, se aprueba el Plan de estudios de la Carrera Medicina, posibilitando el inicio de sus actividades académicas.\nEl 22 de Diciembre del año 2015, por Resolución Ministerial Nº 996/2015, aprueba la apertura de las Carreras: Licenciatura en Odontología, Bioquímica y Farmacia, Fisioterapia y Kinesiología y Licenciatura en Contaduría Pública; en la Subsede Montero.\nLa Resolución Ministerial Nº 0913/2016 del 30 de diciembre del 2016 se aprueban los rediseños curriculares de las Carreras Licenciatura en: Derecho, Enfermería, Ing. de Sistemas, Odontología, Bioquímica y Farmacia, Fisioterapia y Kinesiología y Técnico superior en Contaduría.\nAsí mismo el 30 de diciembre a través de la Resolución Ministerial Nº 0936/2016, se aprueba el inicio de actividades de la Subsede Tarija, con las siguientes Carreras: Odontología, Enfermería y Contaduría Pública.\nDe acuerdo con el artículo 1º del Estatuto Orgánico de la Universidad Nacional del Oriente, ésta es una institución de Educación Superior, que forma parte de la Asociación Nacional de Universidades Privadas en igual jerarquía que las demás universidades, bajo el respaldo de la Constitución Política del Estado Plurinacional de Bolivia, la cual establece que todas sus actividades académicas, están reguladas por el Ministerio de Educación, a través del Reglamento General de Universidades Privadas y su Estatuto Orgánico.\nAl presente cuenta con más de 18 años de excelencia académica e importante contribución a la formación de recursos humanos altamente calificados para las regiones dónde se hallan las subsedes y todo el Estado.\nLa Universidad Nacional del Oriente tiene como premisa fundamental coadyuvar al mejoramiento del bienestar de toda la población del país así como de la constante superación de la comunidad universitaria, mejorando paulatinamente las condiciones de infraestructura y oferta académica, de acuerdo a gestiones que desarrollan sus autoridades.\n\nLa comunidad universitaria de la UNO, está conformada por estudiantes de pregrado postgrado y docentes, en su Sede Principal Santa Cruz y sus dos Subsedes Tarija y Montero, distribuidos en 7 carreras y unidades de postgrado, además de la planta administrativa.\nCuenta con dos subsedes académicas en las ciudades de Montero y Tarija, así como el diseño de otros proyectos para promover la formación profesional en todas las regiones del país.",
+          "imagen":"fundador.webp"
+        }, "misionvision": [{
+          "titulo": "Misión ",
+          "contenido": "La Universidad Nacional del Oriente tiene como misión:\n« Formar profesionales competentes, éticos líderes con emprendedurismo en base a la diversidad cultural, la ciencia y tecnología para contribuir al desarrollo de la sociedad. «"
+        },
+        {
+          "titulo": "Visión ",
+          "contenido": "La Universidad Nacional del Oriente tiene como visión:\n« Ser líderes en educación superior, acreditados y reconocidos internacionalmente por la formación de profesionales de alta calidad, con responsabilidad social y bases sólidas en la investigación e innovación. «"
+        }
+      ],
+        "filosofia": {
+          "titulo": "",
+          "contenido": "La Filosofía institucional en que se inspira la Universidad Nacional del Oriente se funda en ser una Institución de formación, no elitista, que está fundada en el estudio del pensamiento del ser humano, desde el punto de vista del conocimiento teórico, como de la comprobación del mismo, a través del hecho empírico. Sus ideales se sustentan en el humanismo, como doctrina basada en la situación y el destino del hombre, en la ética como principio de la moral y de obligación social."
+        },
+        "reglamento": [{
+          "titulo": "Reglamento Docente",
+          "archivo": "reglamentoDocente.pdf"
+              },
+              {
+          "titulo": "Reglamento Estudiantil",
+          "archivo": "reglamentoEstudiantes.pdf"
+              },
+                {
+          "titulo": "Reglamento Investigación",
+          "archivo": "reglamentoInvestigacion.pdf"
+              },
+              {
+          "titulo": "Reglamento Interacción Social",
+          "archivo": "reglamentoInteraccion.pdf"
+              },
+                    {
+          "titulo": "Reglamento Becas",
+          "archivo": "reglamentoBecas.pdf"
+              }
+              
+              
+      ],
+       
+        "autoridades": [
+          {
+        "cargo": "PRESIDENTA DEL DIRECTORIO",
+        "nombre": "Ing. Fabiola Marco Fernández",
+        "correo": "presidencia@www.uno.edu.bo"
+      },
+      {
+        "cargo": "RECTOR",
+        "nombre": "Dr. M.Sc. Sergio A. Borja Alarcón",
+        "correo": "rectorado@www.uno.edu.bo"
+      },
+      {
+        "cargo": "VICERRECTORA",
+        "nombre": "Ing. Delcy Nogales Rosado",
+        "correo": "vicerrectorado@www.uno.edu.bo"
+      },
+      {
+        "cargo": "SECRETARIA GENERAL",
+        "nombre": "Dra. M. Viviana Rodriguez Becerra",
+        "correo": "secretariageneral@www.uno.edu.bo"
+      },
+      {
+        "cargo": "DIRECTORA ADMINISTRATIVA Y FINANCIERA",
+        "nombre": "Lic. Nancy Llano Cardenas",
+        "correo": "daf@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "DIRECTORA DE INVESTIGACION Y POSGRADO",
+        "nombre": "Ing. Gabriela Quiroga Heredia",
+        "correo": "investigacion@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "DIRECTORA DE PLANIFICACION Y AUTOEVALUACION",
+        "nombre": "Lic. Patricia Arancibia Anagua",
+        "correo": "planificacion@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "DIRECTORA DE INTERACCION SOCIAL",
+        "nombre": "Lic. Rosa M. Barroso Porcel",
+        "correo": "interaccion@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "RECURSOS HUMANOS",
+        "nombre": "Ing. Karen Romero Sanchez",
+        "correo": "rrhh@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE CARRERA DE MEDICINA",
+        "nombre": "Dr. Luis Gómez Peña",
+        "correo": "jefemedicina@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "COORDINADOR DE CARRERA DE MEDICINA",
+        "nombre": "Dr. Dayan Alexis Saravia",
+        "correo": "medicina@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE CARRERA DE ODONTOLOGIA – PROTESIS DENTAL",
+        "nombre": "Dr. Jimmy Porcel",
+        "correo": "odontologia@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE BIOQUIMICA Y FARMACIA",
+        "nombre": "Dr. Jimmy Velasquez Ipamo",
+        "correo": "bioquimica@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE CARRERA DE ENFERMERIA",
+        "nombre": "Lic. Herminia Vargas",
+        "correo": "enfermeria@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE CARRERA DE FISIOTERAPIA Y KINESIOLOGIA",
+        "nombre": "Lic. Wilver J. Bazan Flores",
+        "correo": "fisioterapia@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE CARRERA DE DERECHO",
+        "nombre": "Dr. Juan Ramiro Duran Garcia",
+        "correo": "derecho@sc.uno.edu.bo"
+      },
+      {
+        "cargo": "JEFE DE INTERNOS",
+        "nombre": "Dra. Sarita Montaño",
+        "correo": "internados@sc.uno.edu.bo"
+      }
+        ]
+      },
+
+
+    "inscripcion": {
+        "titulo": "Proceso de Inscripción",
+        "descripcion": "Todo lo que necesitas saber para inscribirte..."
+      },
+    "historia": {
+        "titulo": "Nuestra Historia",
+        "descripcion": "La Universidad UNO se fundó en..."
+      },
+        "alumni": 
+        { "descripcion": "Formar profesionales competentes, éticos líderes con emprendedurismo en base a la diversidad cultural, la ciencia y tecnología para contribuir al desarrollo de la sociedad." , 
+          "graduados": "5628"
+
+    },
+      "oferta": [
+        {"title": "Medicina", "imagen": "medicinaSC.webp"},
+        {"title": "Odontología", "imagen": "odontoSC.webp"},
+        {"title": "Enfermería", "imagen": "enfeSC.webp"},
+        {"title": "Bioquímica y Farmacia", "imagen": "bioSC.webp"},
+        {"title": "Fisioterapia y Kinesiología", "imagen": "fisioSC.webp"},
+        {"title": "Ingenieria de Sistemas", "imagen": "sistemasSC.webp"},
+        {"title": "Derecho", "imagen": "derechoSC.webp"},
+        {"title": "Protesis Dental", "imagen": "odontoSC.webp"}
+        
+
+      ],
+      "sedes": [
+        {"title": "Medicina", "imagen": "medicina.webp"},
+        {"title": "Odontología", "imagen": "odontologia.webp"},
+        {"title": "Enfermería", "imagen": "enfermeria.webp"}
+      ],
+      "requisitos": [
+      
+      ],
+      "noticias": [
+      
+      ],
+     "interaccion":[
+  {
+    "titulo":"Manos Solidarias",
+    "descripcion":"El programa ´Manos Solidarias´ de la Universidad Nacional del Oriente (UNO) es una iniciativa que busca fortalecer el vínculo entre la universidad y las comunidades locales, promoviendo el desarrollo social y el bienestar integral. A través de este programa, estudiantes y docentes de diversas carreras del área de la salud participan activamente en proyectos que benefician a las comunidades más vulnerables, aplicando sus conocimientos y habilidades en situaciones reales.",
+    "objetivo":"Promover el bienestar integral y el desarrollo social de comunidades vulnerables mediante la participación activa de estudiantes y docentes en actividades de salud, apoyo social y educación, fortaleciendo la responsabilidad social universitaria y fomentando la interacción social entre la Universidad Nacional del Oriente y las comunidades locales.",
+    "Proyectos":["La UNO en tu Comunidad","Solidaridad UNO"]
+  },
+  {
+    "titulo":"Uno Solidario",
+    "descripcion":"El programa ´Uno Solidario´ surge como respuesta a la realidad, reconociendo la necesidad urgente de brindar atención médica integral y servicios a comunidades que enfrentan barreras para acceder a la salud. Enfocado en el principio de solidaridad y compromiso social, este programa busca no solo proporcionar atención médica, sino también generar un impacto positivo en la vida de las personas y en la construcción de una sociedad más equitativa y justa.",
+    "objetivo":"Promover la solidaridad y el bienestar en las comunidades vulnerables mediante la recolección y donación de recursos materiales y la realización de actividades educativas y de salud, contribuyendo así al desarrollo social y al mejoramiento de la calidad de vida.",
+    "Proyectos":["Yo me UNO por la sonrisa de un niño","Unidos por las Madres","Unidos por un Invierno Más Cálido","UNO Noelito"]
+  },
+  {
+    "titulo":"Eco Uno",
+    "descripcion":"La Universidad Nacional del Oriente (UNO) está comprometida con la promoción de la sostenibilidad ambiental y la conservación del entorno natural. El programa ´ECO UNO´ se presenta como una iniciativa integral que busca fomentar prácticas sostenibles y desarrollar proyectos que contribuyan a la preservación de nuestro entorno.",
+    "objetivo":"Promover la sostenibilidad ambiental y la conservación del entorno natural mediante la implementación de proyectos de gestión de residuos y reforestación, fomentando la conciencia ecológica y la participación activa de la comunidad universitaria y local.",
+    "Proyectos":["Basura en su Lugar","Jóvenes en Acción (Reforestación)"]
+  },
+  {
+    "titulo":"Becas UNO",
+    "descripcion":"La Universidad Nacional del Oriente ofrece diversos tipos de becas orientadas a apoyar a estudiantes en función de sus méritos académicos, situación social, talentos culturales, deportivos, participación en investigación y cooperación institucional.",
+    "objetivo":"Facilitar el acceso y la permanencia de los estudiantes en la universidad, reconociendo méritos, talentos y necesidades económicas, promoviendo la equidad y el desarrollo integral de la comunidad estudiantil.",
+    "Proyectos":[
+      {
+        "titulo":"Beca Social Solidaria",
+        "descripcion":"Comprende a personas con escasos recursos, poblaciones indígenas, originarios, campesinos y sectores sociales; otorgada por el Ministerio de Educación.",
+        "objetivo":"Brindar apoyo económico a estudiantes de sectores vulnerables, garantizando el acceso a la educación superior."
+      },
+      {
+        "titulo":"Beca Social Capacidades Diferentes",
+        "descripcion":"Se establece en el marco de la Ley General para personas con Discapacidad N° 223 y el Decreto Supremo N°1893.",
+        "objetivo":"Apoyar a estudiantes con necesidades especiales para que puedan cursar sus estudios universitarios sin impedimentos."
+      },
+      {
+        "titulo":"Beca Excelencia Académica",
+        "descripcion":"Reconoce y fomenta el rendimiento académico sobresaliente de los estudiantes universitarios que hayan obtenido el promedio requerido.",
+        "objetivo":"Incentivar el alto rendimiento académico y premiar a los estudiantes destacados."
+      },
+      {
+        "titulo":"Beca Esfuerzo",
+        "descripcion":"Dirigida a bachilleres de colegios Fiscales, Particulares y de Convenio con promedio elevado y acumulado en la promoción.",
+        "objetivo":"Incentivar a bachilleres talentosos a continuar sus estudios universitarios en la UNO."
+      },
+      {
+        "titulo":"Beca Cultural",
+        "descripcion":"Otorgada a estudiantes destacados en áreas culturales que hayan representado a la Universidad.",
+        "objetivo":"Promover y reconocer el talento cultural de los estudiantes."
+      },
+      {
+        "titulo":"Beca Deporte",
+        "descripcion":"Se otorga a estudiantes que participen y representen a la UNO en actividades deportivas oficiales.",
+        "objetivo":"Fomentar la práctica deportiva y premiar la dedicación en competencias universitarias."
+      },
+      {
+        "titulo":"Beca de Cooperación Interinstitucional",
+        "descripcion":"Se otorga a estudiantes procedentes de instituciones que mantengan un Convenio de Cooperación Interinstitucional vigente con la UNO.",
+        "objetivo":"Apoyar a estudiantes de instituciones aliadas y fortalecer la cooperación interinstitucional."
+      },
+      {
+        "titulo":"Beca Familiar",
+        "descripcion":"Destinada a estudiantes que demuestren relación familiar de primer grado con otros miembros de la UNO.",
+        "objetivo":"Facilitar el acceso a la educación universitaria a familias de estudiantes ya vinculados a la institución."
+      },
+      {
+        "titulo":"Beca Profesional UNO",
+        "descripcion":"Reconoce e incentiva la fidelidad y adhesión de estudiantes graduados de la UNO, ofreciéndoles beca en colegiatura para su segunda carrera.",
+        "objetivo":"Premiar la fidelidad de los estudiantes graduados y fomentar la continuidad educativa."
+      },
+      {
+        "titulo":"Beca Social UNO",
+        "descripcion":"Beneficia a estudiantes que, por motivos económicos, sociales o de salud, no pueden cubrir sus estudios universitarios.",
+        "objetivo":"Garantizar la continuidad de estudios a estudiantes en situación de vulnerabilidad."
+      },
+      {
+        "titulo":"Beca Apoyo Institucional",
+        "descripcion":"Reconoce al estudiante por el apoyo brindado a la institución y contribución al desarrollo de la UNO mediante labores específicas.",
+        "objetivo":"Valorar la colaboración de los estudiantes en actividades institucionales, apoyando su formación profesional."
+      },
+      {
+        "titulo":"Beca Investigador UNO",
+        "descripcion":"Estimula la participación de los estudiantes en actividades de investigación científica, tecnológica y humanística.",
+        "objetivo":"Reconocer y fomentar la investigación universitaria entre los estudiantes."
+      }
+    ]
+  },
+  {
+    "titulo": "Convenios UNO",
+    "descripcion": "La Universidad Nacional del Oriente mantiene convenios con diversas instituciones y organizaciones, ofreciendo becas especiales y beneficios exclusivos a estudiantes vinculados a estas entidades.",
+    "objetivo": "Fortalecer la cooperación interinstitucional y proporcionar oportunidades educativas con descuentos y beneficios especiales para estudiantes de instituciones aliadas o miembros de organizaciones convenidas.",
+    "convenios": [
+      {
+        "titulo": "UNO - Policía Boliviana",
+        "beneficios": "Reconocemos tu dedicación y servicio a la comunidad ¡Aprovecha descuentos exclusivos en tus mensualidades! Horarios flexibles para que estudies en la mañana, tarde o noche.  ¡Esta es tu oportunidad de crecer profesional y académicamente!",
+        "imagen": "conPol.jpg"
+      },
+      {
+        "titulo": "UNO - Instituto Latinoamericano",
+        "beneficios": "Accede a descuentos especiales por convenio institucional en tus mensualidades. Estudia en horarios flexibles, compatibles con tu actividad laboral. Forma parte de una universidad comprometida con tu crecimiento profesional y académico.",
+        "imagen": "conlat.jpg"
+      },
+      {
+        "titulo": "UNO - Colegio Médico",
+        "beneficios": "Los miembros del Colegio Médico y sus familiares pueden acceder a descuentos especiales por convenio institucional en sus mensualidades, con horarios flexibles en la mañana, tarde o noche. Continúa tu formación profesional en UNO y brinda nuevas oportunidades académicas a tu familia.",
+        "imagen": "conMed.jpg"
+      },
+      {
+        "titulo": "UNO - Top Fitnes Center",
+        "beneficios": "Los estudiantes de UNO acceden a tarifas preferenciales en Top Fitness Center, promoviendo un estilo de vida saludable y equilibrado. Este convenio apoya su bienestar físico y rendimiento académico mediante espacios modernos y planes accesibles.",
+        "imagen": "contop.jpg"
+      }
+      
+    ]
+  }
+],
+      "carrera": [
+      {
+    "title": "Medicina",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Formar médicos altamente calificados, con competencias técnicas y visión social, capaces de restaurar la salud individual y colectiva, promover municipios saludables e insertarse en programas nacionales de salud. Resuelven problemáticas sanitarias, prevalentes, estudian patologías complejas y contribuyen a mejorar la salud en Bolivia mediante investigación, participación en políticas públicas y una formación integral, priorizando prevención, equidad y compromiso ético con el desarrollo sostenible de las comunidades.",
+    "rm": "R.M No 449/2012",
+    "video":"https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mMedicina.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Impartir educación superior de calidad, para formar profesionales médicos, solidarios y democráticos al servicio de la comunidad.",
+    "vision": "Ser una carrera líder en educación Superior acreditada, con proyección internacional, que forma médicos en un modelo educativo globalizado de competencias.",
+    "roles": [
+      "Atención médica integral: evaluación, tratamiento y seguimiento del bienestar total.",
+      "Práctica quirúrgica: realización de cirugías seguras con conocimientos y técnicas avanzadas.",
+      "Medicina comunitaria y salud pública: promoción y prevención de la salud en poblaciones.",
+      "Producción científica e investigación: generar y difundir conocimiento médico riguroso.",
+      "Docencia universitaria: enseñar habilidades y valores, formando profesionales críticos.",
+      "Gestión y administración en salud: organizar recursos para atención eficiente y de calidad.",
+      "Innovación y tecnología médica: usar nuevas herramientas para mejorar diagnósticos y tratamientos."
+    ],
+     "values": [
+    "Ética profesional",
+    "Vocación de servicio y solidaridad",
+    "Respeto por la dignidad humana",
+    "Compromiso comunitario y responsabilidad social",
+    "Pensamiento crítico y compromiso con la ciencia",
+    "Liderazgo y trabajo en equipo"
+  ]
+
+  },
+  {
+    "title": "Odontología",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Formar profesionales competentes en Odontología, capacitados para desempeñarse con bases sólidas en ciencia, investigación, tecnología, capaces de desarrollar actividades, destrezas, habilidades y conocimientos en un modelo de atención orientado de forma pertinente hacia el paciente y la comunidad para el cuidado odontológico integral y las labores de promoción y prevención en los niveles primario y secundario de salud, con un fundamento profesional humanístico-ético y comprometido con su formación continua tanto científica, como tecnológica y en valores",
+    "rm": "R.M No 0913/2016 (Rediseño Curricular)",
+    "video":"https://www.youtube.com/watch?v=DC1W2KadlB4",
+    "malla": "mOdonto.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales líderes en Odontología con competencias sólidas en ciencia, tecnología, salud y gestión, mediante una formación centrada en el estudiante y orientada a la innovación, la investigación aplicada y el desarrollo sostenible, capaces de aportar soluciones efectivas y éticas a los problemas emergentes del sector salud.",
+    "vision": "Ser una carrera reconocida nacional e internacionalmente por su excelencia académica y su modelo formativo por competencias, consolidando profesionales odontólogos competentes, éticos y comprometidos con el desarrollo científico, sanitario y social del país.",
+    "roles": [
+      "Atención clínica individual y comunitaria: servicios odontológicos completos para todos.",
+      "Gestión y administración de salud bucodental: organizar y supervisar unidades eficaces.",
+      "Investigación e innovación en salud oral: desarrollar proyectos y generar conocimiento.",
+      "Educación y promoción de la salud: programas de prevención y hábitos saludables.",
+      "Trabajo interdisciplinario: colaborar con profesionales para atención integral.",
+      "Consultoría y asesoría profesional: apoyar proyectos, políticas y protocolos odontológicos.",
+      "Docencia: enseñar teoría y práctica a estudiantes y profesionales en formación continua."
+    ],
+     "values": [
+    "Ética profesional y humanismo",
+    "Responsabilidad y calidad de atención",
+    "Compromiso con la salud pública y promoción",
+    "Rigor científico y actualización continua",
+    "Cumplimiento normativo y respeto a reglamentos"
+  ]
+
+  },
+
+  {
+    "title": "Enfermería",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Formar profesionales de enfermería con preparación integral, humanista, científica y ética, capaces de brindar cuidados seguros y de calidad en todos los niveles de atención, con liderazgo, pensamiento crítico e innovación, en respuesta a las necesidades de salud de la población y al fortalecimiento del sistema sanitario.",
+    "rm": "R.M No 0913/2016 (Rediseño Curricular)",
+    "video": "https://www.youtube.com/watch?v=eIKQCi2EteM",
+    "malla": "mEnfermeria.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Brindar una formación profesional integral y humanista que permita desarrollar habilidades técnicas, científicas y éticas en los futuros profesionales de enfermería, promoviendo liderazgo, pensamiento crítico y compromiso social, para responder a las necesidades de salud de la población en diferentes niveles de atención, bajo principios de equidad, calidad y respeto a la diversidad cultural.",
+    "vision": "Ser una carrera de referencia en la formación de profesionales de enfermería con sólida preparación científica, técnica y humanista, reconocidos por su liderazgo, pensamiento crítico y compromiso social, capaces de brindar cuidados integrales, seguros y éticos que respondan a las necesidades de salud de la población en todos los niveles de atención, contribuyendo al fortalecimiento del sistema de salud y al desarrollo sostenible, con responsabilidad social e innovación, tanto en el ámbito nacional como internacional.",
+    "roles": [
+      "Área Asistencial: atención integral a pacientes y familias, con planes individualizados.",
+      "Área Docencia: formar y educar profesionales promoviendo aprendizaje continuo.",
+      "Área Investigación: investigar, publicar y colaborar para mejorar la práctica de enfermería.",
+      "Área Pública: promover salud, prevenir enfermedades y colaborar con comunidades.",
+      "Área Gestión y Liderazgo: gestionar servicios y liderar equipos con calidad y eficiencia.",
+      "Área Digital e Innovación en Salud: aplicar tecnologías e innovaciones para mejorar cuidados."
+    ],
+     "values": [
+    "Ética y responsabilidad profesional",
+    "Compromiso con el bienestar integral del paciente",
+    "Vocación de servicio y sentido social",
+    "Trabajo en equipo interdisciplinario",
+    "Pensamiento crítico y científico",
+    "Humanismo y empatía",
+    "Actualización y aprendizaje continuo"
+  ]
+  },
+  {
+    "title": "Fisioterapia y Kinesiología",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Formar profesionales en Fisioterapia y Kinesiología con una sólida base científica, técnica, humanística y ética, capaces de desempeñarse con competencia en la valoración, prevención, diagnóstico funcional, tratamiento y rehabilitación integral de las alteraciones del movimiento humano y la funcionalidad, en diversos contextos clínicos y comunitarios. Esta formación está centrada en el desarrollo de competencias profesionales y un enfoque socioformativo, comprometido con la transformación social, el bienestar de la población boliviana y los estándares internacionales de calidad en salud dentro del mercado laboral, mediante un sistema progresivo de práctica pre profesional e interrelación constante con las instituciones de salud, respetando la pluriculturidad, y cuidado del medio ambiente.",
+    "rm": "R.M No 0913/2016 (Rediseño Curricular)",
+    "video": "https://www.youtube.com/watch?v=Olr05lH64Y8",
+    "malla": "mFisio.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "La carrera de Fisioterapia y Kinesiología forma profesionales competentes, humanistas y éticos; capaces de prevenir, valorar, tratar y rehabilitar. Sustentada en la formación por competencias y la socioformación, promueve el aprendizaje significativo, la investigación aplicada y el trabajo colaborativo, contribuyendo a la transformación social y al fortalecimiento del sistema de salud boliviano",
+    "vision": "Ser una carrera de referencia nacional e internacional en la formación de fisioterapeutas y kinesiólogos integrales humanistas, innovadores y socialmente comprometidos, reconocidos por su excelencia académica, su responsabilidad ética y su capacidad de generar soluciones sostenibles a los problemas de salud funcional de la población.",
+    "roles": [
+      "Área Privada: consultorios, clínicas, academias, rehabilitación, estética y geriátricos.",
+      "Área Pública: centros de salud, hospitales, programas comunitarios e instituciones.",
+      "Docencia: universidades e institutos superiores, públicos y privados."
+   ],
+     "values": [
+    "Ética y responsabilidad profesional",
+    "Compromiso con el bienestar integral del paciente",
+    "Vocación de servicio y sentido social",
+    "Trabajo en equipo interdisciplinario",
+    "Pensamiento crítico y científico",
+    "Humanismo y empatía",
+    "Actualización y aprendizaje continuo"
+  ]
+  },
+  {
+    "title": "Bioquímica y Farmacia",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "formar profesionales con un conocimiento integral sobre la salud, la ciencia y la tecnología para aplicarlo en el diagnóstico, tratamiento y prevención de enfermedades, así como en el desarrollo y control de productos farmacéuticos, parafarmacéutico y alimentarios. Esto incluye la gestión de laboratorios, la investigación científica, la aplicación de principios éticos en la atención a la salud, y la contribución al bienestar social y la preservación del medio ambiente.",
+    "rm": "R.M No 0913/2016 (Rediseño Curricular)",
+    "video": "https://www.youtube.com/watch?v=66xB-mU5GQQ",
+    "malla": "mBio.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales bioquímicos farmacéuticos, con la capacidad para desempeñarse en el diagnóstico de laboratorio clínico, el análisis e investigación científica, desarrollo sostenible e industria farmacéutica y así promover la solución de problemas de salud prevalentes en la región y en el país",
+    "vision": "Formar profesionales bioquímicos farmacéuticos (as) de alta calidad, con capacidad resolutiva, íntegros, solidarios, con pensamiento crítico y gran sensibilidad humana para el desarrollo de sus competencias profesionales con profunda vocación de servicio dentro de sus diferentes campos laborales, comprometidos a la ciencia del cuidado que emana la profesión.",
+    "roles": [
+      "Laboratorio clínico: procesa, analiza e interpreta muestras con control de calidad.",
+      "Asistencial farmacéutico: regencia, dispensación y control de medicamentos.",
+      "Industria cosmetológica: diseña y prepara fórmulas cosméticas con control de calidad.",
+      "Toxicología: analiza muestras biológicas y químicas, participa en investigación forense.",
+      "Bromatología: controla calidad de alimentos industrializados y procesados.",
+      "Biotecnología: aplica procesos bioquímicos para fármacos, vacunas y productos biológicos.",
+      "Gestión de salud pública y privada: planifica programas y regula medicamentos.",
+      "Control de calidad de productos químicos: asegura seguridad y cumplimiento normativo.",
+    "Docencia e investigación: forma profesionales y desarrolla estudios en bioquímica y farmacología."
+    ],
+     "values": [
+    "Ética profesional e integridad",
+    "Responsabilidad y compromiso social",
+    "Pensamiento crítico y científico",
+    "Competencia técnica y profesional",
+    "Trabajo en equipo y comunicación",
+    "Respeto por la vida y el entorno",
+    "Innovación y actualización continua"
+  ]
+  },
+  {
+    "title": "Derecho",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Al concluir sus estudios, el egresado deberá tener conocimientos y habilidades que lo capaciten para el correcto ejercicio profesional del Derecho, incluyendo el conocimiento del marco jurídico vigente, capacidad de argumentación e interpretación jurídica, y habilidad para enfrentar conflictos y generar soluciones.\n\nAdemás, estará preparado para continuar sus estudios de posgrado y desarrollará actitudes y valores como capacidad analítica para resolver problemas de forma eficiente, vocación de servicio y sentido social de comunidad, liderazgo y trabajo en equipo, capacidad para la toma de decisiones, vocación mediadora y conciliatoria, y análisis de problemas jurídicos desde un enfoque humanista y multidisciplinario.",
+    "rm": "R.M No 456/2012",
+    "video": "https://www.youtube.com/watch?v=B27C5-2J2uw",
+    "malla": "mDerecho.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Derecho competentes, éticos y con capacidad crítica y analítica, comprometidos con la justicia y el bienestar de la sociedad.",
+    "vision": "Ser una carrera líder en educación jurídica, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias.",
+    "roles": [
+      "Ejercer el Derecho con conocimientos sólidos y habilidades jurídicas adecuadas.",
+      "Interpretar y aplicar la normativa vigente de manera eficiente y ética.",
+      "Resolver conflictos y generar soluciones jurídicas efectivas.",
+      "Demostrar liderazgo, trabajo en equipo y vocación de servicio.",
+      "Analizar problemas jurídicos desde un enfoque humanista y multidisciplinario.",
+      "Prepararse para estudios de posgrado y desarrollo profesional continuo."
+    ],
+     "values": [
+    "Ética profesional",
+    "Responsabilidad social",
+    "Humanismo",
+    "Respeto a la dignidad del paciente",
+    "Solidaridad"
+  ]
+  },
+  {
+    "title": "Ingenieria de Sistemas",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Formamos profesionales a nivel licenciatura, capaz de desarrollar proyectos de software, introducir nuevas tecnologías de computación, desarrollar sistemas informáticas en redes de computadoras y sistemas para internet; bajo principios de eficiencia y productividad de servicio, con altos valores éticos y sensibilidad social.",
+    "rm": "R.M No 457/2012",
+    "video": "https://www.youtube.com/watch?v=1OuS9xM2B5w",
+    "malla": "mSist.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar ingenieros competentes, críticos, humanistas, líderes y emprendedores con responsabilidad social y cuidado del medio ambiente; con capacidad creadora e investigativa en el área de las ciencia y tecnología de la información; comprometido con los cambios tecnológicos; aportando al mejoramiento de técnicas y métodos de los sistemas computacionales, contribuyendo de esta manera al desarrollo inte3gral de la región y el país",
+    "vision": "Ser una carrera reconocida en el medio, dedicada a formar profesionales con espíritu creativo e innovador por excelencia",
+    "roles": [
+      "Empresas industriales, con actividades productivas cuando su proceso tecnológico alcance suficiente complejidad ",
+      "Empresas de telecomunicaciones que utilizan la computadora como medio de comunicación y control de sus procesos administrativos",
+      "Instituciones que usan la computadora, no solamente para la administración, sino como instrumento de análisis y pronostico.",
+      "Instituciones dedicadas a la formación de profesionales en sistemas e informática y computación, como parte de su formación (universidades, institutos, escuelas de computación, colegios, etc)",
+      "Empresas de ensamblaje, mantenimiento y servicios de equipo de computo",
+      "Empresas especializadas en instalaciones de redes de corto, mediano y largo alcance",
+      "Elaboración de sistemas computacionales",
+      "Dirigir grupos de trabajo con eficiencia y eficacia optimizando costos y garantizando la calidad exigida.",
+      "Realizar modificaciones a sistemas computacionales ya existentes"
+    
+    ],
+     "values": [
+    "Ética profesional",
+    "Pensamiento crítico, analítico y creativo",
+    "Trabajo en equipo y colaboración interdisciplinaria",
+    "Compromiso con la calidad y la excelencia técnica",
+    "Aprendizaje continuo e innovación",
+    "Responsabilidad social y compromiso con el entorno",
+    "Comunicación efectiva"
+  ]
+  }
+
+  ]
+
+    
+  }

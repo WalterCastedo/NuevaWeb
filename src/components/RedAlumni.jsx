@@ -3,17 +3,21 @@ import { useParams, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import dataJson from "../assets/json/datos.json";
 import NotFound from "../components/404";
-import fondo from "../assets/img/fondoOferta.webp";
+import fondoDefault from "../assets/img/fondoOferta.webp";
+
+// Para cargar imágenes dinámicas si se agregan en el futuro
+const images = require.context("../assets/img", false, /\.(png|jpe?g|webp)$/);
 
 export default function RedAlumni() {
   const { sede, seccion } = useParams();
   const navigate = useNavigate();
-  const rightRef = useRef(null);
   const leftRef = useRef(null);
+  const rightRef = useRef(null);
 
   const [topPos, setTopPos] = useState(0);
   const [activeTab, setActiveTab] = useState(seccion);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [fondoImg, setFondoImg] = useState(fondoDefault);
 
   // Detectar tamaño móvil
   useEffect(() => {
@@ -22,7 +26,27 @@ export default function RedAlumni() {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Scroll para sticky derecha (solo desktop)
+  // Cargar fondo dinámico según la sede
+  useEffect(() => {
+    if (!sede) return;
+    const sedeKey = Object.keys(dataJson).find(
+      (key) => key.toLowerCase() === sede.toLowerCase()
+    );
+    const sedeInfo = sedeKey ? dataJson[sedeKey] : null;
+
+    if (sedeInfo?.imagenes?.fondoPrincipal) {
+      try {
+        const img = require(`../assets/img/${sedeInfo.imagenes.fondoPrincipal}`);
+        setFondoImg(img);
+      } catch {
+        setFondoImg(fondoDefault);
+      }
+    } else {
+      setFondoImg(fondoDefault);
+    }
+  }, [sede]);
+
+  // Scroll sticky derecha (solo desktop)
   useEffect(() => {
     if (isMobile) return;
     const handleScroll = () => {
@@ -34,7 +58,6 @@ export default function RedAlumni() {
       const newTop = Math.min(Math.max(window.scrollY - containerTop + 20, 0), maxTop);
       setTopPos(newTop);
     };
-
     window.addEventListener("scroll", handleScroll);
     window.addEventListener("resize", handleScroll);
     handleScroll();
@@ -50,7 +73,7 @@ export default function RedAlumni() {
     setActiveTab(seccion);
   }, [seccion]);
 
-  // Funciones de normalización
+  // Función para normalizar textos
   const normalize = (text = "") =>
     text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "").toLowerCase();
 
@@ -67,7 +90,7 @@ export default function RedAlumni() {
     ...(redAlumniData?.carreras.map((c) => ({ key: normalize(c.nombre), label: c.nombre })) || []),
   ];
 
-  // Preparar contenido según seccion
+  // Preparar contenido según sección
   let contenido;
   if (seccionNormalized === "general") {
     contenido = { titulo: "Red Alumni", contenido: redAlumniData?.descripcion };
@@ -90,7 +113,6 @@ export default function RedAlumni() {
     visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
     exit: { opacity: 0, y: -50, transition: { duration: 0.4, ease: "easeIn" } },
   };
-
   const tabVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.35 } },
@@ -104,7 +126,7 @@ export default function RedAlumni() {
         minHeight: "100vh",
         fontFamily: "'Montserrat', sans-serif",
         color: "#001A66",
-        backgroundImage: `url(${fondo})`,
+        backgroundImage: `url(${fondoImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
@@ -172,75 +194,80 @@ export default function RedAlumni() {
                   exit="exit"
                   style={{ position: "relative" }}
                 >
-                 {contenido.graduados ? (
-  <div
-    style={{
-      background: "#fff",
-      padding: "1rem",
-      borderRadius: "8px",
-      boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-      marginBottom: "2rem",
-    }}
-  >
-    <h3 style={{ fontWeight: 700, fontSize: "1.3rem", marginBottom: "0.5rem" }}>
-      {contenido.nombre}
-    </h3>
+                  {contenido.graduados ? (
+                    <div
+                      style={{
+                        background: "#fff",
+                        padding: "1rem",
+                        borderRadius: "8px",
+                        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+                        marginBottom: "2rem",
+                      }}
+                    >
+                      <h3 style={{ fontWeight: 700, fontSize: "1.3rem", marginBottom: "0.5rem" }}>
+                        {contenido.nombre}
+                      </h3>
 
-    <p><strong>Graduados:</strong> {contenido.graduados}</p>
+                      <p>
+                        <strong>Graduados:</strong> {contenido.graduados}
+                      </p>
 
-    <div style={{ marginTop: "0.5rem" }}>
-      <strong>Lugares de trabajo:</strong>
-      <ul style={{ marginTop: "0.3rem", paddingLeft: "20px" }}>
-        {contenido.lugaresTrabajo.map((lugar, i) => (
-          <li key={i} style={{ marginBottom: "0.3rem" }}>{lugar}</li>
-        ))}
-      </ul>
-    </div>
+                      <div style={{ marginTop: "0.5rem" }}>
+                        <strong>Lugares de trabajo:</strong>
+                        <ul style={{ marginTop: "0.3rem", paddingLeft: "20px" }}>
+                          {contenido.lugaresTrabajo.map((lugar, i) => (
+                            <li key={i} style={{ marginBottom: "0.3rem" }}>
+                              {lugar}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
-    <div style={{ marginTop: "0.5rem" }}>
-      <strong>Convenios:</strong>
-      <ul style={{ marginTop: "0.3rem", paddingLeft: "20px" }}>
-        {contenido.convenios.map((convenio, i) => (
-          <li key={i} style={{ marginBottom: "0.3rem" }}>{convenio}</li>
-        ))}
-      </ul>
-    </div>
+                      <div style={{ marginTop: "0.5rem" }}>
+                        <strong>Convenios:</strong>
+                        <ul style={{ marginTop: "0.3rem", paddingLeft: "20px" }}>
+                          {contenido.convenios.map((convenio, i) => (
+                            <li key={i} style={{ marginBottom: "0.3rem" }}>
+                              {convenio}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
-    {/* BOTÓN DE WHATSAPP */}
-    {contenido.whatsapp && (
-      <div style={{ textAlign: "center", marginTop: "1rem" }}>
-        <a
-          href={contenido.whatsapp}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            backgroundColor: "#25D366",
-            color: "#fff",
-            padding: "0.8rem 1.5rem",
-            borderRadius: "25px",
-            textDecoration: "none",
-            fontWeight: 600,
-            display: "inline-block",
-          }}
-        >
-          Unirse al grupo de WhatsApp
-        </a>
-      </div>
-    )}
-  </div>
-) : (
-  <motion.p
-    style={{
-      whiteSpace: "pre-line",
-      background: "#fff",
-      padding: "1rem",
-      borderRadius: "5px",
-    }}
-  >
-    {contenido.contenido}
-  </motion.p>
-)}
-
+                      {/* BOTÓN DE WHATSAPP */}
+                      {contenido.whatsapp && (
+                        <div style={{ textAlign: "center", marginTop: "1rem" }}>
+                          <a
+                            href={contenido.whatsapp}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            style={{
+                              backgroundColor: "#25D366",
+                              color: "#fff",
+                              padding: "0.8rem 1.5rem",
+                              borderRadius: "25px",
+                              textDecoration: "none",
+                              fontWeight: 600,
+                              display: "inline-block",
+                            }}
+                          >
+                            Unirse al grupo de WhatsApp
+                          </a>
+                        </div>
+                      )}
+                    </div>
+                  ) : (
+                    <motion.p
+                      style={{
+                        whiteSpace: "pre-line",
+                        background: "#fff",
+                        padding: "1rem",
+                        borderRadius: "5px",
+                      }}
+                    >
+                      {contenido.contenido}
+                    </motion.p>
+                  )}
                 </motion.div>
               </AnimatePresence>
             </div>

@@ -1,51 +1,49 @@
-import { useEffect } from "react";
-import fondoNoticias from "../assets/img/noticias.webp";
+import { useEffect, useState } from "react";
+import fondoNoticiasDefault from "../assets/img/noticias.webp";
+import { useParams } from "react-router-dom";
+import dataJson from "../assets/json/datos.json";
 
 export default function Noticias() {
- useEffect(() => {
-  const ensureElfsightLoaded = () => {
-    // Si ya está cargado, inicializar
-    if (window.ElfsightApp && window.ElfsightApp.init) {
-      window.ElfsightApp.init();
-      return;
+  const { sede } = useParams();
+  const [fondoImg, setFondoImg] = useState(fondoNoticiasDefault);
+  const [iframeUrl, setIframeUrl] = useState("https://widget.tagembed.com/317304?website=1"); // default
+
+  // Actualizar fondo e iframe según sede
+  useEffect(() => {
+    if (!sede) return;
+    const dataSede = dataJson[sede];
+
+    // Fondo
+    if (dataSede?.imagenes?.fondoNoticias) {
+      try {
+        const fondo = require(`../assets/img/${dataSede.imagenes.fondoNoticias}`);
+        setFondoImg(fondo);
+      } catch {
+        setFondoImg(fondoNoticiasDefault);
+      }
+    } else {
+      setFondoImg(fondoNoticiasDefault);
     }
 
-    // Si no existe el script, agregarlo
-    if (!document.getElementById("elfsight-script")) {
-      const script = document.createElement("script");
-      script.id = "elfsight-script";
-      script.src = "https://elfsightcdn.com/platform.js";
-      script.async = true;
-      script.onload = () => window.ElfsightApp?.init?.();
-      document.body.appendChild(script);
+    // URL del iframe
+    if (dataSede?.imagenes?.iframeNoticias) {
+      setIframeUrl(dataSede.imagenes.iframeNoticias);
     }
-
-    // Reintentar cada 500ms hasta que esté listo
-    setTimeout(ensureElfsightLoaded, 500);
-  };
-
-  ensureElfsightLoaded();
-}, []);
+  }, [sede]);
 
   return (
     <section
       id="noticias"
       className="py-5 bg-light"
       style={{
-        background: `linear-gradient(to right, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(${fondoNoticias}) center/cover no-repeat`,
+        background: `linear-gradient(to right, rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url(${fondoImg}) center/cover no-repeat`,
       }}
     >
       <div className="container text-center">
-        <h2
-          className="mb-4 fw-bold"
-          style={{ fontSize: "3em", color: "#001A66" }}
-        >
+        <h2 className="mb-4 fw-bold" style={{ fontSize: "3em", color: "#001A66" }}>
           Últimas Noticias
         </h2>
-        <p
-          className="mb-4 fw-semibold"
-          style={{ fontSize: "1.5em", color: "#001A66" }}
-        >
+        <p className="mb-4 fw-semibold" style={{ fontSize: "1.5em", color: "#001A66" }}>
           Entérate de los eventos, ferias, actividades y congresos de la UNO
         </p>
 
@@ -53,15 +51,21 @@ export default function Noticias() {
           className="mx-auto"
           style={{
             maxWidth: "900px",
-            overflow: "visible",
+            height: "600px",  // altura del iframe
+            overflow: "hidden",
             position: "relative",
           }}
         >
-          {/* Div de Elfsight */}
-          <div
-            className="elfsight-app-c9a88a88-eca1-4915-bbee-8dcc660e0042"
-            data-elfsight-app-lazy
-          ></div>
+          <iframe
+            src={iframeUrl}
+            allow="fullscreen"
+            style={{
+              width: "100%",
+              height: "100%",
+              overflow: "auto",
+              border: "none",
+            }}
+          ></iframe>
         </div>
       </div>
     </section>

@@ -1,0 +1,192 @@
+{
+    "whatsapp":"+59164849322",
+    "imagenes":{
+        "personaPortada":"chicoUnoCocha.webp",
+        "fondoIncripcion":"fondoCocha.webp",
+        "fondoAlumni":"fondoRedAlumniCocha.webp",
+        "graduados":"graduadosCohca.webp",
+        "fondoOferta":"fondoOfertaCocha.webp"
+      },
+      "inscripcion": {
+        "titulo": "Proceso de Inscripción",
+        "descripcion": "Todo lo que necesitas saber para inscribirte..."
+      },
+      "historia": {
+        "titulo": "Nuestra Historia",
+        "descripcion": "La Universidad UNO se fundó en..."
+      },
+      "alumni": 
+        { "descripcion": "Formar profesionales competentes, éticos líderes con emprendedurismo en base a la diversidad cultural, la ciencia y tecnología para contribuir al desarrollo de la sociedad." , 
+          "graduados": "1252"
+
+    },
+      "oferta": [
+        {"title": "Medicina", "imagen": "medC.webp"},
+        {"title": "Enfermería", "imagen": "enfC.webp"},
+        {"title": "Derecho", "imagen": "derC.webp"},
+        {"title": "Fisioterapia y Kinesiología", "imagen": "fisC.webp"},
+        {"title": "Dirección y Administración de Empresas", "imagen": "adminC.webp"}
+      ],
+      "sedes": [
+        {"title": "Medicina", "imagen": "medicina.webp"},
+        {"title": "Odontología", "imagen": "odontologia.webp"},
+        {"title": "Enfermería", "imagen": "enfermeria.webp"}
+      ],
+      "requisitos": [
+        {"title": "Medicina", "imagen": "medicina.webp"},
+        {"title": "Odontología", "imagen": "odontologia.webp"},
+        {"title": "Enfermería", "imagen": "enfermeria.webp"}
+      ],
+      "noticias": [
+        {"title": "Medicina", "imagen": "medicina.webp"},
+        {"title": "Odontología", "imagen": "odontologia.webp"},
+        {"title": "Enfermería", "imagen": "enfermeria.webp"}
+      ],
+      "carrera": [
+        
+        {
+    "title": "Medicina",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "rm": "R.M No 457/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mSist.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
+    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "roles": [
+      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
+      "Desarrollar, implementar y administrar sistemas de información robustos.",
+      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
+      "Participar en proyectos informáticos, generación y gestión de software.",
+      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
+      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+    ],
+     "values": [
+    "Ética profesional",
+    "Responsabilidad social",
+    "Humanismo",
+    "Respeto a la dignidad del paciente",
+    "Solidaridad"
+  ]
+        }, {
+    "title": "Enfermería",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "rm": "R.M No 457/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mSist.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
+    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "roles": [
+      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
+      "Desarrollar, implementar y administrar sistemas de información robustos.",
+      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
+      "Participar en proyectos informáticos, generación y gestión de software.",
+      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
+      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+    ],
+     "values": [
+    "Ética profesional",
+    "Responsabilidad social",
+    "Humanismo",
+    "Respeto a la dignidad del paciente",
+    "Solidaridad"
+  ]
+        },
+          {
+    "title": "Fisioterapia y Kinesiología",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "rm": "R.M No 457/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mSist.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
+    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "roles": [
+      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
+      "Desarrollar, implementar y administrar sistemas de información robustos.",
+      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
+      "Participar en proyectos informáticos, generación y gestión de software.",
+      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
+      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+    ],
+     "values": [
+    "Ética profesional",
+    "Responsabilidad social",
+    "Humanismo",
+    "Respeto a la dignidad del paciente",
+    "Solidaridad"
+  ]
+        },
+          {
+    "title": "Derecho",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Los ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "rm": "R.M No 457/2012",
+    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "malla": "mSist.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
+    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "roles": [
+      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
+      "Desarrollar, implementar y administrar sistemas de información robustos.",
+      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
+      "Participar en proyectos informáticos, generación y gestión de software.",
+      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
+      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+    ],
+     "values": [
+    "Ética profesional",
+    "Responsabilidad social",
+    "Humanismo",
+    "Respeto a la dignidad del paciente",
+    "Solidaridad"
+  ]
+        },
+          {
+    "title": "Dirección y Administración de Empresas",
+    "subtitle": "!Forma parte de la Familia UNO!",
+    "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
+    "rm": "R.M No 457/2012",
+    "video": "https://youtu.be/PBWy69-zmb8",
+    "malla": "mSist.webp",
+    "cta": {
+      "text": "Iniciar mi proceso de admisión",
+      "link": "#"
+    },
+    "mission": "Formar profesionales en Ingeniería de Sistemas competentes, innovadores y éticos, capaces de crear y administrar soluciones tecnológicas que respondan a las necesidades de la sociedad y el desarrollo del país.",
+    "vision": "Ser una carrera líder en educación en Ingeniería de Sistemas, acreditada y con proyección internacional, que forme profesionales con un modelo educativo globalizado de competencias y habilidades tecnológicas.",
+    "roles": [
+      "Comprender y analizar los requerimientos de la sociedad y el mercado para soluciones tecnológicas.",
+      "Desarrollar, implementar y administrar sistemas de información robustos.",
+      "Proporcionar soporte técnico y aplicar nuevas metodologías de software.",
+      "Participar en proyectos informáticos, generación y gestión de software.",
+      "Contribuir al desarrollo de empresas de software y la aplicación tecnológica en el país.",
+      "Proponer soluciones innovadoras que potencien el desarrollo regional y nacional."
+    ],
+     "values": [
+    "Ética profesional",
+    "Responsabilidad social",
+    "Humanismo",
+    "Respeto a la dignidad del paciente",
+    "Solidaridad"
+  ]
+        }
+      ]
+    }

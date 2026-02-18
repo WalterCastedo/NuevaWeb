@@ -1,23 +1,13 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { FaRegFileAlt, FaRegClipboard, FaIdCard, FaRegImage } from "react-icons/fa";
-
-// Fondo por defecto
-import fondoRequisitosDefault from "../assets/img/fondoRequisitos.webp";
-
-// Imágenes de los requisitos
+import fondoRequisitos from "../assets/img/fondoRequisitos.webp";
 import fotoRequisito from "../assets/img/fotos.webp";
 import certificadoRequisito from "../assets/img/certificado.webp";
 import carnetRequisito from "../assets/img/carnet.webp";
 import tituloRequisito from "../assets/img/titulo.webp";
 
-// JSON con info de cada sede
-import dataJson from "../assets/json/datos.json";
-import { useParams } from "react-router-dom";
-
 export default function Requisitos() {
-  const { sede } = useParams();
-
   const requisitos = [
     { texto: "Fotocopia legalizada del Título", icon: <FaRegFileAlt />, foto: tituloRequisito },
     { texto: "Certificado de nacimiento original", icon: <FaRegClipboard />, foto: certificadoRequisito },
@@ -27,9 +17,8 @@ export default function Requisitos() {
 
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [imagesLoaded, setImagesLoaded] = useState(false);
-  const [fondoImg, setFondoImg] = useState(fondoRequisitosDefault);
 
-  // Precargar imágenes de requisitos
+  // Precargar imágenes
   useEffect(() => {
     const imagePromises = requisitos
       .filter((r) => r.foto)
@@ -44,24 +33,6 @@ export default function Requisitos() {
     Promise.all(imagePromises).then(() => setImagesLoaded(true));
   }, []);
 
-  // Cambiar fondo según sede desde el JSON
-  useEffect(() => {
-    if (!sede) return;
-
-    const dataSede = dataJson[sede];
-
-    if (dataSede?.imagenes?.fondoRequisitos) {
-      try {
-        const fondo = require(`../assets/img/${dataSede.imagenes.fondoRequisitos}`);
-        setFondoImg(fondo);
-      } catch {
-        setFondoImg(fondoRequisitosDefault);
-      }
-    } else {
-      setFondoImg(fondoRequisitosDefault);
-    }
-  }, [sede]);
-
   const itemVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.4, ease: "easeOut" } },
@@ -72,10 +43,10 @@ export default function Requisitos() {
       id="requisitos"
       className="py-5"
       style={{
-        background: `linear-gradient(to right, rgba(0, 40, 120, 0.75), rgba(11, 67, 163, 0.75)), url(${fondoImg}) center/cover no-repeat`,
+        background: `linear-gradient(to right, rgba(0, 40, 120, 0.75), rgba(11, 67, 163, 0.75)), url(${fondoRequisitos}) center/cover no-repeat`,
       }}
     >
-      {/* Precargar imágenes invisibles */}
+      {/* 🔹 Precargar imágenes invisibles */}
       <div style={{ display: "none" }}>
         {requisitos.map((req, i) => req.foto ? <img key={i} src={req.foto} alt="" /> : null)}
       </div>
@@ -97,7 +68,7 @@ export default function Requisitos() {
           className="d-flex justify-content-center align-items-start gap-4 flex-wrap"
         >
           <ul className="list-unstyled d-flex flex-column align-items-center gap-4 w-100"
-              style={{ maxWidth: "400px" }}>
+style={{ maxWidth: "400px" }}>
             {requisitos.map((req, index) => (
               <motion.li
                 key={index}
@@ -108,11 +79,13 @@ export default function Requisitos() {
                 className="w-100"
                 style={{ maxWidth: "600px" }}
               >
+                {/* Contenedor animado de botón y detalle */}
                 <motion.div
                   layout
                   transition={{ type: "spring", stiffness: 100, damping: 20 }}
                   style={{ width: "100%" }}
                 >
+                  {/* Botón principal con hover */}
                   <motion.div
                     layout
                     onClick={() =>
@@ -151,6 +124,7 @@ export default function Requisitos() {
                     <span style={{ flex: 1, textAlign: "center" }}>{req.texto}</span>
                   </motion.div>
 
+                  {/* Contenedor de detalle con animación suave */}
                   {selectedIndex === index && (
                     <motion.div
                       layout
@@ -183,6 +157,7 @@ export default function Requisitos() {
                         />
                       )}
 
+                      {/* Botón Atrás */}   
                       <motion.button
                         onClick={() => setSelectedIndex(null)}
                         layout
@@ -210,6 +185,7 @@ export default function Requisitos() {
               </motion.li>
             ))}
 
+            {/* BOTÓN FINAL */}
             <motion.li
               layout
               initial={{ opacity: 0, y: 20 }}

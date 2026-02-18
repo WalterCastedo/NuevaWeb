@@ -359,6 +359,8 @@ const handleClick = (e, item) => {
           borderBottomLeftRadius: scrolled ? "0px" : "100px",
           transition: "width 0.3s ease, border-radius 0.3s ease",
           zIndex: -1,
+              pointerEvents: "none", // ✅ esto evita que bloquee clicks
+
         }}
       />
 
@@ -437,7 +439,7 @@ rel="noopener noreferrer"
                         display: "flex",
                         alignItems: "center",
                         justifyContent: "center",
-                        height: "100%",
+                        height: "90%",
                         transition: "all 0.3s ease",
                         backgroundColor: item.targets.some(
                           (t) => normalizeForUrl(t) === normalizeForUrl(activeSection)
