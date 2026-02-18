@@ -256,7 +256,7 @@ const tabs = tabKeys.map((key) => ({
           justifyContent: "center",
         }}
       >
-        <h4 style={{ fontWeight: 700 }}>{item.titulo}</h4>
+        <h5 style={{ fontWeight: 700 }}>{item.titulo}</h5>
       </div>
     ))}
   </div>
@@ -268,7 +268,7 @@ const tabs = tabKeys.map((key) => ({
                     <div style={{ display: "flex", flexDirection: "column", gap: "1rem" }}>
                       {contenido.map((item, i) => (
                         <div key={i} style={{ background: "#fff", padding: "1rem", borderRadius: "8px", boxShadow: "0 2px 6px rgba(0,0,0,0.1)" }}>
-                          <h4 style={{ fontWeight: 700 }}>{item.docente}</h4>
+                          <h6 style={{ fontWeight: 500 }}>{item.docente}</h6>
                         </div>
                       ))}
                     </div>
@@ -294,7 +294,7 @@ const tabs = tabKeys.map((key) => ({
           wordBreak: "break-word",  // evitar desbordes
         }}
       >
-        <h4 style={{ fontWeight: 700 }}>{item.titulo}</h4>
+        <h5 style={{ fontWeight: 700 }}>{item.titulo}</h5>
         <p style={{ whiteSpace: "pre-line" }}>{item.descripcion}</p>
       </a>
     ))}

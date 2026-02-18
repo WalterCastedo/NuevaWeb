@@ -9,32 +9,144 @@
         "fondoOferta":"fondoOferta.webp"
       },
       "redalumni": {
-        "descripcion": "La Red Alumni de nuestra universidad conecta a todos los graduados, promoviendo networking y oportunidades de desarrollo profesional.",
-        "carreras": [
-          {
-            "nombre": "Medicina",
-            "graduados": 1200,
-            "lugaresTrabajo": ["Hospital Central", "Clínica del Este", "ONG Salud"],
-            "convenios": ["Hospital Central", "Cruz Roja, etc"]
-          },
-          {
-            "nombre": "Odontología",
-            "graduados": 800,
-            "lugaresTrabajo": ["Hospital Regional", "Clínica San Juan"],
-            "convenios": ["Hospital Regional", "Fundación Salud"]
-          },
-          {
-            "nombre": "Enfermería",
-            "graduados": 800,
-            "lugaresTrabajo": ["Hospital Regional", "Clínica San Juan"],
-            "convenios": ["Hospital Regional", "Fundación Salud"]
-          },
-          {
-            "nombre": "Fisioterapia y Kinesiología",
-            "graduados": 450,
-            "lugaresTrabajo": ["Clínica Rehabilita", "Centro FisioPlus"],
-            "convenios": ["Clínica Rehabilita", "Centro FisioPlus"]
-          }
+      "descripcion": "La Red Alumni de nuestra universidad es un espacio diseñado para conectar a todos los graduados, fortaleciendo los lazos entre profesionales que comparten la experiencia de haber formado parte de nuestra institución. A través de esta red, los egresados pueden ampliar su círculo de contactos, participar en actividades de networking, intercambiar conocimientos y experiencias, y acceder a diversas oportunidades de desarrollo académico y profesional. Además, la Red Alumni fomenta la colaboración, el aprendizaje continuo y la creación de vínculos que potencian tanto el crecimiento personal como el impacto en sus respectivas áreas laborales y en la comunidad universitaria.",
+      "carreras": [
+        {
+          "nombre": "Medicina",
+          "graduados": 1200,
+          "lugaresTrabajo": [
+            "Hospital Central: Atención médica general y especialidades clínicas",
+            "Clínica del Este: Consultorios privados y atención especializada",
+            "ONG Salud: Programas comunitarios, campañas de prevención y proyectos de salud pública",
+            "Otros hospitales y centros de salud a nivel nacional: Diversas especialidades médicas"
+          ],
+          "convenios": [
+            "Hospital Central: Prácticas profesionales, residencias médicas y proyectos de investigación",
+            "Cruz Roja: Voluntariado, capacitaciones y programas de apoyo en salud comunitaria",
+            "Clínicas privadas y organismos internacionales: Intercambio académico, seminarios y talleres especializados"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/MedicinaGrupo"
+        },
+        {
+          "nombre": "Odontología",
+          "graduados": 800,
+          "lugaresTrabajo": [
+            "Hospital Regional: Atención odontológica general y especializada",
+            "Clínica San Juan: Tratamientos dentales y ortodoncia",
+            "Consultorios privados: Atención personalizada y especialidades odontológicas"
+          ],
+          "convenios": [
+            "Hospital Regional: Prácticas profesionales y pasantías",
+            "Fundación Salud: Programas comunitarios y voluntariado",
+            "Clínicas odontológicas privadas: Capacitación y talleres especializados"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/OdontologiaGrupo"
+        },
+        {
+          "nombre": "Bioquímica y Farmacia",
+          "graduados": 600,
+          "lugaresTrabajo": [
+            "Laboratorios clínicos: Análisis clínicos y bioquímicos",
+            "Hospitales públicos y privados: Gestión de medicación y control de calidad",
+            "Industria farmacéutica: Producción, control de calidad y desarrollo de medicamentos"
+          ],
+          "convenios": [
+            "Laboratorios Nacionales: Prácticas y pasantías profesionales",
+            "Universidades y centros de investigación: Investigación aplicada y colaboración académica",
+            "Industria farmacéutica: Capacitación y desarrollo profesional"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/BioquimicaFarmaciaGrupo"
+        },
+        {
+          "nombre": "Enfermería",
+          "graduados": 800,
+          "lugaresTrabajo": [
+            "Hospital Regional: Atención clínica y cuidado de pacientes",
+            "Clínica San Juan: Asistencia especializada y apoyo en procedimientos médicos",
+            "Centros de salud comunitarios: Atención primaria y programas preventivos"
+          ],
+          "convenios": [
+            "Hospital Regional: Prácticas y rotaciones profesionales",
+            "Fundación Salud: Programas de voluntariado y formación",
+            "ONGs de atención sanitaria: Capacitación y proyectos comunitarios"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/EnfermeriaGrupo"
+        },
+        {
+          "nombre": "Fisioterapia y Kinesiología",
+          "graduados": 450,
+          "lugaresTrabajo": [
+            "Clínica Rehabilita: Rehabilitación física y terapias especializadas",
+            "Centro FisioPlus: Fisioterapia deportiva y tratamiento de lesiones",
+            "Consultorios privados: Terapias personalizadas y seguimiento de pacientes"
+          ],
+          "convenios": [
+            "Clínica Rehabilita: Prácticas profesionales y pasantías",
+            "Centro FisioPlus: Capacitación y talleres especializados",
+            "Programas de rehabilitación pública: Colaboración académica y profesional"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/FisioKinesiologiaGrupo"
+        },
+        {
+          "nombre": "Derecho",
+          "graduados": 500,
+          "lugaresTrabajo": [
+            "Despachos de abogados: Consultoría legal y litigios",
+            "Ministerio de Justicia: Asesoría y gestión jurídica",
+            "Organismos internacionales: Proyectos legales y cooperación internacional"
+          ],
+          "convenios": [
+            "Colegios de abogados: Capacitación y formación continua",
+            "Universidades y ONGs: Pasantías y programas de investigación",
+            "Instituciones gubernamentales: Rotaciones y prácticas profesionales"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/DerechoGrupo"
+        },
+        {
+          "nombre": "Ingeniería en Sistemas",
+          "graduados": 700,
+          "lugaresTrabajo": [
+            "Empresas de software: Desarrollo de aplicaciones y sistemas",
+            "Startups tecnológicas: Innovación y proyectos tecnológicos",
+            "Departamentos de IT de empresas privadas y públicas: Gestión de infraestructura y soporte"
+          ],
+          "convenios": [
+            "Empresas de tecnología: Pasantías y proyectos prácticos",
+            "Universidades y laboratorios de innovación: Investigación aplicada",
+            "Organizaciones internacionales: Colaboración académica y tecnológica"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/IngenieriaSistemasGrupo"
+        },
+        {
+          "nombre": "Contaduría Pública",
+          "graduados": 650,
+          "lugaresTrabajo": [
+            "Despachos contables: Auditorías, contabilidad y asesoría fiscal",
+            "Empresas privadas: Gestión financiera y contable",
+            "Instituciones gubernamentales: Control financiero y auditorías públicas"
+          ],
+          "convenios": [
+            "Colegios de contadores: Capacitación y certificaciones",
+            "Universidades y asociaciones contables: Pasantías y programas profesionales",
+            "Auditorías privadas: Rotaciones y formación práctica"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/ContaduriaPublicaGrupo"
+        },
+        {
+          "nombre": "Prótesis Dental",
+          "graduados": 350,
+          "lugaresTrabajo": [
+            "Laboratorios dentales: Fabricación y diseño de prótesis",
+            "Clínicas odontológicas: Colaboración en tratamientos y rehabilitación dental",
+            "Consultorios privados: Personalización y atención especializada"
+          ],
+          "convenios": [
+            "Laboratorios especializados: Capacitación y prácticas profesionales",
+            "Clínicas odontológicas: Intercambio académico y pasantías",
+            "Universidades y programas de investigación dental: Proyectos y talleres"
+          ],
+          "whatsapp": "https://chat.whatsapp.com/ProtesisDentalGrupo"
+        }
         ]
       },
        "investigacion":[
@@ -477,7 +589,7 @@
         "objetivo":"Incentivar el alto rendimiento académico y premiar a los estudiantes destacados."
       },
       {
-        "titulo":"Beca Bachiller Destacado",
+        "titulo":"Beca Esfuerzo",
         "descripcion":"Dirigida a bachilleres de colegios Fiscales, Particulares y de Convenio con promedio elevado y acumulado en la promoción.",
         "objetivo":"Incentivar a bachilleres talentosos a continuar sus estudios universitarios en la UNO."
       },
@@ -530,29 +642,25 @@
     "convenios": [
       {
         "titulo": "UNO - Policía Boliviana",
-        "beneficios": "👮‍♂️ BECA CONVENIO👮🏻‍♀️ Reconocemos tu dedicación y servicio a la comunidad ☝🏻💙 🔖 ¡Aprovecha descuentos exclusivos en tus mensualidades! ⏰ Horarios flexibles para que estudies en la mañana, tarde o noche. 🎓 Carreras: ⚖️ Derecho 💼 Ingeniería Comercial 📊 Contaduría Pública 🌟 ¡Esta es tu oportunidad de crecer profesional y académicamente! Para más información, contáctanos al 📲 78148470.",
-        "imagen": "convenio.jpg"
+        "beneficios": "Reconocemos tu dedicación y servicio a la comunidad ¡Aprovecha descuentos exclusivos en tus mensualidades! Horarios flexibles para que estudies en la mañana, tarde o noche.  ¡Esta es tu oportunidad de crecer profesional y académicamente!",
+        "imagen": "conPol.jpg"
       },
       {
-        "titulo": "UNO - Mercados Municipales",
-        "beneficios": "Beca Convenio 📚💙 El futuro depende de #UNO ☺☝🏻🎓💙 No esperes más, ven y se parte de esta gran familia, aprovecha los descuentos por Convenio Suscrito 😊 Consulta aquí 📲 76050098 💼 ¡Esta es tu oportunidad de crecer profesional y académicamente!👌🏻 🎓 Carreras: ⚖️ Derecho - 📊 Ingeniería Comercial - 🧮Contaduría Pública ⏰ Horarios flexibles para que estudies en la mañana, tarde o noche. Para más información, contáctanos al 📲 78148470.",
-        "imagen": "convenio.jpg"
+        "titulo": "UNO - Instituto Latinoamericano",
+        "beneficios": "Accede a descuentos especiales por convenio institucional en tus mensualidades. Estudia en horarios flexibles, compatibles con tu actividad laboral. Forma parte de una universidad comprometida con tu crecimiento profesional y académico.",
+        "imagen": "conlat.jpg"
       },
       {
-        "titulo": "UNO - CSUTCY",
-        "beneficios": "Si formas parte de la Central Sindical Única de Trabajadores Campesinos de Yacuiba (CSUTCY)🤠 💼 ¡Esta es tu oportunidad de crecer profesional y académicamente!👌🏻 🎓 Carreras: ⚖️ Derecho - 📊 Ingeniería Comercial - 🧮Contaduría Pública 🔖 ¡Aprovecha descuentos exclusivos en tus mensualidades! ⏰ Horarios flexibles para que estudies en la mañana, tarde o noche. Para más información, contáctanos al 📲 78148470.",
-        "imagen": "convenio.jpg"
+        "titulo": "UNO - Colegio Médico",
+        "beneficios": "Los miembros del Colegio Médico y sus familiares pueden acceder a descuentos especiales por convenio institucional en sus mensualidades, con horarios flexibles en la mañana, tarde o noche. Continúa tu formación profesional en UNO y brinda nuevas oportunidades académicas a tu familia.",
+        "imagen": "conMed.jpg"
       },
       {
-        "titulo": "UNO - FSTP",
-        "beneficios": "BECA TRABAJADORES PETROLEROS 🦺 ¿Formas parte de la Federación Sindical de Trabajadores Petroleros? 💼 ¡Esta es tu oportunidad de crecer profesional y académicamente!👌🏻 🎓 Carreras: ⚖️ Derecho - 📊 Ingeniería Comercial - 🧮Contaduría Pública 🔖 ¡Aprovecha descuentos exclusivos en tus mensualidades! ⏰ Horarios flexibles para que estudies en la mañana, tarde o noche. Para más información, contáctanos al 📲 78148470.",
-        "imagen": "convenio.jpg"
-      },
-      {
-        "titulo": "UNO - COR",
-        "beneficios": "🛍️ BECA ✍🏻🖊️ CENTRAL OBRERA REGIONAL YACUIBA ☺️☝🏻💙 Valoramos tu esfuerzo y dedicación 💪 🔖 ¡Descuentos especiales en tus mensualidades, para Afiliados. ⏰ Horarios flexibles que se adaptan a tu rutina: mañana, tarde o noche. 🎓 Carreras disponibles: ⚖️ Derecho 💼 Ingeniería Comercial 📊 Contaduría Pública Para más información, contáctanos al 📲 78148470. ✨ La Universidad UNO está contigo para alcanzar tus metas. ¡Te esperamos!😉",
-        "imagen": "convenio.jpg"
+        "titulo": "UNO - Top Fitnes Center",
+        "beneficios": "Los estudiantes de UNO acceden a tarifas preferenciales en Top Fitness Center, promoviendo un estilo de vida saludable y equilibrado. Este convenio apoya su bienestar físico y rendimiento académico mediante espacios modernos y planes accesibles.",
+        "imagen": "contop.jpg"
       }
+      
     ]
   }
 ],
@@ -594,7 +702,7 @@
     "subtitle": "!Forma parte de la Familia UNO!",
     "description": "Formar profesionales competentes en Odontología, capacitados para desempeñarse con bases sólidas en ciencia, investigación, tecnología, capaces de desarrollar actividades, destrezas, habilidades y conocimientos en un modelo de atención orientado de forma pertinente hacia el paciente y la comunidad para el cuidado odontológico integral y las labores de promoción y prevención en los niveles primario y secundario de salud, con un fundamento profesional humanístico-ético y comprometido con su formación continua tanto científica, como tecnológica y en valores",
     "rm": "R.M No 0913/2016 (Rediseño Curricular)",
-    "video":"https://www.youtube.com/watch?v=nTj6DBd096k",
+    "video":"https://www.youtube.com/watch?v=DC1W2KadlB4",
     "malla": "mOdonto.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
@@ -626,7 +734,7 @@
     "subtitle": "!Forma parte de la Familia UNO!",
     "description": "Formar profesionales de enfermería con preparación integral, humanista, científica y ética, capaces de brindar cuidados seguros y de calidad en todos los niveles de atención, con liderazgo, pensamiento crítico e innovación, en respuesta a las necesidades de salud de la población y al fortalecimiento del sistema sanitario.",
     "rm": "R.M No 0913/2016 (Rediseño Curricular)",
-    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "video": "https://www.youtube.com/watch?v=eIKQCi2EteM",
     "malla": "mEnfermeria.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
@@ -657,7 +765,7 @@
     "subtitle": "!Forma parte de la Familia UNO!",
     "description": "Formar profesionales en Fisioterapia y Kinesiología con una sólida base científica, técnica, humanística y ética, capaces de desempeñarse con competencia en la valoración, prevención, diagnóstico funcional, tratamiento y rehabilitación integral de las alteraciones del movimiento humano y la funcionalidad, en diversos contextos clínicos y comunitarios. Esta formación está centrada en el desarrollo de competencias profesionales y un enfoque socioformativo, comprometido con la transformación social, el bienestar de la población boliviana y los estándares internacionales de calidad en salud dentro del mercado laboral, mediante un sistema progresivo de práctica pre profesional e interrelación constante con las instituciones de salud, respetando la pluriculturidad, y cuidado del medio ambiente.",
     "rm": "R.M No 0913/2016 (Rediseño Curricular)",
-    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "video": "https://www.youtube.com/watch?v=Olr05lH64Y8",
     "malla": "mFisio.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
@@ -685,7 +793,7 @@
     "subtitle": "!Forma parte de la Familia UNO!",
     "description": "formar profesionales con un conocimiento integral sobre la salud, la ciencia y la tecnología para aplicarlo en el diagnóstico, tratamiento y prevención de enfermedades, así como en el desarrollo y control de productos farmacéuticos, parafarmacéutico y alimentarios. Esto incluye la gestión de laboratorios, la investigación científica, la aplicación de principios éticos en la atención a la salud, y la contribución al bienestar social y la preservación del medio ambiente.",
     "rm": "R.M No 0913/2016 (Rediseño Curricular)",
-    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "video": "https://www.youtube.com/watch?v=66xB-mU5GQQ",
     "malla": "mBio.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
@@ -719,7 +827,7 @@
     "subtitle": "!Forma parte de la Familia UNO!",
     "description": "Al concluir sus estudios, el egresado deberá tener conocimientos y habilidades que lo capaciten para el correcto ejercicio profesional del Derecho, incluyendo el conocimiento del marco jurídico vigente, capacidad de argumentación e interpretación jurídica, y habilidad para enfrentar conflictos y generar soluciones.\n\nAdemás, estará preparado para continuar sus estudios de posgrado y desarrollará actitudes y valores como capacidad analítica para resolver problemas de forma eficiente, vocación de servicio y sentido social de comunidad, liderazgo y trabajo en equipo, capacidad para la toma de decisiones, vocación mediadora y conciliatoria, y análisis de problemas jurídicos desde un enfoque humanista y multidisciplinario.",
     "rm": "R.M No 456/2012",
-    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "video": "https://www.youtube.com/watch?v=B27C5-2J2uw",
     "malla": "mDerecho.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
@@ -748,7 +856,7 @@
     "subtitle": "!Forma parte de la Familia UNO!",
     "description": "Formamos profesionales a nivel licenciatura, capaz de desarrollar proyectos de software, introducir nuevas tecnologías de computación, desarrollar sistemas informáticas en redes de computadoras y sistemas para internet; bajo principios de eficiencia y productividad de servicio, con altos valores éticos y sensibilidad social.",
     "rm": "R.M No 457/2012",
-    "video": "https://www.youtube.com/watch?v=nTj6DBd096k",
+    "video": "https://www.youtube.com/watch?v=1OuS9xM2B5w",
     "malla": "mSist.webp",
     "cta": {
       "text": "Iniciar mi proceso de admisión",
@@ -806,11 +914,11 @@
 
     },
       "oferta": [
-        {"title": "Medicina", "imagen": "medicinaSC.webp"},
-        {"title": "Enfermería", "imagen": "enfeSC.webp"},
-        {"title": "Derecho", "imagen": "derechoSC.webp"},
-        {"title": "Bioquímica y Farmacia", "imagen": "derechoSC.webp"},
-        {"title": "Dirección y Administración de Empresas", "imagen": "odontoSC.webp"}
+        {"title": "Medicina", "imagen": "medC.webp"},
+        {"title": "Enfermería", "imagen": "enfC.webp"},
+        {"title": "Derecho", "imagen": "derC.webp"},
+        {"title": "Fisioterapia y Kinesiología", "imagen": "fisC.webp"},
+        {"title": "Dirección y Administración de Empresas", "imagen": "adminC.webp"}
       ],
       "sedes": [
         {"title": "Medicina", "imagen": "medicina.webp"},
@@ -887,7 +995,7 @@
   ]
         },
           {
-    "title": "Bioquímica y Farmacia",
+    "title": "Fisioterapia y Kinesiología",
     "subtitle": "!Forma parte de la Familia UNO!",
     "description": "Los problemas profesionales de la Carrera Ingeniería de Sistemas se establecen primeramente en entender y comprender a cabalidad los requerimientos de la sociedad, las empresas y el mercado, para poder resolver problemas de tecnología computacional.\n\nEl profesional desarrolla habilidades para administrar sistemas, proporcionar apoyo técnico, desarrollar nuevas herramientas y aplicar conceptos en nuevas metodologías para la construcción de sistemas de software robustos que respondan a las necesidades de la sociedad.\n\nLos ingenieros de sistemas son capaces de crear, desarrollar, implementar, evaluar, mejorar y administrar sistemas de información, proponiendo e implantando soluciones que potencien el desarrollo regional y nacional. Participan efectivamente en procesos de producción de software, administración, generación y gestión de proyectos informáticos, contribuyendo al desarrollo de empresas de software y a la aplicación tecnológica en el país.",
     "rm": "R.M No 457/2012",

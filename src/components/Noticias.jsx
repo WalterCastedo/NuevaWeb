@@ -2,16 +2,30 @@ import { useEffect } from "react";
 import fondoNoticias from "../assets/img/noticias.webp";
 
 export default function Noticias() {
-  useEffect(() => {
-    // Revisar si el script ya está cargado
+ useEffect(() => {
+  const ensureElfsightLoaded = () => {
+    // Si ya está cargado, inicializar
+    if (window.ElfsightApp && window.ElfsightApp.init) {
+      window.ElfsightApp.init();
+      return;
+    }
+
+    // Si no existe el script, agregarlo
     if (!document.getElementById("elfsight-script")) {
       const script = document.createElement("script");
       script.id = "elfsight-script";
       script.src = "https://elfsightcdn.com/platform.js";
       script.async = true;
+      script.onload = () => window.ElfsightApp?.init?.();
       document.body.appendChild(script);
     }
-  }, []);
+
+    // Reintentar cada 500ms hasta que esté listo
+    setTimeout(ensureElfsightLoaded, 500);
+  };
+
+  ensureElfsightLoaded();
+}, []);
 
   return (
     <section

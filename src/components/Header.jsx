@@ -120,7 +120,11 @@ export default function Header() {
 
 const handleClick = (e, item) => {
   e.preventDefault();
-
+ if (item.targets?.[0]?.startsWith("http")) {
+    window.open(item.targets[0], "_blank");
+    setMobileMenuOpen(false);
+    return;
+  }
   if (item.name === "Inicio") return handleClickInicio();
 
  
@@ -254,8 +258,11 @@ const handleClick = (e, item) => {
         target: normalizeForUrl(s),
       })),
     },
-    { name: "Noticias", targets: ["noticias"].map(normalizeForUrl) },
+    { name: "Red Alumni", targets: ["alumni", "otraSeccion"].map(normalizeForUrl) },
+
     { name: "Requisitos", targets: ["requisitos"].map(normalizeForUrl) },
+    { name: "Noticias", targets: ["noticias"].map(normalizeForUrl) },
+    
     {  
       name: "Investigación",
       submenu: [
@@ -275,15 +282,9 @@ const handleClick = (e, item) => {
       })),
     },
     {
-      name: "Postgrado",
-      targets: ["postgrado"].map(normalizeForUrl),
-      submenu: [
-        { name: "Diplomados", target: normalizeForUrl("Diplomados") },
-        { name: "Maestrías", target: normalizeForUrl("Maestrias") },
-        { name: "Doctorado", target: normalizeForUrl("Doctorado") },
-      ],
-    },
-    { name: "Red Alumni", targets: ["alumni", "otraSeccion"].map(normalizeForUrl) },
+  name: "Postgrado",
+  targets: ["https://postgrado.uno.edu.bo/"],
+},
   ];
 
   const toggleMobileMenu = () => setMobileMenuOpen((prev) => !prev);
@@ -419,7 +420,15 @@ const handleClick = (e, item) => {
                   ) : (
                     <Nav.Link
                       key={item.name}
-                      href={item.targets[0] ? `#${item.targets[0]}` : "#"}
+                      href={
+  item.targets?.[0]?.startsWith("http")
+    ? item.targets[0]
+    : item.targets[0]
+    ? `#${item.targets[0]}`
+    : "#"
+}
+target={item.targets?.[0]?.startsWith("http") ? "_blank" : undefined}
+rel="noopener noreferrer"
                       onClick={(e) => handleClick(e, item)}
                       className="fw-bold text-white"
                       style={{

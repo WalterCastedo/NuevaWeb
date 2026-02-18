@@ -11,10 +11,9 @@ export default function CareerCard() {
   const { sede, carrera } = useParams();
   const [showVideo, setShowVideo] = useState(false);
   const [activeTab, setActiveTab] = useState("misionVision");
-
+  const [zoomPos, setZoomPos] = useState({ x: 0, y: 0, visible: false });
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const iframeRef = useRef(null);
-const [showMallaModal, setShowMallaModal] = useState(false);
 
   // Detectar tamaño móvil
   useEffect(() => {
@@ -50,6 +49,13 @@ const [showMallaModal, setShowMallaModal] = useState(false);
   const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : null;
   const mallaImage = data?.malla ? images(`./${data.malla}`) : null;
 
+  const handleMouseMove = (e) => {
+    const rect = e.currentTarget.getBoundingClientRect();
+    const x = ((e.clientX - rect.left) / rect.width) * 100;
+    const y = ((e.clientY - rect.top) / rect.height) * 100;
+    setZoomPos({ x, y, visible: true });
+  };
+  const handleMouseLeave = () => setZoomPos({ ...zoomPos, visible: false });
 
   const whatsapp = sedeInfo?.whatsapp || "";
   const mensaje = encodeURIComponent(`Hola, deseo solicitar más información sobre la carrera ${data.title} en la sede ${sede}.`);
@@ -58,39 +64,15 @@ const [showMallaModal, setShowMallaModal] = useState(false);
   // Tabs
   const tabs = [
     {
-  key: "misionVision",
-  label: "Misión y Visión",
-  content: (
-    <div>
-      <h4
-        style={{
-          fontWeight: 700,
-          color: "#001A66",
-          marginBottom: "0.3rem",
-          textAlign: "center",
-        }}
-      >
-        Misión
-      </h4>
-      <p style={{ marginBottom: "1rem", textAlign: "center" }}>
-        {data.mission}
-      </p>
-
-      <h4
-        style={{
-          fontWeight: 700,
-          color: "#001A66",
-          marginBottom: "0.3rem",
-          textAlign: "center",
-        }}
-      >
-        Visión
-      </h4>
-      <p style={{ textAlign: "center" }}>{data.vision}</p>
-    </div>
-  ),
-},
-
+      key: "misionVision",
+      label: "Misión y Visión",
+      content: (
+        <div>
+          <p>{data.mission}</p>
+          <p>{data.vision}</p>
+        </div>
+      ),
+    },
     {
       key: "campo",
       label: "Campo Laboral",
@@ -102,64 +84,42 @@ const [showMallaModal, setShowMallaModal] = useState(false);
       content: <ul>{data.values?.map((v, i) => <li key={i}>{v}</li>)}</ul>,
     },
     {
-  key: "malla",
-  label: "Malla Curricular",
-  content: mallaImage && (
-    <div style={{ textAlign: "center" }}>
-      <img
-        src={mallaImage}
-        alt={`Malla ${data.title}`}
-        className="img-fluid shadow-sm"
-        style={{ borderRadius: "10px", width: "100%" }}
-      />
-
-      {/* BOTONES */}
-      <div
-        style={{
-          marginTop: "1rem",
-          display: "flex",
-          gap: "0.8rem",
-          justifyContent: "center",
-          flexWrap: "wrap",
-        }}
-      >
-        {/* VER */}
-        <a
-          href={mallaImage}
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{
-            backgroundColor: "#009DFA",
-            color: "#fff",
-            padding: "0.6rem 1.3rem",
-            borderRadius: "8px",
-            textDecoration: "none",
-            fontWeight: 700,
-          }}
+      key: "malla",
+      label: "Malla Curricular",
+      content: mallaImage && (
+        <div
+          style={{ display: "inline-block", position: "relative" }}
+          onMouseMove={handleMouseMove}
+          onMouseLeave={handleMouseLeave}
         >
-          Ver Malla
-        </a>
-
-        {/* DESCARGAR */}
-        <a
-          href={mallaImage}
-          download
-          style={{
-            backgroundColor: "#001A66",
-            color: "#fff",
-            padding: "0.6rem 1.3rem",
-            borderRadius: "8px",
-            textDecoration: "none",
-            fontWeight: 700,
-          }}
-        >
-          Descargar
-        </a>
-      </div>
-    </div>
-  ),
-},
-
+          <img
+            src={mallaImage}
+            alt={`Malla ${data.title}`}
+            className="img-fluid shadow-sm"
+            style={{ borderRadius: "10px", width: "100%" }}
+          />
+          {zoomPos.visible && (
+            <div
+              style={{
+                position: "absolute",
+                top: `${zoomPos.y}%`,
+                left: `${zoomPos.x}%`,
+                width: "300px",
+                height: "300px",
+                borderRadius: "50%",
+                pointerEvents: "none",
+                transform: "translate(-50%, -50%)",
+                backgroundImage: `url(${mallaImage})`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "800%",
+                backgroundPosition: `${zoomPos.x}% ${zoomPos.y}%`,
+                border: "2px solid #009DFA",
+              }}
+            />
+          )}
+        </div>
+      ),
+    },
     {
       key: "informacion",
       label: "Solicitar Información",

@@ -51,7 +51,6 @@ export default function RedAlumni() {
   }, [seccion]);
 
   // Funciones de normalización
-  const capitalize = (text = "") => text.charAt(0).toUpperCase() + text.slice(1);
   const normalize = (text = "") =>
     text.normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/\s+/g, "").toLowerCase();
 
@@ -173,47 +172,75 @@ export default function RedAlumni() {
                   exit="exit"
                   style={{ position: "relative" }}
                 >
-                  {contenido.graduados ? (
-                    <div
-                      style={{
-                        background: "#fff",
-                        padding: "1rem",
-                        borderRadius: "8px",
-                        boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
-                        marginBottom: "2rem",
-                      }}
-                    >
-                      <h3
-                        style={{
-                          fontWeight: 700,
-                          fontSize: "1.3rem",
-                          marginBottom: "0.5rem",
-                        }}
-                      >
-                        {contenido.nombre}
-                      </h3>
-                      <p>
-                        <strong>Graduados:</strong> {contenido.graduados}
-                      </p>
-                      <p>
-                        <strong>Lugares de trabajo:</strong> {contenido.lugaresTrabajo.join(", ")}
-                      </p>
-                      <p>
-                        <strong>Convenios:</strong> {contenido.convenios.join(", ")}
-                      </p>
-                    </div>
-                  ) : (
-                    <motion.p
-                      style={{
-                        whiteSpace: "pre-line",
-                        background: "#fff",
-                        padding: "1rem",
-                        borderRadius: "5px",
-                      }}
-                    >
-                      {contenido.contenido}
-                    </motion.p>
-                  )}
+                 {contenido.graduados ? (
+  <div
+    style={{
+      background: "#fff",
+      padding: "1rem",
+      borderRadius: "8px",
+      boxShadow: "0 2px 6px rgba(0,0,0,0.1)",
+      marginBottom: "2rem",
+    }}
+  >
+    <h3 style={{ fontWeight: 700, fontSize: "1.3rem", marginBottom: "0.5rem" }}>
+      {contenido.nombre}
+    </h3>
+
+    <p><strong>Graduados:</strong> {contenido.graduados}</p>
+
+    <div style={{ marginTop: "0.5rem" }}>
+      <strong>Lugares de trabajo:</strong>
+      <ul style={{ marginTop: "0.3rem", paddingLeft: "20px" }}>
+        {contenido.lugaresTrabajo.map((lugar, i) => (
+          <li key={i} style={{ marginBottom: "0.3rem" }}>{lugar}</li>
+        ))}
+      </ul>
+    </div>
+
+    <div style={{ marginTop: "0.5rem" }}>
+      <strong>Convenios:</strong>
+      <ul style={{ marginTop: "0.3rem", paddingLeft: "20px" }}>
+        {contenido.convenios.map((convenio, i) => (
+          <li key={i} style={{ marginBottom: "0.3rem" }}>{convenio}</li>
+        ))}
+      </ul>
+    </div>
+
+    {/* BOTÓN DE WHATSAPP */}
+    {contenido.whatsapp && (
+      <div style={{ textAlign: "center", marginTop: "1rem" }}>
+        <a
+          href={contenido.whatsapp}
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            backgroundColor: "#25D366",
+            color: "#fff",
+            padding: "0.8rem 1.5rem",
+            borderRadius: "25px",
+            textDecoration: "none",
+            fontWeight: 600,
+            display: "inline-block",
+          }}
+        >
+          Unirse al grupo de WhatsApp
+        </a>
+      </div>
+    )}
+  </div>
+) : (
+  <motion.p
+    style={{
+      whiteSpace: "pre-line",
+      background: "#fff",
+      padding: "1rem",
+      borderRadius: "5px",
+    }}
+  >
+    {contenido.contenido}
+  </motion.p>
+)}
+
                 </motion.div>
               </AnimatePresence>
             </div>
