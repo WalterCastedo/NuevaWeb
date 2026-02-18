@@ -7,7 +7,7 @@ import monteroImg from "../assets/img/montero.webp";
 import shinahotaImg from "../assets/img/shinaota.webp";
 import santaCruzImg from "../assets/img/santacruz.webp";
 import tarijaImg from "../assets/img/tarija.webp";
-import yacuibaImg from "../assets/img/yacuhiba.webp";
+import yacuibaImg from "../assets/img/yacuhiba.png";
 
 import mapaBolivia from "../assets/img/pais.webp";
 import marcador from "../assets/img/marcador.webp";
