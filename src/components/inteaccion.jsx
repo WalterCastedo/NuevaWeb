@@ -5,7 +5,11 @@ import dataJson from "../assets/json/datos.json";
 import NotFound from "../components/404";
 import fondo from "../assets/img/fondoOferta.webp";
 
+const fondos = require.context("../assets/img", false, /\.(png|jpe?g|webp|svg)$/);
 export default function Interaccion() {
+
+  const [fondoImg, setFondoImg] = useState(fondo);
+
   const { sede, programa } = useParams();
   const navigate = useNavigate();
   const rightRef = useRef(null);
@@ -53,6 +57,33 @@ export default function Interaccion() {
     (key) => normalizeText(key) === normalizeText(sede)
   );
   const sedeInfo = sedeKey ? dataJson[sedeKey] : null;
+
+  // fondo dinámico por sede
+useEffect(() => {
+
+  if (sedeInfo?.imagenes?.fondoPrincipal) {
+
+    try {
+
+      setFondoImg(
+        fondos(`./${sedeInfo.imagenes.fondoPrincipal}`)
+      );
+
+    } catch {
+
+      setFondoImg(fondo);
+
+    }
+
+  } else {
+
+    setFondoImg(fondo);
+
+  }
+
+}, [sedeInfo]);
+
+
   const interaccionArray = sedeInfo?.interaccion || [];
   const contenido = interaccionArray.find(
     (item) => normalizeText(item.titulo) === normalizeText(programa)
@@ -74,7 +105,7 @@ export default function Interaccion() {
         minHeight: "100vh",
         fontFamily: "'Montserrat', sans-serif",
         color: "#001A66",
-        backgroundImage: `url(${fondo})`,
+        backgroundImage: `url(${fondoImg})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
