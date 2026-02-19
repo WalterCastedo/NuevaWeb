@@ -20,6 +20,7 @@ export default function Header() {
   const [ofertaCarreras, setOfertaCarreras] = useState([]);
   const [ofertaInteraccion, setOfertaInteraccion] = useState([]);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+const [ofertaInvestigacion, setOfertaInvestigacion] = useState(null);
 
   const normalizeForUrl = (text) =>
     text
@@ -29,11 +30,19 @@ export default function Header() {
       .toLowerCase();
 
   useEffect(() => {
-    if (!sede) return;
-    const dataSede = dataJson[sede];
-    setOfertaCarreras(dataSede?.oferta || []);
-    setOfertaInteraccion(dataSede?.interaccion || []);
-  }, [sede]);
+
+  if (!sede) return;
+
+  const dataSede = dataJson[sede];
+
+  setOfertaCarreras(dataSede?.oferta || []);
+  setOfertaInteraccion(dataSede?.interaccion || []);
+
+  // aquí accedemos al primer objeto del array
+  setOfertaInvestigacion(dataSede?.investigacion?.[0] || null);
+
+}, [sede]);
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -180,7 +189,15 @@ const handleClick = (e, item) => {
               else if (parentName === "Carreras") handleClickCarrera(sub.name);
               else if (parentName === "SubSedes") handleClickSubSede(sub.name);
               else if (parentName === "Interacción") handleClickPrograma(sub.name);
-              else if (parentName === "Investigación") handleClickInvestigacion(sub.target);
+              else if (parentName === "Investigación") {
+  if (sub.type === "external") {
+    window.open(sub.target, "_blank");
+  } else {
+    handleClickInvestigacion(sub.target);
+  }
+}
+
+
               else scrollToTarget(sub.target);
             }}
             onMouseEnter={() => sub.submenu && handleOpenDropdown(sub.name, level)}
@@ -263,17 +280,76 @@ const handleClick = (e, item) => {
     { name: "Requisitos", targets: ["requisitos"].map(normalizeForUrl) },
     { name: "Noticias", targets: ["noticias"].map(normalizeForUrl) },
     
-    {  
-      name: "Investigación",
-      submenu: [
-        { name: "Bienvenida", target: normalizeForUrl("bienvenida") },
-        { name: "Boletines", target: normalizeForUrl("boletines") },
-        { name: "Salud UNO", target: normalizeForUrl("saludUno") },
-        { name: "Líneas de Investigación", target: normalizeForUrl("lineadeinvestigacion") },
-        { name: "Investigaciónes", target: normalizeForUrl("investigaciones") },
-        { name: "Docentes Investigadores", target: normalizeForUrl("docentesinvestigadores") },
-      ],
-    },
+    {
+  name: "Investigación",
+  submenu: ofertaInvestigacion
+    ? [
+        // Bienvenida (solo si existe)
+        ...(ofertaInvestigacion.bienvenida
+          ? [{
+              name: "Bienvenida",
+              target: normalizeForUrl("bienvenida"),
+              type: "internal"
+            }]
+          : []),
+
+        // Boletines (solo si existe y tiene contenido)
+        ...(ofertaInvestigacion.boletines?.length > 0
+          ? [{
+              name: "Boletines",
+              target: normalizeForUrl("boletines"),
+              type: "internal"
+            }]
+          : []),
+
+        // Salud UNO (solo si existe, enlace externo)
+        ...(ofertaInvestigacion.saludUno
+          ? [{
+              name: "Salud UNO",
+              target: ofertaInvestigacion.saludUno,
+              type: "external"
+            }]
+          : []),
+
+        // ESTOS SIEMPRE SE MUESTRAN
+        {
+          name: "Líneas de Investigación",
+          target: normalizeForUrl("lineadeinvestigacion"),
+          type: "internal"
+        },
+        {
+          name: "Investigaciones",
+          target: normalizeForUrl("investigaciones"),
+          type: "internal"
+        },
+        {
+          name: "Docentes Investigadores",
+          target: normalizeForUrl("docentesinvestigadores"),
+          type: "internal"
+        }
+
+      ]
+    : [
+        // fallback si investigacion es null
+        {
+          name: "Líneas de Investigación",
+          target: normalizeForUrl("lineadeinvestigacion"),
+          type: "internal"
+        },
+        {
+          name: "Investigaciones",
+          target: normalizeForUrl("investigaciones"),
+          type: "internal"
+        },
+        {
+          name: "Docentes Investigadores",
+          target: normalizeForUrl("docentesinvestigadores"),
+          type: "internal"
+        }
+      ]
+},
+
+
     {
       name: "Interacción",
       submenu: ofertaInteraccion.map((p) => ({

@@ -158,6 +158,7 @@
        "investigacion":[
         {
           "bienvenida":"En la Universidad Nacional del Oriente buscamos fomentar las actividades de investigación en todos los niveles de formación esto con el fin de motivar al ciudadano a asumir su rol de responsabilidad desde cada posición que ocupe en la sociedad.\nEs así que en los programas de formación que ofrece la Universidad Nacional del Oriente, se busca motivar a los estudiantes a entrar en el maravilloso mundo de la investigación. Lo que se busca es sentar presencia creando conciencia para realizar análisis emitir puntos de vista y tener criterio sobre ciertos temas determinados que están presentes en el diario vivir. \nDesde la universidad nos preocupamos por insertar en nuestros programas de pre y postgrado actividades que hagan reflexionar al estudiante y ciudadano para generar ideas innovadoras e inmiscuirse en el mundo de la investigación sea cual sea el campo de acción. \nLos objetivos del departamento de Investigación de la UNO son:\n– Desarrollar talento humano para la investigación.\n– Permanecer insertos en la globalización.\n– Aplicar tecnología e innovación en cada uno de los productos que se generan desde la UNO.\n– Desarrollar proyectos que involucren investigación con innovación apuntando al desarrollo social.\n– Incentivar al desarrollo de un eco-sistema sostenible.",
+          "saludUno": "https://salud.uno.edu.bo/",
           "boletines":[
             {
               "titulo":"Boletin 001",
@@ -1187,145 +1188,71 @@
 
       },
       "redalumni": {
-      "descripcion": "La Red Alumni de nuestra universidad es un espacio diseñado para conectar a todos los graduados, fortaleciendo los lazos entre profesionales que comparten la experiencia de haber formado parte de nuestra institución. A través de esta red, los egresados pueden ampliar su círculo de contactos, participar en actividades de networking, intercambiar conocimientos y experiencias, y acceder a diversas oportunidades de desarrollo académico y profesional. Además, la Red Alumni fomenta la colaboración, el aprendizaje continuo y la creación de vínculos que potencian tanto el crecimiento personal como el impacto en sus respectivas áreas laborales y en la comunidad universitaria.",
-      "carreras": [
-        {
-          "nombre": "Medicina",
-          "graduados": 1200,
-          "lugaresTrabajo": [
-            "Hospital Central: Atención médica general y especialidades clínicas",
-            "Clínica del Este: Consultorios privados y atención especializada",
-            "ONG Salud: Programas comunitarios, campañas de prevención y proyectos de salud pública",
-            "Otros hospitales y centros de salud a nivel nacional: Diversas especialidades médicas"
-          ],
-          "convenios": [
-            "Hospital Central: Prácticas profesionales, residencias médicas y proyectos de investigación",
-            "Cruz Roja: Voluntariado, capacitaciones y programas de apoyo en salud comunitaria",
-            "Clínicas privadas y organismos internacionales: Intercambio académico, seminarios y talleres especializados"
-          ],
-          "whatsapp": "https://chat.whatsapp.com/MedicinaGrupo"
-        },
-        {
-          "nombre": "Odontología",
-          "graduados": 800,
-          "lugaresTrabajo": [
-            "Hospital Regional: Atención odontológica general y especializada",
-            "Clínica San Juan: Tratamientos dentales y ortodoncia",
-            "Consultorios privados: Atención personalizada y especialidades odontológicas"
-          ],
-          "convenios": [
-            "Hospital Regional: Prácticas profesionales y pasantías",
-            "Fundación Salud: Programas comunitarios y voluntariado",
-            "Clínicas odontológicas privadas: Capacitación y talleres especializados"
-          ],
-          "whatsapp": "https://chat.whatsapp.com/OdontologiaGrupo"
-        },
-        {
-          "nombre": "Bioquímica y Farmacia",
-          "graduados": 600,
-          "lugaresTrabajo": [
-            "Laboratorios clínicos: Análisis clínicos y bioquímicos",
-            "Hospitales públicos y privados: Gestión de medicación y control de calidad",
-            "Industria farmacéutica: Producción, control de calidad y desarrollo de medicamentos"
-          ],
-          "convenios": [
-            "Laboratorios Nacionales: Prácticas y pasantías profesionales",
-            "Universidades y centros de investigación: Investigación aplicada y colaboración académica",
-            "Industria farmacéutica: Capacitación y desarrollo profesional"
-          ],
-          "whatsapp": "https://chat.whatsapp.com/BioquimicaFarmaciaGrupo"
-        },
-        {
-          "nombre": "Enfermería",
-          "graduados": 800,
-          "lugaresTrabajo": [
-            "Hospital Regional: Atención clínica y cuidado de pacientes",
-            "Clínica San Juan: Asistencia especializada y apoyo en procedimientos médicos",
-            "Centros de salud comunitarios: Atención primaria y programas preventivos"
-          ],
-          "convenios": [
-            "Hospital Regional: Prácticas y rotaciones profesionales",
-            "Fundación Salud: Programas de voluntariado y formación",
-            "ONGs de atención sanitaria: Capacitación y proyectos comunitarios"
-          ],
-          "whatsapp": "https://chat.whatsapp.com/EnfermeriaGrupo"
-        },
-        {
-          "nombre": "Fisioterapia y Kinesiología",
-          "graduados": 450,
-          "lugaresTrabajo": [
-            "Clínica Rehabilita: Rehabilitación física y terapias especializadas",
-            "Centro FisioPlus: Fisioterapia deportiva y tratamiento de lesiones",
-            "Consultorios privados: Terapias personalizadas y seguimiento de pacientes"
-          ],
-          "convenios": [
-            "Clínica Rehabilita: Prácticas profesionales y pasantías",
-            "Centro FisioPlus: Capacitación y talleres especializados",
-            "Programas de rehabilitación pública: Colaboración académica y profesional"
-          ],
-          "whatsapp": "https://chat.whatsapp.com/FisioKinesiologiaGrupo"
-        },
-        {
-          "nombre": "Derecho",
-          "graduados": 500,
-          "lugaresTrabajo": [
-            "Despachos de abogados: Consultoría legal y litigios",
-            "Ministerio de Justicia: Asesoría y gestión jurídica",
-            "Organismos internacionales: Proyectos legales y cooperación internacional"
-          ],
-          "convenios": [
-            "Colegios de abogados: Capacitación y formación continua",
-            "Universidades y ONGs: Pasantías y programas de investigación",
-            "Instituciones gubernamentales: Rotaciones y prácticas profesionales"
-          ],
-          "whatsapp": "https://chat.whatsapp.com/DerechoGrupo"
-        },
-        {
-          "nombre": "Ingeniería en Sistemas",
-          "graduados": 700,
-          "lugaresTrabajo": [
-            "Empresas de software: Desarrollo de aplicaciones y sistemas",
-            "Startups tecnológicas: Innovación y proyectos tecnológicos",
-            "Departamentos de IT de empresas privadas y públicas: Gestión de infraestructura y soporte"
-          ],
-          "convenios": [
-            "Empresas de tecnología: Pasantías y proyectos prácticos",
-            "Universidades y laboratorios de innovación: Investigación aplicada",
-            "Organizaciones internacionales: Colaboración académica y tecnológica"
-          ],
-          "whatsapp": "https://chat.whatsapp.com/IngenieriaSistemasGrupo"
-        },
-        {
-          "nombre": "Contaduría Pública",
-          "graduados": 650,
-          "lugaresTrabajo": [
-            "Despachos contables: Auditorías, contabilidad y asesoría fiscal",
-            "Empresas privadas: Gestión financiera y contable",
-            "Instituciones gubernamentales: Control financiero y auditorías públicas"
-          ],
-          "convenios": [
-            "Colegios de contadores: Capacitación y certificaciones",
-            "Universidades y asociaciones contables: Pasantías y programas profesionales",
-            "Auditorías privadas: Rotaciones y formación práctica"
-          ],
-          "whatsapp": "https://chat.whatsapp.com/ContaduriaPublicaGrupo"
-        },
-        {
-          "nombre": "Prótesis Dental",
-          "graduados": 350,
-          "lugaresTrabajo": [
-            "Laboratorios dentales: Fabricación y diseño de prótesis",
-            "Clínicas odontológicas: Colaboración en tratamientos y rehabilitación dental",
-            "Consultorios privados: Personalización y atención especializada"
-          ],
-          "convenios": [
-            "Laboratorios especializados: Capacitación y prácticas profesionales",
-            "Clínicas odontológicas: Intercambio académico y pasantías",
-            "Universidades y programas de investigación dental: Proyectos y talleres"
-          ],
-          "whatsapp": "https://chat.whatsapp.com/ProtesisDentalGrupo"
-        }
-        ]
+      "descripcion": "La Red Alumni de nuestra universidad integra a los graduados de Derecho, Ingeniería Comercial y Contaduría Pública, fortaleciendo el vínculo profesional e institucional entre ellos. Este espacio impulsa el networking, la actualización permanente y la generación de oportunidades laborales y empresariales. A través de encuentros académicos, actividades de integración y alianzas estratégicas, se promueve el liderazgo, la ética profesional y la responsabilidad social. La Red Alumni consolida una comunidad activa y comprometida con el desarrollo regional y nacional, aportando al crecimiento continuo de sus miembros y al prestigio de la universidad.",
+      "carreras":[
+  {
+    "nombre":"Derecho",
+    "graduados":121,
+    "lugaresTrabajo":[
+      "Estudios jurídicos: Asesoría legal, litigios y consultoría jurídica",
+      "Tribunales departamentales y juzgados: Administración de justicia y resolución de conflictos",
+      "Fiscalías: Investigación y persecución de delitos",
+      "Instituciones públicas: Asesoramiento legal y gestión jurídica",
+      "Empresas privadas: Asesoría legal empresarial y cumplimiento normativo",
+      "Notarías y defensorías: Servicios legales y defensa de derechos",
+      "ONGs: Defensa de derechos humanos y asesoría legal comunitaria",
+      "Ejercicio profesional independiente: Consultoría jurídica y representación legal"
+    ],
+    "convenios":[
+      "Ministerio Público: Prácticas profesionales y formación jurídica",
+      "Consejo de la Magistratura: Pasantías y fortalecimiento profesional",
+      "Notarías: Experiencia práctica en procedimientos legales",
+      "Bufetes jurídicos: Formación profesional y experiencia en litigios",
+      "Entidades gubernamentales: Prácticas y capacitación institucional"
+    ],
+    "whatsapp":"https://chat.whatsapp.com/DerechoGrupo"
+  },
+  {
+    "nombre":"Ingeniería Comercial",
+    "graduados":7,
+    "lugaresTrabajo":[
+      "Empresas privadas nacionales e internacionales: Gestión empresarial y administración",
+      "Entidades financieras: Análisis financiero y gestión comercial",
+      "Consultoras empresariales: Planificación estratégica y asesoría organizacional",
+      "Industrias productivas: Gestión administrativa y operativa",
+      "Instituciones públicas: Administración y gestión de proyectos",
+      "ONGs: Gestión de programas y desarrollo organizacional",
+      "Emprendimientos propios: Creación y gestión de negocios",
+      "Áreas de marketing y comercio exterior: Estrategias comerciales y expansión internacional"
+    ],
+    "convenios":[
+      "Empresas exportadoras: Prácticas profesionales y desarrollo empresarial",
+      "Consultoras estratégicas: Formación profesional y experiencia laboral"
+    ],
+    "whatsapp":"https://chat.whatsapp.com/IngenieriaComercialGrupo"
+  },
+  {
+    "nombre":"Contaduría Pública",
+    "graduados":5,
+    "lugaresTrabajo":[
+      "Estudios contables: Auditoría, contabilidad y asesoría financiera",
+      "Empresas privadas: Gestión contable y financiera",
+      "Instituciones públicas: Control financiero y auditorías",
+      "Entidades financieras: Análisis financiero y control contable",
+      "Auditorías externas: Evaluación financiera y cumplimiento normativo",
+      "Consultoras tributarias: Asesoramiento fiscal y tributario",
+      "Cooperativas: Gestión financiera y administrativa",
+      "Emprendimientos independientes: Asesoría contable y financiera"
+    ],
+    "convenios":[
+      "Colegio de contadores: Capacitación y fortalecimiento profesional",
+      "Cooperativas financieras: Prácticas profesionales",
+      "Empresas privadas: Formación práctica y desarrollo profesional"
+    ],
+    "whatsapp":"https://chat.whatsapp.com/ContaduriaPublicaGrupo"
+  }
+]
+
       },
        "investigacion":[
         {
