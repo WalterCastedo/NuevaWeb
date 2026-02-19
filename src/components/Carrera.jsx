@@ -78,6 +78,16 @@ export default function CareerCard() {
       })()
     : null;
   const thumbnail = videoId ? `https://img.youtube.com/vi/${videoId}/hqdefault.jpg` : null;
+// Imagen alternativa si no hay video
+let imagenAlternativa = null;
+
+if (!videoId && data?.img) {
+  try {
+    imagenAlternativa = require(`../assets/img/${data.img}`);
+  } catch {
+    imagenAlternativa = null;
+  }
+}
 
   // WhatsApp
   const whatsapp = sedeInfo?.whatsapp || "";
@@ -301,52 +311,62 @@ export default function CareerCard() {
           >
             {/* IZQUIERDA */}
             <div style={{ flex: isMobile ? "1 1 100%" : "0 0 600px", maxWidth: isMobile ? "100%" : "600px" }}>
-              {videoId && (
-                <AnimatePresence mode="wait">
-                  <motion.div
-                    key={showVideo ? "video" : "thumbnail"}
-                    variants={videoVariants}
-                    initial="hidden"
-                    animate="visible"
-                    exit="exit"
-                    className="ratio ratio-16x9 mb-3"
-                    style={{ width: "100%" }}
-                  >
-                    {showVideo ? (
-                      <iframe
-                        ref={iframeRef}
-                        src={`https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`}
-                        title="Video de la carrera"
-                        allowFullScreen
-                        className="w-100 h-100 rounded shadow-sm"
-                      />
-                    ) : (
-                      <div
-                        className="w-100 h-100 d-flex align-items-center justify-content-center rounded shadow-sm"
-                        style={{
-                          backgroundImage: `url(${thumbnail})`,
-                          backgroundSize: "cover",
-                          backgroundPosition: "center",
-                          cursor: "pointer",
-                        }}
-                        onClick={() => setShowVideo(true)}
-                      >
-                        <span
-                          style={{
-                            background: "rgba(0,0,0,0.6)",
-                            borderRadius: "50%",
-                            padding: "20px",
-                            color: "white",
-                            fontSize: "2rem",
-                          }}
-                        >
-                          ▶
-                        </span>
-                      </div>
-                    )}
-                  </motion.div>
-                </AnimatePresence>
-              )}
+              {(videoId || imagenAlternativa) && (
+  <AnimatePresence mode="wait">
+    <motion.div
+      key={showVideo ? "video" : "thumbnail"}
+      variants={videoVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="ratio ratio-16x9 mb-3"
+      style={{ width: "100%" }}
+    >
+      {videoId ? (
+        showVideo ? (
+          <iframe
+            ref={iframeRef}
+            src={`https://www.youtube.com/embed/${videoId}?autoplay=1&enablejsapi=1`}
+            title="Video de la carrera"
+            allowFullScreen
+            className="w-100 h-100 rounded shadow-sm"
+          />
+        ) : (
+          <div
+            className="w-100 h-100 d-flex align-items-center justify-content-center rounded shadow-sm"
+            style={{
+              backgroundImage: `url(${thumbnail})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              cursor: "pointer",
+            }}
+            onClick={() => setShowVideo(true)}
+          >
+            <span
+              style={{
+                background: "rgba(0,0,0,0.6)",
+                borderRadius: "50%",
+                padding: "20px",
+                color: "white",
+                fontSize: "2rem",
+              }}
+            >
+              ▶
+            </span>
+          </div>
+        )
+      ) : (
+        <img
+          src={imagenAlternativa}
+          alt={data.title}
+          className="w-100 h-100 rounded shadow-sm"
+          style={{ objectFit: "cover" }}
+        />
+      )}
+    </motion.div>
+  </AnimatePresence>
+)}
+
               <div
                 style={{
                   background: "#F5F7FF",
