@@ -554,7 +554,7 @@ rel="noopener noreferrer"
               src={logo}
               alt="Logo UNO"
               onClick={handleClickInicio}
-              style={{ maxHeight: "80px", cursor: "pointer", filter: "brightness(0) invert(1)", marginTop: "-20px" }}
+              style={{ maxHeight: "80px", cursor: "pointer", filter: "brightness(0) invert(1)", marginTop: "-20px", marginLeft:"-20px" }}
             />
           </div>
           <button
@@ -569,6 +569,8 @@ rel="noopener noreferrer"
               color: "#fff",
               cursor: "pointer",
               zIndex: 3100,
+              marginTop:"-15px",
+              marginRight:"-10px"
             }}
           >
             {mobileMenuOpen ? "✕" : "☰"}

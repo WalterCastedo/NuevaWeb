@@ -82,7 +82,7 @@ export default function SeleccionarSede() {
     return (
       <motion.div
         key={i}
-        className="col-4 col-md-4 col-lg-4 mb-4" // col-4 asegura 3 por fila en móvil
+        className="col-6 col-md-4 col-lg-4 mb-4" // col-4 asegura 3 por fila en móvil
         style={{ order: i }}
         initial={{ opacity: 0, y: 40, scale: 0.9 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
