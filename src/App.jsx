@@ -9,6 +9,7 @@ import Interaccion from "./components/inteaccion";
 import ScrollToTop from "./components/ScrollToTop";
 import investigacion from "./components/investigacion"
 import RedAlumni from "./components/RedAlumni";
+import ServiciosVirtuales from "./components/ServiciosVirtuales";
 import { useEffect } from "react";
 
 // Componente para normalizar params y redirigir si es necesario
@@ -116,6 +117,22 @@ function AppContent() {
           </>
         }
       />
+
+      {/* Página de servicios virtuales (Estudiante / Docente) */}
+<Route
+  path="/:sede/:tipo"
+  element={
+    <>
+      <RouteWrapper element={Header} />
+
+      <main className="bg-white min-h-screen">
+        <RouteWrapper element={ServiciosVirtuales} />
+      </main>
+
+      <Footer />
+    </>
+  }
+/>
 
       {/* Página de investigacion */}
       <Route

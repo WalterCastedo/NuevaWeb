@@ -234,27 +234,7 @@ export default function RedAlumni() {
                         </ul>
                       </div>
 
-                      {/* BOTÓN DE WHATSAPP */}
-                      {contenido.whatsapp && (
-                        <div style={{ textAlign: "center", marginTop: "1rem" }}>
-                          <a
-                            href={contenido.whatsapp}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            style={{
-                              backgroundColor: "#25D366",
-                              color: "#fff",
-                              padding: "0.8rem 1.5rem",
-                              borderRadius: "25px",
-                              textDecoration: "none",
-                              fontWeight: 600,
-                              display: "inline-block",
-                            }}
-                          >
-                            Unirse al grupo de WhatsApp
-                          </a>
-                        </div>
-                      )}
+                      
                     </div>
                   ) : (
                     <motion.p

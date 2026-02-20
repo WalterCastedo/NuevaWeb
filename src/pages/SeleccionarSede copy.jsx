@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import cochabambaImg from "../assets/img/cocha.webp";
 import monteroImg from "../assets/img/montero.webp";
 import shinahotaImg from "../assets/img/shinaota.webp";
-import santaCruzImg from "../assets/img/santacruz.png";
+import santaCruzImg from "../assets/img/santacruz.webp";
 import tarijaImg from "../assets/img/tarija.webp";
 import yacuibaImg from "../assets/img/yacuhiba.png";
 
@@ -28,14 +28,13 @@ export default function SeleccionarSede() {
   }, []);
 
   const sedes = [
-  { nombre: "Santa Cruz", img: santaCruzImg, width: "115px", height: "170px", anchor: "bottom-right", disponible: true },
-  { nombre: "Montero", img: monteroImg, width: "120px", height: "180px", anchor: "bottom-right", disponible: false },
-  { nombre: "Tarija", img: tarijaImg, width: "125px", height: "165px", anchor: "bottom-right", disponible: false },
-  { nombre: "Cochabamba", img: cochabambaImg, width: "120px", height: "170px", anchor: "bottom-right", disponible: false },
-  { nombre: "Yacuiba", img: yacuibaImg, width: "130px", height: "150px", anchor: "bottom-left", disponible: true },
-  { nombre: "Shinahota", img: shinahotaImg, width: "140px", height: "150px", anchor: "bottom-left", disponible: false }
-];
-
+    { nombre: "Santa Cruz", img: santaCruzImg, width: "115px", height: "170px", anchor: "bottom-right" },
+    { nombre: "Montero", img: monteroImg, width: "120px", height: "180px", anchor: "bottom-right" },
+    { nombre: "Tarija", img: tarijaImg, width: "125px", height: "165px", anchor: "bottom-right" },
+    { nombre: "Cochabamba", img: cochabambaImg, width: "120px", height: "170px", anchor: "bottom-right" },
+    { nombre: "Yacuiba", img: yacuibaImg, width: "130px", height: "150px", anchor: "bottom-left" },
+    { nombre: "Shinahota", img: shinahotaImg, width: "140px", height: "150px", anchor: "bottom-left" }
+  ];
 
   const markers = [
     { nombre: "Cochabamba", top: "47%", left: "23%" },
@@ -94,24 +93,16 @@ export default function SeleccionarSede() {
                 return (
                   <motion.div
                     key={i}
-                    className="col-6 col-md-4 col-lg-4 mb-4 d-flex justify-content-center"
+                    className="col-4 col-md-4 col-lg-4 mb-4 d-flex justify-content-center"
                     initial={{ opacity: 0, y: 40, scale: 0.9 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     transition={{ duration: 0.6, delay: i * 0.15 }}
                   >
                     <div
-  style={{
-    textAlign: "center",
-    cursor: sede.disponible ? "pointer" : "not-allowed",
-    opacity: sede.disponible ? opacity : 0.5
-  }}
+                      style={{ textAlign: "center", cursor: "pointer", opacity }}
                       onMouseEnter={() => setActiveSede(sede.nombre)}
                       onMouseLeave={() => setActiveSede(null)}
-                      onClick={() => {
-  if (sede.disponible) {
-    navigate(`/${sede.nombre.replace(/\s+/g, '')}`);
-  }
-}}
+                      onClick={() => navigate(`/${sede.nombre.replace(/\s+/g, '')}`)}
                     >
                       <div
   style={{
@@ -155,20 +146,6 @@ export default function SeleccionarSede() {
                       >
                         {sede.nombre}
                       </h5>
-                      {!sede.disponible && (
-  <div
-    className="text-warning fw-bold"
-    style={{
-      fontSize: isMobile ? "0.7rem" : "0.85rem",
-      marginTop: isMobile ? "4px" : "-40px",
-      position: "relative",
-      zIndex: 5
-    }}
-  >
-    En construcción
-  </div>
-)}
-
                     </div>
                   </motion.div>
                 );

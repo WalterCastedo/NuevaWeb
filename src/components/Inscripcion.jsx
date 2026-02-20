@@ -2,19 +2,18 @@ import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { AnimatedText } from "./textoIncripcion";
 
-import { useParams } from "react-router-dom";
 import fondoLibertad from "../assets/img/fondoLibertad.webp";
 import expoUno from "../assets/img/expUno.webp";
 import calendario from "../assets/img/ingresoAlumno.webp";
 import ingAlum from "../assets/img/ingresoAlumno.webp";
 import ingDoc from "../assets/img/ingresoDocente.webp";
-
+import { useParams, useNavigate } from "react-router-dom";
 import dataJson from "../assets/json/datos.json"; // JSON con info de cada sede
 import "./Inscripcion.css"; 
 
 export default function Inscripcion() {
   const [isScrolled, setIsScrolled] = useState(false);
-
+const navigate = useNavigate();
 useEffect(() => {
   const handleScroll = () => {
     const offset = window.scrollY;
@@ -64,11 +63,18 @@ useEffect(() => {
 
   
   const botones = [
-    { img: ingDoc, text: "Ingreso Docente", link: "https://www.uno.edu.bo/docentes-2025/" },
-    { img: ingAlum, text: "Ingreso Alumno", link: "https://www.uno.edu.bo/alumnos-2025/" },
-    { img: calendario, text: "Calendario Académico", link: "https://mega.nz/file/ZgRnyCaS#O60U_2yXQL_K4O7iM2ZZfJ5NlzTgz-wk9zwcrWNR494" },
-    { img: expoUno, text: "", link: "" }
-  ];
+  { img: ingDoc, text: "Ingreso Docente", link: `/${sede}/docente` },
+
+  { img: ingAlum, text: "Ingreso Alumno", link: `/${sede}/estudiante` },
+
+  {
+    img: calendario,
+    text: "Calendario Académico",
+    link: "https://mega.nz/file/ZgRnyCaS#O60U_2yXQL_K4O7iM2ZZfJ5NlzTgz-wk9zwcrWNR494"
+  },
+
+  { img: expoUno, text: "", link: "" }
+];
 
   return (
     <section
@@ -89,15 +95,15 @@ useEffect(() => {
           />
 
           <div className="hero-text">
-            <AnimatedText text="¡Es ahora!" className="titulo-ahora" />
+            <AnimatedText text="Bienvenidos a la" className="titulo-ahora" />
             <br />
-            <AnimatedText text="Inscripciones" className="titulo-inscripciones" />
+            <AnimatedText text="Universidad" className="titulo-inscripciones" />
             <div style={{ position: "relative" }}>
               <AnimatedText text="2026" className="titulo-ano" />
             </div>
 
             <div className="textos-abiertas-gestion">
-              <AnimatedText text="Abiertas" className="texto-abiertas" />
+              <AnimatedText text="UNO" className="texto-abiertas" />
               <AnimatedText text="Gestión I -" className="texto-gestion" />
             </div>
           </div>
@@ -131,7 +137,15 @@ useEffect(() => {
       key={i}
       className="sub-menu-item"
       style={{ cursor: "pointer" }}
-      onClick={() => item.link && window.open(item.link, "_blank")}
+      onClick={() => {
+  if (!item.link) return;
+
+  if (item.link.startsWith("/")) {
+    navigate(item.link); // ruta interna React
+  } else {
+    window.open(item.link, "_blank"); // enlace externo
+  }
+}}
     >
       <motion.img
         src={item.img}

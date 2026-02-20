@@ -184,10 +184,13 @@ const handleClick = (e, item) => {
       {submenu.map((sub) => (
         <div key={sub.name} style={{ position: "relative", width: "100%" }}>
           <button
-            onClick={() => {
-              if (parentName === "Más") handleClickMas(sub.target);
-              else if (parentName === "Carreras") handleClickCarrera(sub.name);
-              else if (parentName === "SubSedes") handleClickSubSede(sub.name);
+  onClick={() => {
+    if (parentName === "SubSedes" && sub.disponible === false) return;
+
+    if (parentName === "Más") handleClickMas(sub.target);
+    else if (parentName === "Carreras") handleClickCarrera(sub.name);
+    else if (parentName === "SubSedes") handleClickSubSede(sub.name);
+
               else if (parentName === "Interacción") handleClickPrograma(sub.name);
               else if (parentName === "Investigación") {
   if (sub.type === "external") {
@@ -216,12 +219,39 @@ const handleClick = (e, item) => {
                 normalizeForUrl(activeSection) === normalizeForUrl(sub.target)
                   ? "5px"
                   : "0",
-              cursor: "pointer",
+              cursor:
+  parentName === "SubSedes"
+    ? sub.disponible
+      ? "pointer"
+      : "not-allowed"
+    : "pointer",
+
+opacity:
+  parentName === "SubSedes"
+    ? sub.disponible
+      ? 1
+      : 0.5
+    : 1,
+
               border: "none",
               width: "100%",
             }}
           >
-            {sub.name}
+            <>
+  {sub.name}
+  {parentName === "SubSedes" && sub.disponible === false && (
+    <span
+      style={{
+        fontSize: "0.6rem",
+        color: "#ffc107",
+        marginLeft: "6px"
+      }}
+    >
+      (En construcción)
+    </span>
+  )}
+</>
+
           </button>
           {sub.submenu && openDropdowns[level] === sub.name && (
             <div
@@ -269,12 +299,20 @@ const handleClick = (e, item) => {
     },
     //{ name: "Clinica", targets: ["clinica"].map(normalizeForUrl) },
     {
-      name: "SubSedes",
-      submenu: ["Santa Cruz", "Cochabamba", "Shinaota", "Montero", "Yacuiba", "Tarija"].map((s) => ({
-        name: s,
-        target: normalizeForUrl(s),
-      })),
-    },
+  name: "SubSedes",
+  submenu: [
+    { name: "Santa Cruz", disponible: true },
+    { name: "Cochabamba", disponible: false },
+    { name: "Shinaota", disponible: false },
+    { name: "Montero", disponible: false },
+    { name: "Yacuiba", disponible: true },
+    { name: "Tarija", disponible: false }
+  ].map((s) => ({
+    name: s.name,
+    target: normalizeForUrl(s.name),
+    disponible: s.disponible
+  })),
+},
     { name: "Red Alumni", targets: ["alumni", "otraSeccion"].map(normalizeForUrl) },
 
     { name: "Requisitos", targets: ["requisitos"].map(normalizeForUrl) },
@@ -641,7 +679,9 @@ rel="noopener noreferrer"
                             onClick={() => {
                               if (item.name === "Más") handleClickMas(sub.target);
                               else if (item.name === "Carreras") handleClickCarrera(sub.name);
-                              else if (item.name === "SubSedes") handleClickSubSede(sub.name);
+                              else if (item.name === "SubSedes") {
+  if (sub.disponible) handleClickSubSede(sub.name);
+}
                               else if (item.name === "Interacción") handleClickPrograma(sub.name);
                               else if (item.name === "Investigación") handleClickInvestigacion(sub.target);
                               else scrollToTarget(sub.target);
