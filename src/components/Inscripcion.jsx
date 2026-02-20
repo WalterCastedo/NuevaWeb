@@ -70,7 +70,7 @@ useEffect(() => {
   {
     img: calendario,
     text: "Calendario Académico",
-    link: "https://mega.nz/file/ZgRnyCaS#O60U_2yXQL_K4O7iM2ZZfJ5NlzTgz-wk9zwcrWNR494"
+    link: "https://drive.google.com/file/d/1C44VlWgvp5plZ8xPZyTZKBa37wwkaXpm/view?usp=sharing"
   },
 
   { img: expoUno, text: "", link: "" }

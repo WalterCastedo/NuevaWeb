@@ -87,17 +87,17 @@ export default function ServiciosVirtuales() {
   ];
 
 
-  // CLONAR ARRAY
+
   let servicios = [...serviciosBase];
   let titulo = "";
 
-  // MODIFICAR SOLO EL PRIMER ELEMENTO
+  
   if (tipo === "estudiante") {
 
     servicios[0] = {
       titulo: "Consulta Tus Notas",
       imagen: "https://www.uno.edu.bo/wp-content/uploads/2025/03/IMAGEN-WEB-DIGITAL-300x165.jpg",
-      link: "https://notas.uno.edu.bo"
+      link: "https://alumno.uno.edu.bo/"
     };
 
     titulo = "Servicios para Estudiantes";

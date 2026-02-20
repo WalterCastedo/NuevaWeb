@@ -64,7 +64,7 @@ export default function SeleccionarSede() {
 
     { nombre: "Tarija", top: "70%", left: "38%" },
 
-    { nombre: "Yacuiba", top: "77.5%", left: "48%" }
+    { nombre: "Yacuiba", top: "75.5%", left: "48%" }
 
   ];
 
@@ -81,7 +81,7 @@ export default function SeleccionarSede() {
 
     Tarija: { img: mtrImg, top: "84.8%", left: "50.8%", width: "21.5%", height: "21.5%" },
 
-    Yacuiba: { img: mtrImg, top: "84.8%", left: "50.8%", width: "21.5%", height: "21.5%" }
+    Yacuiba: { img: mtrImg, top: "83.8%", left: "50.8%", width: "21.5%", height: "21.5%" }
 
   };
 

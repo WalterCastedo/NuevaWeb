@@ -43,7 +43,7 @@ export default function SeleccionarSede() {
     { nombre: "Montero", top: "37%", left: "51%" },
     { nombre: "Santa Cruz", top: "52%", left: "55%" },
     { nombre: "Tarija", top: "70%", left: "38%" },
-    { nombre: "Yacuiba", top: "77.5%", left: "48%" }
+    { nombre: "Yacuiba", top: "75.5%", left: "48%" }
   ];
 
   const regionMap = {
