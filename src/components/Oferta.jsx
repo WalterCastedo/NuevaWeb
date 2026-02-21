@@ -85,18 +85,21 @@ const isMobile = window.innerWidth <= 768; // ancho típico móvil
     visible: { opacity: 1, y: 0, scale: 1 },
   };
 
-  const filas = dividirEnFilas(carreras);
+
 
   return (
     <section
-      id="oferta"
-      className="py-5"
-      style={{
-        background: `linear-gradient(rgba(255,255,255,0.70), rgba(255,255,255,0.70)), url(${fondo})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-      }}
-    >
+  id="oferta"
+  className="py-5"
+  style={{
+    backgroundImage: `linear-gradient(rgba(255,255,255,0.70), rgba(255,255,255,0.70)), url(${fondo})`,
+    backgroundSize: "cover",        // ✅ cubre todo el espacio
+    backgroundPosition: "center",   // ✅ siempre centrada
+    backgroundRepeat: "no-repeat",  // ✅ no se repite
+    backgroundAttachment: "scroll", // o "fixed" si quieres efecto parallax
+    width: "100%",
+  }}
+>
       <div className="container text-center">
 
         <motion.h2
@@ -127,61 +130,58 @@ const isMobile = window.innerWidth <= 768; // ancho típico móvil
 >
   Contamos con carreras con mayor demanda laboral.
 </motion.p>
-        {filas.map((fila, indexFila) => (
-          <div
-            key={indexFila}
-            style={{
-              display: "flex",
-              justifyContent: "center",
-              gap: "1.7rem",
-              marginBottom: "1.7rem",
-              flexWrap: "wrap",
-            }}
-          >
-            {fila.map((carrera, i) => (
-              <motion.div
-  className="text-center"
+        <div
   style={{
-    maxWidth: isMobile ? "260px" : "215px", // tarjeta más grande en móvil
-    width: "100%",
+    display: "flex",
+    justifyContent: "center", // ✅ centra el último si sobra uno
+    gap: "1.7rem",
+    flexWrap: "wrap",
   }}
-  whileHover={{ scale: 1.05, y: -5 }}
 >
-  <img
-    src={carrera.img}
-    alt={carrera.title}
-    className="img-fluid rounded shadow"
-    style={{
-      maxHeight: isMobile ? "280px" : "190px", // imagen más grande en móvil
-      objectFit: "contain",
-      padding: "5px",
-      borderRadius: "12px",
-    }}
-  />
+  {carreras.map((carrera, i) => (
+    <motion.div
+      key={i}
+      className="text-center"
+      style={{
+        flexBasis: isMobile ? "48%" : "215px", // ✅ 2 por fila en móvil
+        maxWidth: isMobile ? "48%" : "215px",
+      }}
+      whileHover={{ scale: 1.05, y: -5 }}
+    >
+      <img
+        src={carrera.img}
+        alt={carrera.title}
+        className="img-fluid rounded shadow"
+        style={{
+          maxHeight: isMobile ? "280px" : "190px",
+          objectFit: "contain",
+          padding: "5px",
+          borderRadius: "12px",
+        }}
+      />
 
-  <motion.span
-    className="d-block fw-bold py-2 rounded-pill mt-3"
-    style={{
-      background: "#002166",
-      color: "white",
-      width: "100%",
-      fontSize: isMobile ? "1.2em" : "1em", // texto más grande en móvil
-      whiteSpace: "nowrap",
-      overflow: "hidden",
-      textOverflow: "ellipsis",
-      cursor: "pointer",
-    }}
-    whileHover={{ scale: 1.07, backgroundColor: "#003399" }}
-    onClick={() =>
-  navigate(`/${sede}/Carrera/${normalize(carrera.title)}`)
-}
-  >
-    {carrera.title}
-  </motion.span>
-</motion.div>
-            ))}
-          </div>
-        ))}
+      <motion.span
+        className="d-block fw-bold py-2 rounded-pill mt-3"
+        style={{
+          background: "#002166",
+          color: "white",
+          width: "100%",
+          fontSize: isMobile ? "1.2em" : "1em",
+          whiteSpace: "nowrap",
+          overflow: "hidden",
+          textOverflow: "ellipsis",
+          cursor: "pointer",
+        }}
+        whileHover={{ scale: 1.07, backgroundColor: "#003399" }}
+        onClick={() =>
+          navigate(`/${sede}/Carrera/${normalize(carrera.title)}`)
+        }
+      >
+        {carrera.title}
+      </motion.span>
+    </motion.div>
+  ))}
+</div>
       </div>
     </section>
   );

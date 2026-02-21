@@ -90,7 +90,10 @@ const [ofertaInvestigacion, setOfertaInvestigacion] = useState(null);
 
   setMobileMenuOpen(false);
 };
-
+const resetMobileMenu = () => {
+  setMobileMenuOpen(false);
+  setOpenDropdowns({});
+};
 
   const handleClickCarrera = (nombre) => {
     navigate(`/${normalizeForUrl(sede)}/carrera/${normalizeForUrl(nombre)}`);
@@ -147,7 +150,7 @@ const handleClick = (e, item) => {
     setMobileMenuOpen(false);
 
  
-    setTimeout(() => scrollToTarget(item.targets[0]), 100);
+    setTimeout(() => scrollToTarget(item.targets[0]), 500);
     return;
   }
 
@@ -673,19 +676,27 @@ rel="noopener noreferrer"
                           marginTop: "5px",
                         }}
                       >
-                        {item.submenu.map((sub) => (
+                        {item.submenu
+  .filter((sub) => {
+    // ocultar subsedes no disponibles SOLO en móvil
+    if (item.name === "SubSedes") {
+      return sub.disponible;
+    }
+    return true;
+  })
+  .map((sub) => (
                           <button
                             key={sub.name}
-                            onClick={() => {
-                              if (item.name === "Más") handleClickMas(sub.target);
-                              else if (item.name === "Carreras") handleClickCarrera(sub.name);
-                              else if (item.name === "SubSedes") {
-  if (sub.disponible) handleClickSubSede(sub.name);
-}
-                              else if (item.name === "Interacción") handleClickPrograma(sub.name);
-                              else if (item.name === "Investigación") handleClickInvestigacion(sub.target);
-                              else scrollToTarget(sub.target);
-                            }}
+                           onClick={() => {
+  if (item.name === "Más") handleClickMas(sub.target);
+  else if (item.name === "Carreras") handleClickCarrera(sub.name);
+  else if (item.name === "SubSedes") handleClickSubSede(sub.name);
+  else if (item.name === "Interacción") handleClickPrograma(sub.name);
+  else if (item.name === "Investigación") handleClickInvestigacion(sub.target);
+  else scrollToTarget(sub.target);
+
+  resetMobileMenu();
+}}
                             style={{
                               display: "block",
                               padding: "10px",
@@ -706,7 +717,10 @@ rel="noopener noreferrer"
                     </>
                   ) : (
                     <button
-                      onClick={(e) => handleClick(e, item)}
+                      onClick={(e) => {
+  handleClick(e, item);
+  resetMobileMenu();
+}}
                       style={{
                         background: "#0044aa",
                         border: "none",
