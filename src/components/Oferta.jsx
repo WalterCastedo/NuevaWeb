@@ -9,7 +9,16 @@ export default function Oferta() {
   const { sede } = useParams();
   const [carreras, setCarreras] = useState([]);
   const [fondo, setFondo] = useState(fondoDefault);
-const isMobile = window.innerWidth <= 768; // ancho típico móvil
+const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+useEffect(() => {
+  const handleResize = () => {
+    setIsMobile(window.innerWidth <= 768);
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, []);
 
   const dividirEnFilas = (lista) => {
     const n = lista.length;
@@ -140,14 +149,14 @@ const isMobile = window.innerWidth <= 768; // ancho típico móvil
 >
   {carreras.map((carrera, i) => (
     <motion.div
-      key={i}
-      className="text-center"
-      style={{
-        flexBasis: isMobile ? "48%" : "215px", // ✅ 2 por fila en móvil
-        maxWidth: isMobile ? "48%" : "215px",
-      }}
-      whileHover={{ scale: 1.05, y: -5 }}
-    >
+  key={i}
+  className="text-center"
+  style={{
+    flex: "0 0 auto",
+    width: isMobile ? "calc(50% - 0.85rem)" : "215px"
+  }}
+  whileHover={{ scale: 1.05, y: -5 }}
+>
       <img
         src={carrera.img}
         alt={carrera.title}
@@ -166,7 +175,7 @@ const isMobile = window.innerWidth <= 768; // ancho típico móvil
           background: "#002166",
           color: "white",
           width: "100%",
-          fontSize: isMobile ? "1.2em" : "1em",
+          fontSize: isMobile ? "1em" : "1em",
           whiteSpace: "nowrap",
           overflow: "hidden",
           textOverflow: "ellipsis",
